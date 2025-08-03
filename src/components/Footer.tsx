@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const cities = [
@@ -11,19 +12,26 @@ const Footer = () => {
   ];
 
   const curitibaBairros = [
-    "Água Verde", "Ahú", "Alto Boqueirão", "Alto da Glória", "Alto da XV",
-    "Bacacheri", "Bairro Alto", "Barreirinha", "Batel", "Bigorrilho",
-    "Boa Vista", "Bom Retiro", "Boqueirão", "Butiatuvinha", "Cabral",
-    "Cajuru", "Campina do Siqueira", "Campo Comprido", "Campo de Santana", "Capão da Imbuia",
-    "Capão Raso", "Centro", "Centro Cívico", "Cidade Industrial", "Cristo Rei",
-    "Fanny", "Fazendinha", "Guabirotuba", "Guaíra", "Hauer",
-    "Hugo Lange", "Jardim Botânico", "Jardim das Américas", "Jardim Social", "Juvevê",
-    "Lindóia", "Mercês", "Mossunguê", "Novo Mundo", "Orleans",
-    "Parolin", "Pilarzinho", "Pinheirinho", "Portão", "Prado Velho",
-    "Rebouças", "Riviera", "Santa Cândida", "Santa Felicidade", "Santa Quitéria",
-    "Santo Inácio", "São Braz", "São Francisco", "São João", "São Lourenço",
-    "Seminário", "Sítio Cercado", "Taboão", "Tarumã", "Tingui",
-    "Uberaba", "Umbará", "Vila Izabel", "Vista Alegre", "Xaxim"
+    "Abranches de Baixo", "Abranches de Cima", "Água Verde", "Ahú", "Alto Boqueirão", 
+    "Alto da Glória", "Alto da Rua XV", "Alto da XV", "Atuba", "Augusta",
+    "Bacacheri", "Bairro Alto", "Barreirinha", "Batel", "Batel Soho",
+    "Bigorrilho", "Boa Vista", "Bom Retiro", "Boqueirão", "Boqueirão de Baixo", 
+    "Boqueirão de Cima", "Butiatuvinha", "Cabral", "Cachoeira", "Cajuru",
+    "Campina do Siqueira", "Campo Comprido", "Campo de Santana", "Capão da Imbuia",
+    "Capão Raso", "Carmo Abranches", "Cascatinha", "Caximba", "Centro", 
+    "Centro Cívico", "Centro Histórico", "CIC Central", "CIC Norte", "CIC Sul",
+    "Cidade Industrial de Curitiba", "Cristo Rei", "Ecoville", "Fanny", "Fazendinha",
+    "Ganchinho", "Guabirotuba", "Guaíra", "Hauer", "Hugo Lange",
+    "Jardim Botânico", "Jardim das Américas", "Jardim Schaffer", "Jardim Social", "Juvevê",
+    "Lamenha Pequena", "Lindóia", "Mercês", "Mossunguê", "Novo Mundo",
+    "Orleans", "Parolin", "Pilarzinho", "Pinheirinho", "Portão", 
+    "Prado Velho", "Rebouças", "Riviera", "Santa Cândida", "Santa Felicidade",
+    "Santa Quitéria", "Santo Inácio", "São Braz", "São Francisco", "São João",
+    "São Lourenço", "São Miguel", "Seminário", "Sítio Cercado", "Taboão",
+    "Tanguá", "Tarumã", "Tatuquara", "Tingui", "Uberaba", "Umbará",
+    "Vila Fanny", "Vila Guaíra", "Vila Hauer", "Vila Izabel", "Vila Nossa Senhora da Luz",
+    "Vila Oficinas", "Vila Pantanal", "Vila Parolin", "Vila Sabará", "Vila Tecnológica",
+    "Vila Torres", "Vila Zumbi", "Vista Alegre", "Xaxim"
   ];
 
   return (
@@ -62,7 +70,14 @@ const Footer = () => {
             <div className="max-h-48 overflow-y-auto">
               <ul className="space-y-1 text-xs text-muted-foreground">
                 {cities.map((city, index) => (
-                  <li key={index}>{city}</li>
+                  <li key={index}>
+                    <Link 
+                      to={`/city/${city.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="hover:text-primary transition-colors"
+                    >
+                      {city}
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -74,9 +89,23 @@ const Footer = () => {
             <div className="max-h-48 overflow-y-auto">
               <ul className="space-y-1 text-xs text-muted-foreground">
                 {curitibaBairros.slice(0, 20).map((bairro, index) => (
-                  <li key={index}>{bairro}</li>
+                  <li key={index}>
+                    <Link 
+                      to={`/bairro/${bairro.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="hover:text-primary transition-colors"
+                    >
+                      {bairro}
+                    </Link>
+                  </li>
                 ))}
-                <li className="text-primary text-xs">+ outros bairros</li>
+                <li className="text-primary text-xs">
+                  <Link 
+                    to="/bairros" 
+                    className="hover:text-primary/80 transition-colors"
+                  >
+                    + outros bairros
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
