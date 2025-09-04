@@ -23,7 +23,7 @@ const BairroPage = () => {
         <title>Toldos no {bairroName} - Curitiba | Sul Toldos</title>
         <meta name="description" content={`Toldos no ${bairroName}, Curitiba. Sul Toldos - especialista em toldos, coberturas e policarbonato. Orçamento grátis! Atendemos o ${bairroName} e toda Curitiba.`} />
         <meta name="keywords" content={`toldos ${bairroName}, toldo ${bairroName} curitiba, policarbonato ${bairroName}, cobertura ${bairroName}`} />
-        <link rel="canonical" href={`https://sultoldos.com.br/bairro/${bairro}`} />
+        <link rel="canonical" href={`https://sultoldos.app.br/bairro/${bairro}`} />
       </Helmet>
 
       <div className="min-h-screen bg-background">

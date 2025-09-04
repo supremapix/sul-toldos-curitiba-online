@@ -18,15 +18,15 @@ const Index = () => {
         <meta property="og:title" content="Sul Toldos - Toldos em Curitiba | Policarbonato | Orçamento Grátis" />
         <meta property="og:description" content="Especialista em toldos, coberturas e policarbonato em Curitiba. Orçamento grátis! Atendemos toda região metropolitana." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sultoldos.com.br" />
-        <link rel="canonical" href="https://sultoldos.com.br" />
+        <meta property="og:url" content="https://sultoldos.app.br" />
+        <link rel="canonical" href="https://sultoldos.app.br" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Sul Toldos",
             "description": "Especialista em toldos, coberturas e policarbonato em Curitiba",
-            "url": "https://sultoldos.com.br",
+            "url": "https://sultoldos.app.br",
             "telephone": "+554135646943",
             "address": {
               "@type": "PostalAddress",

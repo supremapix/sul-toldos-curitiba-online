@@ -21,7 +21,7 @@ const CityPage = () => {
         <title>Toldos em {cityName} - Sul Toldos | Orçamento Grátis</title>
         <meta name="description" content={`Toldos em ${cityName} com a Sul Toldos. Especialistas em toldos, coberturas e policarbonato. Orçamento grátis! Atendemos ${cityName} e região.`} />
         <meta name="keywords" content={`toldos ${cityName}, toldo ${cityName}, policarbonato ${cityName}, cobertura ${cityName}, sul toldos`} />
-        <link rel="canonical" href={`https://sultoldos.com.br/cidade/${city}`} />
+        <link rel="canonical" href={`https://sultoldos.app.br/cidade/${city}`} />
       </Helmet>
 
       <div className="min-h-screen bg-background">
