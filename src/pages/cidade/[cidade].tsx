@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import YouTubeVideo from "@/components/YouTubeVideo";
+import FloatingButtons from "@/components/FloatingButtons";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -103,6 +104,7 @@ const CidadePage = () => {
 
       <div className="min-h-screen bg-background">
         <Header />
+        <FloatingButtons />
         
         <main>
           {/* Hero Section */}
