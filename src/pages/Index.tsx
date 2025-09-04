@@ -7,6 +7,8 @@ import Gallery from "@/components/Gallery";
 import NavigationSection from "@/components/NavigationSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
+import YouTubeVideo from "@/components/YouTubeVideo";
 
 const Index = () => {
   return (
@@ -64,9 +66,15 @@ const Index = () => {
         <Header />
         <Hero />
         <Services />
+        <YouTubeVideo 
+          title="Conheça a Sul Toldos"
+          subtitle="Veja como trabalhamos e a qualidade dos nossos serviços de toldos, coberturas e policarbonato"
+          ctaText="💬 Solicitar Orçamento no WhatsApp"
+        />
         <About />
         <Gallery />
         <NavigationSection />
+        <FAQ />
         <ContactForm />
         <Footer />
       </div>
