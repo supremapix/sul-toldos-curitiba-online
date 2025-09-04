@@ -5,10 +5,10 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-const CityPage = () => {
-  const { city } = useParams();
+const CidadePage = () => {
+  const { cidade } = useParams();
   
-  const cityName = city?.charAt(0).toUpperCase() + city?.slice(1) || "";
+  const cityName = cidade?.charAt(0).toUpperCase() + cidade?.slice(1) || "";
 
   const handleWhatsApp = () => {
     const message = `Olá, gostaria de solicitar um orçamento para toldos em ${cityName}!`;
@@ -21,7 +21,7 @@ const CityPage = () => {
         <title>Toldos em {cityName} - Sul Toldos | Orçamento Grátis</title>
         <meta name="description" content={`Toldos em ${cityName} com a Sul Toldos. Especialistas em toldos, coberturas e policarbonato. Orçamento grátis! Atendemos ${cityName} e região.`} />
         <meta name="keywords" content={`toldos ${cityName}, toldo ${cityName}, policarbonato ${cityName}, cobertura ${cityName}, sul toldos`} />
-        <link rel="canonical" href={`https://sultoldos.app.br/cidade/${city}`} />
+        <link rel="canonical" href={`https://sultoldos.app.br/cidade/${cidade}`} />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -125,4 +125,4 @@ const CityPage = () => {
   );
 };
 
-export default CityPage;
+export default CidadePage;
