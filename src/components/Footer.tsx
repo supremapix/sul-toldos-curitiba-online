@@ -72,7 +72,7 @@ const Footer = () => {
                 {cities.map((city, index) => (
                   <li key={index}>
                     <Link 
-                      to={`/city/${city.toLowerCase().replace(/\s+/g, '-')}`}
+                      to={`/cidade/${city.toLowerCase().replace(/\s+/g, '-').replace(/ç/g, 'c').replace(/ã/g, 'a').replace(/á/g, 'a').replace(/é/g, 'e').replace(/í/g, 'i').replace(/ó/g, 'o').replace(/ú/g, 'u')}`}
                       className="hover:text-primary transition-colors"
                     >
                       {city}
@@ -91,7 +91,7 @@ const Footer = () => {
                 {curitibaBairros.slice(0, 20).map((bairro, index) => (
                   <li key={index}>
                     <Link 
-                      to={`/bairro/${bairro.toLowerCase().replace(/\s+/g, '-')}`}
+                      to={`/bairro/${bairro.toLowerCase().replace(/\s+/g, '-').replace(/ç/g, 'c').replace(/ã/g, 'a').replace(/á/g, 'a').replace(/é/g, 'e').replace(/í/g, 'i').replace(/ó/g, 'o').replace(/ú/g, 'u')}`}
                       className="hover:text-primary transition-colors"
                     >
                       {bairro}
