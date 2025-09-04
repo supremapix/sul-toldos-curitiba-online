@@ -13,6 +13,7 @@ const Index = () => {
       <Helmet>
         <title>Sul Toldos - Toldos em Curitiba | Policarbonato | Orçamento Grátis</title>
         <meta name="description" content="Sul Toldos - Especialista em toldos, coberturas e policarbonato em Curitiba. Orçamento grátis! ☎️ (41) 3564-6943 | (41) 99812-1324. Atendemos toda região metropolitana." />
+        <meta name="google-site-verification" content="lgYcffKOD4dT19opiSFHCEbV7Q39Jjq6J7mxqejem5M" />
         <meta name="keywords" content="toldos curitiba, toldo, policarbonato, cobertura, toldos retráteis, toldos em lona, sul toldos, curitiba" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Sul Toldos - Toldos em Curitiba | Policarbonato | Orçamento Grátis" />
