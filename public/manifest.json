@@ -1,0 +1,20 @@
+{
+  "name": "Sul Toldos - Toldos em Curitiba",
+  "short_name": "Sul Toldos",
+  "description": "Especialista em toldos, coberturas e policarbonato em Curitiba e região metropolitana",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#22c55e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "lang": "pt-BR",
+  "scope": "/",
+  "categories": ["business", "productivity"]
+}

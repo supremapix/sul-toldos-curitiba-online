@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import EnhancedSEO from "@/components/EnhancedSEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import YouTubeVideo from "@/components/YouTubeVideo";
@@ -73,7 +73,7 @@ const BairroPage = () => {
     window.open(`https://wa.me/5541998121324?text=${encodeURIComponent(message)}`, "_blank");
   };
 
-  const structuredData = {
+  const bairroStructuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `Sul Toldos - Toldos no ${bairroName}`,
@@ -97,25 +97,16 @@ const BairroPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Toldos no {bairroName} - Curitiba | Sul Toldos | Orçamento Grátis | Especialistas</title>
-        <meta name="description" content={`Toldos no ${bairroName}, Curitiba com a Sul Toldos. Especialistas em toldos residenciais, comerciais, policarbonato e coberturas. Orçamento grátis! Visita técnica sem compromisso. Atendemos o ${bairroName} e toda Curitiba. ☎️ (41) 3564-6943`} />
-        <meta name="keywords" content={`toldos ${bairroName.toLowerCase()}, toldo ${bairroName.toLowerCase()} curitiba, policarbonato ${bairroName.toLowerCase()}, cobertura ${bairroName.toLowerCase()}, toldos retráteis ${bairroName.toLowerCase()}, sul toldos, toldos em lona, coberturas residenciais, toldos comerciais, orçamento grátis, ${bairroSlug} curitiba`} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://sultoldos.app.br/bairro/${bairroSlug}`} />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={`Toldos no ${bairroName} - Curitiba | Sul Toldos`} />
-        <meta property="og:description" content={`Especialistas em toldos e coberturas no ${bairroName}, Curitiba. Orçamento grátis e garantia em todos os serviços!`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://sultoldos.app.br/bairro/${bairroSlug}`} />
-        <meta property="og:image" content={currentBairro.image} />
-        
-        {/* Schema.org Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <EnhancedSEO
+        title={`Toldos no ${bairroName} - Sul Toldos | Orçamento Grátis | Curitiba`}
+        description={`Toldos no ${bairroName}, Curitiba com a Sul Toldos. Especialistas em toldos residenciais, comerciais e policarbonato. Orçamento grátis! Visita técnica sem compromisso. ☎️ (41) 3564-6943`}
+        keywords={`toldos ${bairroName.toLowerCase()}, toldo ${bairroName.toLowerCase()}, policarbonato ${bairroName.toLowerCase()}, cobertura ${bairroName.toLowerCase()}, toldos ${bairroName.toLowerCase()} curitiba, sul toldos, toldos em lona, toldo residencial ${bairroName.toLowerCase()}, orçamento grátis, proteção solar, toldos para varanda, toldos para jardim`}
+        canonical={`https://sultoldos.app.br/bairro/${bairroSlug}`}
+        ogImage={currentBairro.image}
+        structuredData={bairroStructuredData}
+        location={`${bairroName}, Curitiba`}
+        service={`toldos no ${bairroName}`}
+      />
 
       <div className="min-h-screen bg-background">
         <Header />

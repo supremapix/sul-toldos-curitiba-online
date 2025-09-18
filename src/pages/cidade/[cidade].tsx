@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import EnhancedSEO from "@/components/EnhancedSEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import YouTubeVideo from "@/components/YouTubeVideo";
@@ -58,7 +58,7 @@ const CidadePage = () => {
     window.open(`https://wa.me/5541998121324?text=${encodeURIComponent(message)}`, "_blank");
   };
 
-  const structuredData = {
+  const cityStructuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `Sul Toldos - Toldos em ${cityName}`,
@@ -82,25 +82,16 @@ const CidadePage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Toldos em {cityName} - Sul Toldos | Orçamento Grátis | Especialistas em Coberturas</title>
-        <meta name="description" content={`Toldos em ${cityName} com a Sul Toldos. Especialistas em toldos residenciais, comerciais, policarbonato e coberturas. Orçamento grátis! Visita técnica sem compromisso. Atendemos ${cityName} e região. ☎️ (41) 3564-6943`} />
-        <meta name="keywords" content={`toldos ${cityName.toLowerCase()}, toldo ${cityName.toLowerCase()}, policarbonato ${cityName.toLowerCase()}, cobertura ${cityName.toLowerCase()}, toldos retráteis ${cityName.toLowerCase()}, sul toldos, toldos em lona, coberturas residenciais, toldos comerciais, orçamento grátis`} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://sultoldos.app.br/cidade/${citySlug}`} />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={`Toldos em ${cityName} - Sul Toldos | Orçamento Grátis`} />
-        <meta property="og:description" content={`Especialistas em toldos e coberturas em ${cityName}. Orçamento grátis e garantia em todos os serviços!`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://sultoldos.app.br/cidade/${citySlug}`} />
-        <meta property="og:image" content={currentCity.image} />
-        
-        {/* Schema.org Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <EnhancedSEO
+        title={`Toldos em ${cityName} - Sul Toldos | Orçamento Grátis | Especialistas em Coberturas`}
+        description={`Toldos em ${cityName} com a Sul Toldos. Especialistas em toldos residenciais, comerciais, policarbonato e coberturas. Orçamento grátis! Visita técnica sem compromisso. Atendemos ${cityName} e região. ☎️ (41) 3564-6943`}
+        keywords={`toldos ${cityName.toLowerCase()}, toldo ${cityName.toLowerCase()}, policarbonato ${cityName.toLowerCase()}, cobertura ${cityName.toLowerCase()}, toldos retráteis ${cityName.toLowerCase()}, sul toldos, toldos em lona, coberturas residenciais, toldos comerciais, orçamento grátis, toldo para área externa, proteção solar, toldos automatizados`}
+        canonical={`https://sultoldos.app.br/cidade/${citySlug}`}
+        ogImage={currentCity.image}
+        structuredData={cityStructuredData}
+        location={cityName}
+        service={`toldos e coberturas em ${cityName}`}
+      />
 
       <div className="min-h-screen bg-background">
         <Header />

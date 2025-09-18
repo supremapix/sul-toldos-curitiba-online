@@ -1,0 +1,40 @@
+# Netlify redirects for SPA routing
+
+# Handle SPA routing - catch all routes and serve index.html
+/*    /index.html   200
+
+# Redirect old URLs if any (examples)
+/toldos-curitiba    /cidade/curitiba    301
+/toldos-pinhais     /cidade/pinhais     301
+/toldos-colombo     /cidade/colombo     301
+/toldos-sao-jose    /cidade/sao-jose-dos-pinhais    301
+
+# Redirect bairro variants
+/bairros/*          /bairro/:splat     301
+/neighborhood/*     /bairro/:splat     301
+
+# Force HTTPS
+http://sultoldos.app.br/*    https://sultoldos.app.br/:splat    301!
+http://www.sultoldos.app.br/*    https://sultoldos.app.br/:splat    301!
+
+# WWW redirect
+https://www.sultoldos.app.br/*    https://sultoldos.app.br/:splat    301!
+
+# Handle trailing slashes
+/cidade/*/ /cidade/:splat 301!
+/bairro/*/ /bairro/:splat 301!
+
+# API fallback (if needed in the future)
+/api/*  /.netlify/functions/:splat  200
+
+# Error pages
+/404    /index.html   404
+/500    /index.html   500
+
+# Security headers
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
