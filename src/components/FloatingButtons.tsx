@@ -50,7 +50,7 @@ const FloatingButtons = () => {
       <Button
         onClick={handleHome}
         size="icon"
-        className="w-12 h-12 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:scale-110 transition-all duration-200"
+        className="w-12 h-12 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-lg hover:scale-110 transition-all duration-200 border-2 border-white/20"
         title="Voltar ao início"
       >
         <Home className="h-5 w-5" />
@@ -60,7 +60,7 @@ const FloatingButtons = () => {
       <Button
         onClick={handleWhatsApp}
         size="icon"
-        className="w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:scale-110 transition-all duration-200"
+        className="w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:scale-110 transition-all duration-200 border-2 border-white/20"
         title="WhatsApp"
       >
         <MessageCircle className="h-5 w-5" />
@@ -70,7 +70,7 @@ const FloatingButtons = () => {
       <Button
         onClick={handleCall}
         size="icon"
-        className="w-12 h-12 rounded-full bg-blue-500 hover:bg-blue-600 text-white shadow-lg hover:scale-110 transition-all duration-200"
+        className="w-12 h-12 rounded-full bg-blue-500 hover:bg-blue-600 text-white shadow-lg hover:scale-110 transition-all duration-200 border-2 border-white/20"
         title="Ligar: (41) 3564-6943"
       >
         <Phone className="h-5 w-5" />
@@ -80,7 +80,7 @@ const FloatingButtons = () => {
       <Button
         onClick={handleEmail}
         size="icon"
-        className="w-12 h-12 rounded-full bg-purple-500 hover:bg-purple-600 text-white shadow-lg hover:scale-110 transition-all duration-200"
+        className="w-12 h-12 rounded-full bg-purple-500 hover:bg-purple-600 text-white shadow-lg hover:scale-110 transition-all duration-200 border-2 border-white/20"
         title="Enviar email"
       >
         <Mail className="h-5 w-5" />
@@ -91,7 +91,7 @@ const FloatingButtons = () => {
         <Button
           onClick={scrollToTop}
           size="icon"
-          className="w-12 h-12 rounded-full bg-secondary hover:bg-secondary/80 text-secondary-foreground shadow-lg hover:scale-110 transition-all duration-200"
+          className="w-12 h-12 rounded-full bg-gray-700 hover:bg-gray-800 text-white shadow-lg hover:scale-110 transition-all duration-200 border-2 border-white/20"
           title="Voltar ao topo"
         >
           <ArrowUp className="h-5 w-5" />
