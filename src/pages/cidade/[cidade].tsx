@@ -4,8 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import YouTubeVideo from "@/components/YouTubeVideo";
 import FloatingButtons from "@/components/FloatingButtons";
+import ServiceCards from "@/components/ServiceCards";
+import LocationFAQ from "@/components/LocationFAQ";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 // Imagens
 import curitibaImage from "@/assets/cidade-curitiba.jpg";
@@ -56,6 +57,100 @@ const CidadePage = () => {
   const handleWhatsApp = () => {
     const message = `Olá, gostaria de solicitar um orçamento para toldos em ${cityName}!`;
     window.open(`https://wa.me/5541998121324?text=${encodeURIComponent(message)}`, "_blank");
+  };
+
+  // Conteúdo específico para cada cidade
+  const getServiceCards = () => {
+    return [
+      {
+        title: `Experiência em ${cityName}`,
+        icon: "🏠",
+        content: `Com ampla experiência em ${cityName}, conhecemos as particularidades climáticas e arquitetônicas da região. Nossos toldos são projetados especificamente para resistir às condições locais, oferecendo máxima durabilidade e proteção contra sol e chuva.\n\nJá atendemos centenas de clientes em ${cityName}, desde residências até grandes estabelecimentos comerciais. Nossa equipe conhece os ${currentCity.neighborhoods} e oferece soluções personalizadas para cada necessidade. ${currentCity.specialty}, o que nos permite adaptar nossos serviços perfeitamente às demandas locais.\n\nNossa experiência inclui projetos em diferentes tipos de imóveis, desde casas residenciais até complexos industriais, sempre respeitando as normas municipais e características urbanísticas de ${cityName}.`
+      },
+      {
+        title: "Serviços Especializados",
+        icon: "⚙️",
+        content: `Em ${cityName}, oferecemos uma linha completa de serviços especializados em toldos e coberturas. Nossos principais serviços incluem instalação, manutenção, reparo e modernização de estruturas de proteção solar.\n\nPrincipais serviços oferecidos:\n${currentCity.mainServices.map((service: string) => `• ${service}`).join('\n')}\n\nCada serviço é executado por profissionais certificados, utilizando equipamentos de última geração e materiais de primeira qualidade. Oferecemos soluções desde projetos residenciais simples até complexas instalações comerciais e industriais em ${cityName}.`
+      },
+      {
+        title: "Qualidade Garantida",
+        icon: "✅",
+        content: `Trabalhamos exclusivamente com materiais de primeira qualidade em ${cityName}. Nossos toldos utilizam lonas acrílicas de marcas renomadas como Sansuy e Guarany, com proteção UV e tratamento impermeabilizante.\n\nOferecemos garantia de até 5 anos em estruturas metálicas e 2 anos em toldos retráteis. Nossa equipe técnica realiza manutenção preventiva gratuita no primeiro ano, garantindo a longevidade do seu investimento.\n\nTodos os materiais são testados e aprovados para as condições climáticas de ${cityName}, com certificações de qualidade e resistência. Utilizamos apenas fornecedores homologados e materiais com procedência garantida.`
+      },
+      {
+        title: "Atendimento Diferenciado",
+        icon: "🚀",
+        content: `Nosso atendimento em ${cityName} é personalizado e diferenciado. Realizamos visita técnica gratuita, elaboramos projeto detalhado e acompanhamos toda a instalação com equipe própria e certificada.\n\nTrabalhamos com prazos flexíveis e respeitamos o orçamento do cliente. Oferecemos parcelamento facilitado e condições especiais para projetos de grande porte. Nossa prioridade é a satisfação total do cliente em ${cityName}.\n\nMantemos canal de comunicação 24h através do WhatsApp para emergências e dúvidas. Nossa equipe de suporte pós-venda está sempre disponível para garantir o perfeito funcionamento dos equipamentos instalados.`
+      }
+    ];
+  };
+
+  // FAQs específicas para cada cidade
+  const getCityFAQs = () => {
+    const baseFAQs = [
+      {
+        question: `Vocês atendem toda a cidade de ${cityName}?`,
+        answer: `Sim, atendemos toda ${cityName} e região metropolitana! Nossa cobertura é completa, incluindo todos os ${currentCity.neighborhoods} da cidade. Temos logística otimizada que permite atendimento rápido e eficiente em qualquer localização.\n\nEm ${cityName}, com população de ${currentCity.population} habitantes, mantemos equipes dedicadas que conhecem bem a geografia local, facilitando agendamentos e entregas. Realizamos visitas técnicas gratuitas em toda a extensão da cidade.\n\nNossa experiência em ${cityName} nos permite atender desde pequenos projetos residenciais até grandes instalações comerciais e industriais. Oferecemos o mesmo padrão de qualidade e atendimento para todos os clientes, independente da localização na cidade.`
+      },
+      {
+        question: `Qual a especialidade da Sul Toldos em ${cityName}?`,
+        answer: `Nossa especialidade em ${cityName} é ${currentCity.specialty.toLowerCase()}. Desenvolvemos soluções específicas para as características únicas da cidade, considerando aspectos climáticos, arquitetônicos e urbanísticos locais.\n\nEm ${cityName}, oferecemos:\n${currentCity.mainServices.map((service: string) => `• ${service}`).join('\n')}\n\nNossa experiência na cidade nos permite identificar as melhores soluções para cada tipo de projeto, sempre considerando as particularidades locais. Mantemos estoque adequado e equipes especializadas para atender a demanda específica de ${cityName}.`
+      },
+      {
+        question: `Quanto custa instalar toldos em ${cityName}?`,
+        answer: `Os preços de toldos em ${cityName} variam conforme o tipo de projeto, materiais utilizados e complexidade da instalação. Consideramos as características específicas da cidade para oferecer o melhor custo-benefício.\n\nEm ${cityName}, trabalhamos com diferentes faixas de preço para atender todos os perfis de clientes. Oferecemos desde soluções econômicas até projetos premium, sempre mantendo o padrão de qualidade Sul Toldos.\n\nRealizar orçamento gratuito com visita técnica, onde analisamos suas necessidades específicas e apresentamos as melhores opções. Oferecemos condições facilitadas de pagamento e parcelamento sem juros. Entre em contato pelo WhatsApp (41) 99812-1324 para receber orçamento personalizado para ${cityName}.`
+      },
+      {
+        question: `Qual o prazo de instalação em ${cityName}?`,
+        answer: `Em ${cityName}, nossos prazos são otimizados devido à nossa logística local eficiente. Para toldos residenciais padrão, o prazo médio é de 7 a 10 dias úteis após aprovação do projeto.\n\nPara projetos comerciais ou toldos retráteis, comuns na cidade, o prazo varia de 10 a 15 dias úteis. Em casos de urgência, oferecemos serviço expresso com instalação em até 5 dias úteis.\n\nTodos os prazos são informados durante o orçamento e cumpridos rigorosamente. Nossa proximidade com ${cityName} permite flexibilidade nos agendamentos e agilidade na execução dos projetos.`
+      },
+      {
+        question: `Que garantias vocês oferecem em ${cityName}?`,
+        answer: `Em ${cityName}, oferecemos garantia diferenciada e completa. Nossa garantia inclui até 5 anos para estruturas metálicas e 2 anos para toldos retráteis, cobrindo defeitos de fabricação e instalação.\n\nPara clientes de ${cityName}, oferecemos manutenção preventiva gratuita no primeiro ano, aproveitando nossa proximidade para garantir o perfeito funcionamento dos equipamentos.\n\nNossa garantia cobre materiais, mão de obra e funcionamento de sistemas automatizados. Mantemos estoque de peças de reposição e equipe técnica disponível 24h para emergências. A garantia é válida para toda ${cityName} e região metropolitana.`
+      },
+      {
+        question: `Vocês trabalham com projetos comerciais em ${cityName}?`,
+        answer: `Sim, somos especialistas em projetos comerciais em ${cityName}! Atendemos desde pequenos estabelecimentos até grandes complexos empresariais, sempre adequando nossas soluções às necessidades específicas de cada negócio.\n\nEm ${cityName}, já executamos projetos para diversos segmentos: restaurantes, lojas, concessionárias, indústrias e condomínios. Nossos toldos comerciais incluem opções para proteção de fachadas, áreas de atendimento e estacionamentos.\n\nOferecemos projetos personalizados que podem incluir impressão de logotipos e cores corporativas, transformando o toldo em ferramenta de marketing. Trabalhamos respeitando todas as normas municipais de ${cityName} e prazos comerciais rigorosos.`
+      },
+      {
+        question: `Como funciona a manutenção em ${cityName}?`,
+        answer: `Em ${cityName}, oferecemos serviço completo de manutenção preventiva e corretiva. Nossa equipe local realiza inspeções regulares, limpeza profissional e ajustes necessários para garantir perfeito funcionamento.\n\nA manutenção preventiva em ${cityName} inclui verificação de estruturas, lubrificação de mecanismos, limpeza especializada e inspeção de pontos de fixação. Desenvolvemos cronograma adequado às características climáticas da cidade.\n\nOferecemos serviço de emergência 24h para reparos urgentes, com atendimento rápido em toda ${cityName}. Todos os serviços são realizados por técnicos certificados, usando equipamentos de segurança e produtos específicos para cada tipo de material.`
+      },
+      {
+        question: `Quais materiais são usados em ${cityName}?`,
+        answer: `Em ${cityName}, utilizamos exclusivamente materiais de primeira qualidade, adequados às condições climáticas locais. Trabalhamos com lonas acrílicas das principais marcas: Sansuy, Guarany e Solan.\n\nAs estruturas são fabricadas em alumínio naval anodizado ou aço galvanizado, conforme a necessidade. Para toldos retráteis, utilizamos motores alemães Somfy e sistemas de automação de última geração.\n\nTodos os materiais possuem proteção UV, tratamento anti-mofo e certificações de qualidade. Em ${cityName}, priorizamos materiais que resistam às condições climáticas específicas da região, garantindo maior durabilidade e melhor custo-benefício.`
+      },
+      {
+        question: `É possível financiar em ${cityName}?`,
+        answer: `Sim, oferecemos excelentes condições de financiamento para clientes de ${cityName}! Trabalhamos com parcelamento facilitado e condições especiais que se adequam a diferentes perfis.\n\nEm ${cityName}, oferecemos: parcelamento sem juros para pagamentos à vista, cartão de crédito em até 12x e financiamento próprio para projetos maiores. Desenvolvemos condições especiais para a cidade.\n\nNosso processo de aprovação é rápido e desburocratizado. Avaliamos cada caso individualmente, oferecendo a melhor condição possível. Consulte nossas condições especiais para moradores e empresários de ${cityName}.`
+      },
+      {
+        question: `Vocês fazem projetos personalizados em ${cityName}?`,
+        answer: `Absolutamente! Em ${cityName}, desenvolvemos projetos 100% personalizados, adequados às características de cada imóvel e necessidades específicas. Nossa equipe de designers trabalha com engenheiros para criar soluções únicas.\n\nConsideramos a arquitetura predominante em ${cityName}, aspectos paisagísticos e particularidades de cada projeto. Oferecemos cores exclusivas, formatos diferenciados e sistemas de automação avançados.\n\nCada projeto personalizado inclui renderização 3D para visualização do resultado final. Nossa experiência em ${cityName} nos permite criar soluções inovadoras que valorizam o imóvel e atendem perfeitamente às expectativas.`
+      },
+      {
+        question: `Como solicitar orçamento em ${cityName}?`,
+        answer: `Solicitar orçamento em ${cityName} é muito fácil! Entre em contato pelo WhatsApp (41) 99812-1324, telefone (41) 3564-6943 ou através do nosso site. Atendemos toda a cidade com agilidade.\n\nRealizamos visita técnica gratuita em toda ${cityName}, onde nosso especialista avalia o local, tira medidas e apresenta as melhores opções. O orçamento é elaborado na hora, sem compromisso.\n\nNosso atendimento em ${cityName} é diferenciado, com agendamento flexível e profissionais especializados. Oferecemos condições especiais de pagamento e orientação completa sobre o melhor tipo de toldo para seu projeto.`
+      },
+      {
+        question: `Qual a diferença dos toldos retráteis em ${cityName}?`,
+        answer: `Os toldos retráteis são uma excelente opção para ${cityName}, oferecendo controle total sobre proteção solar. Podem ser recolhidos quando não necessários, preservando a arquitetura original dos imóveis.\n\nEm ${cityName}, oferecemos modelos manuais e automatizados, com sensores de vento e chuva para proteção automática. São ideais para varandas, terraços e áreas que necessitam flexibilidade.\n\nInstalamos sistemas com controle remoto, timer programável e integração com aplicativos. A instalação é feita sem obras, preservando a estrutura original. Garantimos 2 anos para todo o sistema retrátil instalado em ${cityName}.`
+      },
+      {
+        question: `Qual o horário de atendimento em ${cityName}?`,
+        answer: `Nosso atendimento em ${cityName} funciona de segunda a sexta das 8h às 18h, e aos sábados das 8h às 12h. Para visitas técnicas e instalações, oferecemos horários estendidos conforme disponibilidade.\n\nO WhatsApp (41) 99812-1324 funciona 24h para emergências e agendamentos em ${cityName}. Nossa equipe de plantão atende situações urgentes mesmo fora do horário comercial.\n\nPara ${cityName}, oferecemos agendamento de visitas nos finais de semana mediante disponibilidade, especialmente para clientes que trabalham durante a semana. Nossa flexibilidade é um diferencial importante.`
+      },
+      {
+        question: `Por que escolher Sul Toldos em ${cityName}?`,
+        answer: `A Sul Toldos é a escolha certa para ${cityName} por diversos motivos! Temos mais de 15 anos de experiência na região, conhecendo profundamente as características da cidade e necessidades locais.\n\nNossos diferenciais em ${cityName}: equipe técnica certificada, materiais de primeira qualidade, garantia estendida, manutenção preventiva gratuita e atendimento 24h para emergências. Já conquistamos milhares de clientes satisfeitos.\n\nOfertamos o melhor custo-benefício da região, com orçamento gratuito, visita técnica sem compromisso e condições facilitadas de pagamento. Nossa reputação em ${cityName} é construída na base da confiança, qualidade e pontualidade.`
+      },
+      {
+        question: `Vocês atendem emergências em ${cityName}?`,
+        answer: `Sim, oferecemos atendimento de emergência 24h em ${cityName}! Entendemos que problemas com toldos podem ocorrer a qualquer momento, especialmente durante tempestades ou ventos fortes.\n\nNosso serviço de emergência em ${cityName} inclui reparos urgentes, remoção de toldos danificados e instalação de proteções temporárias. Mantemos equipe de plantão e estoque de peças para atendimento imediato.\n\nPara emergências em ${cityName}, entre em contato pelo WhatsApp (41) 99812-1324 ou telefone (41) 3564-6943. Nossa equipe avalia a situação e providencia solução rápida e segura, minimizando danos e transtornos.`
+      }
+    ];
+    
+    return baseFAQs;
   };
 
   const cityStructuredData = {
@@ -158,108 +253,19 @@ const CidadePage = () => {
             </div>
           </section>
 
-          {/* 4 Textos Personalizados */}
-          <section className="py-20">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-foreground mb-6">
-                  Por que escolher a Sul Toldos em <span className="text-primary">{cityName}</span>?
-                </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  {currentCity.specialty}. Conheça nossos diferenciais e especialidades na região.
-                </p>
-              </div>
+          {/* Service Cards */}
+          <ServiceCards 
+            location={cityName}
+            type="cidade"
+            cards={getServiceCards()}
+          />
 
-              <div className="grid md:grid-cols-2 gap-8 mb-16">
-                {/* Texto 1 - Experiência Local */}
-                <Card className="bg-card border-border">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-foreground flex items-center gap-3">
-                      🏠 Experiência em {cityName}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      Com ampla experiência em {cityName}, conhecemos as particularidades climáticas e arquitetônicas 
-                      da região. Nossos toldos são projetados especificamente para resistir às condições locais, 
-                      oferecendo máxima durabilidade e proteção contra sol e chuva.
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Já atendemos centenas de clientes em {cityName}, desde residências até grandes estabelecimentos 
-                      comerciais. Nossa equipe conhece os {currentCity.neighborhoods} e oferece soluções personalizadas 
-                      para cada necessidade.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                {/* Texto 2 - Serviços Especializados */}
-                <Card className="bg-card border-border">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-foreground flex items-center gap-3">
-                      ⚙️ Serviços Especializados
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      Em {cityName}, oferecemos uma linha completa de serviços especializados em toldos e coberturas. 
-                      Nossos principais serviços incluem instalação, manutenção, reparo e modernização de estruturas 
-                      de proteção solar.
-                    </p>
-                    <ul className="space-y-2">
-                      {currentCity.mainServices.map((service: string, index: number) => (
-                        <li key={index} className="flex items-center text-muted-foreground">
-                          <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                          {service}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                {/* Texto 3 - Qualidade e Garantia */}
-                <Card className="bg-card border-border">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-foreground flex items-center gap-3">
-                      ✅ Qualidade Garantida
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      Trabalhamos exclusivamente com materiais de primeira qualidade em {cityName}. Nossos toldos 
-                      utilizam lonas acrílicas de marcas renomadas como Sansuy e Guarany, com proteção UV e 
-                      tratamento impermeabilizante.
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Oferecemos garantia de até 5 anos em estruturas metálicas e 2 anos em toldos retráteis. 
-                      Nossa equipe técnica realiza manutenção preventiva gratuita no primeiro ano, garantindo 
-                      a longevidade do seu investimento.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                {/* Texto 4 - Atendimento Diferenciado */}
-                <Card className="bg-card border-border">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-foreground flex items-center gap-3">
-                      🚀 Atendimento Diferenciado
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      Nosso atendimento em {cityName} é personalizado e diferenciado. Realizamos visita técnica 
-                      gratuita, elaboramos projeto detalhado e acompanhamos toda a instalação com equipe própria 
-                      e certificada.
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Trabalhamos com prazos flexíveis e respeitamos o orçamento do cliente. Oferecemos parcelamento 
-                      facilitado e condições especiais para projetos de grande porte. Nossa prioridade é a satisfação 
-                      total do cliente em {cityName}.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </section>
+          {/* FAQ Section */}
+          <LocationFAQ 
+            location={cityName}
+            type="cidade"
+            faqs={getCityFAQs()}
+          />
 
           {/* Vídeo YouTube */}
           <YouTubeVideo 
