@@ -257,10 +257,10 @@ const EnhancedSEO = ({
       {/* Critical CSS for above-the-fold content */}
       <style type="text/css">{`
         :root {
-          --primary: 142 86% 28%;
-          --primary-foreground: 355 100% 97%;
-          --background: 0 0% 100%;
-          --foreground: 240 10% 3.9%;
+          --primary: 0 84% 60%;
+          --primary-foreground: 0 0% 100%;
+          --background: 0 0% 5%;
+          --foreground: 0 0% 98%;
         }
         body { 
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
