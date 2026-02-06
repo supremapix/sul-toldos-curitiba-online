@@ -1,5 +1,6 @@
 import { Heart, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoSulToldos from "@/assets/logo-sul-toldos.png";
 
 const Footer = () => {
   const cities = [
@@ -35,26 +36,33 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-12">
-        {/* Top Section - Contact Info */}
+        {/* Top Section */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-          {/* Company */}
+          {/* Company with Logo */}
           <div>
-            <h3 className="text-3xl font-bold text-primary mb-4">Sul Toldos</h3>
-            <p className="text-lg text-muted-foreground mb-6">
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src={logoSulToldos}
+                alt="Sul Toldos Logo"
+                className="h-16 w-auto"
+              />
+              <h3 className="text-2xl font-bold text-primary">Sul Toldos</h3>
+            </div>
+            <p className="text-base text-muted-foreground mb-6">
               Especialista em toldos e coberturas em Curitiba e região metropolitana. Mais de 15 anos de experiência.
             </p>
-            <div className="space-y-3 text-lg">
+            <div className="space-y-3 text-base">
               <a href="tel:+554135646943" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="w-5 h-5 text-primary" /> (41) 3564-6943
+                <Phone className="w-5 h-5 text-primary flex-shrink-0" /> (41) 3564-6943
               </a>
               <a href="https://wa.me/5541998121324" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                <MessageCircle className="w-5 h-5 text-primary" /> (41) 99812-1324
+                <MessageCircle className="w-5 h-5 text-primary flex-shrink-0" /> (41) 99812-1324
               </a>
               <a href="mailto:contato@sultoldos.com.br" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                <Mail className="w-5 h-5 text-primary" /> contato@sultoldos.com.br
+                <Mail className="w-5 h-5 text-primary flex-shrink-0" /> contato@sultoldos.com.br
               </a>
               <a href="https://www.google.com/maps/search/Sul+Toldos+Curitiba" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                <MapPin className="w-5 h-5 text-primary" /> Curitiba - PR
+                <MapPin className="w-5 h-5 text-primary flex-shrink-0" /> Curitiba - PR
               </a>
             </div>
           </div>
