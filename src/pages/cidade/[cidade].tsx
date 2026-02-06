@@ -6,158 +6,164 @@ import YouTubeVideo from "@/components/YouTubeVideo";
 import FloatingButtons from "@/components/FloatingButtons";
 import ServiceCards from "@/components/ServiceCards";
 import LocationFAQ from "@/components/LocationFAQ";
+import InfiniteGallery from "@/components/InfiniteGallery";
 import { Button } from "@/components/ui/button";
 
-// Imagens
-import curitibaImage from "@/assets/cidade-curitiba.jpg";
-import pinhaisImage from "@/assets/cidade-pinhais.jpg";
-import saoJoseImage from "@/assets/cidade-sao-jose-dos-pinhais.jpg";
-import colomboImage from "@/assets/cidade-colombo.jpg";
+import galeriaPolicarbonatoEntrada from "@/assets/galeria-policarbonato-entrada.jpg";
+import galeriaToldoComercial from "@/assets/galeria-toldo-comercial-supermercado.jpg";
+import galeriaToldoLoja from "@/assets/galeria-toldo-loja.jpg";
+import galeriaToldoGaragem from "@/assets/galeria-toldo-garagem.jpg";
 
 const CidadePage = () => {
   const { cidade } = useParams();
   
-  const cityName = cidade?.charAt(0).toUpperCase() + cidade?.slice(1).replace(/-/g, ' ') || "";
+  const cityName = cidade?.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ') || "";
   const citySlug = cidade || "";
 
-  // Configurações específicas por cidade
   const cityData: { [key: string]: any } = {
     curitiba: {
-      image: curitibaImage,
+      image: galeriaToldoLoja,
       population: "1.9 milhão",
       neighborhoods: "75 bairros",
       specialty: "Capital paranaense com forte demanda por toldos residenciais e comerciais",
-      mainServices: ["Toldos residenciais premium", "Coberturas comerciais", "Toldos retráteis automatizados", "Policarbonato para condomínios"]
+      mainServices: ["Toldos residenciais premium", "Coberturas comerciais", "Toldos retráteis automatizados", "Policarbonato para condomínios"],
+      geo: { lat: "-25.4284", lng: "-49.2733" }
     },
     pinhais: {
-      image: pinhaisImage, 
+      image: galeriaToldoGaragem,
       population: "130 mil",
       neighborhoods: "região metropolitana",
       specialty: "Cidade em crescimento com muitas construções comerciais",
-      mainServices: ["Toldos para comércios", "Coberturas industriais", "Toldos em lona", "Estruturas metálicas"]
+      mainServices: ["Toldos para comércios", "Coberturas industriais", "Toldos em lona", "Estruturas metálicas"],
+      geo: { lat: "-25.4426", lng: "-49.1925" }
     },
     "sao-jose-dos-pinhais": {
-      image: saoJoseImage,
-      population: "329 mil", 
+      image: galeriaToldoComercial,
+      population: "329 mil",
       neighborhoods: "diversos bairros",
       specialty: "Centro industrial importante da região metropolitana",
-      mainServices: ["Toldos industriais", "Coberturas para galpões", "Toldos retráteis", "Policarbonato translúcido"]
+      mainServices: ["Toldos industriais", "Coberturas para galpões", "Toldos retráteis", "Policarbonato translúcido"],
+      geo: { lat: "-25.5304", lng: "-49.2084" }
     },
     colombo: {
-      image: colomboImage,
+      image: galeriaPolicarbonatoEntrada,
       population: "240 mil",
       neighborhoods: "região metropolitana",
       specialty: "Cidade residencial com muitas casas e sobrados",
-      mainServices: ["Toldos residenciais", "Coberturas para garagens", "Toldos para áreas de lazer", "Estruturas em alumínio"]
+      mainServices: ["Toldos residenciais", "Coberturas para garagens", "Toldos para áreas de lazer", "Estruturas em alumínio"],
+      geo: { lat: "-25.2917", lng: "-49.2242" }
     }
   };
 
-  const currentCity = cityData[citySlug] || cityData.curitiba;
+  const defaultCity = {
+    image: galeriaToldoLoja,
+    population: "região metropolitana",
+    neighborhoods: "diversos bairros",
+    specialty: "Cidade da região metropolitana de Curitiba com demanda crescente por toldos",
+    mainServices: ["Toldos residenciais", "Coberturas comerciais", "Policarbonato", "Toldos retráteis"],
+    geo: { lat: "-25.4284", lng: "-49.2733" }
+  };
+
+  const currentCity = cityData[citySlug] || defaultCity;
 
   const handleWhatsApp = () => {
     const message = `Olá, gostaria de solicitar um orçamento para toldos em ${cityName}!`;
     window.open(`https://wa.me/5541998121324?text=${encodeURIComponent(message)}`, "_blank");
   };
 
-  // Conteúdo específico para cada cidade
-  const getServiceCards = () => {
-    return [
-      {
-        title: `Experiência em ${cityName}`,
-        icon: "🏠",
-        content: `Com ampla experiência em ${cityName}, conhecemos as particularidades climáticas e arquitetônicas da região. Nossos toldos são projetados especificamente para resistir às condições locais, oferecendo máxima durabilidade e proteção contra sol e chuva.\n\nJá atendemos centenas de clientes em ${cityName}, desde residências até grandes estabelecimentos comerciais. Nossa equipe conhece os ${currentCity.neighborhoods} e oferece soluções personalizadas para cada necessidade. ${currentCity.specialty}, o que nos permite adaptar nossos serviços perfeitamente às demandas locais.\n\nNossa experiência inclui projetos em diferentes tipos de imóveis, desde casas residenciais até complexos industriais, sempre respeitando as normas municipais e características urbanísticas de ${cityName}.`
-      },
-      {
-        title: "Serviços Especializados",
-        icon: "⚙️",
-        content: `Em ${cityName}, oferecemos uma linha completa de serviços especializados em toldos e coberturas. Nossos principais serviços incluem instalação, manutenção, reparo e modernização de estruturas de proteção solar.\n\nPrincipais serviços oferecidos:\n${currentCity.mainServices.map((service: string) => `• ${service}`).join('\n')}\n\nCada serviço é executado por profissionais certificados, utilizando equipamentos de última geração e materiais de primeira qualidade. Oferecemos soluções desde projetos residenciais simples até complexas instalações comerciais e industriais em ${cityName}.`
-      },
-      {
-        title: "Qualidade Garantida",
-        icon: "✅",
-        content: `Trabalhamos exclusivamente com materiais de primeira qualidade em ${cityName}. Nossos toldos utilizam lonas acrílicas de marcas renomadas como Sansuy e Guarany, com proteção UV e tratamento impermeabilizante.\n\nOferecemos garantia de até 5 anos em estruturas metálicas e 2 anos em toldos retráteis. Nossa equipe técnica realiza manutenção preventiva gratuita no primeiro ano, garantindo a longevidade do seu investimento.\n\nTodos os materiais são testados e aprovados para as condições climáticas de ${cityName}, com certificações de qualidade e resistência. Utilizamos apenas fornecedores homologados e materiais com procedência garantida.`
-      },
-      {
-        title: "Atendimento Diferenciado",
-        icon: "🚀",
-        content: `Nosso atendimento em ${cityName} é personalizado e diferenciado. Realizamos visita técnica gratuita, elaboramos projeto detalhado e acompanhamos toda a instalação com equipe própria e certificada.\n\nTrabalhamos com prazos flexíveis e respeitamos o orçamento do cliente. Oferecemos parcelamento facilitado e condições especiais para projetos de grande porte. Nossa prioridade é a satisfação total do cliente em ${cityName}.\n\nMantemos canal de comunicação 24h através do WhatsApp para emergências e dúvidas. Nossa equipe de suporte pós-venda está sempre disponível para garantir o perfeito funcionamento dos equipamentos instalados.`
-      }
-    ];
-  };
+  const getServiceCards = () => [
+    {
+      title: `Toldos Residenciais em ${cityName}`,
+      icon: "🏠",
+      content: `A Sul Toldos é referência em toldos residenciais em ${cityName}. Instalamos toldos fixos em lona a partir de R$ 120/m², toldos retráteis a partir de R$ 250/m² e coberturas em policarbonato a partir de R$ 180/m².\n\nNossos projetos residenciais incluem proteção para garagens, varandas, sacadas, churrasqueiras e áreas de lazer. Cada projeto é dimensionado considerando a arquitetura local e as condições climáticas específicas de ${cityName}.\n\nAtendemos todos os bairros de ${cityName} com visita técnica gratuita, orçamento sem compromisso e garantia de até 5 anos em estruturas metálicas.`
+    },
+    {
+      title: `Toldos Comerciais em ${cityName}`,
+      icon: "🏢",
+      content: `Somos especialistas em toldos comerciais em ${cityName}. Atendemos padarias, farmácias, restaurantes, pet shops, salões de beleza, oficinas mecânicas e todo tipo de comércio.\n\nToldos de fachada comercial partem de R$ 150/m², incluindo estrutura personalizada e lona com logomarca. Coberturas para estacionamentos a partir de R$ 140/m².\n\nEm ${cityName}, já realizamos centenas de instalações comerciais. Cada projeto é desenvolvido para valorizar o estabelecimento e atrair mais clientes, transformando o toldo em ferramenta de marketing.`
+    },
+    {
+      title: `Preços e Condições em ${cityName}`,
+      icon: "💰",
+      content: `Os melhores preços de toldos em ${cityName}! Trabalhamos com tabela competitiva e condições facilitadas:\n\n• Toldo fixo em lona: a partir de R$ 120/m²\n• Toldo retrátil manual: a partir de R$ 250/m²\n• Toldo retrátil motorizado: a partir de R$ 350/m²\n• Policarbonato alveolar: a partir de R$ 180/m²\n• Cortina rolo PVC: a partir de R$ 220/m²\n\nParcelamos em até 12x no cartão. Desconto de 10% à vista. Financiamento próprio para projetos acima de R$ 5.000.`
+    },
+    {
+      title: `Qualidade e Garantia em ${cityName}`,
+      icon: "⭐",
+      content: `Na Sul Toldos, cada instalação em ${cityName} é feita com materiais de primeira qualidade: lonas acrílicas Sansuy e Guarany, alumínio naval, motores Somfy (alemães) e policarbonato com certificação.\n\nNossa garantia inclui: até 5 anos para estruturas, 2 anos para retráteis com motor, 10 anos para policarbonato e manutenção preventiva gratuita no primeiro ano.\n\nMais de 15 anos atendendo ${cityName} com equipe técnica certificada, pontualidade na entrega e suporte pós-venda 24h pelo WhatsApp.`
+    }
+  ];
 
-  // FAQs específicas para cada cidade
-  const getCityFAQs = () => {
-    const baseFAQs = [
-      {
-        question: `Vocês atendem toda a cidade de ${cityName}?`,
-        answer: `Sim, atendemos toda ${cityName} e região metropolitana! Nossa cobertura é completa, incluindo todos os ${currentCity.neighborhoods} da cidade. Temos logística otimizada que permite atendimento rápido e eficiente em qualquer localização.\n\nEm ${cityName}, com população de ${currentCity.population} habitantes, mantemos equipes dedicadas que conhecem bem a geografia local, facilitando agendamentos e entregas. Realizamos visitas técnicas gratuitas em toda a extensão da cidade.\n\nNossa experiência em ${cityName} nos permite atender desde pequenos projetos residenciais até grandes instalações comerciais e industriais. Oferecemos o mesmo padrão de qualidade e atendimento para todos os clientes, independente da localização na cidade.`
-      },
-      {
-        question: `Qual a especialidade da Sul Toldos em ${cityName}?`,
-        answer: `Nossa especialidade em ${cityName} é ${currentCity.specialty.toLowerCase()}. Desenvolvemos soluções específicas para as características únicas da cidade, considerando aspectos climáticos, arquitetônicos e urbanísticos locais.\n\nEm ${cityName}, oferecemos:\n${currentCity.mainServices.map((service: string) => `• ${service}`).join('\n')}\n\nNossa experiência na cidade nos permite identificar as melhores soluções para cada tipo de projeto, sempre considerando as particularidades locais. Mantemos estoque adequado e equipes especializadas para atender a demanda específica de ${cityName}.`
-      },
-      {
-        question: `Quanto custa instalar toldos em ${cityName}?`,
-        answer: `Os preços de toldos em ${cityName} variam conforme o tipo de projeto, materiais utilizados e complexidade da instalação. Consideramos as características específicas da cidade para oferecer o melhor custo-benefício.\n\nEm ${cityName}, trabalhamos com diferentes faixas de preço para atender todos os perfis de clientes. Oferecemos desde soluções econômicas até projetos premium, sempre mantendo o padrão de qualidade Sul Toldos.\n\nRealizar orçamento gratuito com visita técnica, onde analisamos suas necessidades específicas e apresentamos as melhores opções. Oferecemos condições facilitadas de pagamento e parcelamento sem juros. Entre em contato pelo WhatsApp (41) 99812-1324 para receber orçamento personalizado para ${cityName}.`
-      },
-      {
-        question: `Qual o prazo de instalação em ${cityName}?`,
-        answer: `Em ${cityName}, nossos prazos são otimizados devido à nossa logística local eficiente. Para toldos residenciais padrão, o prazo médio é de 7 a 10 dias úteis após aprovação do projeto.\n\nPara projetos comerciais ou toldos retráteis, comuns na cidade, o prazo varia de 10 a 15 dias úteis. Em casos de urgência, oferecemos serviço expresso com instalação em até 5 dias úteis.\n\nTodos os prazos são informados durante o orçamento e cumpridos rigorosamente. Nossa proximidade com ${cityName} permite flexibilidade nos agendamentos e agilidade na execução dos projetos.`
-      },
-      {
-        question: `Que garantias vocês oferecem em ${cityName}?`,
-        answer: `Em ${cityName}, oferecemos garantia diferenciada e completa. Nossa garantia inclui até 5 anos para estruturas metálicas e 2 anos para toldos retráteis, cobrindo defeitos de fabricação e instalação.\n\nPara clientes de ${cityName}, oferecemos manutenção preventiva gratuita no primeiro ano, aproveitando nossa proximidade para garantir o perfeito funcionamento dos equipamentos.\n\nNossa garantia cobre materiais, mão de obra e funcionamento de sistemas automatizados. Mantemos estoque de peças de reposição e equipe técnica disponível 24h para emergências. A garantia é válida para toda ${cityName} e região metropolitana.`
-      },
-      {
-        question: `Vocês trabalham com projetos comerciais em ${cityName}?`,
-        answer: `Sim, somos especialistas em projetos comerciais em ${cityName}! Atendemos desde pequenos estabelecimentos até grandes complexos empresariais, sempre adequando nossas soluções às necessidades específicas de cada negócio.\n\nEm ${cityName}, já executamos projetos para diversos segmentos: restaurantes, lojas, concessionárias, indústrias e condomínios. Nossos toldos comerciais incluem opções para proteção de fachadas, áreas de atendimento e estacionamentos.\n\nOferecemos projetos personalizados que podem incluir impressão de logotipos e cores corporativas, transformando o toldo em ferramenta de marketing. Trabalhamos respeitando todas as normas municipais de ${cityName} e prazos comerciais rigorosos.`
-      },
-      {
-        question: `Como funciona a manutenção em ${cityName}?`,
-        answer: `Em ${cityName}, oferecemos serviço completo de manutenção preventiva e corretiva. Nossa equipe local realiza inspeções regulares, limpeza profissional e ajustes necessários para garantir perfeito funcionamento.\n\nA manutenção preventiva em ${cityName} inclui verificação de estruturas, lubrificação de mecanismos, limpeza especializada e inspeção de pontos de fixação. Desenvolvemos cronograma adequado às características climáticas da cidade.\n\nOferecemos serviço de emergência 24h para reparos urgentes, com atendimento rápido em toda ${cityName}. Todos os serviços são realizados por técnicos certificados, usando equipamentos de segurança e produtos específicos para cada tipo de material.`
-      },
-      {
-        question: `Quais materiais são usados em ${cityName}?`,
-        answer: `Em ${cityName}, utilizamos exclusivamente materiais de primeira qualidade, adequados às condições climáticas locais. Trabalhamos com lonas acrílicas das principais marcas: Sansuy, Guarany e Solan.\n\nAs estruturas são fabricadas em alumínio naval anodizado ou aço galvanizado, conforme a necessidade. Para toldos retráteis, utilizamos motores alemães Somfy e sistemas de automação de última geração.\n\nTodos os materiais possuem proteção UV, tratamento anti-mofo e certificações de qualidade. Em ${cityName}, priorizamos materiais que resistam às condições climáticas específicas da região, garantindo maior durabilidade e melhor custo-benefício.`
-      },
-      {
-        question: `É possível financiar em ${cityName}?`,
-        answer: `Sim, oferecemos excelentes condições de financiamento para clientes de ${cityName}! Trabalhamos com parcelamento facilitado e condições especiais que se adequam a diferentes perfis.\n\nEm ${cityName}, oferecemos: parcelamento sem juros para pagamentos à vista, cartão de crédito em até 12x e financiamento próprio para projetos maiores. Desenvolvemos condições especiais para a cidade.\n\nNosso processo de aprovação é rápido e desburocratizado. Avaliamos cada caso individualmente, oferecendo a melhor condição possível. Consulte nossas condições especiais para moradores e empresários de ${cityName}.`
-      },
-      {
-        question: `Vocês fazem projetos personalizados em ${cityName}?`,
-        answer: `Absolutamente! Em ${cityName}, desenvolvemos projetos 100% personalizados, adequados às características de cada imóvel e necessidades específicas. Nossa equipe de designers trabalha com engenheiros para criar soluções únicas.\n\nConsideramos a arquitetura predominante em ${cityName}, aspectos paisagísticos e particularidades de cada projeto. Oferecemos cores exclusivas, formatos diferenciados e sistemas de automação avançados.\n\nCada projeto personalizado inclui renderização 3D para visualização do resultado final. Nossa experiência em ${cityName} nos permite criar soluções inovadoras que valorizam o imóvel e atendem perfeitamente às expectativas.`
-      },
-      {
-        question: `Como solicitar orçamento em ${cityName}?`,
-        answer: `Solicitar orçamento em ${cityName} é muito fácil! Entre em contato pelo WhatsApp (41) 99812-1324, telefone (41) 3564-6943 ou através do nosso site. Atendemos toda a cidade com agilidade.\n\nRealizamos visita técnica gratuita em toda ${cityName}, onde nosso especialista avalia o local, tira medidas e apresenta as melhores opções. O orçamento é elaborado na hora, sem compromisso.\n\nNosso atendimento em ${cityName} é diferenciado, com agendamento flexível e profissionais especializados. Oferecemos condições especiais de pagamento e orientação completa sobre o melhor tipo de toldo para seu projeto.`
-      },
-      {
-        question: `Qual a diferença dos toldos retráteis em ${cityName}?`,
-        answer: `Os toldos retráteis são uma excelente opção para ${cityName}, oferecendo controle total sobre proteção solar. Podem ser recolhidos quando não necessários, preservando a arquitetura original dos imóveis.\n\nEm ${cityName}, oferecemos modelos manuais e automatizados, com sensores de vento e chuva para proteção automática. São ideais para varandas, terraços e áreas que necessitam flexibilidade.\n\nInstalamos sistemas com controle remoto, timer programável e integração com aplicativos. A instalação é feita sem obras, preservando a estrutura original. Garantimos 2 anos para todo o sistema retrátil instalado em ${cityName}.`
-      },
-      {
-        question: `Qual o horário de atendimento em ${cityName}?`,
-        answer: `Nosso atendimento em ${cityName} funciona de segunda a sexta das 8h às 18h, e aos sábados das 8h às 12h. Para visitas técnicas e instalações, oferecemos horários estendidos conforme disponibilidade.\n\nO WhatsApp (41) 99812-1324 funciona 24h para emergências e agendamentos em ${cityName}. Nossa equipe de plantão atende situações urgentes mesmo fora do horário comercial.\n\nPara ${cityName}, oferecemos agendamento de visitas nos finais de semana mediante disponibilidade, especialmente para clientes que trabalham durante a semana. Nossa flexibilidade é um diferencial importante.`
-      },
-      {
-        question: `Por que escolher Sul Toldos em ${cityName}?`,
-        answer: `A Sul Toldos é a escolha certa para ${cityName} por diversos motivos! Temos mais de 15 anos de experiência na região, conhecendo profundamente as características da cidade e necessidades locais.\n\nNossos diferenciais em ${cityName}: equipe técnica certificada, materiais de primeira qualidade, garantia estendida, manutenção preventiva gratuita e atendimento 24h para emergências. Já conquistamos milhares de clientes satisfeitos.\n\nOfertamos o melhor custo-benefício da região, com orçamento gratuito, visita técnica sem compromisso e condições facilitadas de pagamento. Nossa reputação em ${cityName} é construída na base da confiança, qualidade e pontualidade.`
-      },
-      {
-        question: `Vocês atendem emergências em ${cityName}?`,
-        answer: `Sim, oferecemos atendimento de emergência 24h em ${cityName}! Entendemos que problemas com toldos podem ocorrer a qualquer momento, especialmente durante tempestades ou ventos fortes.\n\nNosso serviço de emergência em ${cityName} inclui reparos urgentes, remoção de toldos danificados e instalação de proteções temporárias. Mantemos equipe de plantão e estoque de peças para atendimento imediato.\n\nPara emergências em ${cityName}, entre em contato pelo WhatsApp (41) 99812-1324 ou telefone (41) 3564-6943. Nossa equipe avalia a situação e providencia solução rápida e segura, minimizando danos e transtornos.`
-      }
-    ];
-    
-    return baseFAQs;
-  };
+  const getCityFAQs = () => [
+    {
+      question: `Quanto custa um toldo por m² em ${cityName}?`,
+      answer: `Os preços de toldos em ${cityName} variam conforme o tipo: toldo fixo em lona a partir de R$ 120/m², toldo retrátil manual a partir de R$ 250/m², retrátil motorizado a partir de R$ 350/m², policarbonato alveolar a partir de R$ 180/m², e cortina rolo transparente a partir de R$ 220/m². Fazemos orçamento gratuito com visita técnica em toda ${cityName}. O preço final depende do tamanho, material escolhido e complexidade da instalação. Entre em contato pelo WhatsApp (41) 99812-1324 para valores exatos para seu projeto em ${cityName}.`
+    },
+    {
+      question: `Vocês atendem toda a cidade de ${cityName}?`,
+      answer: `Sim, atendemos toda ${cityName} e região! Nossa cobertura é completa, incluindo todos os ${currentCity.neighborhoods} da cidade. Temos logística otimizada com equipes dedicadas que conhecem a geografia local, facilitando agendamentos e entregas. Realizamos visitas técnicas gratuitas em toda a extensão de ${cityName}, desde pequenos projetos residenciais até grandes instalações comerciais e industriais. Atendimento de segunda a sexta das 8h às 18h, sábados das 8h às 12h, e emergências 24h pelo WhatsApp.`
+    },
+    {
+      question: `Qual o melhor tipo de toldo para residência em ${cityName}?`,
+      answer: `Para residências em ${cityName}, recomendamos: toldo fixo em lona acrílica (R$ 120-180/m²) para janelas e portas, excelente custo-benefício. Toldo retrátil (R$ 250-350/m²) para varandas e sacadas, oferecendo flexibilidade. Cobertura em policarbonato (R$ 180-280/m²) para garagens e áreas de lazer, com durabilidade superior. Cortina rolo (R$ 220-380/m²) para sacadas gourmet com proteção contra vento e chuva. Cada tipo tem vantagens específicas e nossa equipe pode orientar a melhor escolha durante a visita técnica gratuita.`
+    },
+    {
+      question: `Qual o prazo de instalação de toldos em ${cityName}?`,
+      answer: `Em ${cityName}, nossos prazos são otimizados: toldos fixos simples de 5 a 7 dias úteis após aprovação. Toldos retráteis de 7 a 12 dias úteis. Coberturas em policarbonato de 10 a 15 dias úteis. Projetos comerciais grandes de 15 a 30 dias úteis. Em casos urgentes, oferecemos serviço expresso com prazo reduzido. Todos os prazos são informados no momento do orçamento e cumpridos rigorosamente. Nossa proximidade com ${cityName} permite flexibilidade nos agendamentos.`
+    },
+    {
+      question: `Vocês fazem toldos para comércios em ${cityName}?`,
+      answer: `Sim! Somos especialistas em toldos comerciais em ${cityName}. Atendemos padarias (R$ 800-1.500/m linear em capota), farmácias, restaurantes (toldo retrátil a partir de R$ 3.500), pet shops, salões de beleza, oficinas mecânicas (R$ 140-250/m²), supermercados, concessionárias e todo tipo de estabelecimento. Toldos comerciais de fachada com logomarca impressa partem de R$ 150/m². Projetos incluem personalização completa com cores da marca. Coberturas para estacionamento a partir de R$ 140/m².`
+    },
+    {
+      question: `Qual a garantia dos toldos em ${cityName}?`,
+      answer: `Oferecemos a garantia mais completa da região para clientes de ${cityName}: até 5 anos para estruturas metálicas (alumínio e metalon), 2 anos para toldos retráteis incluindo motor e automação, 10 anos para policarbonato contra amarelamento, e 1 ano para lonas e tecidos. Manutenção preventiva gratuita no primeiro ano para todos os clientes. A garantia cobre defeitos de fabricação, instalação e materiais. Equipe técnica disponível 24h para atendimento de garantia. Estoque de peças de reposição para atendimento rápido.`
+    },
+    {
+      question: `É possível financiar toldos em ${cityName}?`,
+      answer: `Sim! Oferecemos excelentes condições para clientes de ${cityName}: parcelamento em até 12x no cartão de crédito sem juros, desconto de 10% para pagamento à vista (PIX ou transferência), boleto bancário em até 6x, e financiamento próprio para projetos acima de R$ 5.000. Processo de aprovação rápido e desburocratizado. Para projetos comerciais de grande porte, condições especiais com prazos estendidos. Consulte as condições específicas para seu projeto em ${cityName}.`
+    },
+    {
+      question: `Qual o preço de cobertura para garagem em ${cityName}?`,
+      answer: `Cobertura para garagem em ${cityName}: para 1 carro (aprox. 15m²) de R$ 1.800 a R$ 4.500. Para 2 carros (aprox. 30m²) de R$ 3.500 a R$ 9.000. Em policarbonato alveolar, permite passagem de luz natural. Em lona tensionada, mais econômico. Estrutura em metalon galvanizado ou alumínio. Inclui projeto, fabricação e instalação completa. Garantia de até 5 anos na estrutura. Visite nossa galeria para ver exemplos de projetos executados em ${cityName} e região.`
+    },
+    {
+      question: `Vocês instalam toldos retráteis em ${cityName}?`,
+      answer: `Sim! Toldos retráteis são uma das nossas especialidades em ${cityName}. Manual a partir de R$ 250/m², motorizado a partir de R$ 350/m². Utilizamos motores alemães Somfy com garantia de 2 anos. Opcionais: sensor de vento (R$ 300-500), sensor de chuva (R$ 200-400) e controle por aplicativo. Instalação sem obras, preservando a estrutura original do imóvel. Ideais para varandas, terraços e áreas externas que necessitam flexibilidade de uso.`
+    },
+    {
+      question: `Vocês fazem manutenção de toldos em ${cityName}?`,
+      answer: `Sim! Serviço completo de manutenção em ${cityName}: troca de lona (R$ 80-150/m²), limpeza profissional (R$ 15-25/m²), lubrificação de mecanismos (R$ 150-300 por toldo), reparo estrutural (sob consulta). Atendemos toldos de qualquer fabricante. Manutenção preventiva semestral recomendada para prolongar vida útil em até 40%. Atendimento emergencial 24h para reparos urgentes pelo WhatsApp (41) 99812-1324.`
+    },
+    {
+      question: `Qual a diferença entre policarbonato e lona em ${cityName}?`,
+      answer: `Policarbonato: mais resistente a impacto, permite passagem de luz natural, durabilidade de 15-20 anos, ideal para coberturas de garagem e área de lazer, preço de R$ 180-300/m². Lona: melhor proteção solar total, mais opções de cores e estampas, durabilidade de 5-12 anos dependendo do tipo, ideal para fachadas e toldos retráteis, preço de R$ 120-200/m². Em ${cityName}, ambos os materiais performam bem com as condições climáticas locais.`
+    },
+    {
+      question: `Vocês fazem projetos personalizados em ${cityName}?`,
+      answer: `Sim! Desenvolvemos projetos 100% personalizados para ${cityName}. Nossa equipe cria soluções exclusivas considerando a arquitetura do imóvel, necessidades do cliente e orçamento disponível. Oferecemos renderização 3D gratuita para projetos acima de R$ 3.000. Formatos especiais (curvos, em L, triangulares) disponíveis com acréscimo de 15-25%. Cores exclusivas, acabamentos premium e sistemas de automação avançados. Experiência em projetos residenciais e comerciais de todos os portes.`
+    },
+    {
+      question: `Qual o preço do toldo cortina vertical em ${cityName}?`,
+      answer: `Toldo cortina vertical com guias laterais em ${cityName}: em lona blackout de R$ 220 a R$ 320/m², com visor transparente PVC de R$ 280 a R$ 380/m². Sistema de enrolamento manual ou motorizado. Ideal para fechamento de varandas, sacadas e áreas externas de restaurantes. Instalação rápida sem obras. Disponível em diversas cores para harmonizar com a fachada. Garantia de 2 anos com manutenção gratuita no primeiro ano.`
+    },
+    {
+      question: `Como agendar visita técnica gratuita em ${cityName}?`,
+      answer: `Agendar visita técnica em ${cityName} é simples: WhatsApp (41) 99812-1324, telefone (41) 3564-6943 ou formulário do site. Disponibilidade de segunda a sábado, com horários flexíveis. Nosso técnico avalia o local, tira medidas, analisa a estrutura e apresenta opções. Orçamento na hora, sem compromisso. A visita dura 30-45 minutos. Atendemos todos os bairros e regiões de ${cityName} com a mesma qualidade e agilidade.`
+    },
+    {
+      question: `Por que escolher a Sul Toldos em ${cityName}?`,
+      answer: `Mais de 15 anos atendendo ${cityName} com excelência! Nossos diferenciais: preços competitivos a partir de R$ 120/m², materiais de primeira qualidade (Sansuy, Guarany, Somfy), equipe técnica certificada, garantia estendida de até 5 anos, manutenção preventiva gratuita, atendimento 24h para emergências, orçamento gratuito com visita técnica e parcelamento em até 12x. Mais de 2.000 clientes satisfeitos na região. Nota 4.9/5 com 150+ avaliações. Escolha quem é referência em toldos em ${cityName}!`
+    }
+  ];
 
   const cityStructuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `Sul Toldos - Toldos em ${cityName}`,
-    "description": `Especialista em toldos, coberturas e policarbonato em ${cityName}. Orçamento grátis e visita técnica sem compromisso.`,
+    "description": `Toldos em ${cityName} a partir de R$ 120/m². Especialista em toldos residenciais, comerciais, policarbonato e coberturas. Orçamento grátis!`,
     "url": `https://sultoldos.app.br/cidade/${citySlug}`,
     "telephone": "+554135646943",
     "address": {
@@ -166,23 +172,31 @@ const CidadePage = () => {
       "addressRegion": "PR",
       "addressCountry": "BR"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": currentCity.geo?.lat || "-25.4284",
+      "longitude": currentCity.geo?.lng || "-49.2733"
+    },
+    "priceRange": "$$",
+    "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-12:00"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "150"
+    },
     "serviceArea": {
       "@type": "Place",
       "name": cityName
-    },
-    "services": currentCity.mainServices,
-    "priceRange": "$$",
-    "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-12:00"]
+    }
   };
 
   return (
     <>
       <EnhancedSEO
-        title={`Toldos em ${cityName} - Sul Toldos | Orçamento Grátis | Especialistas em Coberturas`}
-        description={`Toldos em ${cityName} com a Sul Toldos. Especialistas em toldos residenciais, comerciais, policarbonato e coberturas. Orçamento grátis! Visita técnica sem compromisso. Atendemos ${cityName} e região. ☎️ (41) 3564-6943`}
-        keywords={`toldos ${cityName.toLowerCase()}, toldo ${cityName.toLowerCase()}, policarbonato ${cityName.toLowerCase()}, cobertura ${cityName.toLowerCase()}, toldos retráteis ${cityName.toLowerCase()}, sul toldos, toldos em lona, coberturas residenciais, toldos comerciais, orçamento grátis, toldo para área externa, proteção solar, toldos automatizados`}
+        title={`Toldos em ${cityName} | Preços a partir R$ 120/m² | Sul Toldos`}
+        description={`Toldos em ${cityName} a partir de R$ 120/m². Policarbonato, retráteis, comerciais e residenciais. Orçamento grátis! ☎️ (41) 3564-6943. Garantia de até 5 anos. Parcelamos em 12x.`}
+        keywords={`toldos ${cityName.toLowerCase()}, toldo ${cityName.toLowerCase()} preço, policarbonato ${cityName.toLowerCase()}, cobertura ${cityName.toLowerCase()}, toldo retrátil ${cityName.toLowerCase()}, preço toldo m2 ${cityName.toLowerCase()}, toldo residencial, toldo comercial, cortina rolo, cobertura garagem`}
         canonical={`https://sultoldos.app.br/cidade/${citySlug}`}
-        ogImage={currentCity.image}
         structuredData={cityStructuredData}
         location={cityName}
         service={`toldos e coberturas em ${cityName}`}
@@ -194,48 +208,51 @@ const CidadePage = () => {
         
         <main>
           {/* Hero Section */}
-          <section className="py-20 bg-gradient-to-br from-primary/10 to-background">
+          <section className="py-16 md:py-20 bg-gradient-to-br from-primary/10 to-background">
             <div className="container mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid lg:grid-cols-2 gap-10 items-center">
                 <div>
-                  <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
+                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
                     Toldos em <span className="text-primary">{cityName}</span>
+                    <span className="block text-2xl lg:text-3xl mt-2 text-muted-foreground font-normal">
+                      A partir de R$ 120/m²
+                    </span>
                   </h1>
-                  <p className="text-xl text-muted-foreground mb-8">
+                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                     A Sul Toldos é especialista em toldos, coberturas e policarbonato em {cityName}. 
-                    Com mais de 15 anos de experiência, oferecemos qualidade garantida e orçamento gratuito 
-                    para toda região metropolitana.
+                    Mais de 15 anos de experiência. Orçamento gratuito com visita técnica sem compromisso.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4 mb-8">
                     <Button 
                       onClick={handleWhatsApp}
                       size="lg"
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold"
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-4 h-auto"
                     >
-                      💬 WhatsApp - Orçamento Grátis
+                      💬 ORÇAMENTO GRÁTIS
                     </Button>
                     <Button 
                       variant="outline"
                       size="lg"
                       onClick={() => window.open("tel:+554135646943")}
+                      className="text-lg py-4 h-auto font-bold"
                     >
                       📞 (41) 3564-6943
                     </Button>
                   </div>
 
                   <div className="grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="text-2xl font-bold text-primary">{currentCity.population}</div>
+                    <div className="bg-card rounded-xl p-3">
+                      <div className="text-xl font-bold text-primary">{currentCity.population}</div>
                       <div className="text-sm text-muted-foreground">habitantes</div>
                     </div>
-                    <div>
-                      <div className="text-2xl font-bold text-primary">15+</div>
+                    <div className="bg-card rounded-xl p-3">
+                      <div className="text-xl font-bold text-primary">15+</div>
                       <div className="text-sm text-muted-foreground">anos experiência</div>
                     </div>
-                    <div>
-                      <div className="text-2xl font-bold text-primary">2000+</div>
-                      <div className="text-sm text-muted-foreground">clientes satisfeitos</div>
+                    <div className="bg-card rounded-xl p-3">
+                      <div className="text-xl font-bold text-primary">2000+</div>
+                      <div className="text-sm text-muted-foreground">clientes</div>
                     </div>
                   </div>
                 </div>
@@ -243,72 +260,50 @@ const CidadePage = () => {
                 <div className="relative">
                   <img 
                     src={currentCity.image} 
-                    alt={`Toldos e coberturas em ${cityName} - Sul Toldos`}
-                    className="rounded-lg shadow-2xl w-full"
-                    loading="lazy"
+                    alt={`Toldos e coberturas em ${cityName} - Sul Toldos - Preços a partir de R$ 120/m²`}
+                    className="rounded-2xl shadow-2xl w-full"
+                    loading="eager"
                   />
-                  <div className="absolute inset-0 bg-primary/20 rounded-lg"></div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Service Cards */}
-          <ServiceCards 
-            location={cityName}
-            type="cidade"
-            cards={getServiceCards()}
-          />
+          <ServiceCards location={cityName} type="cidade" cards={getServiceCards()} />
 
-          {/* FAQ Section */}
-          <LocationFAQ 
-            location={cityName}
-            type="cidade"
-            faqs={getCityFAQs()}
-          />
+          <InfiniteGallery locationName={cityName} locationType="cidade" />
 
-          {/* Vídeo YouTube */}
+          <LocationFAQ location={cityName} type="cidade" faqs={getCityFAQs()} />
+
           <YouTubeVideo 
             title={`Veja nosso trabalho em ${cityName}`}
-            subtitle={`Conheça a qualidade dos nossos serviços de toldos e coberturas em ${cityName} e região`}
-            ctaText={`💬 Solicitar Orçamento em ${cityName}`}
+            subtitle={`Conheça a qualidade dos nossos serviços de toldos em ${cityName}`}
+            ctaText={`💬 Orçamento em ${cityName}`}
             ctaAction={handleWhatsApp}
             className="bg-secondary/30"
           />
 
-          {/* Seção de Contato Final */}
-          <section className="py-20 bg-primary/10">
+          {/* CTA Final */}
+          <section className="py-16 bg-primary/10">
             <div className="container mx-auto px-4 text-center">
-              <h2 className="text-4xl font-bold text-foreground mb-6">
-                Pronto para ter o melhor toldo de <span className="text-primary">{cityName}</span>?
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Pronto para seu toldo em <span className="text-primary">{cityName}</span>?
               </h2>
-              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Entre em contato agora mesmo e solicite seu orçamento gratuito. Nossa equipe está pronta 
-                para atender você em {cityName} com toda qualidade Sul Toldos.
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Orçamento gratuito, visita técnica sem compromisso e parcelamento em até 12x. 
+                Ligue agora ou mande mensagem!
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <Button 
-                  onClick={handleWhatsApp}
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-8 py-4 text-lg"
-                >
-                  💬 WhatsApp: (41) 99812-1324
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <Button onClick={handleWhatsApp} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-4 px-8 h-auto">
+                  💬 WHATSAPP: (41) 99812-1324
                 </Button>
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  onClick={() => window.open("tel:+554135646943")}
-                  className="px-8 py-4 text-lg"
-                >
-                  📞 Telefone: (41) 3564-6943
+                <Button variant="outline" size="lg" onClick={() => window.open("tel:+554135646943")} className="text-lg py-4 px-8 h-auto font-bold">
+                  📞 LIGAR: (41) 3564-6943
                 </Button>
               </div>
-
-              <div className="text-sm text-muted-foreground">
-                <p>✅ Orçamento gratuito • ✅ Visita técnica sem compromisso • ✅ Garantia em todos os serviços</p>
-                <p className="mt-2">📍 Atendemos {cityName} e toda região metropolitana de Curitiba</p>
-              </div>
+              <p className="text-sm text-muted-foreground">
+                ✅ Orçamento gratuito • ✅ Visita técnica sem compromisso • ✅ Garantia de até 5 anos • ✅ Parcelamos em 12x
+              </p>
             </div>
           </section>
         </main>
