@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import YouTubeVideo from "@/components/YouTubeVideo";
 import FloatingButtons from "@/components/FloatingButtons";
+import AwningCalculator from "@/components/AwningCalculator";
 
 const Index = () => {
   const structuredData = {
@@ -73,6 +74,7 @@ const Index = () => {
         <Hero />
         <Services />
         <InfiniteGallery />
+        <AwningCalculator />
         <YouTubeVideo 
           title="Conheça a Sul Toldos"
           subtitle="Veja como trabalhamos e a qualidade dos nossos serviços de toldos, coberturas e policarbonato"
