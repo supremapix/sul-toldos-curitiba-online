@@ -1,30 +1,48 @@
 import { createRoot } from 'react-dom/client'
-import { useEffect } from 'react'
+import { StrictMode, Suspense } from 'react'
 import App from './App.tsx'
 import './index.css'
 
-function AppWithErrorHandler() {
-  useEffect(() => {
-    const handleRejection = (event: PromiseRejectionEvent) => {
-      console.error("Unhandled rejection:", event.reason);
-      event.preventDefault();
-    };
+// Loading fallback — evita tela branca
+const LoadingFallback = () => (
+  <div style={{
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: 'hsl(0 0% 5%)',
+    flexDirection: 'column',
+    gap: '16px'
+  }}>
+    <div style={{
+      width: '60px',
+      height: '60px',
+      border: '4px solid hsl(0 84% 60% / 0.3)',
+      borderTopColor: 'hsl(0 84% 60%)',
+      borderRadius: '50%',
+      animation: 'spin 0.8s linear infinite'
+    }} />
+    <p style={{ color: 'hsl(0 84% 60%)', fontFamily: 'sans-serif', fontSize: '1rem' }}>
+      Carregando Sul Toldos...
+    </p>
+    <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+  </div>
+);
 
-    const handleError = (event: ErrorEvent) => {
-      console.error("Global error:", event.error);
-      event.preventDefault();
-    };
+// Error handling global
+window.addEventListener("unhandledrejection", (event) => {
+  console.error("Unhandled rejection:", event.reason);
+  event.preventDefault();
+});
 
-    window.addEventListener("unhandledrejection", handleRejection);
-    window.addEventListener("error", handleError);
+window.addEventListener("error", (event) => {
+  console.error("Global error:", event.error);
+});
 
-    return () => {
-      window.removeEventListener("unhandledrejection", handleRejection);
-      window.removeEventListener("error", handleError);
-    };
-  }, []);
-
-  return <App />;
-}
-
-createRoot(document.getElementById("root")!).render(<AppWithErrorHandler />);
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <Suspense fallback={<LoadingFallback />}>
+      <App />
+    </Suspense>
+  </StrictMode>
+);
