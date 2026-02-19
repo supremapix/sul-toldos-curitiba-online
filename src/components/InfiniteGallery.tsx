@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { X } from "lucide-react";
 
 import galeriaPolicarbonatoEntrada from "@/assets/galeria-policarbonato-entrada.jpg";
 import galeriaToldoComercial from "@/assets/galeria-toldo-comercial-supermercado.jpg";
@@ -111,119 +111,95 @@ interface InfiniteGalleryProps {
 
 const InfiniteGallery = ({ locationName = "", locationType = "home" }: InfiniteGalleryProps) => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const animationRef = useRef<number>();
+  const [isPaused, setIsPaused] = useState(false);
 
   const getContextualDescription = (item: GalleryItem) => {
     if (locationType === "home" || !locationName) return item.description;
     const prep = locationType === "bairro" ? "no" : "em";
-    return `${item.description} Serviço disponível ${prep} ${locationName} com orçamento gratuito e visita técnica sem compromisso. A Sul Toldos atende ${prep} ${locationName} com materiais de primeira qualidade e equipe especializada.`;
-  };
-
-  // Duplicate items for seamless infinite scroll
-  const duplicatedItems = [...defaultGalleryItems, ...defaultGalleryItems, ...defaultGalleryItems];
-
-  useEffect(() => {
-    const scroll = () => {
-      setScrollPosition((prev) => {
-        const itemWidth = 320;
-        const totalWidth = defaultGalleryItems.length * itemWidth;
-        const newPos = prev + 0.5;
-        if (newPos >= totalWidth) return 0;
-        return newPos;
-      });
-      animationRef.current = requestAnimationFrame(scroll);
-    };
-
-    animationRef.current = requestAnimationFrame(scroll);
-    return () => {
-      if (animationRef.current) cancelAnimationFrame(animationRef.current);
-    };
-  }, []);
-
-  const handleMouseEnter = () => {
-    if (animationRef.current) cancelAnimationFrame(animationRef.current);
-  };
-
-  const handleMouseLeave = () => {
-    const scroll = () => {
-      setScrollPosition((prev) => {
-        const itemWidth = 320;
-        const totalWidth = defaultGalleryItems.length * itemWidth;
-        const newPos = prev + 0.5;
-        if (newPos >= totalWidth) return 0;
-        return newPos;
-      });
-      animationRef.current = requestAnimationFrame(scroll);
-    };
-    animationRef.current = requestAnimationFrame(scroll);
+    return `${item.description} Serviço disponível ${prep} ${locationName} com orçamento gratuito e visita técnica sem compromisso.`;
   };
 
   const prep = locationType === "bairro" ? "no" : "em";
   const sectionTitle = locationName
     ? `Galeria de Trabalhos ${prep} ${locationName}`
-    : "Galeria de Trabalhos";
+    : "Galeria de Trabalhos Realizados";
+
+  // Triplicar para loop perfeito sem saltos
+  const tripled = [...defaultGalleryItems, ...defaultGalleryItems, ...defaultGalleryItems];
 
   return (
     <section id="gallery" className="py-16 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4 mb-10">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {sectionTitle.split(locationName || "___")[0]}
-            {locationName && <span className="text-primary">{locationName}</span>}
+            {locationName ? (
+              <>Galeria de Trabalhos {prep} <span className="text-primary">{locationName}</span></>
+            ) : (
+              <><span className="text-primary">Galeria</span> de Trabalhos Realizados</>
+            )}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {locationName
-              ? `Veja nossos projetos realizados ${prep} ${locationName}. Clique nas imagens para mais detalhes e preços por m².`
-              : "Veja nossos projetos realizados em Curitiba e região. Clique nas imagens para mais detalhes e preços por m²."}
+              ? `Veja nossos projetos realizados ${prep} ${locationName}. Clique nas imagens para detalhes e preços.`
+              : "Veja nossos projetos em Curitiba e região. Clique nas imagens para detalhes e preços por m²."}
           </p>
         </div>
       </div>
 
-      {/* Infinite Carousel */}
+      {/* CSS-only infinite scroll — sem JS loop, sem tela branca */}
       <div
-        ref={scrollRef}
         className="relative w-full"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}
       >
         <div
-          className="flex gap-5 transition-none"
-          style={{ transform: `translateX(-${scrollPosition}px)` }}
+          className="flex gap-4"
+          style={{
+            animation: `scrollGallery 40s linear infinite`,
+            animationPlayState: isPaused ? "paused" : "running",
+            width: "max-content",
+          }}
         >
-          {duplicatedItems.map((item, index) => (
-            <div
+          {tripled.map((item, index) => (
+            <button
               key={`${item.id}-${index}`}
-              className="flex-shrink-0 w-[300px] cursor-pointer group"
+              className="flex-shrink-0 w-[280px] md:w-[320px] cursor-pointer group text-left border-0 bg-transparent p-0"
               onClick={() => setSelectedItem(item)}
+              aria-label={`Ver detalhes: ${item.title}`}
             >
               <div className="relative overflow-hidden rounded-xl shadow-lg">
                 <img
                   src={item.image}
-                  alt={`${item.title} - Sul Toldos ${locationName}`}
+                  alt={`${item.title} - Sul Toldos${locationName ? ` ${locationName}` : ""}`}
                   className="w-full h-[220px] object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
+                  loading={index < 10 ? "eager" : "lazy"}
+                  width="320"
+                  height="220"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-3 left-3 right-3">
-                    <p className="text-white font-bold text-base leading-tight">{item.title}</p>
-                    <p className="text-primary font-semibold text-sm mt-1">{item.priceFrom}</p>
+                    <p className="text-white font-bold text-sm leading-tight">{item.title}</p>
+                    <p className="text-primary font-semibold text-xs mt-1">{item.priceFrom}</p>
                   </div>
                 </div>
+                <div className="absolute top-2 left-2 bg-primary/90 text-primary-foreground text-xs font-bold px-2 py-1 rounded-full">
+                  {item.category}
+                </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
 
-      {/* CTA abaixo da galeria */}
+      {/* CTA */}
       <div className="container mx-auto px-4 mt-10 text-center">
         <a
-          href={`https://wa.me/5541998121324?text=${encodeURIComponent(`Olá, vi a galeria de trabalhos ${locationName ? `${prep} ${locationName}` : ""} e gostaria de um orçamento!`)}`}
+          href={`https://wa.me/5541998121324?text=${encodeURIComponent(`Olá, vi a galeria de trabalhos e gostaria de um orçamento!`)}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-colors"
+          className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105"
         >
           📱 SOLICITAR ORÇAMENTO GRÁTIS
         </a>
@@ -232,28 +208,31 @@ const InfiniteGallery = ({ locationName = "", locationType = "home" }: InfiniteG
       {/* Popup Modal */}
       {selectedItem && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4"
+          style={{ animation: "fadeIn 0.2s ease-out" }}
           onClick={() => setSelectedItem(null)}
         >
           <div
             className="bg-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+            style={{ animation: "scaleIn 0.2s ease-out" }}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative">
               <img
                 src={selectedItem.image}
                 alt={selectedItem.title}
-                className="w-full h-[300px] md:h-[400px] object-cover rounded-t-2xl"
+                className="w-full h-[260px] md:h-[380px] object-cover rounded-t-2xl"
+                loading="eager"
               />
               <button
                 onClick={() => setSelectedItem(null)}
-                className="absolute top-4 right-4 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors"
+                className="absolute top-3 right-3 bg-black/70 hover:bg-black/90 text-white rounded-full p-2.5 transition-colors"
                 aria-label="Fechar"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5" />
               </button>
-              <div className="absolute bottom-4 left-4">
-                <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+              <div className="absolute bottom-3 left-3">
+                <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-bold">
                   {selectedItem.category}
                 </span>
               </div>
