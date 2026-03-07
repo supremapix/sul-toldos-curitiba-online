@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CidadePage from "./pages/cidade/[cidade]";
 import BairroPage from "./pages/bairro/[bairro]";
+import FaqPage from "./pages/FaqPage";
 
 const queryClient = new QueryClient();
 
