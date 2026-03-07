@@ -90,15 +90,27 @@ const Header = () => {
           <div className="lg:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col space-y-1">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="flex items-center gap-3 text-xl text-foreground hover:text-primary hover:bg-secondary/50 transition-colors py-4 px-4 rounded-lg font-medium"
-                  onClick={toggleMenu}
-                >
-                  {item.icon}
-                  {item.label}
-                </a>
+                (item as any).isLink ? (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="flex items-center gap-3 text-xl text-foreground hover:text-primary hover:bg-secondary/50 transition-colors py-4 px-4 rounded-lg font-medium"
+                    onClick={toggleMenu}
+                  >
+                    {item.icon}
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="flex items-center gap-3 text-xl text-foreground hover:text-primary hover:bg-secondary/50 transition-colors py-4 px-4 rounded-lg font-medium"
+                    onClick={toggleMenu}
+                  >
+                    {item.icon}
+                    {item.label}
+                  </a>
+                )
               ))}
               <div className="pt-4 space-y-3 px-4">
                 <a

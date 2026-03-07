@@ -83,6 +83,7 @@ const Index = () => {
         />
         <About />
         <NavigationSection />
+        <FaqHomeSection />
         <FAQ />
         <ContactForm />
         <Footer />
