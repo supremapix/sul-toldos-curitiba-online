@@ -8,6 +8,7 @@ import NavigationSection from "@/components/NavigationSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
+import FaqHomeSection from "@/components/FaqHomeSection";
 import YouTubeVideo from "@/components/YouTubeVideo";
 import FloatingButtons from "@/components/FloatingButtons";
 import AwningCalculator from "@/components/AwningCalculator";
