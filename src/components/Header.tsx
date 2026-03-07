@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Home, Wrench, Image, Info, MessageSquare, Calculator } from "lucide-react";
 import logoSulToldos from "@/assets/logo-sul-toldos.png";
@@ -16,6 +17,7 @@ const Header = () => {
     { href: "#services", label: "Serviços", icon: <Wrench className="w-5 h-5" /> },
     { href: "#gallery", label: "Galeria", icon: <Image className="w-5 h-5" /> },
     { href: "#calculator", label: "Calcular", icon: <Calculator className="w-5 h-5" /> },
+    { href: "/faq", label: "FAQ", icon: <MessageSquare className="w-5 h-5" />, isLink: true },
     { href: "#about", label: "Sobre", icon: <Info className="w-5 h-5" /> },
     { href: "#contact", label: "Contato", icon: <MessageSquare className="w-5 h-5" /> },
   ];
@@ -39,13 +41,23 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-5">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-base text-foreground hover:text-primary transition-colors font-medium"
-              >
-                {item.label}
-              </a>
+              (item as any).isLink ? (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="text-base text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-base text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {item.label}
+                </a>
+              )
             ))}
           </nav>
 
@@ -78,15 +90,27 @@ const Header = () => {
           <div className="lg:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col space-y-1">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="flex items-center gap-3 text-xl text-foreground hover:text-primary hover:bg-secondary/50 transition-colors py-4 px-4 rounded-lg font-medium"
-                  onClick={toggleMenu}
-                >
-                  {item.icon}
-                  {item.label}
-                </a>
+                (item as any).isLink ? (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="flex items-center gap-3 text-xl text-foreground hover:text-primary hover:bg-secondary/50 transition-colors py-4 px-4 rounded-lg font-medium"
+                    onClick={toggleMenu}
+                  >
+                    {item.icon}
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="flex items-center gap-3 text-xl text-foreground hover:text-primary hover:bg-secondary/50 transition-colors py-4 px-4 rounded-lg font-medium"
+                    onClick={toggleMenu}
+                  >
+                    {item.icon}
+                    {item.label}
+                  </a>
+                )
               ))}
               <div className="pt-4 space-y-3 px-4">
                 <a

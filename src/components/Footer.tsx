@@ -67,18 +67,16 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Services & Links */}
           <div>
-            <h4 className="text-xl font-semibold text-foreground mb-4">Serviços</h4>
+            <h4 className="text-xl font-semibold text-foreground mb-4">Navegação</h4>
             <ul className="space-y-2 text-base text-muted-foreground">
-              <li>• Toldos em Lona</li>
-              <li>• Toldos Retráteis</li>
-              <li>• Coberturas em Policarbonato</li>
-              <li>• Toldos Comerciais</li>
-              <li>• Cortinas Rolo</li>
-              <li>• Coberturas Metálicas</li>
-              <li>• Manutenção e Reparo</li>
-              <li>• Projetos Personalizados</li>
+              <li><a href="/#services" className="hover:text-primary transition-colors">• Serviços</a></li>
+              <li><a href="/#gallery" className="hover:text-primary transition-colors">• Galeria</a></li>
+              <li><a href="/#calculator" className="hover:text-primary transition-colors">• Calcular Preço</a></li>
+              <li><Link to="/faq" className="hover:text-primary transition-colors font-semibold text-primary">• Perguntas Frequentes (FAQ)</Link></li>
+              <li><a href="/#about" className="hover:text-primary transition-colors">• Sobre Nós</a></li>
+              <li><a href="/#contact" className="hover:text-primary transition-colors">• Contato</a></li>
             </ul>
           </div>
 
