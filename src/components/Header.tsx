@@ -41,13 +41,23 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-5">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-base text-foreground hover:text-primary transition-colors font-medium"
-              >
-                {item.label}
-              </a>
+              (item as any).isLink ? (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="text-base text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-base text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {item.label}
+                </a>
+              )
             ))}
           </nav>
 
