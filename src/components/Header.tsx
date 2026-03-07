@@ -16,6 +16,7 @@ const Header = () => {
     { href: "#services", label: "Serviços", icon: <Wrench className="w-5 h-5" /> },
     { href: "#gallery", label: "Galeria", icon: <Image className="w-5 h-5" /> },
     { href: "#calculator", label: "Calcular", icon: <Calculator className="w-5 h-5" /> },
+    { href: "/faq", label: "FAQ", icon: <MessageSquare className="w-5 h-5" />, isLink: true },
     { href: "#about", label: "Sobre", icon: <Info className="w-5 h-5" /> },
     { href: "#contact", label: "Contato", icon: <MessageSquare className="w-5 h-5" /> },
   ];
