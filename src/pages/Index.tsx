@@ -77,9 +77,9 @@ const Index = () => {
         <InfiniteGallery />
         <AwningCalculator />
         <YouTubeVideo 
-          title="Conheça a Sul Toldos"
-          subtitle="Veja como trabalhamos e a qualidade dos nossos serviços de toldos, coberturas e policarbonato"
-          ctaText="💬 Solicitar Orçamento no WhatsApp"
+          title="Sul Toldos Cristo Rei — Veja Nosso Trabalho"
+          subtitle="Conheça a qualidade dos nossos serviços de toldos, coberturas e policarbonato em Curitiba e região metropolitana"
+          location="Curitiba"
         />
         <About />
         <NavigationSection />

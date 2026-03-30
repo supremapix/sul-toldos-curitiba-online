@@ -412,6 +412,12 @@ const FaqPage = () => {
           </div>
         </section>
 
+        <YouTubeVideo 
+          title="Veja a Sul Toldos em Ação"
+          subtitle="Conheça como fabricamos e instalamos toldos com qualidade e garantia em Curitiba e região metropolitana"
+          location="Curitiba"
+        />
+
         <Footer />
       </div>
     </>
