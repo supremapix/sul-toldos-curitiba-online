@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import YouTubeVideo from "@/components/YouTubeVideo";
 import { MessageCircle, Phone, Search, ChevronDown, ChevronUp, X } from "lucide-react";
 
 const BLOCOS = [
