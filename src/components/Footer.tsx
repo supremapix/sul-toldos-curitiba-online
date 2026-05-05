@@ -34,7 +34,7 @@ const Footer = () => {
       .replace(/ê/g, 'e').replace(/â/g, 'a').replace(/ô/g, 'o');
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer style={{ backgroundColor: '#241f21' }} className="border-t border-border">
       <div className="container mx-auto px-4 py-12">
         {/* Top Section */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
