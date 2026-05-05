@@ -44,7 +44,7 @@ const Footer = () => {
               <img
                 src={logoSulToldos}
                 alt="Sul Toldos Logo"
-                className="h-32 md:h-36 w-auto object-contain drop-shadow-lg"
+                className="h-40 md:h-44 w-auto max-w-full object-contain drop-shadow-lg"
               />
             </div>
             <p className="text-base text-muted-foreground mb-6">
