@@ -39,12 +39,12 @@ const Footer = () => {
         {/* Top Section */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Company with Logo */}
-          <div>
-            <div className="mb-4 bg-white p-4 rounded-xl shadow-lg inline-block">
+          <div className="text-center md:text-left">
+            <div className="mb-4 flex justify-center md:justify-start">
               <img
                 src={logoSulToldos}
                 alt="Sul Toldos Logo"
-                className="h-24 w-auto object-contain"
+                className="h-32 md:h-36 w-auto object-contain drop-shadow-lg"
               />
             </div>
             <p className="text-base text-muted-foreground mb-6">
