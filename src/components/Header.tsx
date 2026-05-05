@@ -31,7 +31,7 @@ const Header = () => {
             <img
               src={logoSulToldos}
               alt="Sul Toldos - Policarbonato e Toldos em Curitiba"
-              className="h-28 sm:h-32 md:h-40 lg:h-44 w-auto object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105"
+              className="h-28 sm:h-32 md:h-24 lg:h-28 w-auto object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105"
             />
           </a>
 
