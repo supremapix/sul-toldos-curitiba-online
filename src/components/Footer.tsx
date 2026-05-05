@@ -40,13 +40,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Company with Logo */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="mb-4 bg-white p-4 rounded-xl shadow-lg inline-block">
               <img
                 src={logoSulToldos}
                 alt="Sul Toldos Logo"
-                className="h-16 w-auto"
+                className="h-24 w-auto object-contain"
               />
-              <h3 className="text-2xl font-bold text-primary">Sul Toldos</h3>
             </div>
             <p className="text-base text-muted-foreground mb-6">
               Especialista em toldos e coberturas em Curitiba e região metropolitana. Mais de 15 anos de experiência.
