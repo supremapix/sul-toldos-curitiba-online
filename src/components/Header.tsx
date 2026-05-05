@@ -27,15 +27,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-3 group">
+          <a href="/" className="flex items-center group py-2">
             <img
               src={logoSulToldos}
-              alt="Sul Toldos - Toldos e Coberturas em Curitiba"
-              className="h-14 w-auto transition-transform duration-500 group-hover:scale-110"
+              alt="Sul Toldos - Policarbonato e Toldos em Curitiba"
+              className="h-20 md:h-24 w-auto object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105"
             />
-            <span className="hidden sm:block text-2xl font-bold text-primary tracking-tight">
-              Sul Toldos
-            </span>
           </a>
 
           {/* Desktop Navigation */}
