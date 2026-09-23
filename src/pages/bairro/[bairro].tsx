@@ -79,12 +79,12 @@ const BairroPage = () => {
     {
       title: `Toldos Residenciais no ${bairroName}`,
       icon: "🏠",
-      content: `A Sul Toldos oferece as melhores soluções em toldos residenciais para o ${bairroName}, Curitiba. Com perfil ${currentBairro.profile.toLowerCase()}, o bairro demanda toldos de qualidade que combinem estética e funcionalidade.\n\nPreços para o ${bairroName}:\n• Toldo fixo em lona: a partir de R$ 120/m²\n• Toldo retrátil: a partir de R$ 250/m²\n• Policarbonato: a partir de R$ 180/m²\n• Cortina rolo: a partir de R$ 220/m²\n\nVisita técnica gratuita em todo o ${bairroName}. Orçamento sem compromisso e parcelamento em até 12x.`
+      content: `A Sul Toldos oferece as melhores soluções em toldos residenciais para o ${bairroName}, Curitiba. Com perfil ${currentBairro.profile.toLowerCase()}, o bairro demanda toldos de qualidade que combinem estética e funcionalidade.\n\nPreços para o ${bairroName}:\n• Toldo fixo em lona: a partir de R$ 220/m²\n• Toldo retrátil: a partir de R$ 250/m²\n• Policarbonato: a partir de R$ 220/m²\n• Cortina rolo: a partir de R$ 220/m²\n\nVisita técnica gratuita em todo o ${bairroName}. Orçamento sem compromisso e parcelamento em até 12x.`
     },
     {
       title: `Serviços Comerciais no ${bairroName}`,
       icon: "🏢",
-      content: `${currentBairro.specialty}. Nossos serviços comerciais incluem:\n\n${currentBairro.mainServices.map((s: string) => `• ${s}`).join('\n')}\n\nToldos de fachada com logomarca a partir de R$ 150/m². Coberturas para estacionamento a partir de R$ 140/m². Projetos personalizados com cores da marca do estabelecimento.\n\nJá atendemos dezenas de comércios no ${bairroName}. Cada projeto é desenvolvido para valorizar o estabelecimento e atrair mais clientes.`
+      content: `${currentBairro.specialty}. Nossos serviços comerciais incluem:\n\n${currentBairro.mainServices.map((s: string) => `• ${s}`).join('\n')}\n\nToldos de fachada com logomarca a partir de R$ 220/m². Coberturas para estacionamento a partir de R$ 220/m². Projetos personalizados com cores da marca do estabelecimento.\n\nJá atendemos dezenas de comércios no ${bairroName}. Cada projeto é desenvolvido para valorizar o estabelecimento e atrair mais clientes.`
     },
     {
       title: `Atendimento Rápido no ${bairroName}`,
@@ -101,7 +101,7 @@ const BairroPage = () => {
   const getBairroFAQs = () => [
     {
       question: `Quanto custa um toldo por m² no ${bairroName}?`,
-      answer: `Preços de toldos no ${bairroName}, Curitiba: toldo fixo em lona a partir de R$ 120/m², retrátil manual a partir de R$ 250/m², motorizado a partir de R$ 350/m², policarbonato a partir de R$ 180/m², cortina rolo a partir de R$ 220/m². Os valores variam conforme material, dimensões e complexidade. Fazemos orçamento gratuito com visita técnica no ${bairroName}. Parcelamento em até 12x sem juros. Desconto de 10% à vista. WhatsApp (41) 99812-1324.`
+      answer: `Preços de toldos no ${bairroName}, Curitiba: toldo fixo em lona a partir de R$ 220/m², retrátil manual a partir de R$ 250/m², motorizado a partir de R$ 350/m², policarbonato a partir de R$ 220/m², cortina rolo a partir de R$ 220/m². Os valores variam conforme material, dimensões e complexidade. Fazemos orçamento gratuito com visita técnica no ${bairroName}. Parcelamento em até 12x sem juros. Desconto de 10% à vista. WhatsApp (41) 99812-1324.`
     },
     {
       question: `Vocês atendem todo o bairro ${bairroName}?`,
@@ -109,7 +109,7 @@ const BairroPage = () => {
     },
     {
       question: `Qual o melhor toldo para residência no ${bairroName}?`,
-      answer: `Para o ${bairroName}, com perfil ${currentBairro.profile.toLowerCase()}, recomendamos: toldo fixo em lona acrílica (R$ 120-180/m²) para janelas, toldo retrátil (R$ 250-350/m²) para varandas, policarbonato (R$ 180-280/m²) para garagens, e cortina rolo (R$ 220-380/m²) para sacadas. Nossa equipe avalia gratuitamente qual a melhor opção para sua necessidade específica no ${bairroName}.`
+      answer: `Para o ${bairroName}, com perfil ${currentBairro.profile.toLowerCase()}, recomendamos: toldo fixo em lona acrílica (R$ 220-180/m²) para janelas, toldo retrátil (R$ 250-350/m²) para varandas, policarbonato (R$ 220-280/m²) para garagens, e cortina rolo (R$ 220-380/m²) para sacadas. Nossa equipe avalia gratuitamente qual a melhor opção para sua necessidade específica no ${bairroName}.`
     },
     {
       question: `Qual o prazo de instalação no ${bairroName}?`,
@@ -117,7 +117,7 @@ const BairroPage = () => {
     },
     {
       question: `Vocês fazem toldos comerciais no ${bairroName}?`,
-      answer: `Sim! O ${bairroName} tem perfil ${currentBairro.profile.toLowerCase()} e atendemos todos os tipos de comércio: padarias, farmácias, restaurantes, pet shops, salões de beleza, oficinas e mais. Toldos de fachada com logomarca a partir de R$ 150/m². Coberturas para estacionamento a partir de R$ 140/m². Projetos personalizados para cada estabelecimento.`
+      answer: `Sim! O ${bairroName} tem perfil ${currentBairro.profile.toLowerCase()} e atendemos todos os tipos de comércio: padarias, farmácias, restaurantes, pet shops, salões de beleza, oficinas e mais. Toldos de fachada com logomarca a partir de R$ 220/m². Coberturas para estacionamento a partir de R$ 220/m². Projetos personalizados para cada estabelecimento.`
     },
     {
       question: `Qual a garantia para toldos no ${bairroName}?`,
@@ -133,11 +133,11 @@ const BairroPage = () => {
     },
     {
       question: `Vocês fazem manutenção de toldos no ${bairroName}?`,
-      answer: `Sim! Troca de lona (R$ 80-150/m²), limpeza profissional (R$ 15-25/m²), lubrificação (R$ 150-300/toldo), reparo estrutural (sob consulta). Atendemos toldos de qualquer fabricante no ${bairroName}. Manutenção preventiva prolonga vida útil em até 40%. Emergência 24h pelo WhatsApp.`
+      answer: `Sim! Troca de lona (R$ 80-150/m²), limpeza profissional (R$ 15-25/m²), lubrificação (R$ 220-300/toldo), reparo estrutural (sob consulta). Atendemos toldos de qualquer fabricante no ${bairroName}. Manutenção preventiva prolonga vida útil em até 40%. Emergência 24h pelo WhatsApp.`
     },
     {
       question: `Qual a diferença entre policarbonato e lona no ${bairroName}?`,
-      answer: `Policarbonato: mais resistente, permite luz natural, dura 15-20 anos, R$ 180-300/m², ideal para garagem e área de lazer. Lona: melhor proteção solar, mais cores, dura 5-12 anos, R$ 120-200/m², ideal para fachadas e retráteis. No ${bairroName}, ambos os materiais são indicados conforme a necessidade específica.`
+      answer: `Policarbonato: mais resistente, permite luz natural, dura 15-20 anos, R$ 220-300/m², ideal para garagem e área de lazer. Lona: melhor proteção solar, mais cores, dura 5-12 anos, R$ 220-200/m², ideal para fachadas e retráteis. No ${bairroName}, ambos os materiais são indicados conforme a necessidade específica.`
     },
     {
       question: `Vocês instalam cortina rolo no ${bairroName}?`,
@@ -157,7 +157,7 @@ const BairroPage = () => {
     },
     {
       question: `Por que escolher Sul Toldos no ${bairroName}?`,
-      answer: `Mais de 15 anos no ${bairroName}! Diferenciais: preços a partir de R$ 120/m², materiais premium (Sansuy, Guarany, Somfy), equipe certificada, garantia até 5 anos, manutenção gratuita no 1º ano, atendimento 24h, orçamento gratuito, 12x sem juros. Mais de 500 clientes satisfeitos no bairro. Nota 4.9/5 em avaliações.`
+      answer: `Mais de 15 anos no ${bairroName}! Diferenciais: preços a partir de R$ 220/m², materiais premium (Sansuy, Guarany, Somfy), equipe certificada, garantia até 5 anos, manutenção gratuita no 1º ano, atendimento 24h, orçamento gratuito, 12x sem juros. Mais de 500 clientes satisfeitos no bairro. Nota 4.9/5 em avaliações.`
     }
   ];
 
@@ -165,7 +165,7 @@ const BairroPage = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `Sul Toldos - Toldos no ${bairroName}, Curitiba`,
-    "description": `Toldos no ${bairroName}, Curitiba a partir de R$ 120/m². Especialista em toldos, coberturas e policarbonato. Orçamento grátis!`,
+    "description": `Toldos no ${bairroName}, Curitiba a partir de R$ 220/m². Especialista em toldos, coberturas e policarbonato. Orçamento grátis!`,
     "url": `https://sultoldos.app.br/bairro/${bairroSlug}`,
     "telephone": "+554135646943",
     "address": {
@@ -195,8 +195,8 @@ const BairroPage = () => {
   return (
     <>
       <EnhancedSEO
-        title={`Toldos no ${bairroName} Curitiba | Preços a partir R$ 120/m² | Sul Toldos`}
-        description={`Toldos no ${bairroName}, Curitiba a partir de R$ 120/m². Policarbonato, retráteis, comerciais e residenciais. Orçamento grátis! ☎️ (41) 3564-6943. Garantia até 5 anos. 12x sem juros.`}
+        title={`Toldos no ${bairroName} Curitiba | Preços a partir R$ 220/m² | Sul Toldos`}
+        description={`Toldos no ${bairroName}, Curitiba a partir de R$ 220/m². Policarbonato, retráteis, comerciais e residenciais. Orçamento grátis! ☎️ (41) 3564-6943. Garantia até 5 anos. 12x sem juros.`}
         keywords={`toldos ${bairroName.toLowerCase()}, toldo ${bairroName.toLowerCase()} curitiba, preço toldo ${bairroName.toLowerCase()}, policarbonato ${bairroName.toLowerCase()}, cobertura ${bairroName.toLowerCase()}, toldo retrátil, toldo m2 preço, toldo residencial, toldo comercial, cortina rolo`}
         canonical={`https://sultoldos.app.br/bairro/${bairroSlug}`}
         structuredData={bairroStructuredData}
@@ -217,7 +217,7 @@ const BairroPage = () => {
                   <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
                     Toldos no <span className="text-primary">{bairroName}</span>
                     <span className="block text-2xl lg:text-3xl mt-2 text-muted-foreground font-normal">
-                      Curitiba - A partir de R$ 120/m²
+                      Curitiba - A partir de R$ 220/m²
                     </span>
                   </h1>
                   <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
@@ -262,7 +262,7 @@ const BairroPage = () => {
                 <div>
                   <img 
                     src={currentBairro.image} 
-                    alt={`Toldos no ${bairroName}, Curitiba - Sul Toldos - Preços a partir de R$ 120/m²`}
+                    alt={`Toldos no ${bairroName}, Curitiba - Sul Toldos - Preços a partir de R$ 220/m²`}
                     className="rounded-2xl shadow-2xl w-full"
                     loading="eager"
                   />

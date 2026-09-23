@@ -28,7 +28,7 @@ const defaultGalleryItems: GalleryItem[] = [
     title: "Toldo em Policarbonato para Entrada",
     description: "Toldo curvo em policarbonato fumê instalado na entrada de residência. Proteção elegante contra chuva e sol com estrutura em alumínio reforçado. Ideal para portas de entrada, janelas e acessos. Durabilidade superior a 15 anos com manutenção mínima.",
     category: "Policarbonato",
-    priceFrom: "A partir de R$ 180/m²"
+    priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const defaultGalleryItems: GalleryItem[] = [
     title: "Toldo Comercial para Supermercado",
     description: "Cortinas em lona branca para proteção de fachada comercial de supermercado. Solução robusta para grandes áreas com sistema de fixação industrial. Protege produtos e clientes contra intempéries. Material resistente a UV com vida útil estendida.",
     category: "Comercial",
-    priceFrom: "A partir de R$ 120/m²"
+    priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const defaultGalleryItems: GalleryItem[] = [
     title: "Cobertura em Policarbonato para Quintal",
     description: "Cobertura translúcida em policarbonato alveolar com estrutura metálica para área de quintal. Permite passagem de luz natural enquanto protege da chuva. Estrutura em aço galvanizado com pintura eletrostática resistente à corrosão.",
     category: "Policarbonato",
-    priceFrom: "A partir de R$ 200/m²"
+    priceFrom: "A partir de R$ 240/m²"
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const defaultGalleryItems: GalleryItem[] = [
     title: "Toldo para Loja Comercial",
     description: "Toldo em lona amarela com estrutura metálica para fachada de loja esportiva. Projeto personalizado com cores da marca do estabelecimento. Excelente para visibilidade comercial e proteção de vitrines. Resistente a ventos de até 80km/h.",
     category: "Comercial",
-    priceFrom: "A partir de R$ 150/m²"
+    priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const defaultGalleryItems: GalleryItem[] = [
     title: "Cobertura Metálica Residencial",
     description: "Estrutura de cobertura em metalon e telhas para área de serviço residencial. Solução econômica e durável para proteger áreas externas. Construção sob medida com materiais resistentes a intempéries. Ideal para lavanderia, churrasqueira e garagem.",
     category: "Coberturas",
-    priceFrom: "A partir de R$ 160/m²"
+    priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 6,
@@ -76,7 +76,7 @@ const defaultGalleryItems: GalleryItem[] = [
     title: "Toldo para Garagem Residencial",
     description: "Toldo fixo com estrutura curva em metalon e lona cinza para garagem residencial. Proteção completa para veículos contra sol, chuva e granizo. Estrutura dimensionada para suportar ventos fortes. Pintura eletrostática com garantia de 5 anos.",
     category: "Residencial",
-    priceFrom: "A partir de R$ 130/m²"
+    priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 8,
@@ -84,7 +84,7 @@ const defaultGalleryItems: GalleryItem[] = [
     title: "Cobertura para Estacionamento",
     description: "Cobertura em lona tensionada com estrutura metálica treliçada para estacionamento. Solução de grande porte para proteção de múltiplos veículos. Estrutura calculada por engenheiro para máxima segurança. Resistente a ventos extremos e chuva.",
     category: "Coberturas",
-    priceFrom: "A partir de R$ 140/m²"
+    priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 9,
@@ -92,7 +92,7 @@ const defaultGalleryItems: GalleryItem[] = [
     title: "Cobertura em Policarbonato para Área",
     description: "Cobertura em policarbonato opalino com estrutura em metalon azul para área de lazer. Excelente transmissão de luz difusa sem calor direto. Estrutura com treliça para vãos maiores sem colunas intermediárias. Garantia de 10 anos contra amarelamento.",
     category: "Policarbonato",
-    priceFrom: "A partir de R$ 190/m²"
+    priceFrom: "A partir de R$ 230/m²"
   },
   {
     id: 10,

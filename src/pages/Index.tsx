@@ -18,7 +18,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Sul Toldos",
-    "description": "Especialista em toldos, coberturas e policarbonato em Curitiba e região metropolitana. Preços a partir de R$ 120/m².",
+    "description": "Especialista em toldos, coberturas e policarbonato em Curitiba e região metropolitana a partir de R$ 220/m².",
     "url": "https://sultoldos.app.br",
     "telephone": "+554135646943",
     "address": {
@@ -59,8 +59,8 @@ const Index = () => {
   return (
     <>
       <EnhancedSEO
-        title="Sul Toldos Curitiba | Toldos a partir de R$ 120/m² | Orçamento Grátis"
-        description="Sul Toldos - Toldos em Curitiba a partir de R$ 120/m². Policarbonato, toldos retráteis, coberturas comerciais e residenciais. Orçamento grátis! ☎️ (41) 3564-6943. Atendemos toda região metropolitana."
+        title="Sul Toldos Curitiba | Toldos a partir de R$ 220/m² | Orçamento Grátis"
+        description="Sul Toldos - Toldos em Curitiba a partir de R$ 220/m². Policarbonato, toldos retráteis, coberturas comerciais e residenciais. Orçamento grátis! ☎️ (41) 3564-6943. Atendemos toda região metropolitana."
         keywords="toldos curitiba, toldo curitiba preço, policarbonato curitiba, coberturas curitiba, toldos retráteis curitiba, toldo preço m2, sul toldos, toldo residencial, toldo comercial, cobertura garagem, cortina rolo, toldo lona, orçamento grátis toldos"
         canonical="https://sultoldos.app.br/"
         structuredData={structuredData}

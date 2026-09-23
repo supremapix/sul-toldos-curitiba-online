@@ -77,17 +77,17 @@ const CidadePage = () => {
     {
       title: `Toldos Residenciais em ${cityName}`,
       icon: "🏠",
-      content: `A Sul Toldos é referência em toldos residenciais em ${cityName}. Instalamos toldos fixos em lona a partir de R$ 120/m², toldos retráteis a partir de R$ 250/m² e coberturas em policarbonato a partir de R$ 180/m².\n\nNossos projetos residenciais incluem proteção para garagens, varandas, sacadas, churrasqueiras e áreas de lazer. Cada projeto é dimensionado considerando a arquitetura local e as condições climáticas específicas de ${cityName}.\n\nAtendemos todos os bairros de ${cityName} com visita técnica gratuita, orçamento sem compromisso e garantia de até 5 anos em estruturas metálicas.`
+      content: `A Sul Toldos é referência em toldos residenciais em ${cityName}. Instalamos toldos fixos em lona a partir de R$ 220/m², toldos retráteis a partir de R$ 250/m² e coberturas em policarbonato a partir de R$ 220/m².\n\nNossos projetos residenciais incluem proteção para garagens, varandas, sacadas, churrasqueiras e áreas de lazer. Cada projeto é dimensionado considerando a arquitetura local e as condições climáticas específicas de ${cityName}.\n\nAtendemos todos os bairros de ${cityName} com visita técnica gratuita, orçamento sem compromisso e garantia de até 5 anos em estruturas metálicas.`
     },
     {
       title: `Toldos Comerciais em ${cityName}`,
       icon: "🏢",
-      content: `Somos especialistas em toldos comerciais em ${cityName}. Atendemos padarias, farmácias, restaurantes, pet shops, salões de beleza, oficinas mecânicas e todo tipo de comércio.\n\nToldos de fachada comercial partem de R$ 150/m², incluindo estrutura personalizada e lona com logomarca. Coberturas para estacionamentos a partir de R$ 140/m².\n\nEm ${cityName}, já realizamos centenas de instalações comerciais. Cada projeto é desenvolvido para valorizar o estabelecimento e atrair mais clientes, transformando o toldo em ferramenta de marketing.`
+      content: `Somos especialistas em toldos comerciais em ${cityName}. Atendemos padarias, farmácias, restaurantes, pet shops, salões de beleza, oficinas mecânicas e todo tipo de comércio.\n\nToldos de fachada comercial partem de R$ 220/m², incluindo estrutura personalizada e lona com logomarca. Coberturas para estacionamentos a partir de R$ 220/m².\n\nEm ${cityName}, já realizamos centenas de instalações comerciais. Cada projeto é desenvolvido para valorizar o estabelecimento e atrair mais clientes, transformando o toldo em ferramenta de marketing.`
     },
     {
       title: `Preços e Condições em ${cityName}`,
       icon: "💰",
-      content: `Os melhores preços de toldos em ${cityName}! Trabalhamos com tabela competitiva e condições facilitadas:\n\n• Toldo fixo em lona: a partir de R$ 120/m²\n• Toldo retrátil manual: a partir de R$ 250/m²\n• Toldo retrátil motorizado: a partir de R$ 350/m²\n• Policarbonato alveolar: a partir de R$ 180/m²\n• Cortina rolo PVC: a partir de R$ 220/m²\n\nParcelamos em até 12x no cartão. Desconto de 10% à vista. Financiamento próprio para projetos acima de R$ 5.000.`
+      content: `Os melhores preços de toldos em ${cityName}! Trabalhamos com tabela competitiva e condições facilitadas:\n\n• Toldo fixo em lona: a partir de R$ 220/m²\n• Toldo retrátil manual: a partir de R$ 250/m²\n• Toldo retrátil motorizado: a partir de R$ 350/m²\n• Policarbonato alveolar: a partir de R$ 220/m²\n• Cortina rolo PVC: a partir de R$ 220/m²\n\nParcelamos em até 12x no cartão. Desconto de 10% à vista. Financiamento próprio para projetos acima de R$ 5.000.`
     },
     {
       title: `Qualidade e Garantia em ${cityName}`,
@@ -99,7 +99,7 @@ const CidadePage = () => {
   const getCityFAQs = () => [
     {
       question: `Quanto custa um toldo por m² em ${cityName}?`,
-      answer: `Os preços de toldos em ${cityName} variam conforme o tipo: toldo fixo em lona a partir de R$ 120/m², toldo retrátil manual a partir de R$ 250/m², retrátil motorizado a partir de R$ 350/m², policarbonato alveolar a partir de R$ 180/m², e cortina rolo transparente a partir de R$ 220/m². Fazemos orçamento gratuito com visita técnica em toda ${cityName}. O preço final depende do tamanho, material escolhido e complexidade da instalação. Entre em contato pelo WhatsApp (41) 99812-1324 para valores exatos para seu projeto em ${cityName}.`
+      answer: `Os preços de toldos em ${cityName} variam conforme o tipo: toldo fixo em lona a partir de R$ 220/m², toldo retrátil manual a partir de R$ 250/m², retrátil motorizado a partir de R$ 350/m², policarbonato alveolar a partir de R$ 220/m², e cortina rolo transparente a partir de R$ 220/m². Fazemos orçamento gratuito com visita técnica em toda ${cityName}. O preço final depende do tamanho, material escolhido e complexidade da instalação. Entre em contato pelo WhatsApp (41) 99812-1324 para valores exatos para seu projeto em ${cityName}.`
     },
     {
       question: `Vocês atendem toda a cidade de ${cityName}?`,
@@ -107,7 +107,7 @@ const CidadePage = () => {
     },
     {
       question: `Qual o melhor tipo de toldo para residência em ${cityName}?`,
-      answer: `Para residências em ${cityName}, recomendamos: toldo fixo em lona acrílica (R$ 120-180/m²) para janelas e portas, excelente custo-benefício. Toldo retrátil (R$ 250-350/m²) para varandas e sacadas, oferecendo flexibilidade. Cobertura em policarbonato (R$ 180-280/m²) para garagens e áreas de lazer, com durabilidade superior. Cortina rolo (R$ 220-380/m²) para sacadas gourmet com proteção contra vento e chuva. Cada tipo tem vantagens específicas e nossa equipe pode orientar a melhor escolha durante a visita técnica gratuita.`
+      answer: `Para residências em ${cityName}, recomendamos: toldo fixo em lona acrílica (R$ 220-180/m²) para janelas e portas, excelente custo-benefício. Toldo retrátil (R$ 250-350/m²) para varandas e sacadas, oferecendo flexibilidade. Cobertura em policarbonato (R$ 220-280/m²) para garagens e áreas de lazer, com durabilidade superior. Cortina rolo (R$ 220-380/m²) para sacadas gourmet com proteção contra vento e chuva. Cada tipo tem vantagens específicas e nossa equipe pode orientar a melhor escolha durante a visita técnica gratuita.`
     },
     {
       question: `Qual o prazo de instalação de toldos em ${cityName}?`,
@@ -115,7 +115,7 @@ const CidadePage = () => {
     },
     {
       question: `Vocês fazem toldos para comércios em ${cityName}?`,
-      answer: `Sim! Somos especialistas em toldos comerciais em ${cityName}. Atendemos padarias (R$ 800-1.500/m linear em capota), farmácias, restaurantes (toldo retrátil a partir de R$ 3.500), pet shops, salões de beleza, oficinas mecânicas (R$ 140-250/m²), supermercados, concessionárias e todo tipo de estabelecimento. Toldos comerciais de fachada com logomarca impressa partem de R$ 150/m². Projetos incluem personalização completa com cores da marca. Coberturas para estacionamento a partir de R$ 140/m².`
+      answer: `Sim! Somos especialistas em toldos comerciais em ${cityName}. Atendemos padarias (R$ 800-1.500/m linear em capota), farmácias, restaurantes (toldo retrátil a partir de R$ 3.500), pet shops, salões de beleza, oficinas mecânicas (R$ 220-250/m²), supermercados, concessionárias e todo tipo de estabelecimento. Toldos comerciais de fachada com logomarca impressa partem de R$ 220/m². Projetos incluem personalização completa com cores da marca. Coberturas para estacionamento a partir de R$ 220/m².`
     },
     {
       question: `Qual a garantia dos toldos em ${cityName}?`,
@@ -131,15 +131,15 @@ const CidadePage = () => {
     },
     {
       question: `Vocês instalam toldos retráteis em ${cityName}?`,
-      answer: `Sim! Toldos retráteis são uma das nossas especialidades em ${cityName}. Manual a partir de R$ 250/m², motorizado a partir de R$ 350/m². Utilizamos motores alemães Somfy com garantia de 2 anos. Opcionais: sensor de vento (R$ 300-500), sensor de chuva (R$ 200-400) e controle por aplicativo. Instalação sem obras, preservando a estrutura original do imóvel. Ideais para varandas, terraços e áreas externas que necessitam flexibilidade de uso.`
+      answer: `Sim! Toldos retráteis são uma das nossas especialidades em ${cityName}. Manual a partir de R$ 250/m², motorizado a partir de R$ 350/m². Utilizamos motores alemães Somfy com garantia de 2 anos. Opcionais: sensor de vento (R$ 300-500), sensor de chuva (R$ 220-400) e controle por aplicativo. Instalação sem obras, preservando a estrutura original do imóvel. Ideais para varandas, terraços e áreas externas que necessitam flexibilidade de uso.`
     },
     {
       question: `Vocês fazem manutenção de toldos em ${cityName}?`,
-      answer: `Sim! Serviço completo de manutenção em ${cityName}: troca de lona (R$ 80-150/m²), limpeza profissional (R$ 15-25/m²), lubrificação de mecanismos (R$ 150-300 por toldo), reparo estrutural (sob consulta). Atendemos toldos de qualquer fabricante. Manutenção preventiva semestral recomendada para prolongar vida útil em até 40%. Atendimento emergencial 24h para reparos urgentes pelo WhatsApp (41) 99812-1324.`
+      answer: `Sim! Serviço completo de manutenção em ${cityName}: troca de lona (R$ 80-150/m²), limpeza profissional (R$ 15-25/m²), lubrificação de mecanismos (R$ 220-300 por toldo), reparo estrutural (sob consulta). Atendemos toldos de qualquer fabricante. Manutenção preventiva semestral recomendada para prolongar vida útil em até 40%. Atendimento emergencial 24h para reparos urgentes pelo WhatsApp (41) 99812-1324.`
     },
     {
       question: `Qual a diferença entre policarbonato e lona em ${cityName}?`,
-      answer: `Policarbonato: mais resistente a impacto, permite passagem de luz natural, durabilidade de 15-20 anos, ideal para coberturas de garagem e área de lazer, preço de R$ 180-300/m². Lona: melhor proteção solar total, mais opções de cores e estampas, durabilidade de 5-12 anos dependendo do tipo, ideal para fachadas e toldos retráteis, preço de R$ 120-200/m². Em ${cityName}, ambos os materiais performam bem com as condições climáticas locais.`
+      answer: `Policarbonato: mais resistente a impacto, permite passagem de luz natural, durabilidade de 15-20 anos, ideal para coberturas de garagem e área de lazer, preço de R$ 220-300/m². Lona: melhor proteção solar total, mais opções de cores e estampas, durabilidade de 5-12 anos dependendo do tipo, ideal para fachadas e toldos retráteis, preço de R$ 220-200/m². Em ${cityName}, ambos os materiais performam bem com as condições climáticas locais.`
     },
     {
       question: `Vocês fazem projetos personalizados em ${cityName}?`,
@@ -155,7 +155,7 @@ const CidadePage = () => {
     },
     {
       question: `Por que escolher a Sul Toldos em ${cityName}?`,
-      answer: `Mais de 15 anos atendendo ${cityName} com excelência! Nossos diferenciais: preços competitivos a partir de R$ 120/m², materiais de primeira qualidade (Sansuy, Guarany, Somfy), equipe técnica certificada, garantia estendida de até 5 anos, manutenção preventiva gratuita, atendimento 24h para emergências, orçamento gratuito com visita técnica e parcelamento em até 12x. Mais de 2.000 clientes satisfeitos na região. Nota 4.9/5 com 150+ avaliações. Escolha quem é referência em toldos em ${cityName}!`
+      answer: `Mais de 15 anos atendendo ${cityName} com excelência! Nossos diferenciais: preços competitivos a partir de R$ 220/m², materiais de primeira qualidade (Sansuy, Guarany, Somfy), equipe técnica certificada, garantia estendida de até 5 anos, manutenção preventiva gratuita, atendimento 24h para emergências, orçamento gratuito com visita técnica e parcelamento em até 12x. Mais de 2.000 clientes satisfeitos na região. Nota 4.9/5 com 150+ avaliações. Escolha quem é referência em toldos em ${cityName}!`
     }
   ];
 
@@ -163,7 +163,7 @@ const CidadePage = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `Sul Toldos - Toldos em ${cityName}`,
-    "description": `Toldos em ${cityName} a partir de R$ 120/m². Especialista em toldos residenciais, comerciais, policarbonato e coberturas. Orçamento grátis!`,
+    "description": `Toldos em ${cityName} a partir de R$ 220/m². Especialista em toldos residenciais, comerciais, policarbonato e coberturas. Orçamento grátis!`,
     "url": `https://sultoldos.app.br/cidade/${citySlug}`,
     "telephone": "+554135646943",
     "address": {
@@ -193,8 +193,8 @@ const CidadePage = () => {
   return (
     <>
       <EnhancedSEO
-        title={`Toldos em ${cityName} | Preços a partir R$ 120/m² | Sul Toldos`}
-        description={`Toldos em ${cityName} a partir de R$ 120/m². Policarbonato, retráteis, comerciais e residenciais. Orçamento grátis! ☎️ (41) 3564-6943. Garantia de até 5 anos. Parcelamos em 12x.`}
+        title={`Toldos em ${cityName} | Preços a partir R$ 220/m² | Sul Toldos`}
+        description={`Toldos em ${cityName} a partir de R$ 220/m². Policarbonato, retráteis, comerciais e residenciais. Orçamento grátis! ☎️ (41) 3564-6943. Garantia de até 5 anos. Parcelamos em 12x.`}
         keywords={`toldos ${cityName.toLowerCase()}, toldo ${cityName.toLowerCase()} preço, policarbonato ${cityName.toLowerCase()}, cobertura ${cityName.toLowerCase()}, toldo retrátil ${cityName.toLowerCase()}, preço toldo m2 ${cityName.toLowerCase()}, toldo residencial, toldo comercial, cortina rolo, cobertura garagem`}
         canonical={`https://sultoldos.app.br/cidade/${citySlug}`}
         structuredData={cityStructuredData}
@@ -215,7 +215,7 @@ const CidadePage = () => {
                   <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
                     Toldos em <span className="text-primary">{cityName}</span>
                     <span className="block text-2xl lg:text-3xl mt-2 text-muted-foreground font-normal">
-                      A partir de R$ 120/m²
+                      A partir de R$ 220/m²
                     </span>
                   </h1>
                   <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
@@ -260,7 +260,7 @@ const CidadePage = () => {
                 <div className="relative">
                   <img 
                     src={currentCity.image} 
-                    alt={`Toldos e coberturas em ${cityName} - Sul Toldos - Preços a partir de R$ 120/m²`}
+                    alt={`Toldos e coberturas em ${cityName} - Sul Toldos - Preços a partir de R$ 220/m²`}
                     className="rounded-2xl shadow-2xl w-full"
                     loading="eager"
                   />

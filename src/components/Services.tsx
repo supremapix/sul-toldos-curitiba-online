@@ -34,7 +34,7 @@ const Services = () => {
       seoTitle: "Toldos Comerciais em Curitiba - Fachadas e Lojas | Sul Toldos",
       seoDescription: "Toldos comerciais para lojas, restaurantes, padarias e comércios em Curitiba. Estrutura reforçada com lona personalizada.",
       description: "Toldos sob medida para fachadas comerciais com estrutura reforçada em metalon e lona acrílica ou vinílica personalizada. Proteção para clientes e destaque visual para seu negócio.",
-      priceFrom: "A partir de R$ 120/m²",
+      priceFrom: "A partir de R$ 220/m²",
       images: [servicoToldoComercial, servicoToldoFachada, servicoToldoLoja],
       features: ["Lona personalizada com logomarca", "Estrutura em metalon reforçado", "Resistente a ventos de até 80km/h"]
     },
@@ -43,7 +43,7 @@ const Services = () => {
       seoTitle: "Coberturas em Policarbonato Curitiba - Alveolar e Compacto | Sul Toldos",
       seoDescription: "Cobertura em policarbonato alveolar e compacto para garagem, quintal e áreas externas em Curitiba. Proteção UV com garantia.",
       description: "Coberturas translúcidas em policarbonato alveolar ou compacto com estrutura metálica galvanizada. Permite passagem de luz natural com proteção UV total.",
-      priceFrom: "A partir de R$ 180/m²",
+      priceFrom: "A partir de R$ 220/m²",
       images: [servicoCoberturaCorreder, servicoCoberturaLona, servicoCoberturaMetalica],
       features: ["Policarbonato com proteção UV", "Estrutura galvanizada anticorrosão", "Garantia de 10 anos"]
     },
@@ -61,7 +61,7 @@ const Services = () => {
       seoTitle: "Coberturas Metálicas e Estruturas em Metalon Curitiba | Sul Toldos",
       seoDescription: "Coberturas metálicas para garagem, estacionamento e áreas industriais em Curitiba. Estrutura em metalon e aço galvanizado.",
       description: "Estruturas metálicas robustas com cobertura em telha galvalume, sanduíche ou lona tensionada. Ideal para garagens, estacionamentos e áreas industriais.",
-      priceFrom: "A partir de R$ 140/m²",
+      priceFrom: "A partir de R$ 220/m²",
       images: [servicoCoberturaMetalica, servicoToldoIndustrial, servicoCoberturaLona],
       features: ["Estrutura calculada por engenheiro", "Telha termoacústica disponível", "Pintura eletrostática"]
     },

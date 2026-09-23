@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Calculator, MessageCircle } from "lucide-react";
 
 const awningTypes = [
-  { id: "lona-fixa", label: "Toldo Fixo em Lona", priceMin: 120, priceMax: 200 },
-  { id: "retratil-manual", label: "Toldo Retrátil Manual", priceMin: 250, priceMax: 350 },
-  { id: "retratil-motor", label: "Toldo Retrátil Motorizado", priceMin: 350, priceMax: 500 },
-  { id: "policarbonato", label: "Cobertura em Policarbonato", priceMin: 180, priceMax: 300 },
+  { id: "lona-fixa", label: "Toldo Fixo em Lona", priceMin: 220, priceMax: 320 },
+  { id: "retratil-manual", label: "Toldo Retrátil Manual", priceMin: 280, priceMax: 380 },
+  { id: "retratil-motor", label: "Toldo Retrátil Motorizado", priceMin: 380, priceMax: 520 },
+  { id: "policarbonato", label: "Cobertura em Policarbonato", priceMin: 240, priceMax: 350 },
   { id: "cortina-rolo", label: "Cortina Rolo PVC", priceMin: 220, priceMax: 380 },
-  { id: "cobertura-metalica", label: "Cobertura Metálica", priceMin: 140, priceMax: 250 },
-  { id: "pergolado", label: "Pergolado com Cobertura", priceMin: 350, priceMax: 600 },
+  { id: "cobertura-metalica", label: "Cobertura Metálica", priceMin: 220, priceMax: 320 },
+  { id: "pergolado", label: "Pergolado com Cobertura", priceMin: 380, priceMax: 650 },
   { id: "capota", label: "Toldo Capota (Fachada)", priceMin: 800, priceMax: 1500, perLinearMeter: true },
 ];
 
