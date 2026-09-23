@@ -22,7 +22,15 @@ const BairroPage = () => {
   ).join(' ') || "";
   const bairroSlug = bairro || "";
 
-  const bairroData: { [key: string]: any } = {
+  interface BairroInfo {
+    image: string;
+    zone: string;
+    profile: string;
+    specialty: string;
+    mainServices: string[];
+  }
+
+  const bairroData: Record<string, BairroInfo> = {
     "agua-verde": {
       image: galeriaCortinaRolo,
       zone: "Zona Sul",

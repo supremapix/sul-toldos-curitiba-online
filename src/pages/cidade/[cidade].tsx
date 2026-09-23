@@ -22,7 +22,16 @@ const CidadePage = () => {
   ).join(' ') || "";
   const citySlug = cidade || "";
 
-  const cityData: { [key: string]: any } = {
+  interface CityInfo {
+    image: string;
+    population: string;
+    neighborhoods: string;
+    specialty: string;
+    mainServices: string[];
+    geo: { lat: string; lng: string };
+  }
+
+  const cityData: Record<string, CityInfo> = {
     curitiba: {
       image: galeriaToldoLoja,
       population: "1.9 milhão",

@@ -12,7 +12,14 @@ const Header = () => {
     window.open("https://wa.me/5541998121324?text=Olá, gostaria de solicitar um orçamento para toldos!", "_blank");
   };
 
-  const navItems = [
+  interface NavItem {
+    href: string;
+    label: string;
+    icon: React.ReactNode;
+    isLink?: boolean;
+  }
+
+  const navItems: NavItem[] = [
     { href: "#home", label: "Início", icon: <Home className="w-5 h-5" /> },
     { href: "#services", label: "Serviços", icon: <Wrench className="w-5 h-5" /> },
     { href: "#gallery", label: "Galeria", icon: <Image className="w-5 h-5" /> },
@@ -38,7 +45,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-5">
             {navItems.map((item) => (
-              (item as any).isLink ? (
+              item.isLink ? (
                 <Link
                   key={item.href}
                   to={item.href}
@@ -87,7 +94,7 @@ const Header = () => {
           <div className="lg:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col space-y-1">
               {navItems.map((item) => (
-                (item as any).isLink ? (
+                item.isLink ? (
                   <Link
                     key={item.href}
                     to={item.href}
