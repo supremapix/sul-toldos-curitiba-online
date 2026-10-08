@@ -8,6 +8,7 @@ import ServiceCards from "@/components/ServiceCards";
 import LocationFAQ from "@/components/LocationFAQ";
 import InfiniteGallery from "@/components/InfiniteGallery";
 import { Button } from "@/components/ui/button";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 import galeriaPolicarbonatoEntrada from "@/assets/galeria-policarbonato-entrada.jpg";
 import galeriaToldoComercial from "@/assets/galeria-toldo-comercial-supermercado.jpg";
@@ -79,7 +80,7 @@ const CidadePage = () => {
 
   const handleWhatsApp = () => {
     const message = `Olá, gostaria de solicitar um orçamento para toldos em ${cityName}!`;
-    window.open(`https://wa.me/5541998121324?text=${encodeURIComponent(message)}`, "_blank");
+    openWhatsapp(message);
   };
 
   const getServiceCards = () => [

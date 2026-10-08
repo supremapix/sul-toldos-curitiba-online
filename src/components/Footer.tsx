@@ -1,6 +1,7 @@
 import { Heart, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoSulToldos from "@/assets/logo-sul-toldos.png";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 const Footer = () => {
   const cities = [
@@ -54,9 +55,12 @@ const Footer = () => {
               <a href="tel:+554135646943" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" /> (41) 3564-6943
               </a>
-              <a href="https://wa.me/5541991031466" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+              <button
+                onClick={() => openWhatsapp("Olá, gostaria de solicitar um orçamento para toldos!")}
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors cursor-pointer border-0 bg-transparent p-0 font-normal outline-none"
+              >
                 <MessageCircle className="w-5 h-5 text-primary flex-shrink-0" /> (41) 99812-1324
-              </a>
+              </button>
               <a href="mailto:contato@sultoldos.com.br" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" /> contato@sultoldos.com.br
               </a>

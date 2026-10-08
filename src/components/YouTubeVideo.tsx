@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Play, Star, Shield, MapPin } from "lucide-react";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 interface YouTubeVideoProps {
   title?: string;
@@ -22,7 +23,7 @@ const YouTubeVideo = ({
   
   const handleWhatsApp = () => {
     const message = `Olá! Vi o vídeo de vocês sobre toldos em ${location} e gostaria de solicitar um orçamento!`;
-    window.open(`https://wa.me/5541998121324?text=${encodeURIComponent(message)}`, "_blank");
+    openWhatsapp(message);
   };
 
   const handleCall = () => {

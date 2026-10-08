@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 import galeriaPolicarbonatoEntrada from "@/assets/galeria-policarbonato-entrada.jpg";
 import galeriaToldoComercial from "@/assets/galeria-toldo-comercial-supermercado.jpg";
@@ -195,14 +196,12 @@ const InfiniteGallery = ({ locationName = "", locationType = "home" }: InfiniteG
 
       {/* CTA */}
       <div className="container mx-auto px-4 mt-10 text-center">
-        <a
-          href={`https://wa.me/5541998121324?text=${encodeURIComponent(`Olá, vi a galeria de trabalhos e gostaria de um orçamento!`)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105"
+        <button
+          onClick={() => openWhatsapp("Olá, vi a galeria de trabalhos e gostaria de um orçamento!")}
+          className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer border-0 outline-none"
         >
           📱 SOLICITAR ORÇAMENTO GRÁTIS
-        </a>
+        </button>
       </div>
 
       {/* Popup Modal */}
@@ -250,14 +249,12 @@ const InfiniteGallery = ({ locationName = "", locationType = "home" }: InfiniteG
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href={`https://wa.me/5541998121324?text=${encodeURIComponent(`Olá, me interessei pelo serviço: ${selectedItem.title}${locationName ? ` ${prep} ${locationName}` : ""}. Gostaria de um orçamento!`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-lg text-center text-lg transition-colors"
+                <button
+                  onClick={() => openWhatsapp(`Olá, me interessei pelo serviço: ${selectedItem.title}${locationName ? ` ${prep} ${locationName}` : ""}. Gostaria de um orçamento!`)}
+                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-lg text-center text-lg transition-colors cursor-pointer border-0 outline-none"
                 >
                   💬 ORÇAMENTO GRÁTIS
-                </a>
+                </button>
                 <a
                   href="tel:+554135646943"
                   className="flex-1 border-2 border-border hover:bg-secondary text-foreground font-bold py-3 px-6 rounded-lg text-center text-lg transition-colors"

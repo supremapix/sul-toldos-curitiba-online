@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { X, MessageCircle, Phone } from "lucide-react";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 interface FAQItem {
   question: string;
@@ -122,15 +123,13 @@ const FAQ = () => {
         <div className="text-center mt-10">
           <p className="text-lg text-muted-foreground mb-6">Não encontrou sua dúvida?</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://wa.me/5541998121324?text=Olá, tenho dúvidas sobre toldos!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors font-bold text-lg"
+            <button
+              onClick={() => openWhatsapp("Olá, tenho dúvidas sobre toldos!")}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors font-bold text-lg cursor-pointer"
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp: (41) 99812-1324
-            </a>
+            </button>
             <a
               href="tel:+554135646943"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-border text-foreground rounded-xl hover:bg-secondary transition-colors font-bold text-lg"
@@ -171,14 +170,12 @@ const FAQ = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href={`https://wa.me/5541998121324?text=${encodeURIComponent(`Olá, tenho dúvida sobre: ${selectedFAQ.question}`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-5 rounded-lg text-center transition-colors"
+                <button
+                  onClick={() => openWhatsapp(`Olá, tenho dúvida sobre: ${selectedFAQ.question}`)}
+                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-5 rounded-lg text-center transition-colors cursor-pointer"
                 >
                   💬 TIRAR DÚVIDA
-                </a>
+                </button>
                 <a
                   href="tel:+554135646943"
                   className="flex-1 border border-border hover:bg-secondary text-foreground font-semibold py-3 px-5 rounded-lg text-center transition-colors"

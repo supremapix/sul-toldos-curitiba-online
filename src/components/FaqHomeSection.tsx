@@ -1,5 +1,6 @@
 import { MessageCircle, HelpCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 const PREVIEW_FAQS = [
   { q: "Quanto custa um toldo em Curitiba?", a: "O preço varia conforme tipo, material e tamanho. Orçamento 100% gratuito na Sul Toldos." },
@@ -12,7 +13,7 @@ const PREVIEW_FAQS = [
 
 const FaqHomeSection = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5541998121324?text=Olá! Tenho uma dúvida sobre toldos.", "_blank");
+    openWhatsapp("Olá! Tenho uma dúvida sobre toldos.");
   };
 
   return (

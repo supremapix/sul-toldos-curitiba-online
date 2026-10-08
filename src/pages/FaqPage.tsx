@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import YouTubeVideo from "@/components/YouTubeVideo";
 import { MessageCircle, Phone, Search, ChevronDown, ChevronUp, X } from "lucide-react";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 const BLOCOS = [
   { id: "tipos", label: "Tipos de Toldos" },
@@ -220,7 +221,7 @@ const FaqPage = () => {
   }, [activeBloco, search]);
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5541998121324?text=Olá! Tenho uma dúvida sobre toldos. Podem me ajudar?", "_blank");
+    openWhatsapp("Olá! Tenho uma dúvida sobre toldos. Podem me ajudar?");
   };
 
   const faqSchema = {

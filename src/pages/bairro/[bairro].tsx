@@ -8,6 +8,7 @@ import ServiceCards from "@/components/ServiceCards";
 import LocationFAQ from "@/components/LocationFAQ";
 import InfiniteGallery from "@/components/InfiniteGallery";
 import { Button } from "@/components/ui/button";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 import galeriaPolicarbonatoEntrada from "@/assets/galeria-policarbonato-entrada.jpg";
 import galeriaCoberturaQuintal from "@/assets/galeria-cobertura-quintal.jpg";
@@ -80,7 +81,7 @@ const BairroPage = () => {
 
   const handleWhatsApp = () => {
     const message = `Olá, gostaria de solicitar um orçamento para toldos no ${bairroName}, Curitiba!`;
-    window.open(`https://wa.me/5541998121324?text=${encodeURIComponent(message)}`, "_blank");
+    openWhatsapp(message);
   };
 
   const getServiceCards = () => [

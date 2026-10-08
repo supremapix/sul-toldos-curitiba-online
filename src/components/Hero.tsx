@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-awning.jpg";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 const Hero = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5541998121324?text=Olá, gostaria de solicitar um orçamento para toldos!", "_blank");
+    openWhatsapp("Olá, gostaria de solicitar um orçamento para toldos!");
   };
 
   const handleCallNow = () => {

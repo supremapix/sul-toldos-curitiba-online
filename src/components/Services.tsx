@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 import servicoToldoComercial from "@/assets/servico-toldo-comercial.jpg";
 import servicoToldoFachada from "@/assets/servico-toldo-fachada.jpg";
@@ -69,7 +70,7 @@ const Services = () => {
 
   const handleWhatsApp = (service: string) => {
     const message = `Olá, gostaria de solicitar um orçamento para ${service}!`;
-    window.open(`https://wa.me/5541998121324?text=${encodeURIComponent(message)}`, "_blank");
+    openWhatsapp(message);
   };
 
   const nextImage = () => {
@@ -148,14 +149,12 @@ const Services = () => {
           <p className="text-muted-foreground text-lg mb-6">
             Envie uma foto do local e receba seu orçamento personalizado no WhatsApp. Sem compromisso!
           </p>
-          <a
-            href="https://wa.me/5541998121324?text=Olá, gostaria de um orçamento rápido para toldos!"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105"
+          <button
+            onClick={() => openWhatsapp("Olá, gostaria de um orçamento rápido para toldos!")}
+            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
           >
             📱 SOLICITAR ORÇAMENTO GRÁTIS AGORA
-          </a>
+          </button>
         </div>
       </div>
 
@@ -237,14 +236,12 @@ const Services = () => {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href={`https://wa.me/5541998121324?text=${encodeURIComponent(`Olá, me interessei pelo serviço: ${selectedService.title}. Gostaria de um orçamento!`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-lg text-center text-lg transition-colors"
+                <button
+                  onClick={() => openWhatsapp(`Olá, me interessei pelo serviço: ${selectedService.title}. Gostaria de um orçamento!`)}
+                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-lg text-center text-lg transition-colors cursor-pointer"
                 >
                   💬 ORÇAMENTO GRÁTIS
-                </a>
+                </button>
                 <a
                   href="tel:+554135646943"
                   className="flex-1 border-2 border-border hover:bg-secondary text-foreground font-bold py-3 px-6 rounded-lg text-center text-lg transition-colors"

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { openWhatsapp } from "@/utils/whatsapp";
 import awningResidential from "@/assets/awning-residential.jpg";
 import canopyCommercial from "@/assets/canopy-commercial.jpg";
 import retractableAwning from "@/assets/retractable-awning.jpg";
@@ -66,7 +67,7 @@ const Gallery = () => {
     : galleryItems.filter(item => item.category === selectedCategory);
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5541998121324?text=Olá, vi a galeria de trabalhos e gostaria de solicitar um orçamento!", "_blank");
+    openWhatsapp("Olá, vi a galeria de trabalhos e gostaria de solicitar um orçamento!");
   };
 
   return (

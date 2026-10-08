@@ -1,4 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 interface FAQ {
   question: string;
@@ -53,14 +54,12 @@ const LocationFAQ = ({ location, type, faqs }: LocationFAQProps) => {
             Não encontrou a resposta que procurava? Entre em contato conosco!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://wa.me/5541998121324" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-6 py-3 rounded-md transition-colors"
+            <button 
+              onClick={() => openWhatsapp(`Olá, estou em ${location} e gostaria de tirar algumas dúvidas.`)}
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-6 py-3 rounded-md transition-colors cursor-pointer border-0 outline-none"
             >
               💬 WhatsApp: (41) 99812-1324
-            </a>
+            </button>
             <a 
               href="tel:+554135646943"
               className="inline-flex items-center justify-center border border-border hover:bg-secondary text-foreground font-semibold px-6 py-3 rounded-md transition-colors"

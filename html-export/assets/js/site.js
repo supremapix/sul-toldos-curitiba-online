@@ -66,7 +66,15 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
       link.addEventListener('click', (e) => {
           const newNumber = getNextWhatsappNumber();
-          link.href = `https://wa.me/${newNumber}`;
+          try {
+              const url = new URL(link.href);
+              const textParam = url.searchParams.get('text');
+              link.href = `https://wa.me/${newNumber}${textParam ? `?text=${encodeURIComponent(textParam)}` : ''}`;
+          } catch (err) {
+              const textMatch = link.href.match(/[?&]text=([^&#]*)/);
+              const textParam = textMatch ? textMatch[1] : '';
+              link.href = `https://wa.me/${newNumber}${textParam ? `?text=${textParam}` : ''}`;
+          }
       });
   });
 });
