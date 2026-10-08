@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Home, Wrench, Image, Info, MessageSquare, Calculator } from "lucide-react";
 import logoSulToldos from "@/assets/logo-sul-toldos.png";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5541998121324?text=Olá, gostaria de solicitar um orçamento para toldos!", "_blank");
+    openWhatsapp("Olá, gostaria de solicitar um orçamento para toldos!");
   };
 
   interface NavItem {

@@ -51,4 +51,22 @@ document.addEventListener("DOMContentLoaded", () => {
     typeSelect?.addEventListener("change", calculatePrice);
     calculatePrice();
   }
+
+  // WhatsApp Rotation Logic
+  const whatsappNumbers = ["5541995304757", "5541991031466"];
+  let currentWhatsappIndex = parseInt(localStorage.getItem('whatsappIndex') || '0');
+
+  function getNextWhatsappNumber() {
+      const number = whatsappNumbers[currentWhatsappIndex];
+      currentWhatsappIndex = (currentWhatsappIndex + 1) % whatsappNumbers.length;
+      localStorage.setItem('whatsappIndex', currentWhatsappIndex.toString());
+      return number;
+  }
+
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+          const newNumber = getNextWhatsappNumber();
+          link.href = `https://wa.me/${newNumber}`;
+      });
+  });
 });

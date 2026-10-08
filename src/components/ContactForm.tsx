@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -56,8 +57,7 @@ const ContactForm = () => {
 
 _Enviado pelo site Sul Toldos_`;
 
-    const whatsappUrl = `https://wa.me/5541998121324?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
+    openWhatsapp(message);
 
     toast({
       title: "Redirecionando para WhatsApp",
@@ -231,7 +231,7 @@ _Enviado pelo site Sul Toldos_`;
                   Respondemos em até 1 hora durante o horário comercial
                 </p>
                 <Button 
-                  onClick={() => window.open("https://wa.me/5541998121324?text=Olá, preciso de atendimento urgente para toldos!", "_blank")}
+                  onClick={() => openWhatsapp("Olá, preciso de atendimento urgente para toldos!")}
                   className="bg-primary hover:bg-primary/90"
                 >
                   WhatsApp Direto

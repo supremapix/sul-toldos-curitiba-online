@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Calculator, MessageCircle } from "lucide-react";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 const awningTypes = [
   { id: "lona-fixa", label: "Toldo Fixo em Lona", priceMin: 220, priceMax: 320 },
@@ -39,9 +40,12 @@ const AwningCalculator = () => {
     if (isValid) setShowResult(true);
   };
 
-  const whatsappMessage = selectedAwning
-    ? `Olá! Calculei no site e gostaria de um orçamento para:\n\n📋 Tipo: ${selectedAwning.label}\n📏 Largura: ${width}m x Profundidade: ${depth}m\n📐 Área: ${area.toFixed(1)}m²\n💰 Estimativa: R$ ${priceMin.toFixed(0)} a R$ ${priceMax.toFixed(0)}\n\nPode me enviar um orçamento detalhado?`
-    : "";
+  const handleSendWhatsapp = () => {
+    if (selectedAwning) {
+      const whatsappMessage = `Olá! Calculei no site e gostaria de um orçamento para:\n\n📋 Tipo: ${selectedAwning.label}\n📏 Largura: ${width}m x Profundidade: ${depth}m\n📐 Área: ${area.toFixed(1)}m²\n💰 Estimativa: R$ ${priceMin.toFixed(0)} a R$ ${priceMax.toFixed(0)}\n\nPode me enviar um orçamento detalhado?`;
+      openWhatsapp(whatsappMessage);
+    }
+  };
 
   return (
     <section id="calculator" className="py-16 bg-background">
@@ -142,15 +146,13 @@ const AwningCalculator = () => {
                     *Valores aproximados. Preço final depende de visita técnica.
                   </p>
                 </div>
-                <a
-                  href={`https://wa.me/5541998121324?text=${encodeURIComponent(whatsappMessage)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={handleSendWhatsapp}
                   className="flex items-center justify-center gap-2 w-full bg-[hsl(142,70%,40%)] hover:bg-[hsl(142,70%,35%)] text-white font-bold text-lg py-4 rounded-xl transition-all duration-300"
                 >
                   <MessageCircle className="w-6 h-6" />
                   ENVIAR ORÇAMENTO NO WHATSAPP
-                </a>
+                </button>
               </div>
             )}
           </div>

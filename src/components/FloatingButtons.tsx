@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ArrowUp, Phone, MessageCircle, Mail, MapPin, X } from "lucide-react";
+import { openWhatsapp } from "@/utils/whatsapp";
 
 const FloatingButtons = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -22,10 +23,7 @@ const FloatingButtons = () => {
       label: "WhatsApp",
       icon: <MessageCircle className="h-6 w-6" />,
       onClick: () =>
-        window.open(
-          "https://wa.me/5541998121324?text=Olá, gostaria de solicitar um orçamento para toldos!",
-          "_blank"
-        ),
+        openWhatsapp("Olá, gostaria de solicitar um orçamento para toldos!"),
       bg: "bg-[hsl(142,70%,40%)] hover:bg-[hsl(142,70%,35%)]",
     },
     {
