@@ -54,7 +54,7 @@ const Footer = () => {
               <a href="tel:+554135646943" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" /> (41) 3564-6943
               </a>
-              <a href="https://wa.me/5541998121324" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://wa.me/5541991031466" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                 <MessageCircle className="w-5 h-5 text-primary flex-shrink-0" /> (41) 99812-1324
               </a>
               <a href="mailto:contato@sultoldos.com.br" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
