@@ -2,16 +2,13 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import { openWhatsapp } from "@/utils/whatsapp";
 
-import galeriaPolicarbonatoEntrada from "@/assets/galeria-policarbonato-entrada.jpg";
-import galeriaToldoComercial from "@/assets/galeria-toldo-comercial-supermercado.jpg";
-import galeriaCoberturaQuintal from "@/assets/galeria-cobertura-quintal.jpg";
-import galeriaToldoLoja from "@/assets/galeria-toldo-loja.jpg";
-import galeriaCoberturaMetalica from "@/assets/galeria-cobertura-metalica.jpg";
-import galeriaCortinaRolo from "@/assets/galeria-cortina-rolo.jpg";
-import galeriaToldoGaragem from "@/assets/galeria-toldo-garagem.jpg";
-import galeriaCoberturaGaragem from "@/assets/galeria-cobertura-garagem.jpg";
-import galeriaPolicarbonatoArea from "@/assets/galeria-policarbonato-area.jpg";
-import galeriaToldoCortina from "@/assets/galeria-toldo-cortina.jpg";
+import toldoBordoLoja from "@/assets/toldo_bordo_loja.webp";
+import terracoToldoRetratil from "@/assets/terraco_toldo_retratil.webp";
+import coberturaEstacionamento from "@/assets/cobertura_estacionamento.webp";
+import toldoVerdeCafe from "@/assets/toldo_verde_cafe.webp";
+import cortinasPvcCristal from "@/assets/cortinas_pvc_cristal.webp";
+import coberturaMetalicaDoca from "@/assets/cobertura_metalica_doca.webp";
+import instalacaoToldoTerracota from "@/assets/instalacao_toldo_terracota.webp";
 
 export interface GalleryItem {
   id: number;
@@ -25,23 +22,23 @@ export interface GalleryItem {
 const defaultGalleryItems: GalleryItem[] = [
   {
     id: 1,
-    image: galeriaPolicarbonatoEntrada,
+    image: coberturaEstacionamento,
     title: "Cobertura em Policarbonato para Escritório",
-    description: "Toldo curvo em policarbonato fumê instalado na recepção de edifício corporativo. Proteção elegante contra chuva e sol com estrutura em alumínio reforçado. Ideal para acessos de clínicas, cartórios e comércios.",
+    description: "Toldo curvo em policarbonato fumê para recepção de edifício corporativo. Proteção elegante contra chuva e sol com estrutura em alumínio reforçado. Ideal para acessos de clínicas, cartórios e comércios.",
     category: "Policarbonato",
     priceFrom: "A partir de R$ 240/m²"
   },
   {
     id: 2,
-    image: galeriaToldoComercial,
-    title: "Toldo de Lona para Supermercado",
-    description: "Cortinas verticais em lona cinza de alta resistência para proteção de área externa de supermercado. Solução robusta com sistema de engrenagem industrial, excelente proteção climática.",
+    image: terracoToldoRetratil,
+    title: "Toldo de Lona Retrátil para Comércio",
+    description: "Cortinas verticais em lona cinza de alta resistência para proteção de área externa comercial. Solução robusta com sistema de engrenagem industrial, excelente proteção climática.",
     category: "Comercial",
     priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 3,
-    image: galeriaCoberturaQuintal,
+    image: coberturaEstacionamento,
     title: "Cobertura em Policarbonato para Restaurante",
     description: "Cobertura translúcida em policarbonato alveolar para área de atendimento de bar e restaurante. Permite passagem de iluminação natural enquanto protege os clientes do vento e da chuva.",
     category: "Policarbonato",
@@ -49,7 +46,7 @@ const defaultGalleryItems: GalleryItem[] = [
   },
   {
     id: 4,
-    image: galeriaToldoLoja,
+    image: toldoBordoLoja,
     title: "Toldo de Fachada para Loja",
     description: "Toldo fixo reto com estrutura metálica galvanizada sob medida para fachada comercial. Lona personalizada de alta visibilidade e acabamento com impressão de alta resolução do logotipo.",
     category: "Comercial",
@@ -57,7 +54,7 @@ const defaultGalleryItems: GalleryItem[] = [
   },
   {
     id: 5,
-    image: galeriaCoberturaMetalica,
+    image: coberturaMetalicaDoca,
     title: "Cobertura Metálica de Carga/Descarga",
     description: "Estrutura de cobertura em metalon de vãos amplos para área de recebimento de mercadorias em galpão logístico ou fábrica. Proteção garantida para suas operações comerciais.",
     category: "Coberturas",
@@ -65,7 +62,7 @@ const defaultGalleryItems: GalleryItem[] = [
   },
   {
     id: 6,
-    image: galeriaCortinaRolo,
+    image: cortinasPvcCristal,
     title: "Toldo Cortina de PVC Cristal",
     description: "Cortina rolo vertical retrátil com visor transparente em PVC cristal para varanda de restaurante. Permite climatização térmico-acústica sem perder a visibilidade da calçada.",
     category: "Cortinas",
@@ -73,7 +70,7 @@ const defaultGalleryItems: GalleryItem[] = [
   },
   {
     id: 7,
-    image: galeriaToldoGaragem,
+    image: coberturaEstacionamento,
     title: "Cobertura para Estacionamento de Clínica",
     description: "Toldo fixo robusto em arco com estrutura de aço galvanizado anticorrosão e lona vinílica para vagas rotativas de clientes. Proteção integral contra granizo e intempéries.",
     category: "Estacionamento",
@@ -81,7 +78,7 @@ const defaultGalleryItems: GalleryItem[] = [
   },
   {
     id: 8,
-    image: galeriaCoberturaGaragem,
+    image: coberturaMetalicaDoca,
     title: "Cobertura de Estacionamento Corporativo",
     description: "Cobertura em lona tensionada estruturada para proteção de frota de veículos em pátios comerciais e indústrias. Dimensionada por engenheiro para suportar ventos de grande escala.",
     category: "Coberturas",
@@ -89,7 +86,7 @@ const defaultGalleryItems: GalleryItem[] = [
   },
   {
     id: 9,
-    image: galeriaPolicarbonatoArea,
+    image: coberturaEstacionamento,
     title: "Cobertura em Policarbonato para Condomínio",
     description: "Cobertura em policarbonato compacto opalino com estrutura metálica fina para circulação interna de pedestres em condomínio comercial. Sofisticação e resistência de alto padrão.",
     category: "Policarbonato",
@@ -97,7 +94,7 @@ const defaultGalleryItems: GalleryItem[] = [
   },
   {
     id: 10,
-    image: galeriaToldoCortina,
+    image: toldoVerdeCafe,
     title: "Toldo Cortina Vertical Corta-Vento",
     description: "Toldo vertical retrátil em lona vinílica blackout reforçada para fechamento lateral de cafeteria ou restaurante de rua. Proteção eficiente contra chuva lateral e ventanias.",
     category: "Cortinas",
@@ -122,8 +119,8 @@ const InfiniteGallery = ({ locationName = "", locationType = "home" }: InfiniteG
 
   const prep = locationType === "bairro" ? "no" : "em";
   const sectionTitle = locationName
-    ? `Galeria de Trabalhos ${prep} ${locationName}`
-    : "Galeria de Projetos Realizados";
+    ? `Galeria de Modelos ${prep} ${locationName}`
+    : "Imagens Ilustrativas dos Serviços";
 
   // Triplicar para loop perfeito sem saltos
   const tripled = [...defaultGalleryItems, ...defaultGalleryItems, ...defaultGalleryItems];
@@ -143,15 +140,15 @@ const InfiniteGallery = ({ locationName = "", locationType = "home" }: InfiniteG
             }}
           >
             {locationName ? (
-              <>Projetos Instalados {prep} <span className="text-[#C8361D]">{locationName}</span></>
+              <>Modelos de Toldos {prep} <span className="text-[#C8361D]">{locationName}</span></>
             ) : (
-              <>Projetos Instalados em <span className="text-[#C8361D]">Curitiba</span></>
+              <>Modelos de Toldos em <span className="text-[#C8361D]">Curitiba</span></>
             )}
           </h2>
           <p className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
             {locationName
-              ? `Confira as estruturas que montamos para destacar e proteger comércios ${prep} ${locationName}. Clique para ver detalhes e referências.`
-              : "Veja exemplos reais de toldos de fachada, retráteis de lona e coberturas comerciais em policarbonato de alta resistência."}
+              ? `Confira modelos de estruturas para destacar e proteger comércios ${prep} ${locationName}. Clique para ver detalhes e referências.`
+              : "Veja exemplos de toldos de fachada, retráteis de lona e coberturas comerciais em policarbonato de alta resistência (imagens ilustrativas dos serviços)."}
           </p>
         </div>
       </div>

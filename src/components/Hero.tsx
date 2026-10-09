@@ -127,7 +127,7 @@ const Hero = () => {
         <div className="lg:col-span-5 relative min-h-[350px] lg:min-h-full overflow-hidden">
           <img 
             src={heroImage} 
-            alt="Toldo Comercial instalado pela Toldos Comerciais Curitiba" 
+            alt="Toldo Comercial para Fachada de Loja - Imagem Ilustrativa" 
             className="absolute inset-0 w-full h-full object-cover lg:h-full transition-transform duration-[4s]"
             style={isDesktop ? { transform: `translateY(${scrollY * 0.15}px) scale(1.05)`, transition: "transform 0.1s ease-out" } : {}}
             loading="eager"

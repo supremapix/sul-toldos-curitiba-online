@@ -84,10 +84,10 @@ export const Gallery = () => {
               className="font-sans font-extrabold uppercase text-3xl md:text-5xl leading-tight tracking-tight mb-2"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
-              Galeria de Trabalhos Executados
+              Modelos de Toldos e Coberturas
             </h2>
             <p className="text-base text-gray-700 leading-relaxed">
-              Confira fotos de instalações reais de toldos comerciais e coberturas corporativas que realizamos em Curitiba e Região Metropolitana.
+              Confira imagens ilustrativas de toldos comerciais e coberturas corporativas para Curitiba e Região Metropolitana.
             </p>
           </div>
           

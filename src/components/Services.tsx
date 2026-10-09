@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 import { X, ChevronLeft, ChevronRight, LayoutGrid, Store, FileText, Landmark, RefreshCw, Layers, ShieldCheck } from "lucide-react";
 import { openWhatsapp } from "@/utils/whatsapp";
 
-import servicoToldoComercial from "@/assets/servico-toldo-comercial.jpg";
-import servicoToldoFachada from "@/assets/servico-toldo-fachada.jpg";
-import servicoToldoLoja from "@/assets/servico-toldo-loja.jpg";
-import servicoCoberturaCorreder from "@/assets/servico-cobertura-corredor.jpg";
-import servicoPergolado from "@/assets/servico-pergolado.jpg";
-import servicoCortinaRolo from "@/assets/servico-cortina-rolo.jpg";
-import servicoCoberturaMetalica from "@/assets/servico-cobertura-metalica.jpg";
+import toldoBordoLoja from "@/assets/toldo_bordo_loja.webp";
+import terracoToldoRetratil from "@/assets/terraco_toldo_retratil.webp";
+import coberturaEstacionamento from "@/assets/cobertura_estacionamento.webp";
+import toldoVerdeCafe from "@/assets/toldo_verde_cafe.webp";
+import cortinasPvcCristal from "@/assets/cortinas_pvc_cristal.webp";
+import coberturaMetalicaDoca from "@/assets/cobertura_metalica_doca.webp";
+import instalacaoToldoTerracota from "@/assets/instalacao_toldo_terracota.webp";
 
 interface ServiceItem {
   title: string;
@@ -34,7 +34,7 @@ export const Services = () => {
       seoDescription: "Toldo fixo ou capota para lojas, farmácias e vitrines em Curitiba. Estrutura rígida sob medida a partir de R$ 220/m².",
       description: "Toldos rígidos e capotas no formato arco ou trapézio, perfeitos para a entrada de lojas e farmácias. Protege sua vitrine do sol e da chuva direta com altíssima elegância.",
       priceFrom: "A partir de R$ 220/m²",
-      images: [servicoToldoFachada, servicoToldoLoja],
+      images: [toldoBordoLoja, toldoVerdeCafe],
       features: ["Lona de alta resistência UV", "Estrutura metálica com pintura epóxi", "Opção de acabamento reto ou ondulado"],
       icon: Store
     },
@@ -44,7 +44,7 @@ export const Services = () => {
       seoDescription: "Toldo retrátil de braço articulado ou pivotante para restaurantes e bares em Curitiba. Expanda sua área útil com lona de alta qualidade.",
       description: "Sistemas articulados modernos que abrem e fecham conforme a necessidade do clima. Perfeito para cobrir mesas externas e calçadas de bares, cafés e restaurantes.",
       priceFrom: "A partir de R$ 220/m²",
-      images: [servicoToldoComercial, servicoPergolado],
+      images: [terracoToldoRetratil, toldoVerdeCafe],
       features: ["Braços articulados importados", "Acionamento manual ou automatizado", "Proteção térmica contra o calor do sol"],
       icon: Layers
     },
@@ -54,7 +54,7 @@ export const Services = () => {
       seoDescription: "Toldo comercial personalizado com o logotipo da sua empresa. Comunicação visual e proteção integradas.",
       description: "Integração total entre proteção de fachada e identidade de marca. Impressão digital de alta resolução diretamente sobre a lona vinílica ou acrílica.",
       priceFrom: "A partir de R$ 220/m²",
-      images: [servicoToldoLoja, servicoToldoComercial],
+      images: [toldoBordoLoja, toldoVerdeCafe],
       features: ["Impressão UV de alta definição", "Recorte eletrônico de letras", "Alta fidelidade de cores de marca"],
       icon: FileText
     },
@@ -64,7 +64,7 @@ export const Services = () => {
       seoDescription: "Cobertura de policarbonato alveolar ou compacto para estacionamentos, entradas e corredores de empresas.",
       description: "Estruturas transparentes ou translúcidas de alta resistência a impactos. Perfeitas para coberturas de garagens corporativas, estacionamentos e acessos de condomínios.",
       priceFrom: "A partir de R$ 220/m²",
-      images: [servicoCoberturaCorreder, servicoCoberturaMetalica],
+      images: [coberturaEstacionamento, coberturaMetalicaDoca],
       features: ["Policarbonato com barreira anti-UV", "Estrutura tubular com pintura especial", "Garantia contra amarelamento e impacto"],
       icon: LayoutGrid
     },
@@ -74,7 +74,7 @@ export const Services = () => {
       seoDescription: "Toldo cortina rolo transparente em PVC cristal para fechamento de áreas externas de restaurantes e bares.",
       description: "Fechamento vertical retrátil em PVC cristal transparente. Garante conforto térmico e proteção contra ventos fortes ou chuva fina na calçada do seu restaurante.",
       priceFrom: "A partir de R$ 220/m²",
-      images: [servicoCortinaRolo, servicoPergolado],
+      images: [cortinasPvcCristal, terracoToldoRetratil],
       features: ["PVC cristal transparente importado", "Bordas reforçadas em lona colorida", "Sistema de travas inferiores seguras"],
       icon: Landmark
     },
@@ -84,7 +84,7 @@ export const Services = () => {
       seoDescription: "Cobertura de galpões comerciais e áreas de carga e descarga em Curitiba. Proteção metálica e lona reforçada.",
       description: "Projetos robustos e de grandes vãos para docas, áreas de carga e descarga de indústrias, comércios e galpões de distribuição.",
       priceFrom: "A partir de R$ 220/m²",
-      images: [servicoCoberturaMetalica, servicoToldoFachada],
+      images: [coberturaMetalicaDoca, coberturaEstacionamento],
       features: ["Vãos livres calculados para caminhões", "Telhas sanduíche termoacústicas", "Pintura industrial anticorrosiva"],
       icon: ShieldCheck
     },
@@ -94,7 +94,7 @@ export const Services = () => {
       seoDescription: "Manutenção profissional de toldos, pintura de estrutura metálica e troca de lona desgastada para empresas em Curitiba.",
       description: "Renovação completa da fachada do seu comércio sem precisar fabricar uma estrutura nova. Trocamos sua lona rasgada ou desbotada por uma lona novíssima.",
       priceFrom: "A partir de R$ 220/m²",
-      images: [servicoToldoComercial, servicoToldoLoja],
+      images: [instalacaoToldoTerracota, toldoBordoLoja],
       features: ["Avaliação técnica da estrutura atual", "Remoção e descarte da lona antiga", "Pintura e lubrificação de engrenagens"],
       icon: RefreshCw
     }
@@ -131,7 +131,7 @@ export const Services = () => {
             Toldos e Coberturas Industriais & Comerciais
           </h2>
           <p className="text-base text-gray-400 max-w-3xl leading-relaxed">
-            Desenvolvemos projetos robustos e funcionais para dar proteção e alta visibilidade ao seu comércio. Clique em um serviço para ver fotos reais e especificações técnicas.
+            Desenvolvemos projetos robustos e funcionais para dar proteção e alta visibilidade ao seu comércio. Clique em um serviço para ver imagens ilustrativas dos serviços e especificações técnicas.
           </p>
         </div>
 
