@@ -156,16 +156,16 @@ export const VarejoScene = () => {
           <rect x="-90" y="-18" width="180" height="24" fill="#0E1012" stroke="#222" strokeWidth="1" rx="2" />
           
           {/* Neon Glow backdrop */}
-          <rect class="neon-glow-rect" x="-85" y="-15" width="170" height="18" fill="url(#neonGlow)" rx="1" style={{ pointerEvents: "none" }} />
+          <rect className="neon-glow-rect" x="-85" y="-15" width="170" height="18" fill="url(#neonGlow)" rx="1" style={{ pointerEvents: "none" }} />
           
           {/* Neon Lettering */}
-          <text class="neon-sign" x="0" y="-2" textAnchor="middle" fontSize="11px" fontWeight="900" letterSpacing="5px" style={{ fontFamily: "sans-serif" }}>
+          <text className="neon-sign" x="0" y="-2" textAnchor="middle" fontSize="11px" fontWeight="900" letterSpacing="5px" style={{ fontFamily: "sans-serif" }}>
             BOUTIQUE
           </text>
         </g>
 
         {/* Toldo Fixo Capota (Balança levemente ao vento, com 'SUA MARCA' gravado) */}
-        <g class="capota-awning">
+        <g className="capota-awning">
           {/* Structural ribs in grey */}
           <path d="M80,45 Q200,30 320,45" fill="none" stroke="#555" strokeWidth="1.5" />
           <path d="M78,112 Q200,105 322,112" fill="none" stroke="#555" strokeWidth="1.5" />
@@ -182,7 +182,7 @@ export const VarejoScene = () => {
           {/* Golden/Yellow brand lettering: 'SUA MARCA' (Animação Stroke-Dash) */}
           <g transform="translate(200, 78)">
             {/* Outline draw */}
-            <text class="brand-logo" x="0" y="0" textAnchor="middle" fontSize="15px" fontWeight="bold" letterSpacing="4px" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+            <text className="brand-logo" x="0" y="0" textAnchor="middle" fontSize="15px" fontWeight="bold" letterSpacing="4px" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               SUA MARCA
             </text>
           </g>

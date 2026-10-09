@@ -156,12 +156,12 @@ export const RestauranteScene = () => {
           <path d="M0,8 L10,8 C10,13 8,13 5,13 C2,13 0,13 0,8 Z" fill="#F4EFE6" />
           <path d="M10,9 C12,9 12,11 10,11" fill="none" stroke="#F4EFE6" strokeWidth="1" />
           {/* Steams */}
-          <path d="M3,5 Q1,2 3,-1" class="steam steam-1" />
-          <path d="M7,5 Q5,2 7,-1" class="steam steam-2" />
+          <path d="M3,5 Q1,2 3,-1" className="steam steam-1" />
+          <path d="M7,5 Q5,2 7,-1" className="steam steam-2" />
         </g>
 
         {/* Retractable Striped Awning (Abre/Estende em loop) */}
-        <g class="awning-fabric">
+        <g className="awning-fabric">
           {/* Awning Arms Structure (Behind) */}
           <line x1="80" y1="35" x2="70" y2="105" stroke="#555" strokeWidth="2" />
           <line x1="320" y1="35" x2="330" y2="105" stroke="#555" strokeWidth="2" />
@@ -191,7 +191,7 @@ export const RestauranteScene = () => {
           
           {/* Shine swept linear overlay */}
           <g style={{ clipPath: "inset(0px 0px 0px 0px round 1px)" }}>
-            <rect class="shine-line" x="-10" y="-30" width="15" height="200" fill="url(#shineGrad)" transform="rotate(25)" />
+            <rect className="shine-line" x="-10" y="-30" width="15" height="200" fill="url(#shineGrad)" transform="rotate(25)" />
           </g>
         </g>
 

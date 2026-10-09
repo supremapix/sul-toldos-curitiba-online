@@ -125,13 +125,13 @@ export const InfraestruturaScene = () => {
         <line x1="0" y1="155" x2="400" y2="155" stroke="#111" strokeWidth="2.5" />
 
         {/* Shifting Shadows of Carports on floor (Animação rotateShadow) */}
-        <g class="shifting-shadow" filter="url(#shadowBlur)">
+        <g className="shifting-shadow" filter="url(#shadowBlur)">
           <rect x="35" y="155" width="130" height="40" fill="#050607" />
           <rect x="195" y="155" width="130" height="40" fill="#050607" />
         </g>
 
         {/* Moving Sun (Animação moveSun) */}
-        <g class="sun-element" transform="translate(300, 30)">
+        <g className="sun-element" transform="translate(300, 30)">
           <circle cx="0" cy="0" r="12" fill="#F2B705" opacity="0.8" />
           <circle cx="0" cy="0" r="18" fill="#F2B705" opacity="0.2" />
         </g>
@@ -146,7 +146,7 @@ export const InfraestruturaScene = () => {
 
         {/* Cars Entering & Parking (Animação parkCar1 & parkCar2) */}
         {/* Car 1 */}
-        <g class="parked-car-1" transform="translate(0, 125)">
+        <g className="parked-car-1" transform="translate(0, 125)">
           <rect x="-15" y="20" width="45" height="28" fill="#ECEFF1" rx="2" />
           <path d="M-12,20 L3,10 L18,10 L25,20 Z" fill="#2E3033" />
           <circle cx="-5" cy="48" r="6" fill="#111" />
@@ -155,7 +155,7 @@ export const InfraestruturaScene = () => {
           <polygon points="28,26 42,29 42,35 28,31" fill="#F2B705" opacity="0.3" />
         </g>
         {/* Car 2 */}
-        <g class="parked-car-2" transform="translate(0, 125)">
+        <g className="parked-car-2" transform="translate(0, 125)">
           <rect x="-15" y="20" width="45" height="28" fill="#3A86C8" rx="2" />
           <path d="M-12,20 L3,10 L18,10 L25,20 Z" fill="#2E3033" />
           <circle cx="-5" cy="48" r="6" fill="#111" />
@@ -168,7 +168,7 @@ export const InfraestruturaScene = () => {
         {/* Module 1 */}
         <g id="module-1">
           {/* Cantilever Metal Column structure */}
-          <g class="assembly-col-1">
+          <g className="assembly-col-1">
             {/* Base block */}
             <rect x="95" y="148" width="10" height="8" fill="#455A64" />
             {/* Curved column column */}
@@ -176,7 +176,7 @@ export const InfraestruturaScene = () => {
             <line x1="100" y1="120" x2="115" y2="105" stroke="#37474F" strokeWidth="2.5" />
           </g>
           {/* Arched cover membrane */}
-          <g class="assembly-roof-1">
+          <g className="assembly-roof-1">
             <path d="M40,78 Q100,60 160,78 L150,85 Q100,70 50,85 Z" fill="url(#roofGrad)" />
             <path d="M40,78 Q100,60 160,78" fill="none" stroke="#1C1F22" strokeWidth="1.5" />
           </g>
@@ -185,7 +185,7 @@ export const InfraestruturaScene = () => {
         {/* Module 2 */}
         <g id="module-2">
           {/* Cantilever Metal Column structure */}
-          <g class="assembly-col-2">
+          <g className="assembly-col-2">
             {/* Base block */}
             <rect x="255" y="148" width="10" height="8" fill="#455A64" />
             {/* Curved column column */}
@@ -193,7 +193,7 @@ export const InfraestruturaScene = () => {
             <line x1="260" y1="120" x2="275" y2="105" stroke="#37474F" strokeWidth="2.5" />
           </g>
           {/* Arched cover membrane */}
-          <g class="assembly-roof-2">
+          <g className="assembly-roof-2">
             <path d="M200,78 Q260,60 320,78 L310,85 Q260,70 210,85 Z" fill="url(#roofGrad)" />
             <path d="M200,78 Q260,60 320,78" fill="none" stroke="#1C1F22" strokeWidth="1.5" />
           </g>

@@ -119,12 +119,12 @@ export const SaudeScene = () => {
           <rect x="0" y="0" width="90" height="110" fill="url(#doorLight)" stroke="#37474F" strokeWidth="3.5" />
           
           {/* Glass panels (Sliding left and right) */}
-          <g class="door-left">
+          <g className="door-left">
             <rect x="2" y="2" width="42" height="106" fill="#E0F7FA" fillOpacity="0.4" stroke="#78909C" strokeWidth="2" />
             {/* Decal bar */}
             <rect x="15" y="45" width="12" height="2" fill="#546E7A" />
           </g>
-          <g class="door-right">
+          <g className="door-right">
             <rect x="46" y="2" width="42" height="106" fill="#E0F7FA" fillOpacity="0.4" stroke="#78909C" strokeWidth="2" />
             {/* Decal bar */}
             <rect x="63" y="45" width="12" height="2" fill="#546E7A" />
@@ -146,7 +146,7 @@ export const SaudeScene = () => {
           <rect x="-24" y="-24" width="48" height="48" fill="#FFFFFF" stroke="#CFD8DC" strokeWidth="2" rx="4" />
           
           {/* Green Health Cross */}
-          <path class="health-cross" d="M-6,-18 L6,-18 L6,-6 L18,-6 L18,6 L6,6 L6,18 L-6,18 L-6,6 L-18,6 L-18,-6 L-6,-6 Z" fill="#00C853" />
+          <path className="health-cross" d="M-6,-18 L6,-18 L6,-6 L18,-6 L18,6 L6,6 L6,18 L-6,18 L-6,6 L-18,6 L-18,-6 L-6,-6 Z" fill="#00C853" />
         </g>
 
         {/* MARQUISE / TOLDO DE ACESSO (Cobertura Rígida Reta) */}

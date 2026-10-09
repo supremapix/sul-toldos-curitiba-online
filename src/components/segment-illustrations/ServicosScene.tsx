@@ -145,7 +145,7 @@ export const ServicosScene = () => {
         </g>
 
         {/* Car driving in (Animação DriveIn) */}
-        <g class="gas-station-car" transform="translate(0, 132)">
+        <g className="gas-station-car" transform="translate(0, 132)">
           {/* Car body */}
           <path d="M5,15 C5,10 12,9 25,9 C35,9 50,5 58,12 C62,15 65,18 65,22 L5,22 Z" fill="url(#carGrad)" />
           {/* Car window */}
@@ -190,17 +190,17 @@ export const ServicosScene = () => {
           <rect x="50" y="55" width="300" height="2" fill="#F2B705" />
 
           {/* LED blinkers along the board (flashing softly) */}
-          <circle cx="65" cy="51" r="1.5" class="led-light led-light-1" />
-          <circle cx="100" cy="51" r="1.5" class="led-light led-light-2" />
-          <circle cx="150" cy="51" r="1.5" class="led-light led-light-1" />
-          <circle cx="200" cy="51" r="1.5" class="led-light led-light-2" />
-          <circle cx="250" cy="51" r="1.5" class="led-light led-light-1" />
-          <circle cx="300" cy="51" r="1.5" class="led-light led-light-2" />
-          <circle cx="335" cy="51" r="1.5" class="led-light led-light-1" />
+          <circle cx="65" cy="51" r="1.5" className="led-light led-light-1" />
+          <circle cx="100" cy="51" r="1.5" className="led-light led-light-2" />
+          <circle cx="150" cy="51" r="1.5" className="led-light led-light-1" />
+          <circle cx="200" cy="51" r="1.5" className="led-light led-light-2" />
+          <circle cx="250" cy="51" r="1.5" className="led-light led-light-1" />
+          <circle cx="300" cy="51" r="1.5" className="led-light led-light-2" />
+          <circle cx="335" cy="51" r="1.5" className="led-light led-light-1" />
 
           {/* Sun glint moving reflection across the polycarbonate arches */}
           <g style={{ clipPath: "inset(28px 45px 120px 45px)" }} opacity="0.5">
-            <rect class="sun-reflection" x="-40" y="20" width="30" height="60" fill="url(#sunSweep)" transform="rotate(30)" />
+            <rect className="sun-reflection" x="-40" y="20" width="30" height="60" fill="url(#sunSweep)" transform="rotate(30)" />
           </g>
         </g>
 

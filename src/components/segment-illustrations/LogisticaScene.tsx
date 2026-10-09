@@ -145,7 +145,7 @@ export const LogisticaScene = () => {
           <path d="M115,0 L105,0 L115,10 Z M115,30 L105,20 L105,30 L115,40 Z M115,60 L105,50 L105,60 L115,70 Z M115,90 L105,80 L105,90 L115,100 Z" fill="#F2B705" />
 
           {/* Roll-up sheet metal shutter door (Animação rollUp) */}
-          <rect class="rollup-door" x="3" y="2" width="104" height="100" fill="#78909C" stroke="#455A64" strokeWidth="1" />
+          <rect className="rollup-door" x="3" y="2" width="104" height="100" fill="#78909C" stroke="#455A64" strokeWidth="1" />
           {/* horizontal shutter lines */}
           <line x1="3" y1="15" x2="107" y2="15" stroke="#37474F" strokeWidth="1.5" />
           <line x1="3" y1="30" x2="107" y2="30" stroke="#37474F" strokeWidth="1.5" />
@@ -160,7 +160,7 @@ export const LogisticaScene = () => {
         </g>
 
         {/* Cargo Truck reversing to dock (Animação truckReverse) */}
-        <g class="dock-truck" transform="translate(0, 75)">
+        <g className="dock-truck" transform="translate(0, 75)">
           {/* Truck Cargo Body / Container (large white box) */}
           <rect x="0" y="5" width="150" height="85" fill="#EEEEEE" stroke="#BDBDBD" strokeWidth="2" rx="1" />
           {/* Logistics logo generic stripe on cargo container */}
@@ -201,25 +201,25 @@ export const LogisticaScene = () => {
           <line x1="100" y1="30" x2="150" y2="55" stroke="#546E7A" strokeWidth="2.5" />
 
           {/* Water trickle sliding along the slope of canopy (Animação trickleSlide) */}
-          <path class="water-trickle" d="M45,48 L180,48" />
+          <path className="water-trickle" d="M45,48 L180,48" />
         </g>
 
         {/* Rain Drops falling vertically (Not falling in the sheltered area under canopy) */}
         {/* We place rain emitters starting above roof on left, and full right of the roof */}
         <g id="rain-group" transform="translate(0,0)">
           {/* Left side before canopy coverage */}
-          <line x1="15" y1="-20" x2="-5" y2="80" class="rain-drop drop-1" />
+          <line x1="15" y1="-20" x2="-5" y2="80" className="rain-drop drop-1" />
           
           {/* Right side after canopy coverage (x > 185) */}
-          <line x1="220" y1="-20" x2="200" y2="80" class="rain-drop drop-2" />
-          <line x1="260" y1="-10" x2="240" y2="90" class="rain-drop drop-3" />
-          <line x1="300" y1="-25" x2="280" y2="75" class="rain-drop drop-4" />
-          <line x1="340" y1="-15" x2="320" y2="85" class="rain-drop drop-1" />
-          <line x1="380" y1="-30" x2="360" y2="70" class="rain-drop drop-2" />
+          <line x1="220" y1="-20" x2="200" y2="80" className="rain-drop drop-2" />
+          <line x1="260" y1="-10" x2="240" y2="90" className="rain-drop drop-3" />
+          <line x1="300" y1="-25" x2="280" y2="75" className="rain-drop drop-4" />
+          <line x1="340" y1="-15" x2="320" y2="85" className="rain-drop drop-1" />
+          <line x1="380" y1="-30" x2="360" y2="70" className="rain-drop drop-2" />
 
           {/* Top area above canopy */}
-          <line x1="120" y1="-25" x2="110" y2="25" class="rain-drop drop-3" />
-          <line x1="160" y1="-20" x2="150" y2="30" class="rain-drop drop-4" />
+          <line x1="120" y1="-25" x2="110" y2="25" className="rain-drop drop-3" />
+          <line x1="160" y1="-20" x2="150" y2="30" className="rain-drop drop-4" />
         </g>
 
         {/* Small stylized sign icon in background */}
