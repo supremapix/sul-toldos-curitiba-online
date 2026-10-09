@@ -113,8 +113,8 @@ export const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-[#1C1F22] text-[#F4EFE6] border-b border-border">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section id="services" className="py-20 bg-[#1C1F22] text-[#F4EFE6] border-b border-border reveal-on-scroll">
+      <div className="max-w-[1200px] mx-auto px-5 md:px-6">
         
         {/* Section Header */}
         <div className="mb-16">
@@ -122,8 +122,11 @@ export const Services = () => {
             NOSSOS SERVIÇOS
           </span>
           <h2 
-            className="font-sans font-extrabold uppercase text-3xl md:text-5xl leading-tight tracking-tight mb-4 text-[#F4EFE6]"
-            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+            className="font-sans font-extrabold uppercase leading-tight tracking-tight mb-4 text-[#F4EFE6]"
+            style={{ 
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontSize: "clamp(1.75rem, 7vw, 3rem)"
+            }}
           >
             Toldos e Coberturas Industriais & Comerciais
           </h2>
@@ -137,12 +140,12 @@ export const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white/5 border border-white/10 hover:border-[#C8361D] rounded-[2px] transition-all duration-200 group cursor-pointer flex flex-col justify-between"
+              className="relative bg-white/5 border border-white/10 hover:border-[#C8361D] rounded-[2px] transition-all duration-200 group cursor-pointer flex flex-col justify-between overflow-hidden reveal-on-scroll"
               onClick={() => { setSelectedService(service); setCurrentImageIndex(0); }}
             >
               <div>
                 {/* Image Section */}
-                <div className="relative overflow-hidden aspect-video">
+                <div className="relative overflow-hidden aspect-[4/3]">
                   <img
                     src={service.images[0]}
                     alt={service.seoTitle}
@@ -173,17 +176,20 @@ export const Services = () => {
                 </div>
               </div>
 
-              <div className="px-6 pb-6 pt-0">
+              <div className="px-6 pb-6 pt-0 relative z-10">
                 <Button
                   onClick={(e) => { 
                     e.stopPropagation(); 
                     openWhatsapp(`Olá! Gostaria de um orçamento para: ${service.title}`); 
                   }}
-                  className="w-full bg-[#C8361D] hover:bg-[#C8361D]/90 text-white text-xs font-bold tracking-wider uppercase py-2.5 rounded-[2px] transition-all cursor-pointer"
+                  className="w-full bg-[#C8361D] text-white text-xs font-bold tracking-wider uppercase py-2.5 rounded-[2px] transition-all cursor-pointer relative overflow-hidden z-10 btn-fill-hover"
                 >
                   SOLICITAR ORÇAMENTO
                 </Button>
               </div>
+
+              {/* Red hover bar at card base */}
+              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#C8361D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </div>
           ))}
         </div>

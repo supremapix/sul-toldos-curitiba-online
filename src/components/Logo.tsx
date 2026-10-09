@@ -15,7 +15,7 @@ export const Logo: React.FC<LogoProps> = ({ variant = "horizontal", className = 
     return (
       <svg
         viewBox="0 0 100 100"
-        className="w-10 h-10 shrink-0"
+        className="w-10 h-10 shrink-0 animate-open-awning"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

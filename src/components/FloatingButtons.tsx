@@ -90,7 +90,7 @@ const FloatingButtons = () => {
         </button>
       )}
 
-      {/* Main Phone CTA - always visible with pulse */}
+      {/* Main Phone CTA - always visible with gentle attention shake */}
       <button
         onClick={() => {
           if (!isExpanded) {
@@ -101,12 +101,9 @@ const FloatingButtons = () => {
         }}
         title={isExpanded ? "Ligar Agora" : "Contato Rápido"}
         aria-label={isExpanded ? "Ligar Agora" : "Abrir opções de contato"}
-        className="relative w-16 h-16 rounded-full bg-primary text-primary-foreground shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 border-2 border-white/30"
+        className="relative w-[52px] h-[52px] rounded-full bg-primary text-primary-foreground shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 border-2 border-white/30 animate-phone-swing"
       >
-        {/* Pulse rings */}
-        <span className="absolute inset-0 rounded-full bg-primary/40 animate-ping" />
-        <span className="absolute inset-[-4px] rounded-full border-2 border-primary/30 animate-pulse" />
-        <Phone className="h-7 w-7 relative z-10" />
+        <Phone className="h-5 w-5 relative z-10" />
       </button>
     </div>
   );

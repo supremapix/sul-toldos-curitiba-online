@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -7,7 +7,17 @@ import { openWhatsapp } from "@/utils/whatsapp";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleWhatsApp = () => {
     openWhatsapp("Olá, gostaria de solicitar um orçamento de toldo comercial para minha empresa!");
@@ -29,13 +39,13 @@ const Header = () => {
   ];
 
   return (
-    <div className="sticky top-0 z-50 w-full">
+    <div className="sticky top-0 z-50 w-full transition-all duration-300">
       {/* Elemento-assinatura: listras do toldo no topo do header */}
-      <div className="stripe-divider w-full" style={{ height: "8px" }}></div>
+      <div className="stripe-divider w-full transition-all duration-300" style={{ height: isScrolled ? "4px" : "8px" }}></div>
       
-      <header className="w-full bg-[#1C1F22] border-b border-border text-[#F4EFE6] shadow-sm">
+      <header className={`w-full bg-[#1C1F22] text-[#F4EFE6] transition-all duration-300 ${isScrolled ? "shadow-md bg-[#16181A]" : "border-b border-border"}`}>
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="flex items-center justify-between h-20 gap-8">
+          <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-14" : "h-20"} gap-8`}>
             {/* Zone 1: Brand wordmark (Logo) */}
             <Link to="/" className="whitespace-nowrap shrink-0 hover:opacity-90 transition-opacity">
               <Logo variant="negative" />

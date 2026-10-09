@@ -61,8 +61,8 @@ export const Segments = () => {
   };
 
   return (
-    <section className="py-20 bg-[#F4EFE6] text-[#1C1F22] border-b border-border">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section className="py-20 bg-[#F4EFE6] text-[#1C1F22] border-b border-border reveal-on-scroll">
+      <div className="max-w-[1200px] mx-auto px-5 md:px-6">
         
         {/* Header */}
         <div className="mb-16">
@@ -70,8 +70,11 @@ export const Segments = () => {
             SEGMENTOS ATENDIDOS
           </span>
           <h2 
-            className="font-sans font-extrabold uppercase text-3xl md:text-5xl leading-tight tracking-tight mb-4"
-            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+            className="font-sans font-extrabold uppercase leading-tight tracking-tight mb-4"
+            style={{ 
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontSize: "clamp(1.75rem, 7vw, 3rem)"
+            }}
           >
             Estruturas sob Medida para Cada Setor
           </h2>
@@ -85,7 +88,7 @@ export const Segments = () => {
           {segments.map((segment, index) => (
             <div
               key={index}
-              className="bg-white border-2 border-[#1C1F22] p-6 hover:translate-y-[-4px] transition-transform duration-200 flex flex-col justify-between relative group cursor-pointer"
+              className="bg-white border-2 border-[#1C1F22] p-6 hover:translate-y-[-4px] transition-transform duration-200 flex flex-col justify-between relative group cursor-pointer reveal-on-scroll"
               onClick={() => handleWhatsApp(segment.title)}
             >
               {/* Detalhe de Listras de Toldo em miniatura no canto superior da placa */}

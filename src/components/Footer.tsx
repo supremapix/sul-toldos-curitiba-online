@@ -35,7 +35,7 @@ const Footer = () => {
       .replace(/ê/g, 'e').replace(/â/g, 'a').replace(/ô/g, 'o');
 
   return (
-    <footer className="bg-[#1C1F22] text-[#F4EFE6] border-t border-border">
+    <footer className="bg-[#1C1F22] text-[#F4EFE6] border-t border-border pb-20 md:pb-0">
       {/* Elemento-assinatura: listras do toldo no topo do footer */}
       <div className="stripe-divider-dark w-full"></div>
       

@@ -1,7 +1,70 @@
+import { useState, useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Wrench, Clock, Award } from "lucide-react";
 
 const About = () => {
+  const [lineProgress, setLineProgress] = useState(0);
+  const [hasStartedCount, setHasStartedCount] = useState(false);
+  const processSectionRef = useRef<HTMLDivElement>(null);
+
+  const steps = [
+    {
+      number: "01",
+      title: "Visita Técnica",
+      description: "Visita sem compromisso para levantamento das dimensões e análise estrutural da fachada do seu comércio."
+    },
+    {
+      number: "02",
+      title: "Projeto e Arte",
+      description: "Criação do pré-projeto e mockup digital de aplicação da sua logomarca na lona para sua aprovação."
+    },
+    {
+      number: "03",
+      title: "Fabricação",
+      description: "Montagem da estrutura em aço galvanizado reforçado e soldagem vulcanizada da lona vinílica."
+    },
+    {
+      number: "04",
+      title: "Instalação",
+      description: "Fixação rápida e segura no local, adaptada ao seu horário comercial ou fora dele."
+    }
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!processSectionRef.current) return;
+      const rect = processSectionRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      
+      const start = rect.top - viewportHeight + 150;
+      const end = rect.bottom - 150;
+      const total = end - start;
+      const current = window.scrollY - (window.scrollY + rect.top - viewportHeight + 150);
+      
+      const progress = Math.min(Math.max((viewportHeight - rect.top) / (rect.height + 100), 0), 1);
+      setLineProgress(progress * 100);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasStartedCount(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (processSectionRef.current) {
+      observer.observe(processSectionRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   const features = [
     {
       icon: Shield,
@@ -46,7 +109,7 @@ const About = () => {
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           {features.map((feature, index) => (
             <Card key={index} className="bg-white border border-border rounded-[2px] shadow-none hover:border-[#C8361D] transition-colors duration-200">
               <CardContent className="p-6 text-left">
@@ -65,6 +128,75 @@ const About = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Etapas do Processo 01-04 */}
+        <div ref={processSectionRef} className="mb-24 relative overflow-hidden md:overflow-visible">
+          <div className="text-center mb-16">
+            <span className="text-[#C8361D] font-sans font-bold text-xs tracking-[0.2em] uppercase block mb-3">
+              02 — CRONOGRAMA
+            </span>
+            <h3 
+              className="font-sans font-extrabold uppercase text-2xl md:text-4xl leading-tight tracking-tight mb-4"
+              style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+            >
+              Etapas do Processo: <span className="text-[#C8361D]">Do Projeto à Instalação</span>
+            </h3>
+            <p className="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Veja como trabalhamos com rapidez e transparência para renovar a fachada da sua empresa sem causar transtornos ou paralisar suas operações.
+            </p>
+          </div>
+
+          <div className="relative max-w-4xl mx-auto px-4">
+            {/* Horizontal connecting line (Desktop) */}
+            <div className="hidden md:block absolute top-[30px] left-[12%] right-[12%] h-[3px] bg-gray-200 -z-10">
+              <div 
+                className="h-full bg-[#C8361D] transition-all duration-300 ease-out"
+                style={{ width: `${lineProgress}%` }}
+              />
+            </div>
+
+            {/* Vertical connecting line (Mobile) */}
+            <div className="md:hidden absolute left-[36px] top-6 bottom-6 w-[3px] bg-gray-200 -z-10">
+              <div 
+                className="w-full bg-[#C8361D] transition-all duration-300 ease-out"
+                style={{ height: `${lineProgress}%` }}
+              />
+            </div>
+
+            {/* Grid for Steps */}
+            <div className="grid md:grid-cols-4 gap-8 md:gap-4">
+              {steps.map((step, idx) => {
+                const stepNum = hasStartedCount ? step.number : "00";
+                return (
+                  <div 
+                    key={idx} 
+                    className="flex md:flex-col items-start md:items-center gap-6 md:gap-0 text-left md:text-center transition-all duration-500 transform translate-y-0 opacity-100"
+                    style={{ transitionDelay: `${idx * 150}ms` }}
+                  >
+                    {/* Rounded badge wrapper */}
+                    <div className="relative shrink-0 flex items-center justify-center">
+                      <div className={`w-16 h-16 rounded-full border-2 bg-white flex items-center justify-center font-mono font-black text-2xl transition-all duration-500 shadow-sm ${hasStartedCount ? "border-[#C8361D] text-[#C8361D] scale-110" : "border-gray-200 text-gray-300"}`}>
+                        {stepNum}
+                      </div>
+                    </div>
+
+                    <div className="md:mt-6">
+                      <h4 
+                        className="text-lg font-bold text-[#1C1F22] uppercase tracking-wide mb-2"
+                        style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                      >
+                        {step.title}
+                      </h4>
+                      <p className="text-xs text-gray-600 leading-relaxed max-w-[200px] md:mx-auto">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         {/* Prova Concreta Section */}

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import EnhancedSEO from "@/components/EnhancedSEO";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -15,6 +16,26 @@ import FloatingButtons from "@/components/FloatingButtons";
 import AwningCalculator from "@/components/AwningCalculator";
 
 const Index = () => {
+  useEffect(() => {
+    // Verificamos prefers-reduced-motion antes de iniciar animações
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.08 });
+
+    // Observa todas as seções/cards com reveal-on-scroll
+    const elements = document.querySelectorAll(".reveal-on-scroll");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
