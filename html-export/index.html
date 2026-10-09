@@ -138,6 +138,893 @@
       </div>
     </section>
 
+    <!-- Segmentos Atendidos Section -->
+    <section id="segments" class="section reveal-on-scroll" style="background-color: #F4EFE6; color: #1C1F22; padding: 6rem 0; border-bottom: 1px solid #dfd7c9;">
+      <style>
+        /* General Styles for Segment Cards */
+        .segment-card {
+          background: white;
+          border: 2px solid #1C1F22 !important;
+          padding: 1.5rem !important;
+          transition: transform 0.2s, box-shadow 0.2s;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          text-decoration: none;
+          color: #1C1F22 !important;
+        }
+        .segment-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .segment-card-banner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 6px;
+          background: linear-gradient(to right, #C8361D, #F4EFE6, #C8361D);
+        }
+        .segment-illustration-container {
+          aspect-ratio: 16/9;
+          width: 100%;
+          border: 1px solid rgba(28, 31, 34, 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          background: #1C1F22;
+          position: relative;
+          border-radius: 2px;
+        }
+        .segment-illustration-container svg {
+          width: 100%;
+          height: 100%;
+        }
+        
+        /* KEYFRAME ANIMATIONS FOR SVGs */
+        .steam {
+          opacity: 0;
+          fill: none;
+          stroke: #F4EFE6;
+          stroke-width: 1.5;
+          stroke-linecap: round;
+        }
+        .active-anim .steam-1 {
+          animation: rise 3s infinite ease-out;
+        }
+        .active-anim .steam-2 {
+          animation: rise 3s infinite ease-out 1.5s;
+        }
+        .awning-fabric {
+          transform-origin: 200px 35px;
+        }
+        .active-anim .awning-fabric {
+          animation: extendAwning 6s infinite ease-in-out;
+        }
+        .active-anim .shine-line {
+          animation: shineSweep 5s infinite ease-in-out;
+        }
+        .segment-card:hover .awning-fabric {
+          transform: scaleY(1.05) scaleX(1.01) !important;
+          filter: brightness(1.1);
+        }
+        .segment-card:hover .shine-line {
+          animation-duration: 2.5s;
+        }
+
+        @keyframes rise {
+          0% { transform: translateY(0) scaleX(0.8); opacity: 0; }
+          15% { opacity: 0.6; }
+          50% { transform: translateY(-10px) scaleX(1.2); opacity: 0.3; }
+          100% { transform: translateY(-22px) scaleX(1.5); opacity: 0; }
+        }
+        @keyframes extendAwning {
+          0%, 100% { transform: scaleY(1) scaleX(1); }
+          50% { transform: scaleY(0.85) scaleX(0.98); }
+        }
+        @keyframes shineSweep {
+          0% { transform: translateX(-160px); }
+          40%, 100% { transform: translateX(160px); }
+        }
+
+        /* Card 2: Varejo */
+        .capota-awning {
+          transform-origin: 200px 45px;
+        }
+        .active-anim .capota-awning {
+          animation: flutter 4s infinite ease-in-out;
+        }
+        .brand-logo {
+          stroke: #F4EFE6;
+          stroke-width: 1.5;
+          fill: none;
+          stroke-dasharray: 100;
+          stroke-dashoffset: 100;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+        .active-anim .brand-logo {
+          animation: drawLogo 7s infinite ease-in-out forwards;
+        }
+        .neon-sign {
+          fill: #FF4136;
+          opacity: 0.3;
+        }
+        .active-anim .neon-sign {
+          animation: flickerSign 6s infinite alternate;
+        }
+        .active-anim .neon-glow-rect {
+          animation: pulseGlow 6s infinite alternate;
+        }
+        .segment-card:hover .capota-awning {
+          transform: scale(1.03) translateY(-1px) !important;
+          filter: brightness(1.1);
+        }
+        .segment-card:hover .neon-sign {
+          opacity: 1 !important;
+          fill: #FF5A50;
+          filter: drop-shadow(0 0 4px #FF4136);
+        }
+
+        @keyframes flutter {
+          0%, 100% { transform: scale(1) rotate(0deg); }
+          33% { transform: scale(1.005, 0.99) rotate(0.4deg) skewX(0.2deg); }
+          66% { transform: scale(0.995, 1.01) rotate(-0.4deg) skewX(-0.2deg); }
+        }
+        @keyframes drawLogo {
+          0%, 100% { stroke-dashoffset: 100; fill: rgba(244, 239, 230, 0); }
+          25%, 75% { stroke-dashoffset: 0; fill: rgba(244, 239, 230, 1); }
+        }
+        @keyframes flickerSign {
+          0%, 100% { opacity: 0.1; }
+          45% { opacity: 0.15; }
+          47% { opacity: 0.9; }
+          49% { opacity: 0.3; }
+          51% { opacity: 0.95; }
+          53% { opacity: 0.6; }
+          55% { opacity: 1; }
+          85% { opacity: 0.9; }
+        }
+        @keyframes pulseGlow {
+          0%, 47% { opacity: 0; }
+          55%, 85% { opacity: 0.4; }
+          100% { opacity: 0.1; }
+        }
+
+        /* Card 3: Serviços */
+        .gas-station-car {
+          transform: translateX(250px);
+        }
+        .active-anim .gas-station-car {
+          animation: driveIn 8s infinite cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .active-anim .sun-reflection {
+          animation: sunSweepAction 6s infinite ease-in-out;
+        }
+        .led-light {
+          fill: #FF4136;
+          opacity: 0.4;
+        }
+        .active-anim .led-light-1 {
+          animation: ledBlink 1.2s infinite steps(2);
+        }
+        .active-anim .led-light-2 {
+          animation: ledBlink 1.2s infinite steps(2) 0.6s;
+        }
+        .segment-card:hover .gas-station-car {
+          animation-duration: 4s;
+        }
+
+        @keyframes driveIn {
+          0% { transform: translateX(250px); }
+          15%, 80% { transform: translateX(85px); }
+          95%, 100% { transform: translateX(-150px); }
+        }
+        @keyframes sunSweepAction {
+          0% { transform: translateX(-180px) translateY(-50px); }
+          35%, 100% { transform: translateX(180px) translateY(50px); }
+        }
+        @keyframes ledBlink {
+          0%, 100% { fill: #FF851B; opacity: 1; filter: drop-shadow(0 0 2px #FF851B); }
+          50% { fill: #333333; opacity: 0.3; filter: none; }
+        }
+
+        /* Card 4: Saúde */
+        .active-anim .health-cross {
+          animation: pulseCross 2s infinite ease-in-out;
+          transform-origin: 310px 50px;
+        }
+        .active-anim .door-left {
+          animation: openDoorLeft 8s infinite ease-in-out;
+        }
+        .active-anim .door-right {
+          animation: openDoorRight 8s infinite ease-in-out;
+        }
+        .segment-card:hover .health-cross {
+          animation-duration: 0.8s;
+          filter: drop-shadow(0 0 6px #00E676);
+        }
+        .segment-card:hover .door-left {
+          transform: translateX(-26px) !important;
+        }
+        .segment-card:hover .door-right {
+          transform: translateX(26px) !important;
+        }
+
+        @keyframes pulseCross {
+          0%, 100% { transform: scale(1); filter: drop-shadow(0 0 1px #00C853); opacity: 0.7; }
+          50% { transform: scale(1.1); filter: drop-shadow(0 0 6px #00E676); opacity: 1; }
+        }
+        @keyframes openDoorLeft {
+          0%, 20%, 80%, 100% { transform: translateX(0px); }
+          35%, 65% { transform: translateX(-26px); }
+        }
+        @keyframes openDoorRight {
+          0%, 20%, 80%, 100% { transform: translateX(0px); }
+          35%, 65% { transform: translateX(26px); }
+        }
+
+        /* Card 5: Logística */
+        .dock-truck {
+          transform: translateX(180px);
+        }
+        .active-anim .dock-truck {
+          animation: truckReverse 10s infinite ease-in-out;
+        }
+        .rollup-door {
+          height: 100px;
+        }
+        .active-anim .rollup-door {
+          animation: rollUp 10s infinite ease-in-out;
+        }
+        .rain-drop {
+          fill: none;
+          stroke: #4FC3F7;
+          stroke-width: 1.2;
+          stroke-linecap: round;
+          opacity: 0.4;
+        }
+        .active-anim .drop-1 { animation: fallRain 1.5s infinite linear; }
+        .active-anim .drop-2 { animation: fallRain 1.8s infinite linear 0.4s; }
+        .active-anim .drop-3 { animation: fallRain 1.3s infinite linear 0.8s; }
+        .active-anim .drop-4 { animation: fallRain 1.6s infinite linear 0.2s; }
+        .water-trickle {
+          stroke: #4FC3F7;
+          stroke-width: 1;
+          fill: none;
+          opacity: 0.5;
+          stroke-dasharray: 8 20;
+          stroke-dashoffset: 28;
+        }
+        .active-anim .water-trickle {
+          animation: trickleSlide 2s infinite linear;
+        }
+        .segment-card:hover .dock-truck {
+          animation-duration: 5s;
+        }
+
+        @keyframes truckReverse {
+          0%, 10% { transform: translateX(180px); }
+          45%, 75% { transform: translateX(35px); }
+          90%, 100% { transform: translateX(180px); }
+        }
+        @keyframes rollUp {
+          0%, 15% { height: 100px; }
+          30%, 75% { height: 15px; }
+          85%, 100% { height: 100px; }
+        }
+        @keyframes fallRain {
+          0% { transform: translateY(-30px) translateX(0); opacity: 0; }
+          10% { opacity: 0.4; }
+          90% { opacity: 0.4; }
+          100% { transform: translateY(180px) translateX(-30px); opacity: 0; }
+        }
+        @keyframes trickleSlide {
+          to { stroke-dashoffset: -12; }
+        }
+
+        /* Card 6: Infraestrutura */
+        .assembly-col-1 { opacity: 0; transform: translateY(30px); }
+        .assembly-col-2 { opacity: 0; transform: translateY(30px); }
+        .assembly-roof-1 { opacity: 0; transform: scale(0.1); }
+        .assembly-roof-2 { opacity: 0; transform: scale(0.1); }
+
+        .active-anim .assembly-col-1 { animation: showCol 9s infinite ease-out; }
+        .active-anim .assembly-col-2 { animation: showCol 9s infinite ease-out 0.8s; }
+        .active-anim .assembly-roof-1 { animation: showRoof 9s infinite ease-out 1.6s; }
+        .active-anim .assembly-roof-2 { animation: showRoof 9s infinite ease-out 2.4s; }
+
+        .parked-car-1 { transform: translateX(180px); opacity: 0; }
+        .parked-car-2 { transform: translateX(180px); opacity: 0; }
+        .active-anim .parked-car-1 { animation: parkCar1 9s infinite ease-out 3.5s; }
+        .active-anim .parked-car-2 { animation: parkCar2 9s infinite ease-out 4.2s; }
+
+        .sun-element { transform: translate(300px, 35px); }
+        .active-anim .sun-element { animation: moveSun 9s infinite linear; }
+        
+        .shifting-shadow { transform-origin: 200px 175px; }
+        .active-anim .shifting-shadow { animation: rotateShadow 9s infinite ease-in-out; }
+
+        @keyframes showCol {
+          0% { opacity: 0; transform: translateY(30px); }
+          5%, 85% { opacity: 1; transform: translateY(0); }
+          95%, 100% { opacity: 0; transform: translateY(30px); }
+        }
+        @keyframes showRoof {
+          0% { opacity: 0; transform: scale(0.1); }
+          6%, 85% { opacity: 1; transform: scale(1); }
+          95%, 100% { opacity: 0; transform: scale(0.1); }
+        }
+        @keyframes parkCar1 {
+          0% { transform: translateX(180px); opacity: 0; }
+          10%, 80% { transform: translateX(50px); opacity: 1; }
+          90%, 100% { transform: translateX(-180px); opacity: 0; }
+        }
+        @keyframes parkCar2 {
+          0% { transform: translateX(180px); opacity: 0; }
+          10%, 80% { transform: translateX(210px); opacity: 1; }
+          90%, 100% { transform: translateX(-180px); opacity: 0; }
+        }
+        @keyframes moveSun {
+          0%, 100% { transform: translate(240px, 45px); opacity: 0; }
+          5% { opacity: 1; }
+          45% { transform: translate(140px, 15px); }
+          80% { opacity: 1; }
+          85% { transform: translate(60px, 45px); opacity: 0; }
+        }
+        @keyframes rotateShadow {
+          0%, 100% { transform: skewX(-20deg) scaleY(0.9); opacity: 0.3; }
+          50% { transform: skewX(15deg) scaleY(1); opacity: 0.5; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .steam-1, .steam-2, .awning-fabric, .shine-line, .capota-awning, .brand-logo, .neon-sign, .neon-glow-rect,
+          .gas-station-car, .sun-reflection, .led-light-1, .led-light-2, .health-cross, .door-left, .door-right,
+          .dock-truck, .rollup-door, .rain-drop, .water-trickle, .assembly-col-1, .assembly-col-2, .assembly-roof-1, .assembly-roof-2,
+          .parked-car-1, .parked-car-2, .sun-element, .shifting-shadow {
+            animation: none !important;
+            transform: none !important;
+            opacity: 1 !important;
+            stroke-dashoffset: 0 !important;
+          }
+          .gas-station-car { transform: translateX(85px) !important; }
+          .led-light-1, .led-light-2 { fill: #FF851B !important; }
+          .health-cross { opacity: 0.9 !important; }
+          .door-left { transform: translateX(-26px) !important; }
+          .door-right { transform: translateX(26px) !important; }
+          .dock-truck { transform: translateX(35px) !important; }
+          .rollup-door { height: 15px !important; }
+          .rain-drop { display: none !important; }
+          .parked-car-1 { transform: translateX(50px) !important; }
+          .parked-car-2 { transform: translateX(210px) !important; }
+          .sun-element { transform: translate(150px, 20px) !important; }
+          .shifting-shadow { transform: skewX(5deg) scaleY(1) !important; opacity: 0.4 !important; }
+        }
+      </style>
+
+      <div class="container">
+        <!-- Header -->
+        <div class="section-title" style="text-align: center; margin-bottom: 4rem;">
+          <span class="badge" style="background-color: #C8361D; color: white; padding: 0.4rem 0.8rem; font-size: 0.75rem; text-transform: uppercase; font-weight: bold; border-radius: 2px;">SEGMENTOS ATENDIDOS</span>
+          <h2 style="font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; text-transform: uppercase; margin-top: 1rem; color: #1C1F22;">Estruturas sob Medida para Cada Setor</h2>
+          <p style="color: #666; max-w: 600px; margin: 1rem auto 0;">Entendemos as exigências de visibilidade e legislação de cada tipo de comércio. Criamos projetos que valorizam sua marca e atraem clientes.</p>
+        </div>
+
+        <!-- Plates Grid -->
+        <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          
+          <!-- Card 1: Alimentação -->
+          <div class="card segment-card group cursor-pointer" onclick="window.open('https://wa.me/5541995304757?text=Olá, gostaria de solicitar uma visita técnica e orçamento de toldo comercial para: Restaurantes, Cafés e Bares!', '_blank')">
+            <div class="segment-card-banner"></div>
+            <div style="padding-top: 0.5rem;">
+              <div style="font-size: 0.7rem; font-weight: 800; color: #C8361D; letter-spacing: 0.15em; margin-bottom: 0.75rem;">01 — ALIMENTAÇÃO</div>
+              <h3 style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; text-transform: uppercase; color: #1C1F22; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                Restaurantes, Cafés e Bares <span class="arrow" style="font-size: 1rem; color: #ccc;">➔</span>
+              </h3>
+              <p style="color: #666; font-size: 0.8rem; margin-bottom: 1.5rem; line-height: 1.5;">Toldos retráteis e fechamentos em PVC cristal para expansão de mesas na calçada e conforto dos clientes.</p>
+            </div>
+            
+            <div class="segment-illustration-container">
+              <svg viewBox="0 0 400 225" role="img" aria-label="Ilustração animada de toldo retrátil em restaurante" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pvcGlassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0.15" />
+                    <stop offset="50%" stopColor="#ffffff" stopOpacity="0.05" />
+                    <stop offset="100%" stopColor="#ffffff" stopOpacity="0.25" />
+                  </linearGradient>
+                  <linearGradient id="shineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
+                    <stop offset="50%" stopColor="#ffffff" stopOpacity="0.4" />
+                    <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                  </linearGradient>
+                  <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#2A2D30" />
+                    <stop offset="100%" stopColor="#1C1F22" />
+                  </linearGradient>
+                  <linearGradient id="pavementGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#3E4246" />
+                    <stop offset="100%" stopColor="#2A2D30" />
+                  </linearGradient>
+                  <linearGradient id="interiorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#F2B705" stopOpacity="0.3" />
+                    <stop offset="100%" stopColor="#C8361D" stopOpacity="0.05" />
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="175" fill="url(#wallGrad)" />
+                <rect y="175" width="400" height="50" fill="url(#pavementGrad)" />
+                <line x1="0" y1="175" x2="400" y2="175" stroke="#101214" strokeWidth="2" />
+                <rect x="50" y="55" width="130" height="95" fill="url(#interiorGrad)" rx="2" />
+                <rect x="50" y="55" width="130" height="95" fill="none" stroke="#2C2F33" strokeWidth="3" rx="2" />
+                <line x1="115" y1="55" x2="115" y2="150" stroke="#2C2F33" strokeWidth="2" />
+                <line x1="50" y1="100" x2="180" y2="100" stroke="#2C2F33" strokeWidth="2" />
+                <rect x="250" y="55" width="70" height="120" fill="#151719" stroke="#2C2F33" strokeWidth="3" />
+                <rect x="257" y="62" width="56" height="50" fill="url(#interiorGrad)" />
+                <circle cx="310" cy="115" r="3" fill="#F2B705" />
+                <g id="table-set">
+                  <path d="M75,150 L75,185 M75,160 L65,160 L65,185" stroke="#F4EFE6" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M155,150 L155,185 M155,160 L165,160 L165,185" stroke="#F4EFE6" strokeWidth="2" strokeLinecap="round" />
+                  <line x1="95" y1="155" x2="135" y2="155" stroke="#F4EFE6" strokeWidth="3" />
+                  <line x1="115" y1="155" x2="115" y2="190" stroke="#F4EFE6" strokeWidth="2.5" />
+                  <path d="M100,190 L130,190" stroke="#F4EFE6" strokeWidth="3" strokeLinecap="round" />
+                </g>
+                <g transform="translate(110, 142)">
+                  <path d="M0,8 L10,8 C10,13 8,13 5,13 C2,13 0,13 0,8 Z" fill="#F4EFE6" />
+                  <path d="M10,9 C12,9 12,11 10,11" fill="none" stroke="#F4EFE6" strokeWidth="1" />
+                  <path d="M3,5 Q1,2 3,-1" class="steam steam-1" />
+                  <path d="M7,5 Q5,2 7,-1" class="steam steam-2" />
+                </g>
+                <g class="awning-fabric">
+                  <line x1="80" y1="35" x2="70" y2="105" stroke="#555" strokeWidth="2" />
+                  <line x1="320" y1="35" x2="330" y2="105" stroke="#555" strokeWidth="2" />
+                  <path d="M40,35 L360,35 L345,100 L55,100 Z" fill="#C8361D" />
+                  <path d="M72,35 L104,35 L110,100 L81,100 Z" fill="#F4EFE6" />
+                  <path d="M136,35 L168,35 L165,100 L138,100 Z" fill="#F4EFE6" />
+                  <path d="M200,35 L232,35 L220,100 L195,100 Z" fill="#F4EFE6" />
+                  <path d="M264,35 L296,35 L276,100 L251,100 Z" fill="#F4EFE6" />
+                  <path d="M328,35 L345,35 L322,100 L308,100 Z" fill="#F4EFE6" />
+                  <path d="M55,100 Q72.5,108 90,100 Q107.5,108 125,100 Q142.5,108 160,100 Q177.5,108 195,100 Q212.5,108 230,100 Q247.5,108 265,100 Q282.5,108 300,100 Q317.5,108 335,100 Q340,108 345,100 L345,108 Q340,114 335,108 Q317.5,114 300,108 Q282.5,114 265,108 Q247.5,114 230,108 Q212.5,114 195,108 Q177.5,114 160,108 Q142.5,114 125,108 Q107.5,114 90,108 Q72.5,114 55,108 Z" fill="#992211" />
+                </g>
+                <g transform="translate(15, 45)">
+                  <rect x="0" y="0" width="30" height="135" fill="url(#pvcGlassGrad)" stroke="#A0A5AA" strokeWidth="2" rx="1" />
+                  <rect x="0" y="0" width="30" height="8" fill="#C8361D" />
+                  <rect x="0" y="127" width="30" height="8" fill="#C8361D" />
+                  <rect x="0" y="0" width="4" height="135" fill="#C8361D" />
+                  <rect x="26" y="0" width="4" height="135" fill="#C8361D" />
+                  <rect class="shine-line" x="-10" y="-30" width="15" height="200" fill="url(#shineGrad)" transform="rotate(25)" />
+                </g>
+                <text x="390" y="217" textAnchor="end" fill="#555" font-family="monospace" font-weight="bold" style="font-size: 8px; letter-spacing: 1px;">TOLDOS COMERCIAIS</text>
+              </svg>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: bold; color: #C8361D; text-transform: uppercase;">
+              <span>Orçamento Rápido</span>
+              <span class="arrow-hover">Solicitar ➔</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Varejo -->
+          <div class="card segment-card group cursor-pointer" onclick="window.open('https://wa.me/5541995304757?text=Olá, gostaria de solicitar uma visita técnica e orçamento de toldo comercial para: Lojas, Boutiques e Comércios!', '_blank')">
+            <div class="segment-card-banner"></div>
+            <div style="padding-top: 0.5rem;">
+              <div style="font-size: 0.7rem; font-weight: 800; color: #C8361D; letter-spacing: 0.15em; margin-bottom: 0.75rem;">02 — VAREJO</div>
+              <h3 style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; text-transform: uppercase; color: #1C1F22; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                Lojas, Boutiques e Comércios <span class="arrow" style="font-size: 1rem; color: #ccc;">➔</span>
+              </h3>
+              <p style="color: #666; font-size: 0.8rem; margin-bottom: 1.5rem; line-height: 1.5;">Toldos fixos, capotas e lonas sob medida com impressão digital de logotipo para destacar sua vitrine.</p>
+            </div>
+            
+            <div class="segment-illustration-container">
+              <svg viewBox="0 0 400 225" role="img" aria-label="Ilustração animada de toldo fixo capota em loja" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="neonGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#FF4136" stopOpacity="0.4" />
+                    <stop offset="100%" stopColor="#C8361D" stopOpacity="0" />
+                  </linearGradient>
+                  <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#1E2328" />
+                    <stop offset="100%" stopColor="#0B0D0F" />
+                  </linearGradient>
+                  <linearGradient id="capotaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#9E1B1B" />
+                    <stop offset="50%" stopColor="#C8361D" />
+                    <stop offset="100%" stopColor="#9E1B1B" />
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="175" fill="#242629" />
+                <rect y="175" width="400" height="50" fill="#2E3033" />
+                <line x1="0" y1="175" x2="400" y2="175" stroke="#101214" strokeWidth="2" />
+                <rect x="40" y="70" width="120" height="105" fill="url(#glassGrad)" stroke="#111" strokeWidth="3" />
+                <rect x="240" y="70" width="120" height="105" fill="url(#glassGrad)" stroke="#111" strokeWidth="3" />
+                <g opacity="0.3" transform="translate(100, 95) scale(0.6)">
+                  <path d="M0,20 C-10,40 -15,70 -15,100 L15,100 C15,70 10,40 0,20" fill="#E4DCD3" />
+                  <circle cx="0" cy="0" r="10" fill="#E4DCD3" />
+                  <line x1="0" y1="10" x2="0" y2="20" stroke="#E4DCD3" strokeWidth="4" />
+                </g>
+                <g opacity="0.2" transform="translate(300, 90) scale(0.6)">
+                  <path d="M0,20 C-8,35 -10,65 -12,95 L12,95 C10,65 8,35 0,20" fill="#E4DCD3" />
+                  <circle cx="0" cy="-2" r="9" fill="#E4DCD3" />
+                  <line x1="0" y1="8" x2="0" y2="20" stroke="#E4DCD3" strokeWidth="4" />
+                </g>
+                <g transform="translate(200, 32)">
+                  <rect x="-90" y="-18" width="180" height="24" fill="#0E1012" stroke="#222" strokeWidth="1" rx="2" />
+                  <rect class="neon-glow-rect" x="-85" y="-15" width="170" height="18" fill="url(#neonGlow)" rx="1" style="pointer-events: none;" />
+                  <text class="neon-sign" x="0" y="-2" textAnchor="middle" fontSize="11px" fontWeight="900" letterSpacing="5px" style="font-family: sans-serif;">BOUTIQUE</text>
+                </g>
+                <g class="capota-awning">
+                  <path d="M80,45 Q200,30 320,45" fill="none" stroke="#555" strokeWidth="1.5" />
+                  <path d="M78,112 Q200,105 322,112" fill="none" stroke="#555" strokeWidth="1.5" />
+                  <path d="M80,45 Q200,20 320,45 L325,115 Q200,105 75,115 Z" fill="url(#capotaGrad)" />
+                  <path d="M128,40 C140,65 145,95 125,112" fill="none" stroke="#000000" strokeWidth="1" opacity="0.15" />
+                  <path d="M176,37 C185,65 188,95 175,110" fill="none" stroke="#000000" strokeWidth="1" opacity="0.15" />
+                  <path d="M224,37 C215,65 212,95 225,110" fill="none" stroke="#000000" strokeWidth="1" opacity="0.15" />
+                  <path d="M272,40 C260,65 255,95 275,112" fill="none" stroke="#000000" strokeWidth="1" opacity="0.15" />
+                  <g transform="translate(200, 78)">
+                    <text class="brand-logo" x="0" y="0" textAnchor="middle" fontSize="15px" fontWeight="bold" letterSpacing="4px" style="font-family: 'Barlow Condensed', sans-serif;">SUA MARCA</text>
+                  </g>
+                  <path d="M75,115 Q95.4,124 115.8,115 Q136.2,124 156.6,115 Q177,124 197.4,115 Q217.8,124 238.2,115 Q258.6,124 279,115 Q299.4,124 319.8,115 L325,115 L325,123 Q319.8,128 319.8,123 Q299.4,128 279,123 Q258.6,128 238.2,123 Q217.8,128 197.4,123 Q177,128 156.6,123 Q136.2,128 115.8,123 Q95.4,128 75,123 Z" fill="#751313" />
+                </g>
+                <text x="390" y="217" textAnchor="end" fill="#555" font-family="monospace" font-weight="bold" style="font-size: 8px; letter-spacing: 1px;">TOLDOS COMERCIAIS</text>
+              </svg>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: bold; color: #C8361D; text-transform: uppercase;">
+              <span>Orçamento Rápido</span>
+              <span class="arrow-hover">Solicitar ➔</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Serviços -->
+          <div class="card segment-card group cursor-pointer" onclick="window.open('https://wa.me/5541995304757?text=Olá, gostaria de solicitar uma visita técnica e orçamento de toldo comercial para: Postos de Combustível!', '_blank')">
+            <div class="segment-card-banner"></div>
+            <div style="padding-top: 0.5rem;">
+              <div style="font-size: 0.7rem; font-weight: 800; color: #C8361D; letter-spacing: 0.15em; margin-bottom: 0.75rem;">03 — SERVIÇOS</div>
+              <h3 style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; text-transform: uppercase; color: #1C1F22; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                Postos de Combustível <span class="arrow" style="font-size: 1rem; color: #ccc;">➔</span>
+              </h3>
+              <p style="color: #666; font-size: 0.8rem; margin-bottom: 1.5rem; line-height: 1.5;">Coberturas robustas em policarbonato e estruturas metálicas para ilhas de serviço e conveniência.</p>
+            </div>
+            
+            <div class="segment-illustration-container">
+              <svg viewBox="0 0 400 225" role="img" aria-label="Ilustração animada de cobertura de posto de combustível" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="polyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#3A86C8" stopOpacity="0.4" />
+                    <stop offset="50%" stopColor="#8CC0DE" stopOpacity="0.25" />
+                    <stop offset="100%" stopColor="#3A86C8" stopOpacity="0.5" />
+                  </linearGradient>
+                  <linearGradient id="metalColumnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#555B61" />
+                    <stop offset="50%" stopColor="#8A9097" />
+                    <stop offset="100%" stopColor="#40444A" />
+                  </linearGradient>
+                  <linearGradient id="carGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#C8361D" />
+                    <stop offset="100%" stopColor="#801C0D" />
+                  </linearGradient>
+                  <linearGradient id="sunSweep" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
+                    <stop offset="50%" stopColor="#ffffff" stopOpacity="0.35" />
+                    <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="160" fill="#202326" />
+                <rect y="160" width="400" height="65" fill="#313539" />
+                <line x1="0" y1="160" x2="400" y2="160" stroke="#101214" strokeWidth="2.5" />
+                <rect x="290" y="100" width="70" height="60" fill="#1C1F22" stroke="#2D3136" />
+                <rect x="300" y="110" width="15" height="15" fill="#C8361D" opacity="0.3" />
+                <rect x="330" y="110" width="15" height="15" fill="#C8361D" opacity="0.3" />
+                <g transform="translate(130, 115)">
+                  <rect x="0" y="0" width="20" height="45" fill="#151719" stroke="#555" strokeWidth="1" rx="1" />
+                  <rect x="3" y="4" width="14" height="10" fill="#0D0E10" />
+                  <circle cx="7" cy="22" r="2.5" fill="#C8361D" />
+                  <path d="M17,15 Q21,15 21,35 L17,35" fill="none" stroke="#222" strokeWidth="2" />
+                </g>
+                <g transform="translate(230, 115)">
+                  <rect x="0" y="0" width="20" height="45" fill="#151719" stroke="#555" strokeWidth="1" rx="1" />
+                  <rect x="3" y="4" width="14" height="10" fill="#0D0E10" />
+                  <circle cx="7" cy="22" r="2.5" fill="#F2B705" />
+                  <path d="M17,15 Q21,15 21,35 L17,35" fill="none" stroke="#222" strokeWidth="2" />
+                </g>
+                <g class="gas-station-car" transform="translate(0, 132)">
+                  <path d="M5,15 C5,10 12,9 25,9 C35,9 50,5 58,12 C62,15 65,18 65,22 L5,22 Z" fill="url(#carGrad)" />
+                  <path d="M25,11 Q32,10 38,10 Q45,10 47,13 L25,13 Z" fill="#222" />
+                  <circle cx="18" cy="22" r="6" fill="#111" stroke="#444" strokeWidth="1" />
+                  <circle cx="18" cy="22" r="2.5" fill="#777" />
+                  <circle cx="48" cy="22" r="6" fill="#111" stroke="#444" strokeWidth="1" />
+                  <circle cx="48" cy="22" r="2.5" fill="#777" />
+                  <polygon points="63,16 80,14 80,22 63,19" fill="#F2B705" opacity="0.3" />
+                </g>
+                <g id="station-canopy">
+                  <rect x="110" y="55" width="8" height="105" fill="url(#metalColumnGrad)" />
+                  <rect x="260" y="55" width="8" height="105" fill="url(#metalColumnGrad)" />
+                  <line x1="80" y1="55" x2="300" y2="55" stroke="#4A5056" strokeWidth="4" />
+                  <line x1="100" y1="55" x2="110" y2="65" stroke="#4A5056" strokeWidth="2" />
+                  <line x1="280" y1="55" x2="268" y2="65" stroke="#4A5056" strokeWidth="2" />
+                  <path d="M60,55 Q110,32 160,55" fill="none" stroke="url(#polyGrad)" strokeWidth="10" strokeLinecap="round" opacity="0.8" />
+                  <path d="M150,55 Q200,32 250,55" fill="none" stroke="url(#polyGrad)" strokeWidth="10" strokeLinecap="round" opacity="0.8" />
+                  <path d="M240,55 Q290,32 340,55" fill="none" stroke="url(#polyGrad)" strokeWidth="10" strokeLinecap="round" opacity="0.8" />
+                  <path d="M60,55 Q110,32 160,55" fill="none" stroke="#2C699E" strokeWidth="2.5" />
+                  <path d="M150,55 Q200,32 250,55" fill="none" stroke="#2C699E" strokeWidth="2.5" />
+                  <path d="M240,55 Q290,32 340,55" fill="none" stroke="#2C699E" strokeWidth="2.5" />
+                  <rect x="50" y="47" width="300" height="10" fill="#151719" stroke="#333" strokeWidth="1" />
+                  <rect x="50" y="55" width="300" height="2" fill="#F2B705" />
+                  <circle cx="65" cy="51" r="1.5" class="led-light led-light-1" />
+                  <circle cx="100" cy="51" r="1.5" class="led-light led-light-2" />
+                  <circle cx="150" cy="51" r="1.5" class="led-light led-light-1" />
+                  <circle cx="200" cy="51" r="1.5" class="led-light led-light-2" />
+                  <circle cx="250" cy="51" r="1.5" class="led-light led-light-1" />
+                  <circle cx="300" cy="51" r="1.5" class="led-light led-light-2" />
+                  <circle cx="335" cy="51" r="1.5" class="led-light led-light-1" />
+                  <g style="clip-path: inset(28px 45px 120px 45px);" opacity="0.5">
+                    <rect class="sun-reflection" x="-40" y="20" width="30" height="60" fill="url(#sunSweep)" transform="rotate(30)" />
+                  </g>
+                </g>
+                <text x="390" y="217" textAnchor="end" fill="#555" font-family="monospace" font-weight="bold" style="font-size: 8px; letter-spacing: 1px;">TOLDOS COMERCIAIS</text>
+              </svg>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: bold; color: #C8361D; text-transform: uppercase;">
+              <span>Orçamento Rápido</span>
+              <span class="arrow-hover">Solicitar ➔</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Saúde -->
+          <div class="card segment-card group cursor-pointer" onclick="window.open('https://wa.me/5541995304757?text=Olá, gostaria de solicitar uma visita técnica e orçamento de toldo comercial para: Clínicas, Consultórios e Farmácias!', '_blank')">
+            <div class="segment-card-banner"></div>
+            <div style="padding-top: 0.5rem;">
+              <div style="font-size: 0.7rem; font-weight: 800; color: #C8361D; letter-spacing: 0.15em; margin-bottom: 0.75rem;">04 — SAÚDE</div>
+              <h3 style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; text-transform: uppercase; color: #1C1F22; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                Clínicas, Consultórios e Farmácias <span class="arrow" style="font-size: 1rem; color: #ccc;">➔</span>
+              </h3>
+              <p style="color: #666; font-size: 0.8rem; margin-bottom: 1.5rem; line-height: 1.5;">Coberturas de acesso e toldos de fachada elegantes para recepção e acessibilidade de pacientes.</p>
+            </div>
+            
+            <div class="segment-illustration-container">
+              <svg viewBox="0 0 400 225" role="img" aria-label="Ilustração animada de toldo de acesso em clínica médica" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="clinicWall" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#ECEFF1" />
+                    <stop offset="100%" stopColor="#CFD8DC" />
+                  </linearGradient>
+                  <linearGradient id="doorLight" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#4DD0E1" stopOpacity="0.15" />
+                    <stop offset="100%" stopColor="#4DD0E1" stopOpacity="0.01" />
+                  </linearGradient>
+                  <linearGradient id="awningMetalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#78909C" />
+                    <stop offset="50%" stopColor="#B0BEC5" />
+                    <stop offset="100%" stopColor="#546E7A" />
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="175" fill="url(#clinicWall)" />
+                <rect y="175" width="400" height="50" fill="#90A4AE" />
+                <line x1="0" y1="175" x2="400" y2="175" stroke="#455A64" strokeWidth="2.5" />
+                <rect x="40" y="65" width="80" height="110" fill="#A7FFEB" opacity="0.3" stroke="#546E7A" strokeWidth="2" />
+                <line x1="80" y1="65" x2="80" y2="175" stroke="#546E7A" strokeWidth="1.5" />
+                <g transform="translate(155, 65)">
+                  <rect width="90" height="110" fill="url(#doorLight)" stroke="#37474F" strokeWidth="3.5" />
+                  <g class="door-left">
+                    <rect x="2" y="2" width="42" height="106" fill="#E0F7FA" fillOpacity="0.4" stroke="#78909C" strokeWidth="2" />
+                    <rect x="15" y="45" width="12" height="2" fill="#546E7A" />
+                  </g>
+                  <g class="door-right">
+                    <rect x="46" y="2" width="42" height="106" fill="#E0F7FA" fillOpacity="0.4" stroke="#78909C" strokeWidth="2" />
+                    <rect x="63" y="45" width="12" height="2" fill="#546E7A" />
+                  </g>
+                </g>
+                <g transform="translate(130, 175)">
+                  <polygon points="0,0 25,0 25,-12" fill="#ECEFF1" opacity="0.8" />
+                  <polygon points="115,0 140,0 115,-12" fill="#ECEFF1" opacity="0.8" />
+                  <path d="M0,-2 L25,-14 L50,-14" fill="none" stroke="#78909C" strokeWidth="2" strokeLinecap="round" />
+                </g>
+                <g transform="translate(310, 50)">
+                  <rect x="-24" y="-24" width="48" height="48" fill="#FFFFFF" stroke="#CFD8DC" strokeWidth="2" rx="4" />
+                  <path class="health-cross" d="M-6,-18 L6,-18 L6,-6 L18,-6 L18,6 L6,6 L6,18 L-6,18 L-6,6 L-18,6 L-18,-6 L-6,-6 Z" fill="#00C853" />
+                </g>
+                <g id="access-canopy">
+                  <line x1="145" y1="20" x2="145" y2="58" stroke="#37474F" strokeWidth="2.5" />
+                  <line x1="255" y1="20" x2="255" y2="58" stroke="#37474F" strokeWidth="2.5" />
+                  <rect x="135" y="55" width="130" height="10" fill="url(#awningMetalGrad)" rx="1" stroke="#37474F" strokeWidth="1" />
+                  <polygon points="140,55 260,55 255,45 145,45" fill="#4DD0E1" opacity="0.4" />
+                  <polyline points="140,55 145,45 255,45 260,55" fill="none" stroke="#546E7A" strokeWidth="1.5" />
+                </g>
+                <text x="390" y="217" textAnchor="end" fill="#555" font-family="monospace" font-weight="bold" style="font-size: 8px; letter-spacing: 1px;">TOLDOS COMERCIAIS</text>
+              </svg>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: bold; color: #C8361D; text-transform: uppercase;">
+              <span>Orçamento Rápido</span>
+              <span class="arrow-hover">Solicitar ➔</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Logística -->
+          <div class="card segment-card group cursor-pointer" onclick="window.open('https://wa.me/5541995304757?text=Olá, gostaria de solicitar uma visita técnica e orçamento de toldo comercial para: Galpões e Centros de Distribuição!', '_blank')">
+            <div class="segment-card-banner"></div>
+            <div style="padding-top: 0.5rem;">
+              <div style="font-size: 0.7rem; font-weight: 800; color: #C8361D; letter-spacing: 0.15em; margin-bottom: 0.75rem;">05 — LOGÍSTICA</div>
+              <h3 style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; text-transform: uppercase; color: #1C1F22; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                Galpões e Centros de Distribuição <span class="arrow" style="font-size: 1rem; color: #ccc;">➔</span>
+              </h3>
+              <p style="color: #666; font-size: 0.8rem; margin-bottom: 1.5rem; line-height: 1.5;">Coberturas de grandes vãos para docas de carga e descarga com telhas sanduíche e estruturas pesadas.</p>
+            </div>
+            
+            <div class="segment-illustration-container">
+              <svg viewBox="0 0 400 225" role="img" aria-label="Ilustração animada de cobertura de doca industrial e logística" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="galpaoWall" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#37474F" />
+                    <stop offset="100%" stopColor="#212121" />
+                  </linearGradient>
+                  <linearGradient id="truckCab" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#C8361D" />
+                    <stop offset="100%" stopColor="#E53935" />
+                  </linearGradient>
+                  <linearGradient id="dockCeiling" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#151515" />
+                    <stop offset="100%" stopColor="#090909" />
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="175" fill="url(#galpaoWall)" />
+                <rect y="175" width="400" height="50" fill="#3E4246" />
+                <line x1="0" y1="175" x2="400" y2="175" stroke="#111" strokeWidth="2.5" />
+                <g transform="translate(45, 65)">
+                  <rect width="110" height="110" fill="url(#dockCeiling)" stroke="#111" strokeWidth="3" />
+                  <path d="M-5,0 L5,0 L-5,10 Z M-5,30 L5,20 L5,30 L-5,40 Z M-5,60 L5,50 L5,60 L-5,70 Z M-5,90 L5,80 L5,90 L-5,100 Z" fill="#F2B705" />
+                  <path d="M115,0 L105,0 L115,10 Z M115,30 L105,20 L105,30 L115,40 Z M115,60 L105,50 L105,60 L115,70 Z M115,90 L105,80 L105,90 L115,100 Z" fill="#F2B705" />
+                  <rect class="rollup-door" x="3" y="2" width="104" height="100" fill="#78909C" stroke="#455A64" strokeWidth="1" />
+                  <line x1="3" y1="15" x2="107" y2="15" stroke="#37474F" strokeWidth="1.5" />
+                  <line x1="3" y1="30" x2="107" y2="30" stroke="#37474F" strokeWidth="1.5" />
+                  <line x1="3" y1="45" x2="107" y2="45" stroke="#37474F" strokeWidth="1.5" />
+                  <line x1="3" y1="60" x2="107" y2="60" stroke="#37474F" strokeWidth="1.5" />
+                  <line x1="3" y1="75" x2="107" y2="75" stroke="#37474F" strokeWidth="1.5" />
+                  <line x1="3" y1="90" x2="107" y2="90" stroke="#37474F" strokeWidth="1.5" />
+                  <rect x="15" y="108" width="12" height="6" fill="#111" />
+                  <rect x="83" y="108" width="12" height="6" fill="#111" />
+                </g>
+                <g class="dock-truck" transform="translate(0, 75)">
+                  <rect x="0" y="5" width="150" height="85" fill="#EEEEEE" stroke="#BDBDBD" strokeWidth="2" rx="1" />
+                  <rect x="15" y="35" width="120" height="15" fill="#37474F" />
+                  <text x="75" y="46" textAnchor="middle" fill="#F4EFE6" fontSize="9px" fontWeight="900" style="font-family: sans-serif;">SUL CARGO</text>
+                  <path d="M150,30 L175,30 C182,30 185,40 185,55 L185,90 L150,90 Z" fill="url(#truckCab)" />
+                  <path d="M156,36 L170,36 C174,36 176,40 176,46 L156,46 Z" fill="#222" />
+                  <circle cx="30" cy="92" r="10" fill="#111" stroke="#333" strokeWidth="2" />
+                  <circle cx="30" cy="92" r="4" fill="#666" />
+                  <circle cx="120" cy="92" r="10" fill="#111" stroke="#333" strokeWidth="2" />
+                  <circle cx="120" cy="92" r="4" fill="#666" />
+                  <circle cx="165" cy="92" r="10" fill="#111" stroke="#333" strokeWidth="2" />
+                  <circle cx="165" cy="92" r="4" fill="#666" />
+                </g>
+                <g id="dock-roof-awning">
+                  <polygon points="30,55 45,15 175,55" fill="none" stroke="#546E7A" strokeWidth="4.5" strokeLinejoin="round" />
+                  <line x1="30" y1="55" x2="45" y2="55" stroke="#37474F" strokeWidth="4" />
+                  <polygon points="30,48 185,48 180,56 30,56" fill="#CFD8DC" />
+                  <path d="M30,48 L185,48" fill="none" stroke="#90A4AE" strokeWidth="4" strokeLinecap="round" />
+                  <path d="M30,56 L180,56" fill="none" stroke="#455A64" strokeWidth="3.5" strokeLinecap="round" />
+                  <line x1="45" y1="15" x2="100" y2="55" stroke="#546E7A" strokeWidth="2.5" />
+                  <line x1="100" y1="30" x2="150" y2="55" stroke="#546E7A" strokeWidth="2.5" />
+                  <path class="water-trickle" d="M45,48 L180,48" />
+                </g>
+                <g id="rain-group" transform="translate(0,0)">
+                  <line x1="15" y1="-20" x2="-5" y2="80" class="rain-drop drop-1" />
+                  <line x1="220" y1="-20" x2="200" y2="80" class="rain-drop drop-2" />
+                  <line x1="260" y1="-10" x2="240" y2="90" class="rain-drop drop-3" />
+                  <line x1="300" y1="-25" x2="280" y2="75" class="rain-drop drop-4" />
+                  <line x1="340" y1="-15" x2="320" y2="85" class="rain-drop drop-1" />
+                  <line x1="380" y1="-30" x2="360" y2="70" class="rain-drop drop-2" />
+                  <line x1="120" y1="-25" x2="110" y2="25" class="rain-drop drop-3" />
+                  <line x1="160" y1="-20" x2="150" y2="30" class="rain-drop drop-4" />
+                </g>
+                <text x="390" y="217" textAnchor="end" fill="#555" font-family="monospace" font-weight="bold" style="font-size: 8px; letter-spacing: 1px;">TOLDOS COMERCIAIS</text>
+              </svg>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: bold; color: #C8361D; text-transform: uppercase;">
+              <span>Orçamento Rápido</span>
+              <span class="arrow-hover">Solicitar ➔</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Infraestrutura -->
+          <div class="card segment-card group cursor-pointer" onclick="window.open('https://wa.me/5541995304757?text=Olá, gostaria de solicitar uma visita técnica e orçamento de toldo comercial para: Estacionamentos e Condomínios!', '_blank')">
+            <div class="segment-card-banner"></div>
+            <div style="padding-top: 0.5rem;">
+              <div style="font-size: 0.7rem; font-weight: 800; color: #C8361D; letter-spacing: 0.15em; margin-bottom: 0.75rem;">06 — INFRAESTRUTURA</div>
+              <h3 style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; text-transform: uppercase; color: #1C1F22; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                Estacionamentos e Condomínios <span class="arrow" style="font-size: 1rem; color: #ccc;">➔</span>
+              </h3>
+              <p style="color: #666; font-size: 0.8rem; margin-bottom: 1.5rem; line-height: 1.5;">Sistemas modulares de sombreamento e coberturas metálicas para frotas e garagens corporativas.</p>
+            </div>
+            
+            <div class="segment-illustration-container">
+              <svg viewBox="0 0 400 225" role="img" aria-label="Ilustração animada de carport e sombreamento de estacionamento" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#252A2E" />
+                    <stop offset="100%" stopColor="#1C1F22" />
+                  </linearGradient>
+                  <linearGradient id="groundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#313539" />
+                    <stop offset="100%" stopColor="#222528" />
+                  </linearGradient>
+                  <linearGradient id="roofGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#C8361D" />
+                    <stop offset="100%" stopColor="#801000" />
+                  </linearGradient>
+                  <filter id="shadowBlur" x="-10%" y="-10%" width="120%" height="120%">
+                    <feGaussianBlur stdDeviation="3" />
+                  </filter>
+                </defs>
+                <rect width="400" height="155" fill="url(#skyGrad)" />
+                <rect y="155" width="400" height="70" fill="url(#groundGrad)" />
+                <line x1="0" y1="155" x2="400" y2="155" stroke="#111" strokeWidth="2.5" />
+                <g class="shifting-shadow" filter="url(#shadowBlur)">
+                  <rect x="35" y="155" width="130" height="40" fill="#050607" />
+                  <rect x="195" y="155" width="130" height="40" fill="#050607" />
+                </g>
+                <g class="sun-element" transform="translate(300, 30)">
+                  <circle cx="0" cy="0" r="12" fill="#F2B705" opacity="0.8" />
+                  <circle cx="0" cy="0" r="18" fill="#F2B705" opacity="0.2" />
+                </g>
+                <g stroke="#F4EFE6" strokeWidth="1" strokeDasharray="3 3" opacity="0.3">
+                  <line x1="40" y1="155" x2="10" y2="220" />
+                  <line x1="160" y1="155" x2="130" y2="220" />
+                  <line x1="200" y1="155" x2="170" y2="220" />
+                  <line x1="320" y1="155" x2="290" y2="220" />
+                </g>
+                <g class="parked-car-1" transform="translate(0, 125)">
+                  <rect x="-15" y="20" width="45" height="28" fill="#ECEFF1" rx="2" />
+                  <path d="M-12,20 L3,10 L18,10 L25,20 Z" fill="#2E3033" />
+                  <circle cx="-5" cy="48" r="6" fill="#111" />
+                  <circle cx="18" cy="48" r="6" fill="#111" />
+                  <polygon points="28,26 42,29 42,35 28,31" fill="#F2B705" opacity="0.3" />
+                </g>
+                <g class="parked-car-2" transform="translate(0, 125)">
+                  <rect x="-15" y="20" width="45" height="28" fill="#3A86C8" rx="2" />
+                  <path d="M-12,20 L3,10 L18,10 L25,20 Z" fill="#2E3033" />
+                  <circle cx="-5" cy="48" r="6" fill="#111" />
+                  <circle cx="18" cy="48" r="6" fill="#111" />
+                  <polygon points="28,26 42,29 42,35 28,31" fill="#F2B705" opacity="0.3" />
+                </g>
+                <g id="module-1">
+                  <g class="assembly-col-1">
+                    <rect x="95" y="148" width="10" height="8" fill="#455A64" />
+                    <path d="M100,150 L100,85 Q100,75 110,75 L150,75" fill="none" stroke="#37474F" strokeWidth="4" strokeLinecap="round" />
+                    <line x1="100" y1="120" x2="115" y2="105" stroke="#37474F" strokeWidth="2.5" />
+                  </g>
+                  <g class="assembly-roof-1">
+                    <path d="M40,78 Q100,60 160,78 L150,85 Q100,70 50,85 Z" fill="url(#roofGrad)" />
+                    <path d="M40,78 Q100,60 160,78" fill="none" stroke="#1C1F22" strokeWidth="1.5" />
+                  </g>
+                </g>
+                <g id="module-2">
+                  <g class="assembly-col-2">
+                    <rect x="255" y="148" width="10" height="8" fill="#455A64" />
+                    <path d="M260,150 L260,85 Q260,75 270,75 L310,75" fill="none" stroke="#37474F" strokeWidth="4" strokeLinecap="round" />
+                    <line x1="260" y1="120" x2="275" y2="105" stroke="#37474F" strokeWidth="2.5" />
+                  </g>
+                  <g class="assembly-roof-2">
+                    <path d="M200,78 Q260,60 320,78 L310,85 Q260,70 210,85 Z" fill="url(#roofGrad)" />
+                    <path d="M200,78 Q260,60 320,78" fill="none" stroke="#1C1F22" strokeWidth="1.5" />
+                  </g>
+                </g>
+                <text x="390" y="217" textAnchor="end" fill="#555" font-family="monospace" font-weight="bold" style="font-size: 8px; letter-spacing: 1px;">TOLDOS COMERCIAIS</text>
+              </svg>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: bold; color: #C8361D; text-transform: uppercase;">
+              <span>Orçamento Rápido</span>
+              <span class="arrow-hover">Solicitar ➔</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Calculator Section -->
     <section id="calculator" class="section reveal-on-scroll" style="background-color: #1C1F22; color: #F4EFE6;">
       <div class="container">

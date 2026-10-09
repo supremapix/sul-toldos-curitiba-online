@@ -211,4 +211,22 @@ document.addEventListener("DOMContentLoaded", () => {
   if (floatPhone) {
     floatPhone.classList.add("animate-phone-swing");
   }
+
+  // 7. Active SVG animations inside segment cards when visible
+  const segmentCards = document.querySelectorAll(".segment-card");
+  if (segmentCards.length > 0 && !prefersReduced) {
+    const svgObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const svg = entry.target.querySelector("svg");
+        if (svg) {
+          if (entry.isIntersecting) {
+            svg.classList.add("active-anim");
+          } else {
+            svg.classList.remove("active-anim");
+          }
+        }
+      });
+    }, { threshold: 0.1 });
+    segmentCards.forEach(card => svgObserver.observe(card));
+  }
 });
