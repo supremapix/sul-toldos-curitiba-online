@@ -17,10 +17,10 @@ const EnhancedSEO = ({
   description, 
   keywords, 
   canonical, 
-  ogImage = "https://sultoldos.app.br/opengraph-sultoldos.jpg", 
+  ogImage = "https://toldoscomerciaiscuritiba.com.br/opengraph-toldoscomerciais.jpg", 
   structuredData,
   location,
-  service = "toldos",
+  service = "toldos comerciais",
   isHomePage = false
 }: EnhancedSEOProps) => {
   
@@ -28,17 +28,17 @@ const EnhancedSEO = ({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://sultoldos.app.br/#organization",
-    "name": "Sul Toldos",
-    "alternateName": "Sul Toldos Curitiba",
-    "description": "Especialista em toldos, coberturas e policarbonato em Curitiba e região metropolitana",
-    "url": "https://sultoldos.app.br",
-    "telephone": ["+554135646943", "+5541998121324"],
-    "email": "contato@sultoldos.com.br",
-    "foundingDate": "2008",
+    "@id": "https://toldoscomerciaiscuritiba.com.br/#organization",
+    "name": "Toldos Comerciais Curitiba",
+    "alternateName": "Toldos Comerciais Curitiba - Fabricação e Instalação",
+    "description": "Especialista em toldos comerciais, coberturas em policarbonato e lona com logomarca para comércios, lojas, galpões e indústrias em Curitiba e RMC.",
+    "url": "https://toldoscomerciaiscuritiba.com.br",
+    "telephone": ["+554135646943", "+5541995304757", "+5541991031466"],
+    "email": "contato@toldoscomerciaiscuritiba.com.br",
+    "foundingDate": "2010",
     "priceRange": "$$",
     "currenciesAccepted": "BRL",
-    "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+    "paymentAccepted": "Cash, Credit Card, Bank Transfer, PIX",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -55,16 +55,16 @@ const EnhancedSEO = ({
     ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua Exemplo, 123",
+      "streetAddress": "Rua Mandirituba, 1875",
       "addressLocality": "Curitiba",
       "addressRegion": "PR",
-      "postalCode": "80000-000",
+      "postalCode": "81925-540",
       "addressCountry": "BR"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "-25.4284",
-      "longitude": "-49.2733"
+      "latitude": "-25.4372",
+      "longitude": "-49.2692"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -75,22 +75,14 @@ const EnhancedSEO = ({
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Serviços de Toldos e Coberturas",
+      "name": "Catálogo de Serviços de Toldos e Coberturas Comerciais",
       "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Toldos Residenciais",
-            "description": "Instalação de toldos para residências"
-          }
-        },
         {
           "@type": "Offer", 
           "itemOffered": {
             "@type": "Service",
-            "name": "Toldos Comerciais",
-            "description": "Toldos para estabelecimentos comerciais"
+            "name": "Toldos de Fachada para Lojas",
+            "description": "Toldos fixos e capotas personalizados com impressão digital de logotipo para comércio."
           }
         },
         {
@@ -98,15 +90,23 @@ const EnhancedSEO = ({
           "itemOffered": {
             "@type": "Service", 
             "name": "Coberturas em Policarbonato",
-            "description": "Coberturas translúcidas em policarbonato"
+            "description": "Coberturas de alta resistência em policarbonato alveolar e compacto para áreas comerciais."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Toldos Retráteis",
-            "description": "Toldos automatizados e manuais retráteis"
+            "name": "Toldos Retráteis de Braços Articulados",
+            "description": "Sistemas de toldo retrátil manual e motorizado de alta performance para restaurantes, bares e cafés."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Troca de Lona e Manutenção Comercial",
+            "description": "Troca de lona vinílica ou acrílica sob medida mantendo a ferragem original do toldo."
           }
         }
       ]
@@ -134,9 +134,7 @@ const EnhancedSEO = ({
       }
     ],
     "sameAs": [
-      "https://www.facebook.com/sultoldos",
-      "https://www.instagram.com/sultoldos", 
-      "https://wa.me/5541998121324"
+      "https://wa.me/5541995304757"
     ]
   };
 
@@ -144,19 +142,19 @@ const EnhancedSEO = ({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://sultoldos.app.br/#website",
-    "url": "https://sultoldos.app.br",
-    "name": "Sul Toldos",
-    "description": "Especialista em toldos, coberturas e policarbonato em Curitiba",
+    "@id": "https://toldoscomerciaiscuritiba.com.br/#website",
+    "url": "https://toldoscomerciaiscuritiba.com.br",
+    "name": "Toldos Comerciais Curitiba",
+    "description": "Especialista em toldos comerciais, coberturas e policarbonato em Curitiba e RMC",
     "publisher": {
-      "@id": "https://sultoldos.app.br/#organization"
+      "@id": "https://toldoscomerciaiscuritiba.com.br/#organization"
     },
     "potentialAction": [
       {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://sultoldos.app.br/search?q={search_term_string}"
+          "urlTemplate": "https://toldoscomerciaiscuritiba.com.br/search?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       }
@@ -170,26 +168,26 @@ const EnhancedSEO = ({
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Quanto custa instalar um toldo?",
+        "name": "Quanto custa um toldo comercial por metro quadrado?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O preço de um toldo varia conforme o tamanho, material e tipo. Fazemos orçamento gratuito com visita técnica. Entre em contato pelo WhatsApp (41) 99812-1324 para receber um orçamento personalizado."
+          "text": "O preço dos toldos fixos de lona comercial parte de R$ 220/m². Toldos retráteis articulados manuais custam a partir de R$ 250/m² e coberturas em policarbonato alveolar a partir de R$ 240/m². Oferecemos visita técnica de projeto 100% gratuita para medição exata do vão."
         }
       },
       {
         "@type": "Question", 
-        "name": "Qual a garantia dos toldos?",
+        "name": "Qual a garantia dos toldos comerciais?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oferecemos até 5 anos de garantia em estruturas metálicas e 2 anos em toldos retráteis. Todos os materiais possuem garantia contra defeitos de fabricação."
+          "text": "Nossos toldos e coberturas contam com garantia registrada por escrito em contrato: até 5 anos para as estruturas de metalon galvanizado, 2 anos para motores automatizados e até 10 anos contra amarelamento das coberturas em policarbonato."
         }
       },
       {
         "@type": "Question",
-        "name": "Atendem toda Curitiba?",
+        "name": "Vocês realizam a instalação fora do horário comercial?",
         "acceptedAnswer": {
           "@type": "Answer", 
-          "text": "Sim, atendemos Curitiba e toda região metropolitana, incluindo São José dos Pinhais, Pinhais, Colombo e demais cidades da RMC."
+          "text": "Sim! Para não interferir no fluxo de atendimento e vendas do seu comércio, agendamos a instalação das estruturas metálicas e lonas para finais de semana, período noturno ou feriados, conforme a sua conveniência e sem taxas adicionais."
         }
       }
     ]
@@ -208,11 +206,11 @@ const EnhancedSEO = ({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="author" content="Sul Toldos" />
+      <meta name="author" content="Toldos Comerciais Curitiba" />
       <meta name="language" content="pt-BR" />
       <meta name="geo.region" content="BR-PR" />
       <meta name="geo.placename" content="Curitiba" />
-      <meta name="ICBM" content="-25.4284, -49.2733" />
+      <meta name="ICBM" content="-25.4372, -49.2692" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={canonical} />
@@ -225,12 +223,12 @@ const EnhancedSEO = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Sul Toldos" />
+      <meta property="og:site_name" content="Toldos Comerciais Curitiba" />
       <meta property="og:locale" content="pt_BR" />
-      <meta property="business:contact_data:street_address" content="Curitiba" />
+      <meta property="business:contact_data:street_address" content="Rua Mandirituba, 1875" />
       <meta property="business:contact_data:locality" content="Curitiba" />
       <meta property="business:contact_data:region" content="PR" />
-      <meta property="business:contact_data:postal_code" content="80000-000" />
+      <meta property="business:contact_data:postal_code" content="81925-540" />
       <meta property="business:contact_data:country_name" content="Brasil" />
       
       {/* Twitter */}
@@ -241,14 +239,11 @@ const EnhancedSEO = ({
       <meta name="twitter:image" content={ogImage} />
       
       {/* Additional Meta Tags for Local SEO */}
-      {location && <meta name="geo.position" content="-25.4284;-49.2733" />}
+      {location && <meta name="geo.position" content="-25.4372;-49.2692" />}
       {location && <meta name="NUTS" content="BR-PR" />}
       
       {/* Resource Hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-      <link rel="dns-prefetch" href="//connect.facebook.net" />
       <link rel="dns-prefetch" href="//wa.me" />
       
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -257,29 +252,18 @@ const EnhancedSEO = ({
       {/* Critical CSS for above-the-fold content */}
       <style type="text/css">{`
         :root {
-          --primary: 0 84% 60%;
-          --primary-foreground: 0 0% 100%;
-          --background: 0 0% 5%;
-          --foreground: 0 0% 98%;
+          --background: 39 24% 93%; /* #F4EFE6 */
+          --foreground: 210 10% 12%; /* #1C1F22 */
+          --primary: 348 76% 45%; /* #C8361D */
+          --primary-foreground: 0 0% 98%;
         }
         body { 
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-family: 'Inter', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
           line-height: 1.6;
           color: hsl(var(--foreground));
           background: hsl(var(--background));
         }
-        .hero-section {
-          min-height: 60vh;
-          display: flex;
-          align-items: center;
-        }
-        @media (max-width: 768px) {
-          .hero-section { min-height: 50vh; }
-        }
       `}</style>
-      
-      {/* Font Optimization */}
-      <link rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -292,7 +276,7 @@ const EnhancedSEO = ({
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="theme-color" content="hsl(142, 86%, 28%)" />
+      <meta name="theme-color" content="#1C1F22" />
       
       {/* Alternate languages */}
       <link rel="alternate" hrefLang="pt-BR" href={canonical} />

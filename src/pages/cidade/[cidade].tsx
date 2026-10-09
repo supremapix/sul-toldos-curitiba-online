@@ -37,32 +37,32 @@ const CidadePage = () => {
       image: galeriaToldoLoja,
       population: "1.9 milhão",
       neighborhoods: "75 bairros",
-      specialty: "Capital paranaense com forte demanda por toldos residenciais e comerciais",
-      mainServices: ["Toldos residenciais premium", "Coberturas comerciais", "Toldos retráteis automatizados", "Policarbonato para condomínios"],
+      specialty: "Capital paranaense com altíssima demanda por toldos comerciais e projetos de fachada de lojas e restaurantes",
+      mainServices: ["Toldo de fachada para lojas", "Toldos retráteis para restaurantes", "Lona com logotipo impresso", "Coberturas comerciais em policarbonato"],
       geo: { lat: "-25.4284", lng: "-49.2733" }
     },
     pinhais: {
       image: galeriaToldoGaragem,
       population: "130 mil",
       neighborhoods: "região metropolitana",
-      specialty: "Cidade em crescimento com muitas construções comerciais",
-      mainServices: ["Toldos para comércios", "Coberturas industriais", "Toldos em lona", "Estruturas metálicas"],
+      specialty: "Município vizinho com expressivo desenvolvimento comercial e indústrias que exigem galpões e áreas de carga protegidas",
+      mainServices: ["Coberturas metálicas industriais", "Toldos para fachadas de comércio", "Manutenção e reforma de toldos", "Toldo cortina retrátil"],
       geo: { lat: "-25.4426", lng: "-49.1925" }
     },
     "sao-jose-dos-pinhais": {
       image: galeriaToldoComercial,
       population: "329 mil",
       neighborhoods: "diversos bairros",
-      specialty: "Centro industrial importante da região metropolitana",
-      mainServices: ["Toldos industriais", "Coberturas para galpões", "Toldos retráteis", "Policarbonato translúcido"],
+      specialty: "Centro industrial e comercial relevante na RMC com forte demanda por coberturas de grandes vãos e fachadas comerciais",
+      mainServices: ["Toldos industriais de carga/descarga", "Lonas personalizadas de alta resistência", "Coberturas de policarbonato", "Toldo retrátil de bar"],
       geo: { lat: "-25.5304", lng: "-49.2084" }
     },
     colombo: {
       image: galeriaPolicarbonatoEntrada,
       population: "240 mil",
       neighborhoods: "região metropolitana",
-      specialty: "Cidade residencial com muitas casas e sobrados",
-      mainServices: ["Toldos residenciais", "Coberturas para garagens", "Toldos para áreas de lazer", "Estruturas em alumínio"],
+      specialty: "Cidade residencial e comercial com forte mercado de pequenas lojas, supermercados e conveniências",
+      mainServices: ["Toldo fixo para fachadas de comércios", "Toldo cortina de calçada", "Cobertura em policarbonato", "Toldos capota para farmácias"],
       geo: { lat: "-25.2917", lng: "-49.2242" }
     }
   };
@@ -71,111 +71,71 @@ const CidadePage = () => {
     image: galeriaToldoLoja,
     population: "região metropolitana",
     neighborhoods: "diversos bairros",
-    specialty: "Cidade da região metropolitana de Curitiba com demanda crescente por toldos",
-    mainServices: ["Toldos residenciais", "Coberturas comerciais", "Policarbonato", "Toldos retráteis"],
+    specialty: "Cidade da região metropolitana de Curitiba com forte presença de comércio local e indústrias em expansão",
+    mainServices: ["Toldos fixos para lojas", "Toldos retráteis comerciais", "Lona personalizada com logotipo", "Cobertura comercial de policarbonato"],
     geo: { lat: "-25.4284", lng: "-49.2733" }
   };
 
   const currentCity = cityData[citySlug] || defaultCity;
 
   const handleWhatsApp = () => {
-    const message = `Olá, gostaria de solicitar um orçamento para toldos em ${cityName}!`;
+    const message = `Olá! Gostaria de solicitar um orçamento para toldo comercial em ${cityName}!`;
     openWhatsapp(message);
   };
 
   const getServiceCards = () => [
     {
-      title: `Toldos Residenciais em ${cityName}`,
-      icon: "🏠",
-      content: `A Sul Toldos é referência em toldos residenciais em ${cityName}. Instalamos toldos fixos em lona a partir de R$ 220/m², toldos retráteis a partir de R$ 250/m² e coberturas em policarbonato a partir de R$ 220/m².\n\nNossos projetos residenciais incluem proteção para garagens, varandas, sacadas, churrasqueiras e áreas de lazer. Cada projeto é dimensionado considerando a arquitetura local e as condições climáticas específicas de ${cityName}.\n\nAtendemos todos os bairros de ${cityName} com visita técnica gratuita, orçamento sem compromisso e garantia de até 5 anos em estruturas metálicas.`
-    },
-    {
-      title: `Toldos Comerciais em ${cityName}`,
+      title: `Toldos de Fachada para Lojas em ${cityName}`,
       icon: "🏢",
-      content: `Somos especialistas em toldos comerciais em ${cityName}. Atendemos padarias, farmácias, restaurantes, pet shops, salões de beleza, oficinas mecânicas e todo tipo de comércio.\n\nToldos de fachada comercial partem de R$ 220/m², incluindo estrutura personalizada e lona com logomarca. Coberturas para estacionamentos a partir de R$ 220/m².\n\nEm ${cityName}, já realizamos centenas de instalações comerciais. Cada projeto é desenvolvido para valorizar o estabelecimento e atrair mais clientes, transformando o toldo em ferramenta de marketing.`
+      content: `A Toldos Comerciais Curitiba é referência absoluta no projeto e instalação de toldos de fachada em ${cityName}. Fabricamos toldos fixos e capotas sob medida, a partir de R$ 220/m², perfeitos para destacar lojas, boutiques, farmácias e clínicas corporativas.\n\nNossos projetos unem proteção climática contra o sol e chuva direta e comunicação visual de alto padrão. Utilizamos estruturas em metalon galvanizado de alta estabilidade e tecidos vinílicos ou acrílicos nacionais e importados de extrema durabilidade.\n\nAgende uma visita técnica sem compromisso em ${cityName} para obter as medidas exatas para sua fachada.`
     },
     {
-      title: `Preços e Condições em ${cityName}`,
+      title: `Toldos Retráteis para Restaurantes em ${cityName}`,
+      icon: "🍽️",
+      content: `Expanda o espaço de atendimento do seu restaurante, bar ou café em ${cityName} com nossos toldos retráteis. Projetados com braços articulados de tecnologia avançada, permitem estender ou recolher a estrutura rapidamente conforme o clima.\n\nToldos retráteis manuais partem de R$ 250/m² e os motorizados de R$ 380/m², oferecendo uma lona com sua marca impressa e máxima durabilidade para proteger seus clientes na calçada.\n\nToldos cortina em PVC cristal transparente também garantem o fechamento vertical térmico ideal contra vento forte em ${cityName}.`
+    },
+    {
+      title: `Preços e Projetos Comerciais em ${cityName}`,
       icon: "💰",
-      content: `Os melhores preços de toldos em ${cityName}! Trabalhamos com tabela competitiva e condições facilitadas:\n\n• Toldo fixo em lona: a partir de R$ 220/m²\n• Toldo retrátil manual: a partir de R$ 250/m²\n• Toldo retrátil motorizado: a partir de R$ 350/m²\n• Policarbonato alveolar: a partir de R$ 220/m²\n• Cortina rolo PVC: a partir de R$ 220/m²\n\nParcelamos em até 12x no cartão. Desconto de 10% à vista. Financiamento próprio para projetos acima de R$ 5.000.`
+      content: `Oferecemos as melhores condições de pagamento de toldos comerciais em ${cityName}! Confira nossas faixas de preço base de mercado:\n\n• Toldo fixo comercial em lona: a partir de R$ 220/m²\n• Toldo retrátil articulado manual: a partir de R$ 250/m²\n• Toldo retrátil automático: a partir de R$ 380/m²\n• Cobertura de policarbonato alveolar: a partir de R$ 240/m²\n• Fechamento vertical PVC cristal: a partir de R$ 220/m²\n\nOpção de parcelamento em até 12x no cartão ou condições faturadas para pessoa jurídica sob consulta.`
     },
     {
-      title: `Qualidade e Garantia em ${cityName}`,
-      icon: "⭐",
-      content: `Na Sul Toldos, cada instalação em ${cityName} é feita com materiais de primeira qualidade: lonas acrílicas Sansuy e Guarany, alumínio naval, motores Somfy (alemães) e policarbonato com certificação.\n\nNossa garantia inclui: até 5 anos para estruturas, 2 anos para retráteis com motor, 10 anos para policarbonato e manutenção preventiva gratuita no primeiro ano.\n\nMais de 15 anos atendendo ${cityName} com equipe técnica certificada, pontualidade na entrega e suporte pós-venda 24h pelo WhatsApp.`
+      title: `Qualidade Corporativa por Contrato em ${cityName}`,
+      icon: "📜",
+      content: `Trabalhamos com materiais de alta resistência que atendem às normas exigidas de segurança: lonas Sansuy e Guarany retardantes de chama, solda eletrônica de alta frequência, e pintura anticorrosiva de estruturas.\n\nTodos os nossos serviços em ${cityName} contam com garantia por escrito em contrato detalhado de até 5 anos para as partes metálicas estruturais, e manutenção e reforma de lona sob medida disponível.\n\nSegurança total para as operações comerciais e o patrimônio da sua empresa.`
     }
   ];
 
   const getCityFAQs = () => [
     {
-      question: `Quanto custa um toldo por m² em ${cityName}?`,
-      answer: `Os preços de toldos em ${cityName} variam conforme o tipo: toldo fixo em lona a partir de R$ 220/m², toldo retrátil manual a partir de R$ 250/m², retrátil motorizado a partir de R$ 350/m², policarbonato alveolar a partir de R$ 220/m², e cortina rolo transparente a partir de R$ 220/m². Fazemos orçamento gratuito com visita técnica em toda ${cityName}. O preço final depende do tamanho, material escolhido e complexidade da instalação. Entre em contato pelo WhatsApp (41) 99812-1324 para valores exatos para seu projeto em ${cityName}.`
+      question: `Quanto custa um toldo comercial por m² em ${cityName}?`,
+      answer: `Os preços básicos de toldos em ${cityName} dependem do formato do projeto. Toldo fixo comercial parte de R$ 220/m², toldos retráteis manuais partem de R$ 250/m², retráteis motorizados a partir de R$ 380/m², e coberturas de policarbonato compacto a partir de R$ 280/m². Oferecemos visita técnica técnica 100% gratuita para avaliar o vão, as dimensões exatas e a fixação estrutural ideal na fachada da sua empresa em ${cityName}.`
     },
     {
-      question: `Vocês atendem toda a cidade de ${cityName}?`,
-      answer: `Sim, atendemos toda ${cityName} e região! Nossa cobertura é completa, incluindo todos os ${currentCity.neighborhoods} da cidade. Temos logística otimizada com equipes dedicadas que conhecem a geografia local, facilitando agendamentos e entregas. Realizamos visitas técnicas gratuitas em toda a extensão de ${cityName}, desde pequenos projetos residenciais até grandes instalações comerciais e industriais. Atendimento de segunda a sexta das 8h às 18h, sábados das 8h às 12h, e emergências 24h pelo WhatsApp.`
+      question: `Vocês atendem todos os bairros de ${cityName}?`,
+      answer: `Sim! Prestamos serviços completos de ponta a ponta em toda a extensão territorial de ${cityName}, englobando tanto o centro comercial quanto as zonas industriais e bairros mais distantes. Nossos engenheiros técnicos realizam visitas agendadas sem custo para levantar as especificações e apresentar orçamentos detalhados na hora.`
     },
     {
-      question: `Qual o melhor tipo de toldo para residência em ${cityName}?`,
-      answer: `Para residências em ${cityName}, recomendamos: toldo fixo em lona acrílica (R$ 220-180/m²) para janelas e portas, excelente custo-benefício. Toldo retrátil (R$ 250-350/m²) para varandas e sacadas, oferecendo flexibilidade. Cobertura em policarbonato (R$ 220-280/m²) para garagens e áreas de lazer, com durabilidade superior. Cortina rolo (R$ 220-380/m²) para sacadas gourmet com proteção contra vento e chuva. Cada tipo tem vantagens específicas e nossa equipe pode orientar a melhor escolha durante a visita técnica gratuita.`
+      question: `Qual o melhor tipo de toldo para restaurantes em ${cityName}?`,
+      answer: `Recomendamos o toldo retrátil de braço articulado (a partir de R$ 250/m²) combinado com toldos cortina verticais em PVC cristal transparente (a partir de R$ 220/m²). Essa solução integrada permite ampliar a área útil externa nas calçadas de ${cityName}, oferecendo climatização ideal e proteção rápida contra ventos fortes ou chuva repentina.`
     },
     {
-      question: `Qual o prazo de instalação de toldos em ${cityName}?`,
-      answer: `Em ${cityName}, nossos prazos são otimizados: toldos fixos simples de 5 a 7 dias úteis após aprovação. Toldos retráteis de 7 a 12 dias úteis. Coberturas em policarbonato de 10 a 15 dias úteis. Projetos comerciais grandes de 15 a 30 dias úteis. Em casos urgentes, oferecemos serviço expresso com prazo reduzido. Todos os prazos são informados no momento do orçamento e cumpridos rigorosamente. Nossa proximidade com ${cityName} permite flexibilidade nos agendamentos.`
+      question: `Como funciona a gravação do logotipo da minha marca no toldo?`,
+      answer: `Realizamos a impressão digital UV direta de alta resolução ou o recorte digital em película vinílica de alta aderência sobre a lona do toldo. Isso garante que a identidade visual do seu comércio em ${cityName} seja transmitida com fidelidade absoluta de cores e excelente leitura mesmo à distância, ajudando a sua fachada a vender mais.`
     },
     {
-      question: `Vocês fazem toldos para comércios em ${cityName}?`,
-      answer: `Sim! Somos especialistas em toldos comerciais em ${cityName}. Atendemos padarias (R$ 800-1.500/m linear em capota), farmácias, restaurantes (toldo retrátil a partir de R$ 3.500), pet shops, salões de beleza, oficinas mecânicas (R$ 220-250/m²), supermercados, concessionárias e todo tipo de estabelecimento. Toldos comerciais de fachada com logomarca impressa partem de R$ 220/m². Projetos incluem personalização completa com cores da marca. Coberturas para estacionamento a partir de R$ 220/m².`
-    },
-    {
-      question: `Qual a garantia dos toldos em ${cityName}?`,
-      answer: `Oferecemos a garantia mais completa da região para clientes de ${cityName}: até 5 anos para estruturas metálicas (alumínio e metalon), 2 anos para toldos retráteis incluindo motor e automação, 10 anos para policarbonato contra amarelamento, e 1 ano para lonas e tecidos. Manutenção preventiva gratuita no primeiro ano para todos os clientes. A garantia cobre defeitos de fabricação, instalação e materiais. Equipe técnica disponível 24h para atendimento de garantia. Estoque de peças de reposição para atendimento rápido.`
-    },
-    {
-      question: `É possível financiar toldos em ${cityName}?`,
-      answer: `Sim! Oferecemos excelentes condições para clientes de ${cityName}: parcelamento em até 12x no cartão de crédito sem juros, desconto de 10% para pagamento à vista (PIX ou transferência), boleto bancário em até 6x, e financiamento próprio para projetos acima de R$ 5.000. Processo de aprovação rápido e desburocratizado. Para projetos comerciais de grande porte, condições especiais com prazos estendidos. Consulte as condições específicas para seu projeto em ${cityName}.`
-    },
-    {
-      question: `Qual o preço de cobertura para garagem em ${cityName}?`,
-      answer: `Cobertura para garagem em ${cityName}: para 1 carro (aprox. 15m²) de R$ 1.800 a R$ 4.500. Para 2 carros (aprox. 30m²) de R$ 3.500 a R$ 9.000. Em policarbonato alveolar, permite passagem de luz natural. Em lona tensionada, mais econômico. Estrutura em metalon galvanizado ou alumínio. Inclui projeto, fabricação e instalação completa. Garantia de até 5 anos na estrutura. Visite nossa galeria para ver exemplos de projetos executados em ${cityName} e região.`
-    },
-    {
-      question: `Vocês instalam toldos retráteis em ${cityName}?`,
-      answer: `Sim! Toldos retráteis são uma das nossas especialidades em ${cityName}. Manual a partir de R$ 250/m², motorizado a partir de R$ 350/m². Utilizamos motores alemães Somfy com garantia de 2 anos. Opcionais: sensor de vento (R$ 300-500), sensor de chuva (R$ 220-400) e controle por aplicativo. Instalação sem obras, preservando a estrutura original do imóvel. Ideais para varandas, terraços e áreas externas que necessitam flexibilidade de uso.`
-    },
-    {
-      question: `Vocês fazem manutenção de toldos em ${cityName}?`,
-      answer: `Sim! Serviço completo de manutenção em ${cityName}: troca de lona (R$ 80-150/m²), limpeza profissional (R$ 15-25/m²), lubrificação de mecanismos (R$ 220-300 por toldo), reparo estrutural (sob consulta). Atendemos toldos de qualquer fabricante. Manutenção preventiva semestral recomendada para prolongar vida útil em até 40%. Atendimento emergencial 24h para reparos urgentes pelo WhatsApp (41) 99812-1324.`
-    },
-    {
-      question: `Qual a diferença entre policarbonato e lona em ${cityName}?`,
-      answer: `Policarbonato: mais resistente a impacto, permite passagem de luz natural, durabilidade de 15-20 anos, ideal para coberturas de garagem e área de lazer, preço de R$ 220-300/m². Lona: melhor proteção solar total, mais opções de cores e estampas, durabilidade de 5-12 anos dependendo do tipo, ideal para fachadas e toldos retráteis, preço de R$ 220-200/m². Em ${cityName}, ambos os materiais performam bem com as condições climáticas locais.`
-    },
-    {
-      question: `Vocês fazem projetos personalizados em ${cityName}?`,
-      answer: `Sim! Desenvolvemos projetos 100% personalizados para ${cityName}. Nossa equipe cria soluções exclusivas considerando a arquitetura do imóvel, necessidades do cliente e orçamento disponível. Oferecemos renderização 3D gratuita para projetos acima de R$ 3.000. Formatos especiais (curvos, em L, triangulares) disponíveis com acréscimo de 15-25%. Cores exclusivas, acabamentos premium e sistemas de automação avançados. Experiência em projetos residenciais e comerciais de todos os portes.`
-    },
-    {
-      question: `Qual o preço do toldo cortina vertical em ${cityName}?`,
-      answer: `Toldo cortina vertical com guias laterais em ${cityName}: em lona blackout de R$ 220 a R$ 320/m², com visor transparente PVC de R$ 280 a R$ 380/m². Sistema de enrolamento manual ou motorizado. Ideal para fechamento de varandas, sacadas e áreas externas de restaurantes. Instalação rápida sem obras. Disponível em diversas cores para harmonizar com a fachada. Garantia de 2 anos com manutenção gratuita no primeiro ano.`
-    },
-    {
-      question: `Como agendar visita técnica gratuita em ${cityName}?`,
-      answer: `Agendar visita técnica em ${cityName} é simples: WhatsApp (41) 99812-1324, telefone (41) 3564-6943 ou formulário do site. Disponibilidade de segunda a sábado, com horários flexíveis. Nosso técnico avalia o local, tira medidas, analisa a estrutura e apresenta opções. Orçamento na hora, sem compromisso. A visita dura 30-45 minutos. Atendemos todos os bairros e regiões de ${cityName} com a mesma qualidade e agilidade.`
-    },
-    {
-      question: `Por que escolher a Sul Toldos em ${cityName}?`,
-      answer: `Mais de 15 anos atendendo ${cityName} com excelência! Nossos diferenciais: preços competitivos a partir de R$ 220/m², materiais de primeira qualidade (Sansuy, Guarany, Somfy), equipe técnica certificada, garantia estendida de até 5 anos, manutenção preventiva gratuita, atendimento 24h para emergências, orçamento gratuito com visita técnica e parcelamento em até 12x. Mais de 2.000 clientes satisfeitos na região. Nota 4.9/5 com 150+ avaliações. Escolha quem é referência em toldos em ${cityName}!`
+      question: `A Toldos Comerciais Curitiba dá garantia por escrito?`,
+      answer: `Sim! Oferecemos garantia formalizada em contrato para todas as instalações em ${cityName}. Estruturas metálicas galvanizadas contam com até 5 anos de garantia, coberturas em policarbonato contra amarelamento e intempéries por até 10 anos, e mecanismos e motores automatizados contam com 2 anos de assistência técnica total.`
     }
   ];
 
   const cityStructuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": `Sul Toldos - Toldos em ${cityName}`,
-    "description": `Toldos em ${cityName} a partir de R$ 220/m². Especialista em toldos residenciais, comerciais, policarbonato e coberturas. Orçamento grátis!`,
-    "url": `https://sultoldos.app.br/cidade/${citySlug}`,
-    "telephone": "+554135646943",
+    "name": `Toldos Comerciais Curitiba - ${cityName}`,
+    "description": `Toldos comerciais, lonas com logomarca e coberturas de policarbonato em ${cityName} a partir de R$ 220/m². Orçamento e visita técnica gratuitos!`,
+    "url": `https://toldoscomerciaiscuritiba.com.br/cidade/${citySlug}`,
+    "telephone": ["+554135646943", "+5541995304757", "+5541991031466"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": cityName,
@@ -203,76 +163,82 @@ const CidadePage = () => {
   return (
     <>
       <EnhancedSEO
-        title={`Toldos em ${cityName} | Preços a partir R$ 220/m² | Sul Toldos`}
-        description={`Toldos em ${cityName} a partir de R$ 220/m². Policarbonato, retráteis, comerciais e residenciais. Orçamento grátis! ☎️ (41) 3564-6943. Garantia de até 5 anos. Parcelamos em 12x.`}
-        keywords={`toldos ${cityName.toLowerCase()}, toldo ${cityName.toLowerCase()} preço, policarbonato ${cityName.toLowerCase()}, cobertura ${cityName.toLowerCase()}, toldo retrátil ${cityName.toLowerCase()}, preço toldo m2 ${cityName.toLowerCase()}, toldo residencial, toldo comercial, cortina rolo, cobertura garagem`}
-        canonical={`https://sultoldos.app.br/cidade/${citySlug}`}
+        title={`Toldos Comerciais em ${cityName} | A Partir R$ 220/m² | Orçamento Grátis`}
+        description={`Especialista em toldos comerciais, coberturas e lona com logomarca em ${cityName} a partir de R$ 220/m². Visita técnica gratuita sem compromisso! ☎️ (41) 3564-6943.`}
+        keywords={`toldos comerciais ${cityName.toLowerCase()}, toldo para loja ${cityName.toLowerCase()}, toldo para restaurante ${cityName.toLowerCase()}, policarbonato ${cityName.toLowerCase()}, cobertura ${cityName.toLowerCase()}, toldo retrátil ${cityName.toLowerCase()}, lona com logotipo, cobertura estacionamento`}
+        canonical={`https://toldoscomerciaiscuritiba.com.br/cidade/${citySlug}`}
         structuredData={cityStructuredData}
         location={cityName}
-        service={`toldos e coberturas em ${cityName}`}
+        service={`toldos comerciais e coberturas corporativas em ${cityName}`}
       />
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-[#F4EFE6] text-[#1C1F22]">
         <Header />
         <FloatingButtons />
         
         <main>
           {/* Hero Section */}
-          <section className="py-16 md:py-20 bg-gradient-to-br from-primary/10 to-background">
-            <div className="container mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-10 items-center">
-                <div>
-                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                    Toldos em <span className="text-primary">{cityName}</span>
-                    <span className="block text-2xl lg:text-3xl mt-2 text-muted-foreground font-normal">
-                      A partir de R$ 220/m²
+          <section className="py-20 bg-[#1C1F22] text-[#F4EFE6] border-b border-border">
+            <div className="max-w-[1200px] mx-auto px-6">
+              <div className="grid lg:grid-cols-12 gap-12 items-center">
+                <div className="lg:col-span-7">
+                  <span className="inline-block bg-[#F2B705] text-[#1C1F22] font-sans font-extrabold text-[10px] md:text-xs tracking-[0.2em] uppercase px-3 py-1.5 mb-6 rounded-[2px]">
+                    ESTRUTURAS METÁLICAS & LONAS EM {cityName.toUpperCase()}
+                  </span>
+                  <h1 
+                    className="text-4xl lg:text-6xl font-extrabold uppercase leading-[1.05] tracking-tight mb-6"
+                    style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                  >
+                    Toldos Comerciais em <span className="text-[#C8361D]">{cityName}</span>
+                    <span className="block text-xl lg:text-2xl mt-3 text-gray-400 font-normal normal-case">
+                      Projetos sob medida a partir de R$ 220/m²
                     </span>
                   </h1>
-                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                    A Sul Toldos é especialista em toldos, coberturas e policarbonato em {cityName}. 
-                    Mais de 15 anos de experiência. Orçamento gratuito com visita técnica sem compromisso.
+                  <p className="text-base text-gray-300 mb-8 leading-relaxed">
+                    A Toldos Comerciais Curitiba desenvolve soluções completas em toldos fixos, retráteis e coberturas de policarbonato de alta resistência em {cityName}. Visitas gratuitas no local de segunda a sábado para planejar a estrutura ideal sem atrapalhar o seu fluxo de vendas.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4 mb-8">
                     <Button 
                       onClick={handleWhatsApp}
                       size="lg"
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-4 h-auto"
+                      className="bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold text-xs uppercase tracking-wider py-5 px-8 rounded-[2px] h-auto cursor-pointer"
                     >
-                      💬 ORÇAMENTO GRÁTIS
+                      Pedir orçamento para minha empresa
                     </Button>
                     <Button 
                       variant="outline"
                       size="lg"
                       onClick={() => window.open("tel:+554135646943")}
-                      className="text-lg py-4 h-auto font-bold"
+                      className="border-gray-600 hover:border-white text-[#F4EFE6] hover:bg-[#F4EFE6] hover:text-[#1C1F22] font-extrabold text-xs uppercase tracking-wider py-5 px-8 rounded-[2px] h-auto cursor-pointer"
                     >
-                      📞 (41) 3564-6943
+                      📞 Ligar: (41) 3564-6943
                     </Button>
                   </div>
 
                   <div className="grid grid-cols-3 gap-4 text-center">
-                    <div className="bg-card rounded-xl p-3">
-                      <div className="text-xl font-bold text-primary">{currentCity.population}</div>
-                      <div className="text-sm text-muted-foreground">habitantes</div>
+                    <div className="bg-white/5 border border-white/10 rounded-[2px] p-4">
+                      <div className="text-xl font-bold text-[#F2B705] font-mono">{currentCity.population}</div>
+                      <div className="text-[10px] text-gray-400 uppercase font-semibold">habitantes</div>
                     </div>
-                    <div className="bg-card rounded-xl p-3">
-                      <div className="text-xl font-bold text-primary">15+</div>
-                      <div className="text-sm text-muted-foreground">anos experiência</div>
+                    <div className="bg-white/5 border border-white/10 rounded-[2px] p-4">
+                      <div className="text-xl font-bold text-[#F2B705] font-mono">Contrato</div>
+                      <div className="text-[10px] text-gray-400 uppercase font-semibold">garantia por escrito</div>
                     </div>
-                    <div className="bg-card rounded-xl p-3">
-                      <div className="text-xl font-bold text-primary">2000+</div>
-                      <div className="text-sm text-muted-foreground">clientes</div>
+                    <div className="bg-white/5 border border-white/10 rounded-[2px] p-4">
+                      <div className="text-xl font-bold text-[#F2B705] font-mono">100%</div>
+                      <div className="text-[10px] text-gray-400 uppercase font-semibold">foco comercial</div>
                     </div>
                   </div>
                 </div>
 
-                <div className="relative">
+                <div className="lg:col-span-5 relative min-h-[300px] overflow-hidden rounded-[2px] border border-white/10 aspect-video lg:aspect-auto lg:h-[450px]">
                   <img 
                     src={currentCity.image} 
-                    alt={`Toldos e coberturas em ${cityName} - Sul Toldos - Preços a partir de R$ 220/m²`}
-                    className="rounded-2xl shadow-2xl w-full"
+                    alt={`Toldos Comerciais em ${cityName}`}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     loading="eager"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>
@@ -286,33 +252,34 @@ const CidadePage = () => {
           <LocationFAQ location={cityName} type="cidade" faqs={getCityFAQs()} />
 
           <YouTubeVideo 
-            title={`Veja nosso trabalho em ${cityName}`}
-            subtitle={`Conheça a qualidade dos nossos serviços de toldos em ${cityName}`}
-            ctaText={`💬 Orçamento em ${cityName}`}
+            title={`Veja nosso trabalho comercial em ${cityName}`}
+            subtitle={`Conheça o alto padrão estrutural e estético das nossas coberturas comerciais instaladas em ${cityName}`}
+            ctaText={`Solicitar Orçamento em ${cityName}`}
             ctaAction={handleWhatsApp}
-            className="bg-secondary/30"
           />
 
           {/* CTA Final */}
-          <section className="py-16 bg-primary/10">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Pronto para seu toldo em <span className="text-primary">{cityName}</span>?
+          <section className="py-20 bg-[#1C1F22] text-[#F4EFE6] border-t border-border">
+            <div className="max-w-[1200px] mx-auto px-6 text-center">
+              <h2 
+                className="text-3xl md:text-5xl font-extrabold uppercase leading-tight tracking-tight mb-4 text-[#F4EFE6]"
+                style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+              >
+                Pronto para renovar a fachada da sua empresa em <span className="text-[#C8361D]">{cityName}</span>?
               </h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Orçamento gratuito, visita técnica sem compromisso e parcelamento em até 12x. 
-                Ligue agora ou mande mensagem!
+              <p className="text-sm text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Agende hoje mesmo sua visita técnica de medidas e projeto sem compromisso. Equipe profissional com certificação estrutural completa para garantir segurança e visibilidade.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-                <Button onClick={handleWhatsApp} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-4 px-8 h-auto">
-                  💬 WHATSAPP: (41) 99812-1324
+                <Button onClick={handleWhatsApp} size="lg" className="bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] h-auto cursor-pointer">
+                  💬 Falar no WhatsApp
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => window.open("tel:+554135646943")} className="text-lg py-4 px-8 h-auto font-bold">
-                  📞 LIGAR: (41) 3564-6943
+                <Button variant="outline" size="lg" onClick={() => window.open("tel:+554135646943")} className="border-gray-600 hover:border-white text-[#F4EFE6] hover:bg-[#F4EFE6] hover:text-[#1C1F22] font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] h-auto cursor-pointer">
+                  📞 Ligar agora
                 </Button>
               </div>
-              <p className="text-sm text-muted-foreground">
-                ✅ Orçamento gratuito • ✅ Visita técnica sem compromisso • ✅ Garantia de até 5 anos • ✅ Parcelamos em 12x
+              <p className="text-xs text-gray-500 uppercase font-semibold tracking-wider">
+                ✓ Visita técnica sem custo • ✓ Lona de alta durabilidade • ✓ Garantia registrada em contrato
               </p>
             </div>
           </section>

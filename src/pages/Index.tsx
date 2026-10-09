@@ -2,6 +2,7 @@ import EnhancedSEO from "@/components/EnhancedSEO";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import { Segments } from "@/components/Segments";
 import About from "@/components/About";
 import InfiniteGallery from "@/components/InfiniteGallery";
 import NavigationSection from "@/components/NavigationSection";
@@ -17,10 +18,10 @@ const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Sul Toldos",
-    "description": "Especialista em toldos, coberturas e policarbonato em Curitiba e região metropolitana a partir de R$ 220/m².",
-    "url": "https://sultoldos.app.br",
-    "telephone": "+554135646943",
+    "name": "Toldos Comerciais Curitiba",
+    "description": "Especialista em toldos comerciais, coberturas em policarbonato e lonas personalizadas em Curitiba e região metropolitana a partir de R$ 220/m².",
+    "url": "https://toldoscomerciaiscuritiba.com.br",
+    "telephone": ["+554135646943", "+5541995304757", "+5541991031466"],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rua Mandirituba, 1875",
@@ -59,14 +60,14 @@ const Index = () => {
   return (
     <>
       <EnhancedSEO
-        title="Sul Toldos Curitiba | Toldos a partir de R$ 220/m² | Orçamento Grátis"
-        description="Sul Toldos - Toldos em Curitiba a partir de R$ 220/m². Policarbonato, toldos retráteis, coberturas comerciais e residenciais. Orçamento grátis! ☎️ (41) 3564-6943. Atendemos toda região metropolitana."
-        keywords="toldos curitiba, toldo curitiba preço, policarbonato curitiba, coberturas curitiba, toldos retráteis curitiba, toldo preço m2, sul toldos, toldo residencial, toldo comercial, cobertura garagem, cortina rolo, toldo lona, orçamento grátis toldos"
-        canonical="https://sultoldos.app.br/"
+        title="Toldos Comerciais Curitiba | Toldos a partir de R$ 220/m² | Orçamento Grátis"
+        description="Toldos Comerciais Curitiba - Toldos para lojas, restaurantes e comércios a partir de R$ 220/m². Policarbonato, toldos retráteis, coberturas comerciais. Orçamento grátis! ☎️ (41) 3564-6943."
+        keywords="toldos comerciais curitiba, toldo para loja curitiba, toldo para restaurante curitiba, policarbonato curitiba, coberturas curitiba, toldos retráteis curitiba, toldo preço m2, toldos comerciais, cobertura estacionamento, cortina rolo comercial, toldo lona comercial, orçamento grátis toldos"
+        canonical="https://toldoscomerciaiscuritiba.com.br/"
         structuredData={structuredData}
         isHomePage={true}
         location="Curitiba"
-        service="toldos e coberturas"
+        service="toldos comerciais e coberturas"
       />
       
       <div className="min-h-screen bg-background">
@@ -74,11 +75,12 @@ const Index = () => {
         <FloatingButtons />
         <Hero />
         <Services />
+        <Segments />
         <InfiniteGallery />
         <AwningCalculator />
         <YouTubeVideo 
-          title="Sul Toldos Cristo Rei — Veja Nosso Trabalho"
-          subtitle="Conheça a qualidade dos nossos serviços de toldos, coberturas e policarbonato em Curitiba e região metropolitana"
+          title="Toldos Comerciais Curitiba — Projetos de Destaque"
+          subtitle="Conheça a qualidade dos nossos serviços de toldos comerciais, coberturas e policarbonato em Curitiba e região"
           location="Curitiba"
         />
         <About />

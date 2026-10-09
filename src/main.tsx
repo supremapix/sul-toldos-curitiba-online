@@ -23,7 +23,7 @@ const LoadingFallback = () => (
       animation: 'spin 0.8s linear infinite'
     }} />
     <p style={{ color: 'hsl(0 84% 60%)', fontFamily: 'sans-serif', fontSize: '1rem' }}>
-      Carregando Sul Toldos...
+      Carregando Toldos Comerciais Curitiba...
     </p>
     <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
   </div>

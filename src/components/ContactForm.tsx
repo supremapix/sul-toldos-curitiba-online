@@ -47,7 +47,7 @@ const ContactForm = () => {
       return;
     }
 
-    const message = `*Novo contato - Sul Toldos*
+    const message = `*Novo contato - Toldos Comerciais Curitiba*
 
 *Nome:* ${formData.name}
 *Telefone:* ${formData.phone}
@@ -55,7 +55,7 @@ const ContactForm = () => {
 *Serviço:* ${formData.service || "Não especificado"}
 *Mensagem:* ${formData.message || "Não informada"}
 
-_Enviado pelo site Sul Toldos_`;
+_Enviado pelo site Toldos Comerciais Curitiba_`;
 
     openWhatsapp(message);
 
@@ -75,23 +75,32 @@ _Enviado pelo site Sul Toldos_`;
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-[#F4EFE6] text-[#1C1F22] border-b border-border">
+      <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            <span className="text-primary">Solicite um Orçamento</span> ou Tire suas Dúvidas
+          <span className="text-[#C8361D] font-sans font-bold text-xs tracking-[0.2em] uppercase block mb-3">
+            CONTATO & ORÇAMENTO
+          </span>
+          <h2 
+            className="text-3xl md:text-5xl font-extrabold uppercase leading-tight tracking-tight mb-4 text-[#1C1F22]"
+            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+          >
+            Solicite Sua Visita Técnica Gratuita
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Entre em contato conosco para toldos em Curitiba. Atendimento rápido e orçamento gratuito!
+          <p className="text-sm text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Preencha os dados abaixo e nossa equipe comercial entrará em contato para agendar a visita sem custo e sem compromisso para sua empresa.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="bg-card border-border">
-            <CardHeader>
-              <CardTitle className="text-2xl text-foreground">
-                Solicitar Orçamento
+          <Card className="bg-white border border-border rounded-[2px] shadow-none">
+            <CardHeader className="p-6 pb-4 border-b border-gray-100">
+              <CardTitle 
+                className="text-xl font-extrabold uppercase text-[#1C1F22]"
+                style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+              >
+                Formulário de Contato Comercial
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -139,12 +148,12 @@ _Enviado pelo site Sul Toldos_`;
                       <SelectValue placeholder="Selecione o serviço" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="toldo-lona">Toldo em Lona</SelectItem>
-                      <SelectItem value="toldo-retratil">Toldo Retrátil</SelectItem>
+                      <SelectItem value="toldo-fachada">Toldo de Fachada (Fixo/Capota)</SelectItem>
+                      <SelectItem value="toldo-retratil">Toldo Retrátil Comercial</SelectItem>
                       <SelectItem value="cobertura-policarbonato">Cobertura em Policarbonato</SelectItem>
-                      <SelectItem value="toldo-comercial">Toldo Comercial</SelectItem>
-                      <SelectItem value="manutencao">Manutenção</SelectItem>
-                      <SelectItem value="outros">Outros</SelectItem>
+                      <SelectItem value="toldo-cristal">Toldo Cortina / Fechamento</SelectItem>
+                      <SelectItem value="cobertura-industrial">Cobertura de Galpão / Carga</SelectItem>
+                      <SelectItem value="manutencao">Manutenção e Troca de Lona</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -156,16 +165,16 @@ _Enviado pelo site Sul Toldos_`;
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Descreva seu projeto ou dúvida..."
+                    placeholder="Descreva o projeto comercial ou dúvida..."
                     rows={4}
                   />
                 </div>
 
                 <Button 
                   type="submit" 
-                  className="w-full bg-primary hover:bg-primary/90 text-lg py-6"
+                  className="w-full bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold text-xs uppercase tracking-wider py-5 rounded-[2px] cursor-pointer"
                 >
-                  📱 Enviar via WhatsApp
+                  Falar no WhatsApp
                 </Button>
               </form>
             </CardContent>
@@ -173,35 +182,38 @@ _Enviado pelo site Sul Toldos_`;
 
           {/* Contact Info */}
           <div className="space-y-8">
-            <Card className="bg-card border-border">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-6">
-                  Informações de Contato
+            <Card className="bg-white border border-border rounded-[2px] shadow-none">
+              <CardContent className="p-6 text-left">
+                <h3 
+                  className="text-xl font-extrabold uppercase text-[#1C1F22] mb-6 border-b border-gray-100 pb-3"
+                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                >
+                  Canais de Atendimento
                 </h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <Phone className="w-6 h-6 text-primary mr-4 mt-1" />
+                    <Phone className="w-5 h-5 text-[#C8361D] mr-4 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-foreground">Telefones</h4>
-                      <p className="text-muted-foreground">(41) 3564-6943</p>
-                      <p className="text-muted-foreground">(41) 99812-1324</p>
+                      <h4 className="font-bold text-sm uppercase text-[#1C1F22]">Telefones Comerciais</h4>
+                      <p className="text-xs text-gray-600">(41) 3564-6943</p>
+                      <p className="text-xs text-gray-600">(41) 99812-1324</p>
                     </div>
                   </div>
 
                   <div className="flex items-start">
-                    <Mail className="w-6 h-6 text-primary mr-4 mt-1" />
+                    <Mail className="w-5 h-5 text-[#C8361D] mr-4 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-foreground">E-mail</h4>
-                      <p className="text-muted-foreground">contato@sultoldos.com.br</p>
+                      <h4 className="font-bold text-sm uppercase text-[#1C1F22]">E-mail Corporativo</h4>
+                      <p className="text-xs text-gray-600">contato@toldoscomerciaiscuritiba.com.br</p>
                     </div>
                   </div>
 
                   <div className="flex items-start">
-                    <MapPin className="w-6 h-6 text-primary mr-4 mt-1" />
+                    <MapPin className="w-5 h-5 text-[#C8361D] mr-4 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-foreground">Endereço</h4>
-                      <p className="text-muted-foreground">
+                      <h4 className="font-bold text-sm uppercase text-[#1C1F22]">Fábrica & Showroom</h4>
+                      <p className="text-xs text-gray-600">
                         Rua Mandirituba, 1875<br />
                         CEP 81.925-540 - Curitiba/PR
                       </p>
@@ -209,10 +221,10 @@ _Enviado pelo site Sul Toldos_`;
                   </div>
 
                   <div className="flex items-start">
-                    <Clock className="w-6 h-6 text-primary mr-4 mt-1" />
+                    <Clock className="w-5 h-5 text-[#C8361D] mr-4 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-foreground">Horário de Atendimento</h4>
-                      <p className="text-muted-foreground">
+                      <h4 className="font-bold text-sm uppercase text-[#1C1F22]">Horário de Atendimento</h4>
+                      <p className="text-xs text-gray-600">
                         Segunda a Sexta: 8h às 18h<br />
                         Sábado: 8h às 12h
                       </p>
@@ -222,17 +234,20 @@ _Enviado pelo site Sul Toldos_`;
               </CardContent>
             </Card>
 
-            <Card className="bg-primary/10 border-primary/20">
+            <Card className="bg-[#1C1F22] text-[#F4EFE6] border border-white/5 rounded-[2px] shadow-none">
               <CardContent className="p-6 text-center">
-                <h3 className="text-xl font-bold text-foreground mb-4">
-                  🚀 Atendimento Rápido
+                <h3 
+                  className="text-lg font-extrabold uppercase text-[#F2B705] mb-2"
+                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                >
+                  Atendimento Urgente
                 </h3>
-                <p className="text-muted-foreground mb-4">
-                  Respondemos em até 1 hora durante o horário comercial
+                <p className="text-xs text-gray-400 mb-4 font-semibold uppercase tracking-wider">
+                  Retorno comercial em até 1 hora no horário de expediente
                 </p>
                 <Button 
-                  onClick={() => openWhatsapp("Olá, preciso de atendimento urgente para toldos!")}
-                  className="bg-primary hover:bg-primary/90"
+                  onClick={() => openWhatsapp("Olá, preciso de atendimento urgente para toldos comerciais!")}
+                  className="bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold text-xs uppercase tracking-wider px-6 py-3.5 rounded-[2px] cursor-pointer"
                 >
                   WhatsApp Direto
                 </Button>

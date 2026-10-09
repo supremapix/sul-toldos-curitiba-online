@@ -1,4 +1,4 @@
-# Design Spec - Sul Toldos
+# Design Spec - Toldos Comerciais Curitiba
 
 ## Typography
 - **Font Family**: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif

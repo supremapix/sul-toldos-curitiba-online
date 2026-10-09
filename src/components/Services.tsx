@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, LayoutGrid, Store, FileText, Landmark, RefreshCw, Layers, ShieldCheck } from "lucide-react";
 import { openWhatsapp } from "@/utils/whatsapp";
 
 import servicoToldoComercial from "@/assets/servico-toldo-comercial.jpg";
@@ -11,9 +11,6 @@ import servicoCoberturaCorreder from "@/assets/servico-cobertura-corredor.jpg";
 import servicoPergolado from "@/assets/servico-pergolado.jpg";
 import servicoCortinaRolo from "@/assets/servico-cortina-rolo.jpg";
 import servicoCoberturaMetalica from "@/assets/servico-cobertura-metalica.jpg";
-import servicoToldoIndustrial from "@/assets/servico-toldo-industrial.jpg";
-import servicoFechamentoVaranda from "@/assets/servico-fechamento-varanda.jpg";
-import servicoCoberturaLona from "@/assets/servico-cobertura-lona.jpg";
 
 interface ServiceItem {
   title: string;
@@ -23,55 +20,85 @@ interface ServiceItem {
   priceFrom: string;
   images: string[];
   features: string[];
+  icon: React.ComponentType<{ className?: string }>;
 }
 
-const Services = () => {
+export const Services = () => {
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const services: ServiceItem[] = [
     {
-      title: "Toldos Comerciais",
-      seoTitle: "Toldos Comerciais em Curitiba - Fachadas e Lojas | Sul Toldos",
-      seoDescription: "Toldos comerciais para lojas, restaurantes, padarias e comércios em Curitiba. Estrutura reforçada com lona personalizada.",
-      description: "Toldos sob medida para fachadas comerciais com estrutura reforçada em metalon e lona acrílica ou vinílica personalizada. Proteção para clientes e destaque visual para seu negócio.",
+      title: "Toldo de Fachada para Loja (Fixo/Capota)",
+      seoTitle: "Toldo de Fachada para Loja Curitiba | Toldos Comerciais",
+      seoDescription: "Toldo fixo ou capota para lojas, farmácias e vitrines em Curitiba. Estrutura rígida sob medida a partir de R$ 220/m².",
+      description: "Toldos rígidos e capotas no formato arco ou trapézio, perfeitos para a entrada de lojas e farmácias. Protege sua vitrine do sol e da chuva direta com altíssima elegância.",
       priceFrom: "A partir de R$ 220/m²",
-      images: [servicoToldoComercial, servicoToldoFachada, servicoToldoLoja],
-      features: ["Lona personalizada com logomarca", "Estrutura em metalon reforçado", "Resistente a ventos de até 80km/h"]
+      images: [servicoToldoFachada, servicoToldoLoja],
+      features: ["Lona de alta resistência UV", "Estrutura metálica com pintura epóxi", "Opção de acabamento reto ou ondulado"],
+      icon: Store
     },
     {
-      title: "Coberturas em Policarbonato",
-      seoTitle: "Coberturas em Policarbonato Curitiba - Alveolar e Compacto | Sul Toldos",
-      seoDescription: "Cobertura em policarbonato alveolar e compacto para garagem, quintal e áreas externas em Curitiba. Proteção UV com garantia.",
-      description: "Coberturas translúcidas em policarbonato alveolar ou compacto com estrutura metálica galvanizada. Permite passagem de luz natural com proteção UV total.",
+      title: "Toldo Retrátil para Restaurantes e Bares",
+      seoTitle: "Toldo Retrátil para Restaurantes e Bares em Curitiba | Toldos Comerciais",
+      seoDescription: "Toldo retrátil de braço articulado ou pivotante para restaurantes e bares em Curitiba. Expanda sua área útil com lona de alta qualidade.",
+      description: "Sistemas articulados modernos que abrem e fecham conforme a necessidade do clima. Perfeito para cobrir mesas externas e calçadas de bares, cafés e restaurantes.",
       priceFrom: "A partir de R$ 220/m²",
-      images: [servicoCoberturaCorreder, servicoCoberturaLona, servicoCoberturaMetalica],
-      features: ["Policarbonato com proteção UV", "Estrutura galvanizada anticorrosão", "Garantia de 10 anos"]
+      images: [servicoToldoComercial, servicoPergolado],
+      features: ["Braços articulados importados", "Acionamento manual ou automatizado", "Proteção térmica contra o calor do sol"],
+      icon: Layers
     },
     {
-      title: "Cortinas e Fechamentos",
-      seoTitle: "Cortinas Rolo e Fechamento de Varanda Curitiba | Sul Toldos",
-      seoDescription: "Cortina rolo transparente, toldo cortina e fechamento de varanda em PVC cristal. Proteção contra vento e chuva em Curitiba.",
-      description: "Cortinas rolo em PVC cristal transparente e fechamentos laterais para varandas, sacadas e espaços gourmet. Sistema com guias laterais para vedação total.",
+      title: "Toldo Personalizado com Logomarca",
+      seoTitle: "Toldo com Logomarca e Comunicação Visual Curitiba | Toldos Comerciais",
+      seoDescription: "Toldo comercial personalizado com o logotipo da sua empresa. Comunicação visual e proteção integradas.",
+      description: "Integração total entre proteção de fachada e identidade de marca. Impressão digital de alta resolução diretamente sobre a lona vinílica ou acrílica.",
       priceFrom: "A partir de R$ 220/m²",
-      images: [servicoCortinaRolo, servicoFechamentoVaranda, servicoPergolado],
-      features: ["PVC cristal transparente", "Sistema com guias laterais", "Manual ou motorizado"]
+      images: [servicoToldoLoja, servicoToldoComercial],
+      features: ["Impressão UV de alta definição", "Recorte eletrônico de letras", "Alta fidelidade de cores de marca"],
+      icon: FileText
     },
     {
-      title: "Coberturas Metálicas",
-      seoTitle: "Coberturas Metálicas e Estruturas em Metalon Curitiba | Sul Toldos",
-      seoDescription: "Coberturas metálicas para garagem, estacionamento e áreas industriais em Curitiba. Estrutura em metalon e aço galvanizado.",
-      description: "Estruturas metálicas robustas com cobertura em telha galvalume, sanduíche ou lona tensionada. Ideal para garagens, estacionamentos e áreas industriais.",
+      title: "Cobertura em Policarbonato para Estacionamentos",
+      seoTitle: "Cobertura em Policarbonato para Áreas Comerciais Curitiba | Toldos Comerciais",
+      seoDescription: "Cobertura de policarbonato alveolar ou compacto para estacionamentos, entradas e corredores de empresas.",
+      description: "Estruturas transparentes ou translúcidas de alta resistência a impactos. Perfeitas para coberturas de garagens corporativas, estacionamentos e acessos de condomínios.",
       priceFrom: "A partir de R$ 220/m²",
-      images: [servicoCoberturaMetalica, servicoToldoIndustrial, servicoCoberturaLona],
-      features: ["Estrutura calculada por engenheiro", "Telha termoacústica disponível", "Pintura eletrostática"]
+      images: [servicoCoberturaCorreder, servicoCoberturaMetalica],
+      features: ["Policarbonato com barreira anti-UV", "Estrutura tubular com pintura especial", "Garantia contra amarelamento e impacto"],
+      icon: LayoutGrid
     },
+    {
+      title: "Toldo Cortina/Fechamento para Áreas Externas",
+      seoTitle: "Toldo Cortina e Fechamento de PVC Cristal Curitiba | Toldos Comerciais",
+      seoDescription: "Toldo cortina rolo transparente em PVC cristal para fechamento de áreas externas de restaurantes e bares.",
+      description: "Fechamento vertical retrátil em PVC cristal transparente. Garante conforto térmico e proteção contra ventos fortes ou chuva fina na calçada do seu restaurante.",
+      priceFrom: "A partir de R$ 220/m²",
+      images: [servicoCortinaRolo, servicoPergolado],
+      features: ["PVC cristal transparente importado", "Bordas reforçadas em lona colorida", "Sistema de travas inferiores seguras"],
+      icon: Landmark
+    },
+    {
+      title: "Cobertura de Galpão e Carga/Descarga",
+      seoTitle: "Coberturas Industriais e Áreas de Carga Curitiba | Toldos Comerciais",
+      seoDescription: "Cobertura de galpões comerciais e áreas de carga e descarga em Curitiba. Proteção metálica e lona reforçada.",
+      description: "Projetos robustos e de grandes vãos para docas, áreas de carga e descarga de indústrias, comércios e galpões de distribuição.",
+      priceFrom: "A partir de R$ 220/m²",
+      images: [servicoCoberturaMetalica, servicoToldoFachada],
+      features: ["Vãos livres calculados para caminhões", "Telhas sanduíche termoacústicas", "Pintura industrial anticorrosiva"],
+      icon: ShieldCheck
+    },
+    {
+      title: "Manutenção e Troca de Lona para Empresas",
+      seoTitle: "Reforma de Toldos e Troca de Lona Curitiba | Toldos Comerciais",
+      seoDescription: "Manutenção profissional de toldos, pintura de estrutura metálica e troca de lona desgastada para empresas em Curitiba.",
+      description: "Renovação completa da fachada do seu comércio sem precisar fabricar uma estrutura nova. Trocamos sua lona rasgada ou desbotada por uma lona novíssima.",
+      priceFrom: "A partir de R$ 220/m²",
+      images: [servicoToldoComercial, servicoToldoLoja],
+      features: ["Avaliação técnica da estrutura atual", "Remoção e descarte da lona antiga", "Pintura e lubrificação de engrenagens"],
+      icon: RefreshCw
+    }
   ];
-
-  const handleWhatsApp = (service: string) => {
-    const message = `Olá, gostaria de solicitar um orçamento para ${service}!`;
-    openWhatsapp(message);
-  };
 
   const nextImage = () => {
     if (selectedService) {
@@ -86,76 +113,103 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-secondary">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Nossos Serviços em <span className="text-primary">Toldos</span>
+    <section id="services" className="py-20 bg-[#1C1F22] text-[#F4EFE6] border-b border-border">
+      <div className="max-w-[1200px] mx-auto px-6">
+        
+        {/* Section Header */}
+        <div className="mb-16">
+          <span className="text-[#C8361D] font-sans font-bold text-xs tracking-[0.2em] uppercase block mb-3">
+            NOSSOS SERVIÇOS
+          </span>
+          <h2 
+            className="font-sans font-extrabold uppercase text-3xl md:text-5xl leading-tight tracking-tight mb-4 text-[#F4EFE6]"
+            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+          >
+            Toldos e Coberturas Industriais & Comerciais
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Clique em cada serviço para ver a galeria de fotos reais e preços. Soluções completas para comércio e residência.
+          <p className="text-base text-gray-400 max-w-3xl leading-relaxed">
+            Desenvolvemos projetos robustos e funcionais para dar proteção e alta visibilidade ao seu comércio. Clique em um serviço para ver fotos reais e especificações técnicas.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card
+            <div
               key={index}
-              className="bg-card border-border hover:border-primary/50 hover:shadow-[var(--shadow-elegant)] transition-all duration-300 group cursor-pointer"
+              className="bg-white/5 border border-white/10 hover:border-[#C8361D] rounded-[2px] transition-all duration-200 group cursor-pointer flex flex-col justify-between"
               onClick={() => { setSelectedService(service); setCurrentImageIndex(0); }}
             >
-              <div className="relative overflow-hidden rounded-t-lg">
-                <img
-                  src={service.images[0]}
-                  alt={service.seoTitle}
-                  className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <span className="text-primary font-bold text-sm">{service.priceFrom}</span>
+              <div>
+                {/* Image Section */}
+                <div className="relative overflow-hidden aspect-video">
+                  <img
+                    src={service.images[0]}
+                    alt={service.seoTitle}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  {/* Subtle Price Overlay */}
+                  <div className="absolute bottom-3 left-3 bg-[#1C1F22] px-2 py-1 text-xs border border-white/10 rounded-[2px] font-mono text-[#F2B705] font-bold">
+                    {service.priceFrom}
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <service.icon className="w-5 h-5 text-[#C8361D]" />
+                    <h3 
+                      className="text-lg font-bold text-[#F4EFE6] uppercase tracking-wide group-hover:text-[#C8361D] transition-colors"
+                      style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                    >
+                      {service.title}
+                    </h3>
+                  </div>
+                  
+                  <p className="text-sm text-gray-400 leading-relaxed mb-4 line-clamp-2">
+                    {service.description}
+                  </p>
                 </div>
               </div>
 
-              <CardContent className="p-5">
-                <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-2">
-                  {service.description}
-                </p>
-                <ul className="space-y-1 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-xs text-muted-foreground">
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+              <div className="px-6 pb-6 pt-0">
                 <Button
-                  onClick={(e) => { e.stopPropagation(); handleWhatsApp(service.title); }}
-                  className="w-full bg-primary hover:bg-primary/90 font-bold"
+                  onClick={(e) => { 
+                    e.stopPropagation(); 
+                    openWhatsapp(`Olá! Gostaria de um orçamento para: ${service.title}`); 
+                  }}
+                  className="w-full bg-[#C8361D] hover:bg-[#C8361D]/90 text-white text-xs font-bold tracking-wider uppercase py-2.5 rounded-[2px] transition-all cursor-pointer"
                 >
-                  💬 ORÇAMENTO
+                  SOLICITAR ORÇAMENTO
                 </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
 
-        {/* CTA Persuasivo */}
-        <div className="mt-12 text-center bg-card border border-border rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-foreground mb-3">
-            🏗️ Orçamento Grátis em até 2 Horas!
-          </h3>
-          <p className="text-muted-foreground text-lg mb-6">
-            Envie uma foto do local e receba seu orçamento personalizado no WhatsApp. Sem compromisso!
-          </p>
+        {/* Faixa de Prova Concreta CTA */}
+        <div className="mt-16 bg-[#F4EFE6] text-[#1C1F22] rounded-[2px] p-8 md:p-12 border border-border flex flex-col md:flex-row justify-between items-center gap-8 text-left">
+          <div className="max-w-2xl">
+            <span className="text-[#C8361D] font-bold text-xs tracking-[0.2em] uppercase block mb-2">PROPOSTA EM ATÉ 2 HORAS</span>
+            <h3 
+              className="text-2xl md:text-3xl font-extrabold uppercase leading-tight tracking-tight mb-2"
+              style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+            >
+              Envie fotos da sua fachada pelo WhatsApp!
+            </h3>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              Receba um pré-projeto gratuito e estimativa de valores sem precisar parar as operações da sua empresa. Atendimento rápido e flexível para Curitiba e Região.
+            </p>
+          </div>
           <button
-            onClick={() => openWhatsapp("Olá, gostaria de um orçamento rápido para toldos!")}
-            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+            onClick={() => openWhatsapp("Olá, gostaria de solicitar uma visita técnica para orçamento de toldo comercial!")}
+            className="whitespace-nowrap bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold text-sm uppercase tracking-wider px-8 py-4 rounded-[2px] transition-all cursor-pointer"
           >
-            📱 SOLICITAR ORÇAMENTO GRÁTIS AGORA
+            Falar com Engenheiro Técnico
           </button>
         </div>
+
       </div>
 
       {/* Service Gallery Popup */}
@@ -165,7 +219,7 @@ const Services = () => {
           onClick={() => setSelectedService(null)}
         >
           <div
-            className="bg-card rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl animate-scale-in"
+            className="bg-[#1C1F22] text-[#F4EFE6] border border-white/10 rounded-[2px] max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl animate-scale-in"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Gallery with navigation */}
@@ -173,7 +227,7 @@ const Services = () => {
               <img
                 src={selectedService.images[currentImageIndex]}
                 alt={`${selectedService.seoTitle} - Foto ${currentImageIndex + 1}`}
-                className="w-full h-[300px] md:h-[400px] object-cover rounded-t-2xl transition-opacity duration-300"
+                className="w-full h-[300px] md:h-[400px] object-cover transition-opacity duration-300"
               />
 
               {/* Nav arrows */}
@@ -181,27 +235,27 @@ const Services = () => {
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors cursor-pointer"
                     aria-label="Foto anterior"
                   >
-                    <ChevronLeft className="w-6 h-6" />
+                    <ChevronLeft className="w-5 h-5" />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors cursor-pointer"
                     aria-label="Próxima foto"
                   >
-                    <ChevronRight className="w-6 h-6" />
+                    <ChevronRight className="w-5 h-5" />
                   </button>
                 </>
               )}
 
               <button
                 onClick={() => setSelectedService(null)}
-                className="absolute top-4 right-4 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors"
+                className="absolute top-4 right-4 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors cursor-pointer"
                 aria-label="Fechar"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5" />
               </button>
 
               {/* Image counter */}
@@ -210,26 +264,29 @@ const Services = () => {
                   <button
                     key={idx}
                     onClick={() => setCurrentImageIndex(idx)}
-                    className={`w-3 h-3 rounded-full transition-all ${idx === currentImageIndex ? "bg-primary scale-125" : "bg-white/50"}`}
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${idx === currentImageIndex ? "bg-[#C8361D] scale-125" : "bg-white/50"}`}
                     aria-label={`Ver foto ${idx + 1}`}
                   />
                 ))}
               </div>
             </div>
 
-            <div className="p-6 md:p-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-1">
+            <div className="p-6 md:p-8 text-left">
+              <h3 
+                className="text-2xl md:text-3xl font-extrabold uppercase tracking-wide text-[#F4EFE6] mb-1"
+                style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+              >
                 {selectedService.title}
               </h3>
-              <p className="text-primary font-bold text-xl mb-4">{selectedService.priceFrom}</p>
-              <p className="text-muted-foreground text-base leading-relaxed mb-4">
+              <p className="text-[#F2B705] font-mono font-bold text-lg mb-4">{selectedService.priceFrom}</p>
+              <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 {selectedService.description}
               </p>
 
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2.5 mb-8">
                 {selectedService.features.map((f, i) => (
-                  <li key={i} className="flex items-center text-foreground">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0" />
+                  <li key={i} className="flex items-center text-sm text-gray-300">
+                    <span className="w-1.5 h-1.5 bg-[#C8361D] mr-3 flex-shrink-0 rounded-full" />
                     {f}
                   </li>
                 ))}
@@ -238,13 +295,13 @@ const Services = () => {
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={() => openWhatsapp(`Olá, me interessei pelo serviço: ${selectedService.title}. Gostaria de um orçamento!`)}
-                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-lg text-center text-lg transition-colors cursor-pointer"
+                  className="flex-1 bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold py-3.5 px-6 rounded-[2px] text-center text-sm uppercase tracking-wider transition-colors cursor-pointer"
                 >
-                  💬 ORÇAMENTO GRÁTIS
+                  💬 ORÇAMENTO VIA WHATSAPP
                 </button>
                 <a
                   href="tel:+554135646943"
-                  className="flex-1 border-2 border-border hover:bg-secondary text-foreground font-bold py-3 px-6 rounded-lg text-center text-lg transition-colors"
+                  className="flex-1 border border-white/20 hover:bg-white/5 text-[#F4EFE6] font-extrabold py-3.5 px-6 rounded-[2px] text-center text-sm uppercase tracking-wider transition-colors"
                 >
                   📞 LIGAR AGORA
                 </a>

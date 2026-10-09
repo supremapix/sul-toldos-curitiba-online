@@ -23,28 +23,28 @@ const FloatingButtons = () => {
       label: "WhatsApp",
       icon: <MessageCircle className="h-6 w-6" />,
       onClick: () =>
-        openWhatsapp("Olá, gostaria de solicitar um orçamento para toldos!"),
-      bg: "bg-[hsl(142,70%,40%)] hover:bg-[hsl(142,70%,35%)]",
+        openWhatsapp("Olá, gostaria de solicitar um orçamento para toldos comerciais!"),
+      bg: "bg-[#25D366] hover:bg-[#20ba5a]",
     },
     {
       label: "Email",
       icon: <Mail className="h-6 w-6" />,
       onClick: () =>
         window.open(
-          "mailto:contato@sultoldos.com.br?subject=Orçamento de Toldos&body=Olá, gostaria de solicitar um orçamento.",
+          "mailto:contato@toldoscomerciaiscuritiba.com.br?subject=Orçamento de Toldos Comerciais&body=Olá, gostaria de solicitar um orçamento.",
           "_self"
         ),
-      bg: "bg-[hsl(210,80%,50%)] hover:bg-[hsl(210,80%,45%)]",
+      bg: "bg-[#1C1F22] hover:bg-[#1C1F22]/90 border border-white/20",
     },
     {
       label: "GPS",
       icon: <MapPin className="h-6 w-6" />,
       onClick: () =>
         window.open(
-          "https://www.google.com/maps/search/Sul+Toldos+Curitiba",
+          "https://www.google.com/maps/search/Toldos+Comerciais+Curitiba",
           "_blank"
         ),
-      bg: "bg-[hsl(25,90%,50%)] hover:bg-[hsl(25,90%,45%)]",
+      bg: "bg-[#F2B705] hover:bg-[#d9a104] text-[#1C1F22]",
     },
   ];
 

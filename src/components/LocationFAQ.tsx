@@ -14,15 +14,20 @@ interface LocationFAQProps {
 
 const LocationFAQ = ({ location, type, faqs }: LocationFAQProps) => {
   return (
-    <section className="py-20 bg-secondary/20">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-[#F4EFE6] text-[#1C1F22] border-b border-border">
+      <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-6">
-            Perguntas Frequentes sobre Toldos {type === 'bairro' ? 'no' : 'em'} <span className="text-primary">{location}</span>
+          <span className="inline-block bg-[#F2B705] text-[#1C1F22] font-sans font-extrabold text-[10px] md:text-xs tracking-[0.2em] uppercase px-3 py-1.5 mb-6 rounded-[2px]">
+            FAQ LOCAL — {location.toUpperCase()}
+          </span>
+          <h2 
+            className="text-3xl md:text-5xl font-extrabold uppercase leading-tight tracking-tight mb-4 text-[#1C1F22]"
+            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+          >
+            Perguntas Frequentes {type === 'bairro' ? 'no' : 'em'} <span className="text-[#C8361D]">{location}</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Tire suas dúvidas sobre nossos serviços de toldos, coberturas e policarbonato {type === 'bairro' ? 'no' : 'em'} {location}. 
-            Nossa equipe está sempre pronta para esclarecer qualquer questão.
+          <p className="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Consulte as principais dúvidas sobre prazos de fabricação, materiais de cobertura e visitas gratuitas de projeto {type === 'bairro' ? 'no' : 'em'} {location}.
           </p>
         </div>
 
@@ -32,15 +37,16 @@ const LocationFAQ = ({ location, type, faqs }: LocationFAQProps) => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="bg-card border border-border rounded-lg px-6"
+                className="bg-white border border-border rounded-[2px] px-6"
               >
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <span className="text-lg font-semibold text-foreground pr-4">
-                    {faq.question}
-                  </span>
+                <AccordionTrigger 
+                  className="text-left hover:no-underline py-5 text-sm uppercase tracking-wide font-extrabold text-[#1C1F22] hover:text-[#C8361D] transition-colors"
+                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                >
+                  <span>{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="pb-6">
-                  <div className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                <AccordionContent className="pb-5 pt-0 border-t border-gray-50 mt-2 text-xs text-gray-600 leading-relaxed">
+                  <div className="pt-3">
                     {faq.answer}
                   </div>
                 </AccordionContent>
@@ -49,22 +55,22 @@ const LocationFAQ = ({ location, type, faqs }: LocationFAQProps) => {
           </Accordion>
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-lg text-muted-foreground mb-6">
-            Não encontrou a resposta que procurava? Entre em contato conosco!
+        <div className="text-center mt-12 pt-8 border-t border-gray-200">
+          <p className="text-xs text-gray-500 font-extrabold uppercase tracking-wider mb-6">
+            Ainda tem dúvidas sobre o projeto na sua empresa? Fale conosco agora!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
-              onClick={() => openWhatsapp(`Olá, estou em ${location} e gostaria de tirar algumas dúvidas.`)}
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-6 py-3 rounded-md transition-colors cursor-pointer border-0 outline-none"
+              onClick={() => openWhatsapp(`Olá, estou em ${location} e gostaria de tirar algumas dúvidas sobre toldos comerciais.`)}
+              className="inline-flex items-center justify-center bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold text-xs uppercase tracking-widest px-8 py-4 rounded-[2px] transition-colors cursor-pointer border-0 outline-none"
             >
-              💬 WhatsApp: (41) 99812-1324
+              💬 Falar no WhatsApp
             </button>
             <a 
               href="tel:+554135646943"
-              className="inline-flex items-center justify-center border border-border hover:bg-secondary text-foreground font-semibold px-6 py-3 rounded-md transition-colors"
+              className="inline-flex items-center justify-center border border-gray-400 hover:border-[#1C1F22] text-[#1C1F22] font-extrabold text-xs uppercase tracking-widest px-8 py-4 rounded-[2px] transition-colors"
             >
-              📞 Telefone: (41) 3564-6943
+              📞 Ligar: (41) 3564-6943
             </a>
           </div>
         </div>

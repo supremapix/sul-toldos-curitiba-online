@@ -26,80 +26,80 @@ const defaultGalleryItems: GalleryItem[] = [
   {
     id: 1,
     image: galeriaPolicarbonatoEntrada,
-    title: "Toldo em Policarbonato para Entrada",
-    description: "Toldo curvo em policarbonato fumê instalado na entrada de residência. Proteção elegante contra chuva e sol com estrutura em alumínio reforçado. Ideal para portas de entrada, janelas e acessos. Durabilidade superior a 15 anos com manutenção mínima.",
+    title: "Cobertura em Policarbonato para Escritório",
+    description: "Toldo curvo em policarbonato fumê instalado na recepção de edifício corporativo. Proteção elegante contra chuva e sol com estrutura em alumínio reforçado. Ideal para acessos de clínicas, cartórios e comércios.",
     category: "Policarbonato",
-    priceFrom: "A partir de R$ 220/m²"
+    priceFrom: "A partir de R$ 240/m²"
   },
   {
     id: 2,
     image: galeriaToldoComercial,
-    title: "Toldo Comercial para Supermercado",
-    description: "Cortinas em lona branca para proteção de fachada comercial de supermercado. Solução robusta para grandes áreas com sistema de fixação industrial. Protege produtos e clientes contra intempéries. Material resistente a UV com vida útil estendida.",
+    title: "Toldo de Lona para Supermercado",
+    description: "Cortinas verticais em lona cinza de alta resistência para proteção de área externa de supermercado. Solução robusta com sistema de engrenagem industrial, excelente proteção climática.",
     category: "Comercial",
     priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 3,
     image: galeriaCoberturaQuintal,
-    title: "Cobertura em Policarbonato para Quintal",
-    description: "Cobertura translúcida em policarbonato alveolar com estrutura metálica para área de quintal. Permite passagem de luz natural enquanto protege da chuva. Estrutura em aço galvanizado com pintura eletrostática resistente à corrosão.",
+    title: "Cobertura em Policarbonato para Restaurante",
+    description: "Cobertura translúcida em policarbonato alveolar para área de atendimento de bar e restaurante. Permite passagem de iluminação natural enquanto protege os clientes do vento e da chuva.",
     category: "Policarbonato",
-    priceFrom: "A partir de R$ 240/m²"
+    priceFrom: "A partir = R$ 240/m²"
   },
   {
     id: 4,
     image: galeriaToldoLoja,
-    title: "Toldo para Loja Comercial",
-    description: "Toldo em lona amarela com estrutura metálica para fachada de loja esportiva. Projeto personalizado com cores da marca do estabelecimento. Excelente para visibilidade comercial e proteção de vitrines. Resistente a ventos de até 80km/h.",
+    title: "Toldo de Fachada para Loja",
+    description: "Toldo fixo reto com estrutura metálica galvanizada sob medida para fachada comercial. Lona personalizada de alta visibilidade e acabamento com impressão de alta resolução do logotipo.",
     category: "Comercial",
     priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 5,
     image: galeriaCoberturaMetalica,
-    title: "Cobertura Metálica Residencial",
-    description: "Estrutura de cobertura em metalon e telhas para área de serviço residencial. Solução econômica e durável para proteger áreas externas. Construção sob medida com materiais resistentes a intempéries. Ideal para lavanderia, churrasqueira e garagem.",
+    title: "Cobertura Metálica de Carga/Descarga",
+    description: "Estrutura de cobertura em metalon de vãos amplos para área de recebimento de mercadorias em galpão logístico ou fábrica. Proteção garantida para suas operações comerciais.",
     category: "Coberturas",
     priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 6,
     image: galeriaCortinaRolo,
-    title: "Cortina Rolo Transparente",
-    description: "Cortina rolo com visor transparente em PVC cristal para área gourmet. Permite visualização externa enquanto protege contra vento e chuva. Sistema retrátil com manivela ou motorizado. Perfeito para varandas, sacadas e espaços gastronômicos.",
+    title: "Toldo Cortina de PVC Cristal",
+    description: "Cortina rolo vertical retrátil com visor transparente em PVC cristal para varanda de restaurante. Permite climatização térmico-acústica sem perder a visibilidade da calçada.",
     category: "Cortinas",
-    priceFrom: "A partir de R$ 250/m²"
+    priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 7,
     image: galeriaToldoGaragem,
-    title: "Toldo para Garagem Residencial",
-    description: "Toldo fixo com estrutura curva em metalon e lona cinza para garagem residencial. Proteção completa para veículos contra sol, chuva e granizo. Estrutura dimensionada para suportar ventos fortes. Pintura eletrostática com garantia de 5 anos.",
-    category: "Residencial",
+    title: "Cobertura para Estacionamento de Clínica",
+    description: "Toldo fixo robusto em arco com estrutura de aço galvanizado anticorrosão e lona vinílica para vagas rotativas de clientes. Proteção integral contra granizo e intempéries.",
+    category: "Estacionamento",
     priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 8,
     image: galeriaCoberturaGaragem,
-    title: "Cobertura para Estacionamento",
-    description: "Cobertura em lona tensionada com estrutura metálica treliçada para estacionamento. Solução de grande porte para proteção de múltiplos veículos. Estrutura calculada por engenheiro para máxima segurança. Resistente a ventos extremos e chuva.",
+    title: "Cobertura de Estacionamento Corporativo",
+    description: "Cobertura em lona tensionada estruturada para proteção de frota de veículos em pátios comerciais e indústrias. Dimensionada por engenheiro para suportar ventos de grande escala.",
     category: "Coberturas",
     priceFrom: "A partir de R$ 220/m²"
   },
   {
     id: 9,
     image: galeriaPolicarbonatoArea,
-    title: "Cobertura em Policarbonato para Área",
-    description: "Cobertura em policarbonato opalino com estrutura em metalon azul para área de lazer. Excelente transmissão de luz difusa sem calor direto. Estrutura com treliça para vãos maiores sem colunas intermediárias. Garantia de 10 anos contra amarelamento.",
+    title: "Cobertura em Policarbonato para Condomínio",
+    description: "Cobertura em policarbonato compacto opalino com estrutura metálica fina para circulação interna de pedestres em condomínio comercial. Sofisticação e resistência de alto padrão.",
     category: "Policarbonato",
-    priceFrom: "A partir de R$ 230/m²"
+    priceFrom: "A partir de R$ 280/m²"
   },
   {
     id: 10,
     image: galeriaToldoCortina,
-    title: "Cortina Toldo Vertical",
-    description: "Toldo cortina vertical em lona blackout com trilho lateral para fechamento de varanda. Sistema com guias laterais que impede a entrada de vento e chuva. Ideal para sacadas, varandas gourmet e áreas de convivência. Disponível em diversas cores.",
+    title: "Toldo Cortina Vertical Corta-Vento",
+    description: "Toldo vertical retrátil em lona vinílica blackout reforçada para fechamento lateral de cafeteria ou restaurante de rua. Proteção eficiente contra chuva lateral e ventanias.",
     category: "Cortinas",
     priceFrom: "A partir de R$ 220/m²"
   }
@@ -117,37 +117,43 @@ const InfiniteGallery = ({ locationName = "", locationType = "home" }: InfiniteG
   const getContextualDescription = (item: GalleryItem) => {
     if (locationType === "home" || !locationName) return item.description;
     const prep = locationType === "bairro" ? "no" : "em";
-    return `${item.description} Serviço disponível ${prep} ${locationName} com orçamento gratuito e visita técnica sem compromisso.`;
+    return `${item.description} Serviço disponível ${prep} ${locationName} com projeto sob medida e garantia estendida de fábrica pela Toldos Comerciais Curitiba.`;
   };
 
   const prep = locationType === "bairro" ? "no" : "em";
   const sectionTitle = locationName
     ? `Galeria de Trabalhos ${prep} ${locationName}`
-    : "Galeria de Trabalhos Realizados";
+    : "Galeria de Projetos Realizados";
 
   // Triplicar para loop perfeito sem saltos
   const tripled = [...defaultGalleryItems, ...defaultGalleryItems, ...defaultGalleryItems];
 
   return (
-    <section id="gallery" className="py-16 bg-secondary overflow-hidden">
-      <div className="container mx-auto px-4 mb-10">
+    <section id="gallery" className="py-20 bg-[#1C1F22] text-[#F4EFE6] overflow-hidden border-b border-border">
+      <div className="max-w-[1200px] mx-auto px-6 mb-12">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <span className="inline-block bg-[#F2B705] text-[#1C1F22] font-sans font-extrabold text-[10px] md:text-xs tracking-[0.2em] uppercase px-3 py-1.5 mb-6 rounded-[2px]">
+            03 — GALERIA DE CASOS
+          </span>
+          <h2 
+            className="text-3xl md:text-5xl font-extrabold uppercase leading-tight tracking-tight mb-4"
+            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+          >
             {locationName ? (
-              <>Galeria de Trabalhos {prep} <span className="text-primary">{locationName}</span></>
+              <>Projetos Instalados {prep} <span className="text-[#C8361D]">{locationName}</span></>
             ) : (
-              <><span className="text-primary">Galeria</span> de Trabalhos Realizados</>
+              <>Projetos Instalados em <span className="text-[#C8361D]">Curitiba</span></>
             )}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
             {locationName
-              ? `Veja nossos projetos realizados ${prep} ${locationName}. Clique nas imagens para detalhes e preços.`
-              : "Veja nossos projetos em Curitiba e região. Clique nas imagens para detalhes e preços por m²."}
+              ? `Confira as estruturas que montamos para destacar e proteger comércios ${prep} ${locationName}. Clique para ver detalhes e referências.`
+              : "Veja exemplos reais de toldos de fachada, retráteis de lona e coberturas comerciais em policarbonato de alta resistência."}
           </p>
         </div>
       </div>
 
-      {/* CSS-only infinite scroll — sem JS loop, sem tela branca */}
+      {/* Infinite Horizontal Scroll */}
       <div
         className="relative w-full"
         onMouseEnter={() => setIsPaused(true)}
@@ -166,26 +172,26 @@ const InfiniteGallery = ({ locationName = "", locationType = "home" }: InfiniteG
           {tripled.map((item, index) => (
             <button
               key={`${item.id}-${index}`}
-              className="flex-shrink-0 w-[280px] md:w-[320px] cursor-pointer group text-left border-0 bg-transparent p-0"
+              className="flex-shrink-0 w-[280px] md:w-[320px] cursor-pointer group text-left border-0 bg-transparent p-0 outline-none"
               onClick={() => setSelectedItem(item)}
               aria-label={`Ver detalhes: ${item.title}`}
             >
-              <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <div className="relative overflow-hidden rounded-[2px] border border-white/10 aspect-[4/3]">
                 <img
                   src={item.image}
-                  alt={`${item.title} - Sul Toldos${locationName ? ` ${locationName}` : ""}`}
-                  className="w-full h-[220px] object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt={`${item.title} - Toldos Comerciais Curitiba${locationName ? ` ${locationName}` : ""}`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading={index < 10 ? "eager" : "lazy"}
-                  width="320"
-                  height="220"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <p className="text-white font-bold text-sm leading-tight">{item.title}</p>
-                    <p className="text-primary font-semibold text-xs mt-1">{item.priceFrom}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-white font-bold text-sm uppercase leading-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+                      {item.title}
+                    </p>
+                    <p className="text-[#F2B705] font-bold text-xs mt-1">{item.priceFrom}</p>
                   </div>
                 </div>
-                <div className="absolute top-2 left-2 bg-primary/90 text-primary-foreground text-xs font-bold px-2 py-1 rounded-full">
+                <div className="absolute top-3 left-3 bg-[#C8361D] text-white text-[9px] font-extrabold uppercase tracking-widest px-2 py-1 rounded-[1px]">
                   {item.category}
                 </div>
               </div>
@@ -194,72 +200,73 @@ const InfiniteGallery = ({ locationName = "", locationType = "home" }: InfiniteG
         </div>
       </div>
 
-      {/* CTA */}
-      <div className="container mx-auto px-4 mt-10 text-center">
+      {/* CTA Button */}
+      <div className="max-w-[1200px] mx-auto px-6 mt-12 text-center">
         <button
-          onClick={() => openWhatsapp("Olá, vi a galeria de trabalhos e gostaria de um orçamento!")}
-          className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer border-0 outline-none"
+          onClick={() => openWhatsapp("Olá, vi os projetos na galeria e gostaria de pedir um orçamento para minha empresa!")}
+          className="inline-block bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold text-xs uppercase tracking-widest py-5 px-10 rounded-[2px] transition-all duration-300 hover:scale-105 cursor-pointer border-0 outline-none"
         >
-          📱 SOLICITAR ORÇAMENTO GRÁTIS
+          Pedir Orçamento Grátis com Visita Técnica
         </button>
       </div>
 
       {/* Popup Modal */}
       {selectedItem && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4"
-          style={{ animation: "fadeIn 0.2s ease-out" }}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 animate-fade-in"
           onClick={() => setSelectedItem(null)}
         >
           <div
-            className="bg-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
-            style={{ animation: "scaleIn 0.2s ease-out" }}
+            className="bg-[#1C1F22] text-[#F4EFE6] border border-white/10 rounded-[2px] max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl animate-scale-in"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative">
               <img
                 src={selectedItem.image}
                 alt={selectedItem.title}
-                className="w-full h-[260px] md:h-[380px] object-cover rounded-t-2xl"
+                className="w-full h-[260px] md:h-[380px] object-cover"
                 loading="eager"
               />
               <button
                 onClick={() => setSelectedItem(null)}
-                className="absolute top-3 right-3 bg-black/70 hover:bg-black/90 text-white rounded-full p-2.5 transition-colors"
+                className="absolute top-3 right-3 bg-black/70 hover:bg-black/90 text-white rounded-full p-2 transition-colors cursor-pointer"
                 aria-label="Fechar"
               >
                 <X className="w-5 h-5" />
               </button>
-              <div className="absolute bottom-3 left-3">
-                <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-bold">
+              <div className="absolute bottom-4 left-4">
+                <span className="bg-[#C8361D] text-white text-xs font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-[1px]">
                   {selectedItem.category}
                 </span>
               </div>
             </div>
 
             <div className="p-6 md:p-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+              <h3 
+                className="text-2xl md:text-3xl font-extrabold uppercase text-[#F4EFE6] mb-2"
+                style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+              >
                 {selectedItem.title}
               </h3>
               {selectedItem.priceFrom && (
-                <p className="text-primary font-bold text-xl mb-4">{selectedItem.priceFrom}</p>
+                <p className="text-[#F2B705] font-extrabold text-lg mb-4">{selectedItem.priceFrom}</p>
               )}
-              <p className="text-muted-foreground text-base leading-relaxed mb-6">
+              <p className="text-gray-300 text-sm leading-relaxed mb-6 border-t border-white/10 pt-4">
                 {getContextualDescription(selectedItem)}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
-                  onClick={() => openWhatsapp(`Olá, me interessei pelo serviço: ${selectedItem.title}${locationName ? ` ${prep} ${locationName}` : ""}. Gostaria de um orçamento!`)}
-                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-lg text-center text-lg transition-colors cursor-pointer border-0 outline-none"
+                  onClick={() => openWhatsapp(`Olá, vi ${selectedItem.title} na galeria e gostaria de saber as condições comerciais!`)}
+                  className="flex-1 bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold text-xs uppercase tracking-widest py-4 px-6 rounded-[2px] text-center transition-colors cursor-pointer border-0 outline-none"
                 >
-                  💬 ORÇAMENTO GRÁTIS
+                  💬 Enviar Mensagem no WhatsApp
                 </button>
                 <a
                   href="tel:+554135646943"
-                  className="flex-1 border-2 border-border hover:bg-secondary text-foreground font-bold py-3 px-6 rounded-lg text-center text-lg transition-colors"
+                  className="flex-1 border border-white/20 hover:bg-white/5 text-[#F4EFE6] font-extrabold text-xs uppercase tracking-widest py-4 px-6 rounded-[2px] text-center transition-colors"
                 >
-                  📞 LIGAR AGORA
+                  📞 Chamar Engenheiro: (41) 3564-6943
                 </a>
               </div>
             </div>
