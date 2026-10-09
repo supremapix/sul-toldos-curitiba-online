@@ -98,8 +98,11 @@ const About = () => {
             SOBRE A EMPRESA
           </span>
           <h2 
-            className="font-sans font-extrabold uppercase text-3xl md:text-5xl leading-tight tracking-tight mb-4"
-            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+            className="font-sans font-extrabold uppercase leading-tight tracking-tight mb-4"
+            style={{ 
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontSize: "clamp(1.75rem, 7vw, 3rem)"
+            }}
           >
             Toldos Comerciais Curitiba — <span className="text-[#C8361D]">Estruturas Profissionais para Empresas</span>
           </h2>
@@ -137,8 +140,11 @@ const About = () => {
               02 — CRONOGRAMA
             </span>
             <h3 
-              className="font-sans font-extrabold uppercase text-2xl md:text-4xl leading-tight tracking-tight mb-4"
-              style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+              className="font-sans font-extrabold uppercase leading-tight tracking-tight mb-4"
+              style={{ 
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "clamp(1.5rem, 6vw, 2.5rem)"
+              }}
             >
               Etapas do Processo: <span className="text-[#C8361D]">Do Projeto à Instalação</span>
             </h3>
@@ -176,7 +182,7 @@ const About = () => {
                   >
                     {/* Rounded badge wrapper */}
                     <div className="relative shrink-0 flex items-center justify-center">
-                      <div className={`w-16 h-16 rounded-full border-2 bg-white flex items-center justify-center font-mono font-black text-2xl transition-all duration-500 shadow-sm ${hasStartedCount ? "border-[#C8361D] text-[#C8361D] scale-110" : "border-gray-200 text-gray-300"}`}>
+                      <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full border-2 bg-white flex items-center justify-center font-mono font-black text-lg md:text-2xl transition-all duration-500 shadow-sm ${hasStartedCount ? "border-[#C8361D] text-[#C8361D] scale-105 md:scale-110" : "border-gray-200 text-gray-300"}`}>
                         {stepNum}
                       </div>
                     </div>
@@ -207,8 +213,11 @@ const About = () => {
                 DIFERENCIAIS REAIS
               </span>
               <h3 
-                className="text-2xl md:text-4xl font-extrabold uppercase tracking-tight mb-6"
-                style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                className="font-extrabold uppercase tracking-tight mb-6"
+                style={{ 
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: "clamp(1.5rem, 6vw, 2.5rem)"
+                }}
               >
                 Atendimento Sob Medida para o Seu Comércio
               </h3>

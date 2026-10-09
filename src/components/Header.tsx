@@ -44,8 +44,8 @@ const Header = () => {
       <div className="stripe-divider w-full transition-all duration-300" style={{ height: isScrolled ? "4px" : "8px" }}></div>
       
       <header className={`w-full bg-[#1C1F22] text-[#F4EFE6] transition-all duration-300 ${isScrolled ? "shadow-md bg-[#16181A]" : "border-b border-border"}`}>
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-14" : "h-20"} gap-8`}>
+        <div className="max-w-[1200px] mx-auto px-5 md:px-6">
+          <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-14" : "h-20"} gap-4 md:gap-8`}>
             {/* Zone 1: Brand wordmark (Logo) */}
             <Link to="/" className="whitespace-nowrap shrink-0 hover:opacity-90 transition-opacity">
               <Logo variant="negative" />

@@ -56,8 +56,11 @@ const AwningCalculator = () => {
               02 — CALCULADORA COMERCIAL
             </span>
             <h2 
-              className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight mb-4 text-[#F4EFE6]"
-              style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+              className="font-extrabold uppercase tracking-tight mb-4 text-[#F4EFE6]"
+              style={{ 
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "clamp(1.75rem, 7vw, 3rem)"
+              }}
             >
               Simulador de Área Comercial (M²)
             </h2>

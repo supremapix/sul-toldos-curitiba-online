@@ -15,7 +15,7 @@ export const Logo: React.FC<LogoProps> = ({ variant = "horizontal", className = 
     return (
       <svg
         viewBox="0 0 100 100"
-        className="w-10 h-10 shrink-0 animate-open-awning"
+        className="w-8 h-8 md:w-10 h-8 md:h-10 shrink-0 animate-open-awning"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -59,7 +59,7 @@ export const Logo: React.FC<LogoProps> = ({ variant = "horizontal", className = 
   const textSecondaryColor = isNegative ? "text-gray-400" : "text-[#C8361D]";
 
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex items-center gap-2 md:gap-3 ${className}`}>
       {renderAwningSymbol(isNegative)}
       
       <div className="flex flex-col justify-center">
@@ -67,7 +67,7 @@ export const Logo: React.FC<LogoProps> = ({ variant = "horizontal", className = 
         <span
           className={`font-sans tracking-tight font-extrabold leading-none uppercase ${textPrimaryColor}`}
           style={{
-            fontSize: "1.45rem",
+            fontSize: "clamp(1.1rem, 4.5vw, 1.45rem)",
             fontStretch: "condensed",
             fontFamily: "'Barlow Condensed', 'Archivo Narrow', sans-serif",
           }}
@@ -77,9 +77,9 @@ export const Logo: React.FC<LogoProps> = ({ variant = "horizontal", className = 
         
         {/* Subtitle "CURITIBA · PROJETO E INSTALAÇÃO" */}
         <span
-          className={`tracking-[0.14em] font-bold leading-none ${textSecondaryColor}`}
+          className={`tracking-[0.12em] md:tracking-[0.14em] font-bold leading-none ${textSecondaryColor}`}
           style={{
-            fontSize: "0.58rem",
+            fontSize: "clamp(0.48rem, 2vw, 0.58rem)",
             fontFamily: "'Inter', sans-serif",
             marginTop: "3px",
           }}

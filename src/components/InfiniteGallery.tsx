@@ -136,8 +136,11 @@ const InfiniteGallery = ({ locationName = "", locationType = "home" }: InfiniteG
             03 — GALERIA DE CASOS
           </span>
           <h2 
-            className="text-3xl md:text-5xl font-extrabold uppercase leading-tight tracking-tight mb-4"
-            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+            className="font-extrabold uppercase leading-tight tracking-tight mb-4"
+            style={{ 
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontSize: "clamp(1.75rem, 7vw, 3rem)"
+            }}
           >
             {locationName ? (
               <>Projetos Instalados {prep} <span className="text-[#C8361D]">{locationName}</span></>

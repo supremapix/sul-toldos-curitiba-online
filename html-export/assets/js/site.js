@@ -167,8 +167,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const horizontalProgress = document.querySelector(".process-line-horizontal-progress");
   const verticalProgress = document.querySelector(".process-line-vertical-progress");
   const processNumbers = document.querySelectorAll(".process-number");
+  let processStarted = false;
   
   if (processSection) {
+    // Initialize process numbers to 00 if JS is active and motion is allowed
+    if (!prefersReduced) {
+      processNumbers.forEach(num => {
+        num.textContent = "00";
+      });
+    }
+
     const handleProcessScroll = () => {
       const rect = processSection.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
@@ -178,12 +186,17 @@ document.addEventListener("DOMContentLoaded", () => {
       if (horizontalProgress) horizontalProgress.style.width = `${progress * 100}%`;
       if (verticalProgress) verticalProgress.style.height = `${progress * 100}%`;
       
-      if (viewportHeight - rect.top > 100) {
+      if (viewportHeight - rect.top > 100 && !processStarted) {
+        processStarted = true;
         processNumbers.forEach((num, idx) => {
           setTimeout(() => {
             num.style.borderColor = "#C8361D";
             num.style.color = "#C8361D";
             num.style.transform = "scale(1.1)";
+            if (!prefersReduced) {
+              const targetVal = "0" + (idx + 1);
+              num.textContent = targetVal;
+            }
           }, idx * 150);
         });
       }

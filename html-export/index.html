@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <script>document.documentElement.classList.add('js')</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toldos Comerciais Curitiba | Toldos a partir de R$ 220/m² | Orçamento Grátis</title>
@@ -34,7 +35,7 @@
       <div class="stripe-divider"></div>
       <div class="container header-container">
         <a href="/" class="logo" style="display: flex; align-items: center;">
-          <img src="/logo.svg" alt="Toldos Comerciais Curitiba" style="height: 3.5rem;" />
+          <img src="/logo.svg" alt="Toldos Comerciais Curitiba" class="animate-open-awning" style="height: 3.5rem;" />
         </a>
         <nav class="desktop-nav">
           <a href="#home">Início</a>
@@ -71,12 +72,13 @@
     <!-- Hero -->
     <section id="home" class="hero" style="background-image: linear-gradient(rgba(28, 31, 34, 0.85), rgba(28, 31, 34, 0.85)), url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; color: #F4EFE6;">
       <div class="hero-content container">
-        <span class="badge" style="background-color: #F2B705; color: #1C1F22; font-weight: 800; padding: 0.5rem 1rem; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; border-radius: 2px;">100% Foco Comercial · Atendimento em Curitiba e Região</span>
+        <span class="badge animate-slide-left" style="background-color: #F2B705; color: #1C1F22; font-weight: 800; padding: 0.5rem 1rem; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; border-radius: 2px; display: inline-block;">01 — FACHADAS COMERCIAIS</span>
         <h1 style="font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); text-transform: uppercase; line-height: 1.1; margin: 1.5rem 0;">Toldos comerciais que fazem sua fachada vender mais</h1>
         <p style="font-size: 1.1rem; max-w: 800px; margin-bottom: 2rem; color: #ccc;">Projetos corporativos sob medida: lona com a marca do cliente impressa em alta definição, coberturas em policarbonato resistentes e instalação rápida sem paralisar o seu expediente. Orçamento com visita técnica gratuita!</p>
         <div class="hero-buttons" style="display: flex; gap: 1rem; flex-wrap: wrap;">
           <a href="https://wa.me/5541995304757" target="_blank" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
-            💬 Pedir Orçamento para minha Empresa
+            <span class="mobile-text-short">💬 Pedir Orçamento</span>
+            <span class="desktop-text-full">💬 Pedir Orçamento para minha Empresa</span>
           </a>
           <a href="tel:4135646943" class="btn-outline-hero" style="font-size: 1.1rem;">
             📞 Ligar agora: (41) 3564-6943
@@ -155,7 +157,7 @@
                 <option value="cortina">Toldo Vertical Cortina (A partir de R$ 220/m²)</option>
               </select>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div class="calculator-grid" style="margin-bottom: 1.5rem;">
               <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
                 <label for="calc-width" style="font-size: 0.85rem; font-weight: bold; text-transform: uppercase; color: #F2B705;">Largura (metros)</label>
                 <input type="number" id="calc-width" class="form-control" placeholder="Ex: 4" step="0.5" min="1" value="4" style="width: 100%; padding: 0.85rem; background: #2a2a2a; color: white; border: 1px solid rgba(255,255,255,0.15); border-radius: 2px;" />
@@ -184,7 +186,7 @@
           <h2 style="font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; text-transform: uppercase; margin-top: 1rem; color: #1C1F22;">Toldos Comerciais Curitiba</h2>
           <p style="color: #666; max-w: 600px; margin: 1rem auto 0;">Sua empresa merece a melhor visibilidade, proteção térmica e durabilidade de fachada.</p>
         </div>
-        <div style="display: grid; md:grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+        <div class="about-grid">
           <div>
             <h3 style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.8rem; text-transform: uppercase; margin-bottom: 1rem;">Compromisso Registrado em Contrato</h3>
             <p style="color: #555; margin-bottom: 1.5rem; font-size: 0.95rem; leading-relaxed: 1.7;">A Toldos Comerciais Curitiba desenvolve projetos estruturais de alta performance com lonas vinílicas e acrílicas premium. Nosso foco é 100% corporativo: lojas, farmácias, cafeterias, indústrias, pátios de carga, estacionamentos e pátios corporativos.</p>
