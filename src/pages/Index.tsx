@@ -6,7 +6,6 @@ import Services from "@/components/Services";
 import { Segments } from "@/components/Segments";
 import About from "@/components/About";
 import InfiniteGallery from "@/components/InfiniteGallery";
-import NavigationSection from "@/components/NavigationSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
@@ -105,7 +104,6 @@ const Index = () => {
           location="Curitiba"
         />
         <About />
-        <NavigationSection />
         <FaqHomeSection />
         <FAQ />
         <ContactForm />

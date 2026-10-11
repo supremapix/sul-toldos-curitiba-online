@@ -10,10 +10,10 @@ import InfiniteGallery from "@/components/InfiniteGallery";
 import { Button } from "@/components/ui/button";
 import { openWhatsapp } from "@/utils/whatsapp";
 
-import galeriaPolicarbonatoEntrada from "@/assets/galeria-policarbonato-entrada.jpg";
-import galeriaToldoComercial from "@/assets/galeria-toldo-comercial-supermercado.jpg";
-import galeriaToldoLoja from "@/assets/galeria-toldo-loja.jpg";
-import galeriaToldoGaragem from "@/assets/galeria-toldo-garagem.jpg";
+import toldoBordoLoja from "@/assets/toldo_bordo_loja.webp";
+import terracoToldoRetratil from "@/assets/terraco_toldo_retratil.webp";
+import coberturaEstacionamento from "@/assets/cobertura_estacionamento.webp";
+import toldoVerdeCafe from "@/assets/toldo_verde_cafe.webp";
 
 const BairroPage = () => {
   const { bairro } = useParams();
@@ -33,35 +33,35 @@ const BairroPage = () => {
 
   const bairroData: Record<string, BairroInfo> = {
     "agua-verde": {
-      image: galeriaToldoLoja,
+      image: toldoBordoLoja,
       zone: "Zona Sul",
       profile: "Comercial e corporativo nobre",
       specialty: "Bairro com forte concentração de escritórios, clínicas e restaurantes sofisticados que exigem toldos de alto padrão",
       mainServices: ["Toldos retráteis para restaurantes", "Toldo de fachada sob medida", "Coberturas de policarbonato compacto", "Lonas personalizadas"]
     },
     "centro": {
-      image: galeriaPolicarbonatoEntrada,
+      image: toldoVerdeCafe,
       zone: "Região Central",
       profile: "Comercial de alta densidade",
       specialty: "Centro histórico e de compras com imenso fluxo de pedestres, exigindo toldos fixos elegantes e capotas personalizadas",
       mainServices: ["Toldo de fachada para lojas", "Troca de lona comercial", "Toldos fixos em metalon", "Comunicação visual para comércio"]
     },
     "batel": {
-      image: galeriaToldoLoja,
+      image: toldoBordoLoja,
       zone: "Zona Sul",
       profile: "Comercial e gastronômico premium",
       specialty: "Área nobre de Curitiba com boutiques de grife e alta gastronomia que demandam toldos de lona acrílica de luxo",
       mainServices: ["Toldos retráteis articulados", "Sistemas automatizados premium", "Toldos de fachada de luxo", "Coberturas termoacústicas"]
     },
     "portao": {
-      image: galeriaToldoGaragem,
+      image: coberturaEstacionamento,
       zone: "Zona Sul",
       profile: "Comercial e de serviços",
       specialty: "Grande corredor comercial com lojas de departamento, oficinas e revendedoras com forte necessidade de coberturas",
       mainServices: ["Coberturas para estacionamento", "Toldo capota para fachadas", "Troca e reforma de lona", "Toldo vertical cortina"]
     },
     "cajuru": {
-      image: galeriaToldoComercial,
+      image: terracoToldoRetratil,
       zone: "Zona Leste",
       profile: "Comercial em expansão",
       specialty: "Bairro de Curitiba com comércio local pulsante, mercados, autopeças e postos de serviço em pleno crescimento",
@@ -70,7 +70,7 @@ const BairroPage = () => {
   };
 
   const defaultBairro = {
-    image: galeriaToldoGaragem,
+    image: toldoBordoLoja,
     zone: "Curitiba",
     profile: "Comercial/Corporativo",
     specialty: "Bairro de Curitiba com expressiva movimentação comercial e necessidade de coberturas profissionais de fachada",
@@ -207,7 +207,7 @@ const BairroPage = () => {
                       variant="outline"
                       size="lg"
                       onClick={() => window.open("tel:+554135646943")}
-                      className="border-gray-600 hover:border-white text-[#F4EFE6] hover:bg-[#F4EFE6] hover:text-[#1C1F22] font-extrabold text-xs uppercase tracking-wider py-5 px-8 rounded-[2px] h-auto cursor-pointer"
+                      className="bg-[#2A2D30] hover:bg-[#3E4246] border-2 border-[#F2B705] text-[#F2B705] hover:text-white font-extrabold text-xs uppercase tracking-wider py-5 px-8 rounded-[2px] h-auto cursor-pointer shadow-md transition-all"
                     >
                       📞 Ligar: (41) 3564-6943
                     </Button>
@@ -271,7 +271,7 @@ const BairroPage = () => {
                 <Button onClick={handleWhatsApp} size="lg" className="bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] h-auto cursor-pointer">
                   💬 Chamar no WhatsApp
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => window.open("tel:+554135646943")} className="border-gray-600 hover:border-white text-[#F4EFE6] hover:bg-[#F4EFE6] hover:text-[#1C1F22] font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] h-auto cursor-pointer">
+                <Button variant="outline" size="lg" onClick={() => window.open("tel:+554135646943")} className="bg-[#2A2D30] hover:bg-[#3E4246] border-2 border-[#F2B705] text-[#F2B705] hover:text-white font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] h-auto cursor-pointer shadow-md transition-all">
                   📞 Chamar por Telefone
                 </Button>
               </div>

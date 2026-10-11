@@ -228,7 +228,7 @@ const FaqPage = () => {
               </button>
               <a 
                 href="tel:+554135646943"
-                className="border border-gray-600 hover:border-white text-[#F4EFE6] hover:bg-[#F4EFE6] hover:text-[#1C1F22] font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] transition-all"
+                className="bg-[#2A2D30] hover:bg-[#3E4246] border-2 border-[#F2B705] text-[#F2B705] hover:text-white font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] transition-all shadow-md inline-flex items-center justify-center"
               >
                 Ligar: (41) 3564-6943
               </a>
