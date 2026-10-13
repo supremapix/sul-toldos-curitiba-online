@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { X, ChevronLeft, ChevronRight, LayoutGrid, Store, FileText, Landmark, RefreshCw, Layers, ShieldCheck } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, LayoutGrid, Store, FileText, Landmark, RefreshCw, Layers, ShieldCheck, MessageCircle, Building2 } from "lucide-react";
 import { openWhatsapp } from "@/utils/whatsapp";
 
 import toldoBordoLoja from "@/assets/toldo_bordo_loja.webp";
@@ -21,6 +21,8 @@ interface ServiceItem {
   images: string[];
   features: string[];
   icon: React.ComponentType<{ className?: string }>;
+  whatsappNumber?: string;
+  whatsappDisplay?: string;
 }
 
 export const Services = () => {
@@ -66,7 +68,9 @@ export const Services = () => {
       priceFrom: "A partir de R$ 220/m²",
       images: [coberturaEstacionamento, coberturaMetalicaDoca],
       features: ["Policarbonato com barreira anti-UV", "Estrutura tubular com pintura especial", "Garantia contra amarelamento e impacto"],
-      icon: LayoutGrid
+      icon: LayoutGrid,
+      whatsappNumber: "5541998000366",
+      whatsappDisplay: "(41) 99800-0366"
     },
     {
       title: "Toldo Cortina/Fechamento para Áreas Externas",
@@ -76,7 +80,9 @@ export const Services = () => {
       priceFrom: "A partir de R$ 220/m²",
       images: [cortinasPvcCristal, terracoToldoRetratil],
       features: ["PVC cristal transparente importado", "Bordas reforçadas em lona colorida", "Sistema de travas inferiores seguras"],
-      icon: Landmark
+      icon: Landmark,
+      whatsappNumber: "5541998000366",
+      whatsappDisplay: "(41) 99800-0366"
     },
     {
       title: "Cobertura de Galpão e Carga/Descarga",
@@ -86,7 +92,21 @@ export const Services = () => {
       priceFrom: "A partir de R$ 220/m²",
       images: [coberturaMetalicaDoca, coberturaEstacionamento],
       features: ["Vãos livres calculados para caminhões", "Telhas sanduíche termoacústicas", "Pintura industrial anticorrosiva"],
-      icon: ShieldCheck
+      icon: ShieldCheck,
+      whatsappNumber: "5541996315885",
+      whatsappDisplay: "(41) 99631-5885"
+    },
+    {
+      title: "Coberturas com Estruturas Metálicas e Mezaninos",
+      seoTitle: "Coberturas Metálicas e Mezaninos Curitiba | Toldos Comerciais",
+      seoDescription: "Fabricação e montagem de coberturas metálicas pesadas, mezaninos comerciais e estruturas em aço sob medida em Curitiba e RMC.",
+      description: "Projetos completos de engenharia estrutural para mezaninos comerciais, galpões e coberturas metálicas reforçadas. Maximize a área útil e a capacidade operacional da sua empresa com estruturas em aço galvanizado calculadas por especialistas.",
+      priceFrom: "Sob Medida / Projeto",
+      images: [coberturaMetalicaDoca, coberturaEstacionamento],
+      features: ["Vigas de aço galvanizado estrutural", "Mezaninos para ampliação de piso útil", "Pintura epóxi anticorrosiva de alto rendimento", "Acompanhamento técnico e cálculo de carga"],
+      icon: Building2,
+      whatsappNumber: "5541996315885",
+      whatsappDisplay: "(41) 99631-5885"
     },
     {
       title: "Manutenção e Troca de Lona para Empresas",
@@ -96,7 +116,9 @@ export const Services = () => {
       priceFrom: "A partir de R$ 220/m²",
       images: [instalacaoToldoTerracota, toldoBordoLoja],
       features: ["Avaliação técnica da estrutura atual", "Remoção e descarte da lona antiga", "Pintura e lubrificação de engrenagens"],
-      icon: RefreshCw
+      icon: RefreshCw,
+      whatsappNumber: "5541998000366",
+      whatsappDisplay: "(41) 99800-0366"
     }
   ];
 
@@ -177,13 +199,23 @@ export const Services = () => {
               </div>
 
               <div className="px-6 pb-6 pt-0 relative z-10">
+                {service.whatsappDisplay && (
+                  <div className="flex items-center justify-between text-[11px] font-bold text-gray-300 bg-white/5 px-2.5 py-1.5 rounded-[2px] mb-2.5 border border-white/10">
+                    <span className="text-gray-400">WhatsApp direto:</span>
+                    <span className="text-[#25D366] flex items-center gap-1 font-mono">
+                      <MessageCircle className="w-3.5 h-3.5" />
+                      {service.whatsappDisplay}
+                    </span>
+                  </div>
+                )}
                 <Button
                   onClick={(e) => { 
                     e.stopPropagation(); 
-                    openWhatsapp(`Olá! Gostaria de um orçamento para: ${service.title}`); 
+                    openWhatsapp(`Olá! Gostaria de um orçamento para: ${service.title}`, service.whatsappNumber); 
                   }}
-                  className="w-full bg-[#C8361D] text-white text-xs font-bold tracking-wider uppercase py-2.5 rounded-[2px] transition-all cursor-pointer relative overflow-hidden z-10 btn-fill-hover"
+                  className="w-full bg-[#C8361D] text-white text-xs font-bold tracking-wider uppercase py-2.5 rounded-[2px] transition-all cursor-pointer relative overflow-hidden z-10 btn-fill-hover flex items-center justify-center gap-2"
                 >
+                  <MessageCircle className="w-3.5 h-3.5" />
                   SOLICITAR ORÇAMENTO
                 </Button>
               </div>
@@ -284,7 +316,15 @@ export const Services = () => {
               >
                 {selectedService.title}
               </h3>
-              <p className="text-[#F2B705] font-mono font-bold text-lg mb-4">{selectedService.priceFrom}</p>
+              <p className="text-[#F2B705] font-mono font-bold text-lg mb-3">{selectedService.priceFrom}</p>
+              
+              {selectedService.whatsappDisplay && (
+                <div className="inline-flex items-center gap-2 bg-[#25D366]/10 border border-[#25D366]/30 px-3 py-1.5 rounded-[2px] text-xs font-bold text-[#25D366] mb-4">
+                  <MessageCircle className="w-4 h-4" />
+                  Atendimento WhatsApp: {selectedService.whatsappDisplay}
+                </div>
+              )}
+
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 {selectedService.description}
               </p>
@@ -300,14 +340,18 @@ export const Services = () => {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
-                  onClick={() => openWhatsapp(`Olá, me interessei pelo serviço: ${selectedService.title}. Gostaria de um orçamento!`)}
-                  className="flex-1 bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold py-3.5 px-6 rounded-[2px] text-center text-sm uppercase tracking-wider transition-colors cursor-pointer"
+                  onClick={() => openWhatsapp(
+                    `Olá, me interessei pelo serviço: ${selectedService.title}. Gostaria de um orçamento!`,
+                    selectedService.whatsappNumber
+                  )}
+                  className="flex-1 bg-[#25D366] hover:bg-[#20ba5a] text-white font-extrabold py-3.5 px-6 rounded-[2px] text-center text-sm uppercase tracking-wider transition-colors cursor-pointer flex items-center justify-center gap-2"
                 >
-                  💬 ORÇAMENTO VIA WHATSAPP
+                  <MessageCircle className="w-4 h-4" />
+                  ORÇAMENTO VIA WHATSAPP {selectedService.whatsappDisplay ? `(${selectedService.whatsappDisplay})` : ""}
                 </button>
                 <a
                   href="tel:+554135646943"
-                  className="flex-1 border border-white/20 hover:bg-white/5 text-[#F4EFE6] font-extrabold py-3.5 px-6 rounded-[2px] text-center text-sm uppercase tracking-wider transition-colors"
+                  className="flex-1 border border-white/20 hover:bg-white/5 text-[#F4EFE6] font-extrabold py-3.5 px-6 rounded-[2px] text-center text-sm uppercase tracking-wider transition-colors flex items-center justify-center"
                 >
                   📞 LIGAR AGORA
                 </a>

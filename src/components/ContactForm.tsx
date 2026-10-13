@@ -156,6 +156,7 @@ _Enviado pelo site Toldos Comerciais Curitiba_`;
                       <SelectItem value="cobertura-policarbonato">Cobertura em Policarbonato</SelectItem>
                       <SelectItem value="toldo-cristal">Toldo Cortina / Fechamento</SelectItem>
                       <SelectItem value="cobertura-industrial">Cobertura de Galpão / Carga</SelectItem>
+                      <SelectItem value="coberturas-mezaninos">Coberturas com Estruturas Metálicas e Mezaninos</SelectItem>
                       <SelectItem value="manutencao">Manutenção e Troca de Lona</SelectItem>
                     </SelectContent>
                   </Select>

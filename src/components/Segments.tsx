@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { openWhatsapp } from "@/utils/whatsapp";
 import { RestauranteScene } from "./segment-illustrations/RestauranteScene";
 import { VarejoScene } from "./segment-illustrations/VarejoScene";
@@ -13,6 +13,8 @@ interface SegmentItem {
   tag: string;
   description: string;
   illustration: React.ComponentType;
+  whatsappNumber?: string;
+  whatsappDisplay?: string;
 }
 
 export const Segments = () => {
@@ -45,18 +47,25 @@ export const Segments = () => {
       title: "Galpões e Centros de Distribuição",
       tag: "05 — LOGÍSTICA",
       description: "Coberturas de grandes vãos para docas de carga e descarga com telhas sanduíche e estruturas pesadas.",
-      illustration: LogisticaScene
+      illustration: LogisticaScene,
+      whatsappNumber: "5541996315885",
+      whatsappDisplay: "(41) 99631-5885"
     },
     {
       title: "Estacionamentos e Condomínios",
       tag: "06 — INFRAESTRUTURA",
       description: "Sistemas modulares de sombreamento e coberturas metálicas para frotas e garagens corporativas.",
-      illustration: InfraestruturaScene
+      illustration: InfraestruturaScene,
+      whatsappNumber: "5541998000366",
+      whatsappDisplay: "(41) 99800-0366"
     }
   ];
 
-  const handleWhatsApp = (segment: string) => {
-    openWhatsapp(`Olá, gostaria de solicitar uma visita técnica e orçamento de toldo comercial para: ${segment}!`);
+  const handleWhatsApp = (segment: SegmentItem) => {
+    openWhatsapp(
+      `Olá, gostaria de solicitar uma visita técnica e orçamento de toldo comercial para: ${segment.title}!`,
+      segment.whatsappNumber
+    );
   };
 
   return (
@@ -88,7 +97,7 @@ export const Segments = () => {
             <div
               key={index}
               className="bg-white border-2 border-[#1C1F22] p-6 hover:translate-y-[-4px] transition-transform duration-200 flex flex-col justify-between relative group cursor-pointer reveal-on-scroll"
-              onClick={() => handleWhatsApp(segment.title)}
+              onClick={() => handleWhatsApp(segment)}
             >
               {/* Detalhe de Listras de Toldo em miniatura no canto superior da placa */}
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#C8361D] via-[#F4EFE6] to-[#C8361D]" />
@@ -120,8 +129,15 @@ export const Segments = () => {
               </div>
               
               {/* Hover effect bottom stripe */}
-              <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-[#C8361D] uppercase tracking-wider">
-                <span>Orçamento Rápido</span>
+              <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold uppercase tracking-wider">
+                {segment.whatsappDisplay ? (
+                  <span className="flex items-center gap-1 text-[#25D366] font-mono font-bold">
+                    <MessageCircle className="w-3.5 h-3.5" />
+                    {segment.whatsappDisplay}
+                  </span>
+                ) : (
+                  <span className="text-[#C8361D]">Orçamento Rápido</span>
+                )}
                 <span className="text-[#1C1F22] group-hover:underline">Solicitar ➔</span>
               </div>
             </div>

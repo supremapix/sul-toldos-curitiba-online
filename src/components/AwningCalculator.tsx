@@ -9,6 +9,7 @@ const awningTypes = [
   { id: "policarbonato", label: "Cobertura em Policarbonato", priceMin: 240, priceMax: 350 },
   { id: "cortina-rolo", label: "Cortina Rolo PVC", priceMin: 220, priceMax: 380 },
   { id: "cobertura-metalica", label: "Cobertura Metálica", priceMin: 220, priceMax: 320 },
+  { id: "mezanino-metalico", label: "Estruturas Metálicas e Mezaninos", priceMin: 320, priceMax: 580 },
   { id: "pergolado", label: "Pergolado com Cobertura", priceMin: 380, priceMax: 650 },
   { id: "capota", label: "Toldo Capota (Fachada)", priceMin: 800, priceMax: 1500, perLinearMeter: true },
 ];
