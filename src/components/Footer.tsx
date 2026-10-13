@@ -31,8 +31,8 @@ const Footer = () => {
               >
                 <MessageCircle className="w-4 h-4 text-primary flex-shrink-0" /> (41) 99812-1324
               </button>
-              <a href="mailto:contato@toldoscomerciaiscuritiba.com.br" className="flex items-center gap-3 hover:text-primary transition-colors">
-                <Mail className="w-4 h-4 text-primary flex-shrink-0" /> contato@toldoscomerciaiscuritiba.com.br
+              <a href="mailto:contato@sultoldos.com.br" className="flex items-center gap-3 hover:text-primary transition-colors">
+                <Mail className="w-4 h-4 text-primary flex-shrink-0" /> contato@sultoldos.com.br
               </a>
               <span className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0" /> Curitiba - PR

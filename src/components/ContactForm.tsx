@@ -208,7 +208,7 @@ _Enviado pelo site Toldos Comerciais Curitiba_`;
                     <Mail className="w-5 h-5 text-[#C8361D] mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-bold text-sm uppercase text-[#1C1F22]">E-mail Corporativo</h4>
-                      <p className="text-xs text-gray-600">contato@toldoscomerciaiscuritiba.com.br</p>
+                      <p className="text-xs text-gray-600">contato@sultoldos.com.br</p>
                     </div>
                   </div>
 

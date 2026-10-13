@@ -8,8 +8,8 @@ export const getNextWhatsappNumber = () => {
     return newNumber;
 };
 
-export const openWhatsapp = (text?: string) => {
-    const number = getNextWhatsappNumber();
+export const openWhatsapp = (text?: string, customNumber?: string) => {
+    const number = customNumber || getNextWhatsappNumber();
     const url = `https://wa.me/${number}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
     window.open(url, "_blank");
 };

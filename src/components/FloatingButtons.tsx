@@ -18,12 +18,19 @@ const FloatingButtons = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const FLOATING_WHATSAPP_PHONE = "5541998000366";
+  const FLOATING_WHATSAPP_TEXT = "ola quero saber sobre toldos";
+  const floatingWhatsappUrl = `https://wa.me/${FLOATING_WHATSAPP_PHONE}?text=${encodeURIComponent(FLOATING_WHATSAPP_TEXT)}`;
+
+  const handleFloatingWhatsapp = () => {
+    openWhatsapp(FLOATING_WHATSAPP_TEXT, FLOATING_WHATSAPP_PHONE);
+  };
+
   const buttons = [
     {
       label: "WhatsApp",
       icon: <MessageCircle className="h-6 w-6" />,
-      onClick: () =>
-        openWhatsapp("Olá, gostaria de solicitar um orçamento para toldos comerciais!"),
+      onClick: handleFloatingWhatsapp,
       bg: "bg-[#25D366] hover:bg-[#20ba5a]",
     },
     {
@@ -31,7 +38,7 @@ const FloatingButtons = () => {
       icon: <Mail className="h-6 w-6" />,
       onClick: () =>
         window.open(
-          "mailto:contato@toldoscomerciaiscuritiba.com.br?subject=Orçamento de Toldos Comerciais&body=Olá, gostaria de solicitar um orçamento.",
+          "mailto:contato@sultoldos.com.br?subject=Orçamento de Toldos Comerciais&body=Olá, gostaria de solicitar um orçamento.",
           "_self"
         ),
       bg: "bg-[#1C1F22] hover:bg-[#1C1F22]/90 border border-white/20",
@@ -56,7 +63,7 @@ const FloatingButtons = () => {
           onClick={scrollToTop}
           title="Voltar ao topo"
           aria-label="Voltar ao topo"
-          className="bg-muted hover:bg-muted/80 w-12 h-12 rounded-full text-foreground shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 border border-border animate-fade-in"
+          className="bg-muted hover:bg-muted/80 w-12 h-12 rounded-full text-foreground shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 border border-border animate-fade-in cursor-pointer"
         >
           <ArrowUp className="h-5 w-5" />
         </button>
@@ -71,7 +78,7 @@ const FloatingButtons = () => {
               onClick={btn.onClick}
               title={btn.label}
               aria-label={btn.label}
-              className={`${btn.bg} w-14 h-14 rounded-full text-white shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border-2 border-white/20`}
+              className={`${btn.bg} w-14 h-14 rounded-full text-white shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border-2 border-white/20 cursor-pointer`}
             >
               {btn.icon}
             </button>
@@ -84,13 +91,25 @@ const FloatingButtons = () => {
         <button
           onClick={() => setIsExpanded(false)}
           aria-label="Fechar menu"
-          className="w-14 h-14 rounded-full bg-muted text-foreground shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-border animate-fade-in"
+          className="w-14 h-14 rounded-full bg-muted text-foreground shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-border animate-fade-in cursor-pointer"
         >
           <X className="h-6 w-6" />
         </button>
       )}
 
-      {/* Main Phone CTA - always visible with gentle attention shake */}
+      {/* Direct Floating WhatsApp Button */}
+      <a
+        href={floatingWhatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Falar no WhatsApp"
+        aria-label="Falar no WhatsApp"
+        className="relative w-[52px] h-[52px] rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 border-2 border-white/30 animate-phone-swing cursor-pointer"
+      >
+        <MessageCircle className="h-6 w-6 relative z-10" />
+      </a>
+
+      {/* Main Phone CTA - always visible */}
       <button
         onClick={() => {
           if (!isExpanded) {
@@ -99,9 +118,9 @@ const FloatingButtons = () => {
             window.open("tel:+554135646943", "_self");
           }
         }}
-        title={isExpanded ? "Ligar Agora" : "Contato Rápido"}
+        title={isExpanded ? "Ligar Agora" : "Mais opções de contato"}
         aria-label={isExpanded ? "Ligar Agora" : "Abrir opções de contato"}
-        className="relative w-[52px] h-[52px] rounded-full bg-[#C8361D] text-white shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 border-2 border-white/30 animate-phone-swing"
+        className="relative w-[52px] h-[52px] rounded-full bg-[#C8361D] text-white shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 border-2 border-white/30 cursor-pointer"
       >
         <Phone className="h-5 w-5 relative z-10" />
       </button>

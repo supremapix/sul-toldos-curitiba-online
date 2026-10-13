@@ -665,7 +665,7 @@ header {
   transform: scaleX(1);
 }
 
-/* Phone Floating CTA adjustments */
+/* Phone & WhatsApp Floating CTA adjustments */
 .btn-float-phone {
   position: fixed;
   bottom: 16px;
@@ -686,6 +686,30 @@ header {
 }
 
 .btn-float-phone:hover {
+  transform: scale(1.1);
+}
+
+.btn-float-whatsapp {
+  position: fixed;
+  bottom: 76px;
+  right: 16px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 100;
+  border: 2px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+
+.btn-float-whatsapp:hover {
   transform: scale(1.1);
 }
 
