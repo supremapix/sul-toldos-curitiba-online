@@ -44,7 +44,14 @@ const AwningCalculator = () => {
   const handleSendWhatsapp = () => {
     if (selectedAwning) {
       const whatsappMessage = `Olá! Calculei no site e gostaria de um orçamento para:\n\n📋 Tipo: ${selectedAwning.label}\n📏 Largura: ${width}m x Profundidade: ${depth}m\n📐 Área: ${area.toFixed(1)}m²\n💰 Estimativa: R$ ${priceMin.toFixed(0)} a R$ ${priceMax.toFixed(0)}\n\nPode me enviar um orçamento detalhado?`;
-      openWhatsapp(whatsappMessage);
+      
+      let targetNumber: string | undefined;
+      if (selectedAwning.id === "mezanino-metalico" || selectedAwning.id === "cobertura-metalica") {
+        targetNumber = "5541996315885";
+      } else if (["policarbonato", "cortina-rolo"].includes(selectedAwning.id)) {
+        targetNumber = "5541998000366";
+      }
+      openWhatsapp(whatsappMessage, targetNumber);
     }
   };
 

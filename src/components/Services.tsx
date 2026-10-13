@@ -11,6 +11,7 @@ import toldoVerdeCafe from "@/assets/toldo_verde_cafe.webp";
 import cortinasPvcCristal from "@/assets/cortinas_pvc_cristal.webp";
 import coberturaMetalicaDoca from "@/assets/cobertura_metalica_doca.webp";
 import instalacaoToldoTerracota from "@/assets/instalacao_toldo_terracota.webp";
+import mezaninosImg from "@/assets/mezaninos.webp";
 
 interface ServiceItem {
   title: string;
@@ -102,7 +103,7 @@ export const Services = () => {
       seoDescription: "Fabricação e montagem de coberturas metálicas pesadas, mezaninos comerciais e estruturas em aço sob medida em Curitiba e RMC.",
       description: "Projetos completos de engenharia estrutural para mezaninos comerciais, galpões e coberturas metálicas reforçadas. Maximize a área útil e a capacidade operacional da sua empresa com estruturas em aço galvanizado calculadas por especialistas.",
       priceFrom: "Sob Medida / Projeto",
-      images: [coberturaMetalicaDoca, coberturaEstacionamento],
+      images: ["https://img.supremasite.com.br/mezaninos.webp", mezaninosImg, coberturaMetalicaDoca],
       features: ["Vigas de aço galvanizado estrutural", "Mezaninos para ampliação de piso útil", "Pintura epóxi anticorrosiva de alto rendimento", "Acompanhamento técnico e cálculo de carga"],
       icon: Building2,
       whatsappNumber: "5541996315885",

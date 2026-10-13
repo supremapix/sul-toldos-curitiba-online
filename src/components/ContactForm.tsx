@@ -57,7 +57,14 @@ const ContactForm = () => {
 
 _Enviado pelo site Toldos Comerciais Curitiba_`;
 
-    openWhatsapp(message);
+    let targetNumber: string | undefined;
+    if (formData.service === "cobertura-industrial" || formData.service === "coberturas-mezaninos") {
+      targetNumber = "5541996315885";
+    } else if (["cobertura-policarbonato", "toldo-cristal", "manutencao"].includes(formData.service)) {
+      targetNumber = "5541998000366";
+    }
+
+    openWhatsapp(message, targetNumber);
 
     toast({
       title: "Redirecionando para WhatsApp",
