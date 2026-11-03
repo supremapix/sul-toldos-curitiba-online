@@ -135,7 +135,7 @@ const CidadePage = () => {
     "name": `Toldos Comerciais Curitiba - ${cityName}`,
     "description": `Toldos comerciais, lonas com logomarca e coberturas de policarbonato em ${cityName} a partir de R$ 220/m². Orçamento e visita técnica gratuitos!`,
     "url": `https://toldoscomerciaiscuritiba.com.br/cidade/${citySlug}`,
-    "telephone": ["+554135646943", "+5541995304757", "+5541991031466"],
+    "telephone": ["+5541998000366"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": cityName,
@@ -164,7 +164,7 @@ const CidadePage = () => {
     <>
       <EnhancedSEO
         title={`Toldos Comerciais em ${cityName} | A Partir R$ 220/m² | Orçamento Grátis`}
-        description={`Especialista em toldos comerciais, coberturas e lona com logomarca em ${cityName} a partir de R$ 220/m². Visita técnica gratuita sem compromisso! ☎️ (41) 3564-6943.`}
+        description={`Especialista em toldos comerciais, coberturas e lona com logomarca em ${cityName} a partir de R$ 220/m². Visita técnica gratuita sem compromisso! ☎️ (41) 99800-0366.`}
         keywords={`toldos comerciais ${cityName.toLowerCase()}, toldo para loja ${cityName.toLowerCase()}, toldo para restaurante ${cityName.toLowerCase()}, policarbonato ${cityName.toLowerCase()}, cobertura ${cityName.toLowerCase()}, toldo retrátil ${cityName.toLowerCase()}, lona com logotipo, cobertura estacionamento`}
         canonical={`https://toldoscomerciaiscuritiba.com.br/cidade/${citySlug}`}
         structuredData={cityStructuredData}
@@ -209,10 +209,10 @@ const CidadePage = () => {
                     <Button 
                       variant="outline"
                       size="lg"
-                      onClick={() => window.open("tel:+554135646943")}
+                      onClick={() => window.open("tel:+5541998000366")}
                       className="bg-[#2A2D30] hover:bg-[#3E4246] border-2 border-[#F2B705] text-[#F2B705] hover:text-white font-extrabold text-xs uppercase tracking-wider py-5 px-8 rounded-[2px] h-auto cursor-pointer shadow-md transition-all"
                     >
-                      📞 Ligar: (41) 3564-6943
+                      📞 Ligar: (41) 99800-0366
                     </Button>
                   </div>
 
@@ -274,8 +274,8 @@ const CidadePage = () => {
                 <Button onClick={handleWhatsApp} size="lg" className="bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] h-auto cursor-pointer">
                   💬 Falar no WhatsApp
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => window.open("tel:+554135646943")} className="bg-[#2A2D30] hover:bg-[#3E4246] border-2 border-[#F2B705] text-[#F2B705] hover:text-white font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] h-auto cursor-pointer shadow-md transition-all">
-                  📞 Ligar agora
+                <Button variant="outline" size="lg" onClick={() => window.open("tel:+5541998000366")} className="bg-[#2A2D30] hover:bg-[#3E4246] border-2 border-[#F2B705] text-[#F2B705] hover:text-white font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] h-auto cursor-pointer shadow-md transition-all">
+                  📞 Ligar agora: (41) 99800-0366
                 </Button>
               </div>
               <p className="text-xs text-gray-500 uppercase font-semibold tracking-wider">

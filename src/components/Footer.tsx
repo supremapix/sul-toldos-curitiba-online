@@ -22,14 +22,14 @@ const Footer = () => {
               Especialista em toldos comerciais, coberturas de policarbonato, e lonas personalizadas com logotipo para lojas, restaurantes, postos, estacionamentos e condomínios em Curitiba e região metropolitana.
             </p>
             <div className="space-y-3 text-sm text-gray-300">
-              <a href="tel:+554135646943" className="flex items-center gap-3 hover:text-primary transition-colors">
-                <Phone className="w-4 h-4 text-primary flex-shrink-0" /> (41) 3564-6943
+              <a href="tel:+5541998000366" className="flex items-center gap-3 hover:text-primary transition-colors">
+                <Phone className="w-4 h-4 text-primary flex-shrink-0" /> (41) 99800-0366
               </a>
               <button
-                onClick={() => openWhatsapp("Olá, gostaria de solicitar um orçamento para toldos comerciais!")}
+                onClick={() => openWhatsapp("Olá, gostaria de solicitar um orçamento para toldos comerciais!", "5541998000366")}
                 className="flex items-center gap-3 text-left hover:text-primary transition-colors cursor-pointer border-0 bg-transparent p-0 font-normal outline-none text-gray-300"
               >
-                <MessageCircle className="w-4 h-4 text-primary flex-shrink-0" /> (41) 99812-1324
+                <MessageCircle className="w-4 h-4 text-primary flex-shrink-0" /> WhatsApp Atendimento
               </button>
               <a href="mailto:contato@sultoldos.com.br" className="flex items-center gap-3 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" /> contato@sultoldos.com.br

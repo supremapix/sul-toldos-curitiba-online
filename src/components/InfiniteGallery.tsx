@@ -263,10 +263,10 @@ const InfiniteGallery = ({ locationName = "", locationType = "home" }: InfiniteG
                   💬 Enviar Mensagem no WhatsApp
                 </button>
                 <a
-                  href="tel:+554135646943"
+                  href="tel:+5541998000366"
                   className="flex-1 border border-white/20 hover:bg-white/5 text-[#F4EFE6] font-extrabold text-xs uppercase tracking-widest py-4 px-6 rounded-[2px] text-center transition-colors"
                 >
-                  📞 Chamar Engenheiro: (41) 3564-6943
+                  📞 Chamar Engenheiro: (41) 99800-0366
                 </a>
               </div>
             </div>

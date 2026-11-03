@@ -48,8 +48,8 @@ export const Segments = () => {
       tag: "05 — LOGÍSTICA",
       description: "Coberturas de grandes vãos para docas de carga e descarga com telhas sanduíche e estruturas pesadas.",
       illustration: LogisticaScene,
-      whatsappNumber: "5541996315885",
-      whatsappDisplay: "(41) 99631-5885"
+      whatsappNumber: "5541998000366",
+      whatsappDisplay: "(41) 99800-0366"
     },
     {
       title: "Estacionamentos e Condomínios",

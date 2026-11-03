@@ -95,18 +95,18 @@ const FAQ = () => {
           <p className="text-sm text-gray-600 mb-6 font-semibold uppercase tracking-wider">Ainda tem alguma dúvida técnica sobre a lona ou a estrutura?</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => openWhatsapp("Olá, tenho dúvidas sobre toldos comerciais!")}
+              onClick={() => openWhatsapp("Olá, tenho dúvidas sobre toldos comerciais!", "5541998000366")}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C8361D] hover:bg-[#C8361D]/90 text-white rounded-[2px] font-bold text-xs uppercase tracking-widest cursor-pointer"
             >
               <MessageCircle className="w-4 h-4" />
-              WhatsApp: (41) 99812-1324
+              WhatsApp: (41) 99800-0366
             </button>
             <a
-              href="tel:+554135646943"
+              href="tel:+5541998000366"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gray-400 text-[#1C1F22] rounded-[2px] hover:bg-[#1C1F22] hover:text-[#F4EFE6] font-bold text-xs uppercase tracking-widest"
             >
               <Phone className="w-4 h-4" />
-              Ligar: (41) 3564-6943
+              Ligar: (41) 99800-0366
             </a>
           </div>
         </div>
@@ -145,13 +145,13 @@ const FAQ = () => {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
-                  onClick={() => openWhatsapp(`Olá, tenho dúvida sobre: ${selectedFAQ.question}`)}
+                  onClick={() => openWhatsapp(`Olá, tenho dúvida sobre: ${selectedFAQ.question}`, "5541998000366")}
                   className="flex-1 bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-bold py-3.5 px-5 rounded-[2px] text-center text-xs uppercase tracking-wider transition-colors cursor-pointer"
                 >
                   💬 TIRAR DÚVIDA
                 </button>
                 <a
-                  href="tel:+554135646943"
+                  href="tel:+5541998000366"
                   className="flex-1 border border-white/20 hover:bg-white/5 text-[#F4EFE6] font-semibold py-3.5 px-5 rounded-[2px] text-center text-xs uppercase tracking-wider transition-colors"
                 >
                   📞 LIGAR AGORA

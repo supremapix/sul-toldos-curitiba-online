@@ -67,10 +67,10 @@ const LocationFAQ = ({ location, type, faqs }: LocationFAQProps) => {
               💬 Falar no WhatsApp
             </button>
             <a 
-              href="tel:+554135646943"
+              href="tel:+5541998000366"
               className="inline-flex items-center justify-center border border-gray-400 hover:border-[#1C1F22] text-[#1C1F22] font-extrabold text-xs uppercase tracking-widest px-8 py-4 rounded-[2px] transition-colors"
             >
-              📞 Ligar: (41) 3564-6943
+              📞 Ligar: (41) 99800-0366
             </a>
           </div>
         </div>

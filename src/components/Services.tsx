@@ -94,8 +94,8 @@ export const Services = () => {
       images: [coberturaMetalicaDoca, coberturaEstacionamento],
       features: ["Vãos livres calculados para caminhões", "Telhas sanduíche termoacústicas", "Pintura industrial anticorrosiva"],
       icon: ShieldCheck,
-      whatsappNumber: "5541996315885",
-      whatsappDisplay: "(41) 99631-5885"
+      whatsappNumber: "5541998000366",
+      whatsappDisplay: "(41) 99800-0366"
     },
     {
       title: "Coberturas com Estruturas Metálicas e Mezaninos",
@@ -106,8 +106,8 @@ export const Services = () => {
       images: ["https://img.supremasite.com.br/mezaninos.webp", mezaninosImg, coberturaMetalicaDoca],
       features: ["Vigas de aço galvanizado estrutural", "Mezaninos para ampliação de piso útil", "Pintura epóxi anticorrosiva de alto rendimento", "Acompanhamento técnico e cálculo de carga"],
       icon: Building2,
-      whatsappNumber: "5541996315885",
-      whatsappDisplay: "(41) 99631-5885"
+      whatsappNumber: "5541998000366",
+      whatsappDisplay: "(41) 99800-0366"
     },
     {
       title: "Manutenção e Troca de Lona para Empresas",
@@ -351,7 +351,7 @@ export const Services = () => {
                   ORÇAMENTO VIA WHATSAPP {selectedService.whatsappDisplay ? `(${selectedService.whatsappDisplay})` : ""}
                 </button>
                 <a
-                  href="tel:+554135646943"
+                  href="tel:+5541998000366"
                   className="flex-1 border border-white/20 hover:bg-white/5 text-[#F4EFE6] font-extrabold py-3.5 px-6 rounded-[2px] text-center text-sm uppercase tracking-wider transition-colors flex items-center justify-center"
                 >
                   📞 LIGAR AGORA

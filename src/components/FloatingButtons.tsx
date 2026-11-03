@@ -115,7 +115,7 @@ const FloatingButtons = () => {
           if (!isExpanded) {
             setIsExpanded(true);
           } else {
-            window.open("tel:+554135646943", "_self");
+            window.open("tel:+5541998000366", "_self");
           }
         }}
         title={isExpanded ? "Ligar Agora" : "Mais opções de contato"}

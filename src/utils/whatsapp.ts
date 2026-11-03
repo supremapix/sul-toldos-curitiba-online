@@ -1,4 +1,4 @@
-export const whatsappNumbers = ["5541995304757", "5541991031466"];
+export const whatsappNumbers = ["5541998000366"];
 
 export const getNextWhatsappNumber = () => {
     const currentIndex = parseInt(localStorage.getItem('whatsappIndex') || '0');

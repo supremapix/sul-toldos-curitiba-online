@@ -227,10 +227,10 @@ const FaqPage = () => {
                 Falar com Engenheiro no WhatsApp
               </button>
               <a 
-                href="tel:+554135646943"
+                href="tel:+5541998000366"
                 className="bg-[#2A2D30] hover:bg-[#3E4246] border-2 border-[#F2B705] text-[#F2B705] hover:text-white font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] transition-all shadow-md inline-flex items-center justify-center"
               >
-                Ligar: (41) 3564-6943
+                Ligar: (41) 99800-0366
               </a>
             </div>
           </div>

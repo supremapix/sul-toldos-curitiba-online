@@ -132,7 +132,7 @@ const BairroPage = () => {
     "name": `Toldos Comerciais Curitiba - ${bairroName}`,
     "description": `Toldos comerciais, coberturas de policarbonato e lonas personalizadas no bairro ${bairroName} em Curitiba a partir de R$ 220/m².`,
     "url": `https://toldoscomerciaiscuritiba.com.br/bairro/${bairroSlug}`,
-    "telephone": ["+554135646943", "+5541995304757", "+5541991031466"],
+    "telephone": ["+5541998000366"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Curitiba",
@@ -161,7 +161,7 @@ const BairroPage = () => {
     <>
       <EnhancedSEO
         title={`Toldos Comerciais no ${bairroName} Curitiba | A Partir R$ 220/m²`}
-        description={`Coberturas, toldos retráteis de bar e lonas personalizadas no ${bairroName} em Curitiba a partir de R$ 220/m². Visita técnica gratuita sem compromisso! ☎️ (41) 3564-6943.`}
+        description={`Coberturas, toldos retráteis de bar e lonas personalizadas no ${bairroName} em Curitiba a partir de R$ 220/m². Visita técnica gratuita sem compromisso! ☎️ (41) 99800-0366.`}
         keywords={`toldos comerciais ${bairroName.toLowerCase()}, toldo para loja ${bairroName.toLowerCase()}, toldo para restaurante ${bairroName.toLowerCase()}, policarbonato ${bairroName.toLowerCase()}, cobertura ${bairroName.toLowerCase()}, toldo retrátil, lona com logotipo`}
         canonical={`https://toldoscomerciaiscuritiba.com.br/bairro/${bairroSlug}`}
         structuredData={bairroStructuredData}
@@ -206,10 +206,10 @@ const BairroPage = () => {
                     <Button 
                       variant="outline"
                       size="lg"
-                      onClick={() => window.open("tel:+554135646943")}
+                      onClick={() => window.open("tel:+5541998000366")}
                       className="bg-[#2A2D30] hover:bg-[#3E4246] border-2 border-[#F2B705] text-[#F2B705] hover:text-white font-extrabold text-xs uppercase tracking-wider py-5 px-8 rounded-[2px] h-auto cursor-pointer shadow-md transition-all"
                     >
-                      📞 Ligar: (41) 3564-6943
+                      📞 Ligar: (41) 99800-0366
                     </Button>
                   </div>
 
@@ -271,8 +271,8 @@ const BairroPage = () => {
                 <Button onClick={handleWhatsApp} size="lg" className="bg-[#C8361D] hover:bg-[#C8361D]/90 text-white font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] h-auto cursor-pointer">
                   💬 Chamar no WhatsApp
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => window.open("tel:+554135646943")} className="bg-[#2A2D30] hover:bg-[#3E4246] border-2 border-[#F2B705] text-[#F2B705] hover:text-white font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] h-auto cursor-pointer shadow-md transition-all">
-                  📞 Chamar por Telefone
+                <Button variant="outline" size="lg" onClick={() => window.open("tel:+5541998000366")} className="bg-[#2A2D30] hover:bg-[#3E4246] border-2 border-[#F2B705] text-[#F2B705] hover:text-white font-extrabold text-xs uppercase tracking-widest py-5 px-8 rounded-[2px] h-auto cursor-pointer shadow-md transition-all">
+                  📞 Chamar por Telefone: (41) 99800-0366
                 </Button>
               </div>
               <p className="text-xs text-gray-500 uppercase font-semibold tracking-wider">

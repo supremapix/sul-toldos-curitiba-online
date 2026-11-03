@@ -59,7 +59,7 @@ _Enviado pelo site Toldos Comerciais Curitiba_`;
 
     let targetNumber: string | undefined;
     if (formData.service === "cobertura-industrial" || formData.service === "coberturas-mezaninos") {
-      targetNumber = "5541996315885";
+      targetNumber = "5541998000366";
     } else if (["cobertura-policarbonato", "toldo-cristal", "manutencao"].includes(formData.service)) {
       targetNumber = "5541998000366";
     }
@@ -206,9 +206,8 @@ _Enviado pelo site Toldos Comerciais Curitiba_`;
                   <div className="flex items-start">
                     <Phone className="w-5 h-5 text-[#C8361D] mr-4 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-bold text-sm uppercase text-[#1C1F22]">Telefones Comerciais</h4>
-                      <p className="text-xs text-gray-600">(41) 3564-6943</p>
-                      <p className="text-xs text-gray-600">(41) 99812-1324</p>
+                      <h4 className="font-bold text-sm uppercase text-[#1C1F22]">Central de Atendimento</h4>
+                      <p className="text-xs text-gray-600">(41) 99800-0366</p>
                     </div>
                   </div>
 

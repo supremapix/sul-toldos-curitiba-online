@@ -27,7 +27,7 @@ const YouTubeVideo = ({
   };
 
   const handleCall = () => {
-    window.open("tel:4135646943");
+    window.open("tel:41998000366");
   };
 
   return (

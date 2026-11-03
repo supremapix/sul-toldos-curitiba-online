@@ -41,7 +41,7 @@ const Index = () => {
     "name": "Toldos Comerciais Curitiba",
     "description": "Especialista em toldos comerciais, coberturas em policarbonato e lonas personalizadas em Curitiba e região metropolitana a partir de R$ 220/m².",
     "url": "https://toldoscomerciaiscuritiba.com.br",
-    "telephone": ["+554135646943", "+5541995304757", "+5541991031466"],
+    "telephone": ["+5541998000366"],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rua Mandirituba, 1875",
@@ -81,7 +81,7 @@ const Index = () => {
     <>
       <EnhancedSEO
         title="Toldos Comerciais Curitiba | Toldos a partir de R$ 220/m² | Orçamento Grátis"
-        description="Toldos Comerciais Curitiba - Toldos para lojas, restaurantes e comércios a partir de R$ 220/m². Policarbonato, toldos retráteis, coberturas comerciais. Orçamento grátis! ☎️ (41) 3564-6943."
+        description="Toldos Comerciais Curitiba - Toldos para lojas, restaurantes e comércios a partir de R$ 220/m². Policarbonato, toldos retráteis, coberturas comerciais. Orçamento grátis! ☎️ (41) 99800-0366."
         keywords="toldos comerciais curitiba, toldo para loja curitiba, toldo para restaurante curitiba, policarbonato curitiba, coberturas curitiba, toldos retráteis curitiba, toldo preço m2, toldos comerciais, cobertura estacionamento, cortina rolo comercial, toldo lona comercial, orçamento grátis toldos"
         canonical="https://toldoscomerciaiscuritiba.com.br/"
         structuredData={structuredData}

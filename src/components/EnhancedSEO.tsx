@@ -33,7 +33,7 @@ const EnhancedSEO = ({
     "alternateName": "Toldos Comerciais Curitiba - Fabricação e Instalação",
     "description": "Especialista em toldos comerciais, coberturas em policarbonato e lona com logomarca para comércios, lojas, galpões e indústrias em Curitiba e RMC.",
     "url": "https://toldoscomerciaiscuritiba.com.br",
-    "telephone": ["+554135646943", "+5541995304757", "+5541991031466"],
+    "telephone": ["+5541998000366"],
     "email": "contato@sultoldos.com.br",
     "foundingDate": "2010",
     "priceRange": "$$",

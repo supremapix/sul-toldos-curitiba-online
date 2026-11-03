@@ -47,7 +47,7 @@ const AwningCalculator = () => {
       
       let targetNumber: string | undefined;
       if (selectedAwning.id === "mezanino-metalico" || selectedAwning.id === "cobertura-metalica") {
-        targetNumber = "5541996315885";
+        targetNumber = "5541998000366";
       } else if (["policarbonato", "cortina-rolo"].includes(selectedAwning.id)) {
         targetNumber = "5541998000366";
       }
