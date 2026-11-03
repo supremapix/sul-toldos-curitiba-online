@@ -10,7 +10,6 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import FaqHomeSection from "@/components/FaqHomeSection";
-import YouTubeVideo from "@/components/YouTubeVideo";
 import FloatingButtons from "@/components/FloatingButtons";
 import AwningCalculator from "@/components/AwningCalculator";
 
@@ -98,11 +97,6 @@ const Index = () => {
         <Segments />
         <InfiniteGallery />
         <AwningCalculator />
-        <YouTubeVideo 
-          title="Toldos Comerciais Curitiba — Projetos de Destaque"
-          subtitle="Conheça a qualidade dos nossos serviços de toldos comerciais, coberturas e policarbonato em Curitiba e região"
-          location="Curitiba"
-        />
         <About />
         <FaqHomeSection />
         <FAQ />

@@ -45,7 +45,7 @@ const FAQ = () => {
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-12">
           <span className="inline-block bg-[#F2B705] text-[#1C1F22] font-sans font-extrabold text-[10px] md:text-xs tracking-[0.2em] uppercase px-3 py-1.5 mb-6 rounded-[2px]">
-            05 — DÚVIDAS FREQUENTES
+            04 — DÚVIDAS FREQUENTES
           </span>
           <h2 
             className="font-extrabold uppercase leading-tight tracking-tight mb-4 text-[#1C1F22]"

@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
-import YouTubeVideo from "@/components/YouTubeVideo";
 import { MessageCircle, Phone, Search, ChevronDown, ChevronUp } from "lucide-react";
 import { openWhatsapp } from "@/utils/whatsapp";
 
@@ -202,10 +201,7 @@ const FaqPage = () => {
           </div>
         </section>
 
-        <YouTubeVideo 
-          title="Toldos Comerciais Curitiba — Central de Visita Técnica"
-          subtitle="Entenda como organizamos as visitas no local de forma gratuita para planejar as coberturas sem impacto no seu faturamento"
-        />
+
 
         {/* CTA Section */}
         <section className="py-20 bg-[#1C1F22] text-[#F4EFE6] border-t border-border">

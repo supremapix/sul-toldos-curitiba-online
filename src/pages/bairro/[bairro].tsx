@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import EnhancedSEO from "@/components/EnhancedSEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import YouTubeVideo from "@/components/YouTubeVideo";
 import FloatingButtons from "@/components/FloatingButtons";
 import ServiceCards from "@/components/ServiceCards";
 import LocationFAQ from "@/components/LocationFAQ";
@@ -248,12 +247,7 @@ const BairroPage = () => {
 
           <LocationFAQ location={bairroName} type="bairro" faqs={getBairroFAQs()} />
 
-          <YouTubeVideo 
-            title={`Instalações no ${bairroName}`}
-            subtitle={`Conheça a qualidade e a agilidade da Toldos Comerciais Curitiba no ${bairroName}`}
-            ctaText={`Solicitar Orçamento no ${bairroName}`}
-            ctaAction={handleWhatsApp}
-          />
+
 
           {/* CTA Final */}
           <section className="py-20 bg-[#1C1F22] text-[#F4EFE6] border-t border-border">

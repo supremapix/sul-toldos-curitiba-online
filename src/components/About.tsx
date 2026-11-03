@@ -137,7 +137,7 @@ const About = () => {
         <div ref={processSectionRef} className="mb-24 relative overflow-hidden md:overflow-visible">
           <div className="text-center mb-16">
             <span className="text-[#C8361D] font-sans font-bold text-xs tracking-[0.2em] uppercase block mb-3">
-              02 — CRONOGRAMA
+              03 — CRONOGRAMA
             </span>
             <h3 
               className="font-sans font-extrabold uppercase leading-tight tracking-tight mb-4"

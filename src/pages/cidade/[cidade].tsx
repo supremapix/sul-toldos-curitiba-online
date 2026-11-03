@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import EnhancedSEO from "@/components/EnhancedSEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import YouTubeVideo from "@/components/YouTubeVideo";
 import FloatingButtons from "@/components/FloatingButtons";
 import ServiceCards from "@/components/ServiceCards";
 import LocationFAQ from "@/components/LocationFAQ";
@@ -251,12 +250,7 @@ const CidadePage = () => {
 
           <LocationFAQ location={cityName} type="cidade" faqs={getCityFAQs()} />
 
-          <YouTubeVideo 
-            title={`Veja nosso trabalho comercial em ${cityName}`}
-            subtitle={`Conheça o alto padrão estrutural e estético das nossas coberturas comerciais instaladas em ${cityName}`}
-            ctaText={`Solicitar Orçamento em ${cityName}`}
-            ctaAction={handleWhatsApp}
-          />
+
 
           {/* CTA Final */}
           <section className="py-20 bg-[#1C1F22] text-[#F4EFE6] border-t border-border">
