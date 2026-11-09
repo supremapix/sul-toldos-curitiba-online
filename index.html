@@ -77,6 +77,10 @@
       }
       #root { min-height: 100vh; }
       img { max-width: 100%; height: auto; }
+      .startup-fallback { min-height: 100vh; display: grid; place-content: center; gap: 20px; padding: 32px 24px; max-width: 640px; margin: auto; }
+      .startup-fallback h1 { font-size: clamp(1.8rem, 7vw, 2.6rem); line-height: 1.2; }
+      .startup-fallback a { color: #A42A17; font-weight: 700; text-decoration: underline; }
+      .startup-fallback nav { display: flex; flex-wrap: wrap; gap: 20px; }
     </style>
 
     <!-- JSON-LD Schema Markup Principal -->
@@ -141,18 +145,21 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <!-- Visible even when the application bundle is delayed or cannot load. -->
+    <div id="root">
+      <main class="startup-fallback">
+        <p>Toldos Comerciais Curitiba</p>
+        <h1>Toldos e coberturas para sua empresa</h1>
+        <p>Estamos carregando o site. Se ele não abrir, atualize a página ou fale diretamente com nossa equipe.</p>
+        <nav aria-label="Opções de carregamento e contato">
+          <a href="">Atualizar página</a>
+          <a href="https://wa.me/5541998000366">Falar no WhatsApp</a>
+          <a href="tel:+5541998000366">Ligar: (41) 99800-0366</a>
+        </nav>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Service Worker Registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then(r => console.log('SW registered'))
-            .catch(e => console.log('SW failed:', e));
-        });
-      }
-    </script>
+    <!-- Do not register the legacy offline cache. /sw.js retires existing installs. -->
   </body>
 </html>
