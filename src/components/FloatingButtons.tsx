@@ -97,6 +97,19 @@ const FloatingButtons = () => {
         </button>
       )}
 
+      {/* Additional contact, with its own message */}
+      <a
+        href="https://wa.me/5541984877344?text=Encontrei%20seu%20site%20feito%20pela%20Suprema%20e%20gostaria%20de%20saber%20sobre%3A"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="WhatsApp: (41) 98487-7344"
+        aria-label="WhatsApp: (41) 98487-7344"
+        className="relative w-[52px] h-[52px] rounded-full bg-[#176b4d] hover:bg-[#12553d] text-white shadow-2xl flex items-center justify-center border-2 border-white/30 cursor-pointer"
+      >
+        <MessageCircle className="h-6 w-6" />
+        <span className="absolute -top-1 -right-1 rounded-full bg-white text-[#176b4d] text-xs font-bold w-5 h-5 flex items-center justify-center">2</span>
+      </a>
+
       {/* Direct Floating WhatsApp Button */}
       <a
         href={floatingWhatsappUrl}
