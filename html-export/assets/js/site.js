@@ -230,3 +230,16 @@ document.addEventListener("DOMContentLoaded", () => {
     segmentCards.forEach(card => svgObserver.observe(card));
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const original = document.querySelector(".btn-float-whatsapp");
+  if (!original || document.querySelector("[data-suprema-contact]")) return;
+  const extra = original.cloneNode(true);
+  extra.href = "https://wa.me/5541984877344?text=Encontrei%20seu%20site%20feito%20pela%20Suprema%20e%20gostaria%20de%20saber%20sobre%3A";
+  extra.dataset.supremaContact = "true";
+  extra.setAttribute("aria-label", "WhatsApp: (41) 98487-7344");
+  extra.title = "WhatsApp: (41) 98487-7344";
+  extra.style.bottom = "140px";
+  extra.style.backgroundColor = "#176b4d";
+  original.after(extra);
+});
