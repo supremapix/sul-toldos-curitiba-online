@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return number;
   }
 
-  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+  document.querySelectorAll('a[href*="wa.me"]:not([data-tornimec-contact])').forEach(link => {
       link.addEventListener('click', (e) => {
           const newNumber = getNextWhatsappNumber();
           try {
