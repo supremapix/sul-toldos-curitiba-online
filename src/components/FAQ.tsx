@@ -18,7 +18,7 @@ const faqData: FAQItem[] = [
   { question: "Vocês atendem toda Curitiba e região metropolitana?", answer: "Sim! Atendemos todos os bairros de Curitiba e os 29 municípios da Região Metropolitana com técnicos locais qualificados." },
   { question: "É possível estampar a logomarca da minha empresa no toldo?", answer: "Com certeza! Realizamos comunicação visual integrada de alta definição diretamente sobre a lona acrílica ou vinílica com recorte eletrônico." },
   { question: "Qual o prazo de entrega e instalação para empresas?", answer: "Nossos prazos variam de 5 a 10 dias úteis para toldos de fachada convencionais e de 10 a 15 dias úteis para grandes coberturas comerciais de policarbonato." },
-  { question: "Vocês realizam a troca de lona em toldos antigos?", answer: "Sim! Fornecemos serviço especializado de troca de lona rasgada ou desbotada, conservando sua estrutura de ferro atual por um preço que parte de R$ 130/m² só da lona." },
+  { question: "Vocês realizam a troca de lona em toldos antigos?", answer: "Sim! Fornecemos serviço especializado de troca de lona rasgada ou desbotada, conservando sua estrutura de ferro atual por um preço que parte de R$ 220/m² só da lona." },
   { question: "Quais as formas de pagamento aceitas para pessoas jurídicas?", answer: "Parcelamos no cartão de crédito em até 12x, boleto bancário faturado para empresas (sujeito a análise), e desconto especial de 10% para pagamentos via PIX à vista." }
 ];
 
