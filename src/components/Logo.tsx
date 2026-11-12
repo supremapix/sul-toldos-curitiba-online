@@ -1,2 +1,1 @@
-import logo from '@/assets/logo-sul-toldos.png';
-export const Logo = ({className = ''}: {variant?: string; className?: string}) => <img src={logo} alt="Sul Toldos · Policarbonato" width="218" height="52" className={`sul-logo ${className}`} />;
+export const Logo = ({className='',variant='horizontal'}:{variant?:string;className?:string}) => <span className={`portal-wordmark ${variant==='negative'?'portal-wordmark-light':''} ${className}`}><strong>Toldos<span> em Curitiba</span></strong><small>GUIA DE SOLUÇÕES & EMPRESAS</small></span>;

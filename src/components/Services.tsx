@@ -142,7 +142,7 @@ export const Services = () => {
         {/* Section Header */}
         <div className="mb-16">
           <span className="text-[#C8361D] font-sans font-bold text-xs tracking-[0.2em] uppercase block mb-3">
-            NOSSOS SERVIÇOS
+            SERVIÇOS ANUNCIADOS · CONTATO IDENTIFICADO
           </span>
           <h2 
             className="font-sans font-extrabold uppercase leading-tight tracking-tight mb-4 text-[#F4EFE6]"
@@ -154,7 +154,7 @@ export const Services = () => {
             Toldos e Coberturas Industriais & Comerciais
           </h2>
           <p className="text-base text-gray-400 max-w-3xl leading-relaxed">
-            Desenvolvemos projetos robustos e funcionais para dar proteção e alta visibilidade ao seu comércio. Clique em um serviço para ver imagens ilustrativas dos serviços e especificações técnicas.
+            Conheça opções de toldos e coberturas. Os botões direcionam ao contato indicado no serviço; a seção Tornimec tem atendimento próprio. Imagens de aplicação são ilustrativas.
           </p>
         </div>
 

@@ -128,7 +128,7 @@ const CidadePage = () => {
     }
   ];
 
-  const cityStructuredData = {"@context":"https://schema.org","@type":"Service",name:`Toldos em ${cityName}`,areaServed:{"@type":"Place",name:cityName},provider:{"@id":"https://www.sultoldos.app.br/#organization"}};
+  const cityStructuredData = {"@context":"https://schema.org","@type":"Service",name:`Toldos em ${cityName}`,areaServed:{"@type":"Place",name:cityName},provider:{"@type":"Organization",name:"Sul Toldos",telephone:"+5541998000366"}};
 
   return (
     <>

@@ -1,3 +1,4 @@
+import PartnerDirectory from '@/components/PartnerDirectory';
 import ProjectGuide from '@/components/ProjectGuide';
 import TornimecServices from '@/components/TornimecServices';
 import { useEffect } from "react";
@@ -37,13 +38,13 @@ const Index = () => {
     return () => observer.disconnect();
   }, []);
 
-  const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Toldos e coberturas em Curitiba","provider":{"@id":"https://www.sultoldos.app.br/#organization"},"areaServed":"Curitiba e região metropolitana"};
+  const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Toldos e coberturas em Curitiba","areaServed":"Curitiba e região metropolitana"};
 
   return (
     <>
       <EnhancedSEO
-        title="Toldos em Curitiba | Sul Toldos · Coberturas sob medida"
-        description="Toldos Comerciais Curitiba - Toldos para lojas, restaurantes e comércios a partir de R$ 220/m². Policarbonato, toldos retráteis, coberturas comerciais. Orçamento grátis! ☎️ (41) 99800-0366."
+        title="Toldos em Curitiba | Guia de empresas e coberturas"
+        description="Guia de toldos e coberturas em Curitiba: conheça soluções, materiais e contatos de empresas independentes. Escolha com quem conversar sobre seu projeto."
         keywords="toldos comerciais curitiba, toldo para loja curitiba, toldo para restaurante curitiba, policarbonato curitiba, coberturas curitiba, toldos retráteis curitiba, toldo preço m2, toldos comerciais, cobertura estacionamento, cortina rolo comercial, toldo lona comercial, orçamento grátis toldos"
         canonical="https://www.sultoldos.app.br/"
         structuredData={structuredData}
@@ -56,6 +57,7 @@ const Index = () => {
         <Header />
         <FloatingButtons />
         <Hero />
+        <PartnerDirectory />
         <ProjectGuide />
         <Services />
         <TornimecServices />

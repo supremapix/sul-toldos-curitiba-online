@@ -1,6 +1,6 @@
 {
-  "name": "Sul Toldos - Toldos em Curitiba",
-  "short_name": "Sul Toldos",
+  "name": "Toldos em Curitiba · Guia de empresas",
+  "short_name": "Toldos Curitiba",
   "description": "Especialista em toldos, coberturas e policarbonato em Curitiba e região metropolitana",
   "start_url": "/",
   "display": "standalone",
@@ -9,12 +9,16 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
   "lang": "pt-BR",
   "scope": "/",
-  "categories": ["business", "productivity"]
+  "categories": [
+    "business",
+    "productivity"
+  ]
 }

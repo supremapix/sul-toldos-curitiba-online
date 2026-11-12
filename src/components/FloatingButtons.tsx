@@ -115,8 +115,8 @@ const FloatingButtons = () => {
         href={floatingWhatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        title="Falar no WhatsApp"
-        aria-label="Falar no WhatsApp"
+        title="Sul Toldos: (41) 99800-0366"
+        aria-label="WhatsApp Sul Toldos: (41) 99800-0366"
         className="relative w-[52px] h-[52px] rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 border-2 border-white/30 animate-phone-swing cursor-pointer"
       >
         <MessageCircle className="h-6 w-6 relative z-10" />

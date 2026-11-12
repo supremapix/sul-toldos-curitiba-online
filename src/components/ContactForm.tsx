@@ -86,7 +86,7 @@ _Enviado pelo site Toldos Comerciais Curitiba_`;
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-[#C8361D] font-sans font-bold text-xs tracking-[0.2em] uppercase block mb-3">
-            CONTATO & ORÇAMENTO
+            CONTATO 01 · SUL TOLDOS
           </span>
           <h2 
             className="font-extrabold uppercase leading-tight tracking-tight mb-4 text-[#1C1F22]"
@@ -98,7 +98,7 @@ _Enviado pelo site Toldos Comerciais Curitiba_`;
             Solicite Sua Visita Técnica Gratuita
           </h2>
           <p className="text-sm text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Preencha os dados abaixo e nossa equipe comercial entrará em contato para agendar a visita sem custo e sem compromisso para sua empresa.
+            Este formulário prepara uma mensagem para a Sul Toldos, contato (41) 99800-0366. Para falar com a Tornimec, use os botões identificados na seção dela. A mensagem só é enviada quando você confirmar no WhatsApp.
           </p>
         </div>
 

@@ -125,7 +125,7 @@ const BairroPage = () => {
     }
   ];
 
-  const bairroStructuredData = {"@context":"https://schema.org","@type":"Service",name:`Toldos no ${bairroName}`,areaServed:{"@type":"Place",name:`${bairroName}, Curitiba`},provider:{"@id":"https://www.sultoldos.app.br/#organization"}};
+  const bairroStructuredData = {"@context":"https://schema.org","@type":"Service",name:`Toldos no ${bairroName}`,areaServed:{"@type":"Place",name:`${bairroName}, Curitiba`},provider:{"@type":"Organization",name:"Sul Toldos",telephone:"+5541998000366"}};
 
   return (
     <>

@@ -304,3 +304,7 @@ section, .container {
 #services>div>div:first-child h2,#services>div>div:first-child p{color:#252923!important}
 
 @media(max-width:850px){.sul-floating{bottom:12px;right:10px;flex-direction:row;align-items:center;gap:6px;z-index:65}.sul-floating:before{content:'';position:fixed;bottom:0;left:0;right:0;height:78px;background:#f9f7f1;box-shadow:0 -1px 12px #0002;z-index:-1}.sul-floating>a,.sul-floating>button{width:44px;height:44px;min-width:44px}.sul-floating>button[aria-label="Voltar ao topo"]{display:none}.sul-contact-options{position:absolute;right:0;bottom:60px;padding:12px;border-radius:14px;background:#f9f7f1;box-shadow:0 3px 18px #0003}.sul-share-trigger{bottom:13px;max-width:calc(100vw - 170px)}body{padding-bottom:78px}.sul-floating>button[aria-label="Fechar menu"]{position:absolute;bottom:60px;right:78px}.sul-share-panel{bottom:16px}}
+
+.portal-wordmark{display:flex;flex-direction:column;color:#252923;line-height:1.2;max-width:240px}.portal-wordmark strong{font:600 24px/1.1 Georgia,serif;letter-spacing:-.04em}.portal-wordmark strong span{font-weight:400}.portal-wordmark small{font-size:8px;letter-spacing:.15em;font-weight:700;margin-top:7px}.portal-wordmark-light{color:#f9f7f1}@media(max-width:850px){.portal-wordmark{max-width:190px}.portal-wordmark strong{font-size:22px}.portal-wordmark small{font-size:7px}}
+
+.portal-notice{background:#ecebe3;color:#444b40;padding:10px 4vw;font-size:12px;line-height:1.6}.portal-notice a{text-decoration:underline;font-weight:600}
