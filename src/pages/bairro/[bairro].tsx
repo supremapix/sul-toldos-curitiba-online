@@ -125,36 +125,7 @@ const BairroPage = () => {
     }
   ];
 
-  const bairroStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": `Toldos Comerciais Curitiba - ${bairroName}`,
-    "description": `Toldos comerciais, coberturas de policarbonato e lonas personalizadas no bairro ${bairroName} em Curitiba a partir de R$ 220/m².`,
-    "url": `https://www.sultoldos.app.br/bairro/${bairroSlug}`,
-    "telephone": ["+5541998000366"],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Curitiba",
-      "addressRegion": "PR",
-      "addressCountry": "BR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-25.4284",
-      "longitude": "-49.2733"
-    },
-    "priceRange": "$$",
-    "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-12:00"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    },
-    "serviceArea": {
-      "@type": "Place",
-      "name": `${bairroName}, Curitiba`
-    }
-  };
+  const bairroStructuredData = {"@context":"https://schema.org","@type":"Service",name:`Toldos no ${bairroName}`,areaServed:{"@type":"Place",name:`${bairroName}, Curitiba`},provider:{"@id":"https://www.sultoldos.app.br/#organization"}};
 
   return (
     <>

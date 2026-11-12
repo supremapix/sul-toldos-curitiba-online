@@ -128,36 +128,7 @@ const CidadePage = () => {
     }
   ];
 
-  const cityStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": `Toldos Comerciais Curitiba - ${cityName}`,
-    "description": `Toldos comerciais, lonas com logomarca e coberturas de policarbonato em ${cityName} a partir de R$ 220/m². Orçamento e visita técnica gratuitos!`,
-    "url": `https://www.sultoldos.app.br/cidade/${citySlug}`,
-    "telephone": ["+5541998000366"],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": cityName,
-      "addressRegion": "PR",
-      "addressCountry": "BR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": currentCity.geo?.lat || "-25.4284",
-      "longitude": currentCity.geo?.lng || "-49.2733"
-    },
-    "priceRange": "$$",
-    "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-12:00"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    },
-    "serviceArea": {
-      "@type": "Place",
-      "name": cityName
-    }
-  };
+  const cityStructuredData = {"@context":"https://schema.org","@type":"Service",name:`Toldos em ${cityName}`,areaServed:{"@type":"Place",name:cityName},provider:{"@id":"https://www.sultoldos.app.br/#organization"}};
 
   return (
     <>
