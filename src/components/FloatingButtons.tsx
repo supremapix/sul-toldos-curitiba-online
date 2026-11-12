@@ -56,7 +56,7 @@ const FloatingButtons = () => {
   ];
 
   return (
-    <div className="fixed right-4 bottom-4 z-50 flex flex-col items-end gap-3">
+    <div className="sul-floating fixed right-4 bottom-4 z-50 flex flex-col items-end gap-3">
       {/* Scroll to top */}
       {showScrollTop && (
         <button
@@ -71,7 +71,7 @@ const FloatingButtons = () => {
 
       {/* Expanded buttons */}
       {isExpanded && (
-        <div className="flex flex-col gap-3 animate-fade-in">
+        <div className="sul-contact-options flex flex-col gap-3 animate-fade-in">
           {buttons.map((btn) => (
             <button
               key={btn.label}
@@ -102,8 +102,8 @@ const FloatingButtons = () => {
         href="https://wa.me/5541984877344?text=Encontrei%20seu%20site%20feito%20pela%20Suprema%20e%20gostaria%20de%20saber%20sobre%3A"
         target="_blank"
         rel="noopener noreferrer"
-        title="WhatsApp: (41) 98487-7344"
-        aria-label="WhatsApp: (41) 98487-7344"
+        title="Tornimec: (41) 98487-7344"
+        aria-label="WhatsApp Tornimec: (41) 98487-7344"
         className="relative w-[52px] h-[52px] rounded-full bg-[#176b4d] hover:bg-[#12553d] text-white shadow-2xl flex items-center justify-center border-2 border-white/30 cursor-pointer"
       >
         <MessageCircle className="h-6 w-6" />
