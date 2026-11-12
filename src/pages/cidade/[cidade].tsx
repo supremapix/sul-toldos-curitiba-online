@@ -133,7 +133,7 @@ const CidadePage = () => {
     "@type": "LocalBusiness",
     "name": `Toldos Comerciais Curitiba - ${cityName}`,
     "description": `Toldos comerciais, lonas com logomarca e coberturas de policarbonato em ${cityName} a partir de R$ 220/m². Orçamento e visita técnica gratuitos!`,
-    "url": `https://toldoscomerciaiscuritiba.com.br/cidade/${citySlug}`,
+    "url": `https://www.sultoldos.app.br/cidade/${citySlug}`,
     "telephone": ["+5541998000366"],
     "address": {
       "@type": "PostalAddress",
@@ -165,7 +165,7 @@ const CidadePage = () => {
         title={`Toldos Comerciais em ${cityName} | A Partir R$ 220/m² | Orçamento Grátis`}
         description={`Especialista em toldos comerciais, coberturas e lona com logomarca em ${cityName} a partir de R$ 220/m². Visita técnica gratuita sem compromisso! ☎️ (41) 99800-0366.`}
         keywords={`toldos comerciais ${cityName.toLowerCase()}, toldo para loja ${cityName.toLowerCase()}, toldo para restaurante ${cityName.toLowerCase()}, policarbonato ${cityName.toLowerCase()}, cobertura ${cityName.toLowerCase()}, toldo retrátil ${cityName.toLowerCase()}, lona com logotipo, cobertura estacionamento`}
-        canonical={`https://toldoscomerciaiscuritiba.com.br/cidade/${citySlug}`}
+        canonical={`https://www.sultoldos.app.br/cidade/${citySlug}`}
         structuredData={cityStructuredData}
         location={cityName}
         service={`toldos comerciais e coberturas corporativas em ${cityName}`}

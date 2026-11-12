@@ -1,3 +1,4 @@
+import ShareSuprema from './components/ShareSuprema';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,13 +14,14 @@ import SitemapPage from "./pages/SitemapPage";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <HelmetProvider>
+export const AppContent = ({helmetContext = {}}: {helmetContext?: object}) => (
+  <HelmetProvider context={helmetContext}>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <>
+          <ShareSuprema />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/faq" element={<FaqPage />} />
@@ -29,10 +31,11 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
+        </>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
 );
 
+const App = () => <BrowserRouter><AppContent /></BrowserRouter>;
 export default App;

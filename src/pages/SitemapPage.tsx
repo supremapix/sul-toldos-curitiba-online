@@ -50,7 +50,7 @@ const SitemapPage = () => {
       <Helmet>
         <title>Mapa do Site — Todas as Localidades Atendidas | Toldos Comerciais Curitiba</title>
         <meta name="description" content="Lista completa de cidades e bairros de Curitiba atendidos pela Toldos Comerciais Curitiba. Encontre seu bairro para orçamentos e visitas técnicas." />
-        <link rel="canonical" href="https://toldoscomerciaiscuritiba.com.br/mapa-do-site" />
+        <link rel="canonical" href="https://www.sultoldos.app.br/mapa-do-site" />
       </Helmet>
 
       <div className="min-h-screen bg-[#F4EFE6] text-[#1C1F22]">

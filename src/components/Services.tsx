@@ -163,6 +163,8 @@ export const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
+              tabIndex={0} role="button" aria-label={`Ver detalhes: ${service.title}`}
+              onKeyDown={(e) => {if(e.target===e.currentTarget && (e.key==='Enter' || e.key===' ')){e.preventDefault();setSelectedService(service);setCurrentImageIndex(0)}}}
               className="relative bg-white/5 border border-white/10 hover:border-[#C8361D] rounded-[2px] transition-all duration-200 group cursor-pointer flex flex-col justify-between overflow-hidden reveal-on-scroll"
               onClick={() => { setSelectedService(service); setCurrentImageIndex(0); }}
             >

@@ -85,10 +85,10 @@ const FaqPage = () => {
         <title>Perguntas Frequentes sobre Toldos Comerciais em Curitiba</title>
         <meta name="description" content="Dúvidas frequentes sobre toldos comerciais, coberturas de policarbonato, lona com logotipo, prazos, formas de pagamento PJ e preços a partir de R$ 220/m² em Curitiba." />
         <meta name="keywords" content="toldos comerciais curitiba, toldo para loja curitiba, toldo para restaurante curitiba, conserto de toldos curitiba, coberturas curitiba" />
-        <link rel="canonical" href="https://toldoscomerciaiscuritiba.com.br/faq" />
+        <link rel="canonical" href="https://www.sultoldos.app.br/faq" />
         <meta property="og:title" content="Dúvidas Frequentes | Toldos Comerciais Curitiba" />
         <meta property="og:description" content="Tudo sobre toldos comerciais, coberturas, lona com logotipo e troca de lona para empresas. Orçamento grátis!" />
-        <meta property="og:url" content="https://toldoscomerciaiscuritiba.com.br/faq" />
+        <meta property="og:url" content="https://www.sultoldos.app.br/faq" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>

@@ -130,7 +130,7 @@ const BairroPage = () => {
     "@type": "LocalBusiness",
     "name": `Toldos Comerciais Curitiba - ${bairroName}`,
     "description": `Toldos comerciais, coberturas de policarbonato e lonas personalizadas no bairro ${bairroName} em Curitiba a partir de R$ 220/m².`,
-    "url": `https://toldoscomerciaiscuritiba.com.br/bairro/${bairroSlug}`,
+    "url": `https://www.sultoldos.app.br/bairro/${bairroSlug}`,
     "telephone": ["+5541998000366"],
     "address": {
       "@type": "PostalAddress",
@@ -162,7 +162,7 @@ const BairroPage = () => {
         title={`Toldos Comerciais no ${bairroName} Curitiba | A Partir R$ 220/m²`}
         description={`Coberturas, toldos retráteis de bar e lonas personalizadas no ${bairroName} em Curitiba a partir de R$ 220/m². Visita técnica gratuita sem compromisso! ☎️ (41) 99800-0366.`}
         keywords={`toldos comerciais ${bairroName.toLowerCase()}, toldo para loja ${bairroName.toLowerCase()}, toldo para restaurante ${bairroName.toLowerCase()}, policarbonato ${bairroName.toLowerCase()}, cobertura ${bairroName.toLowerCase()}, toldo retrátil, lona com logotipo`}
-        canonical={`https://toldoscomerciaiscuritiba.com.br/bairro/${bairroSlug}`}
+        canonical={`https://www.sultoldos.app.br/bairro/${bairroSlug}`}
         structuredData={bairroStructuredData}
         location={`${bairroName}, Curitiba`}
         service={`toldos no ${bairroName}`}
