@@ -24,6 +24,7 @@ interface ServiceItem {
   icon: React.ComponentType<{ className?: string }>;
   whatsappNumber?: string;
   whatsappDisplay?: string;
+  whatsappUrl?: string;
 }
 
 export const Services = () => {
@@ -94,8 +95,9 @@ export const Services = () => {
       images: [coberturaMetalicaDoca, coberturaEstacionamento],
       features: ["Vãos livres calculados para caminhões", "Telhas sanduíche termoacústicas", "Pintura industrial anticorrosiva"],
       icon: ShieldCheck,
-      whatsappNumber: "5541998000366",
-      whatsappDisplay: "(41) 99800-0366"
+      whatsappNumber: "5541996646761",
+      whatsappDisplay: "(41) 99664-6761",
+      whatsappUrl: "https://wa.me/5541996646761?text=Ol%C3%A1!%20Conheci%20a%20ENGEUM%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
     },
     {
       title: "Coberturas com Estruturas Metálicas e Mezaninos",
@@ -106,8 +108,9 @@ export const Services = () => {
       images: ["https://img.supremasite.com.br/mezaninos.webp", mezaninosImg, coberturaMetalicaDoca],
       features: ["Vigas de aço galvanizado estrutural", "Mezaninos para ampliação de piso útil", "Pintura epóxi anticorrosiva de alto rendimento", "Acompanhamento técnico e cálculo de carga"],
       icon: Building2,
-      whatsappNumber: "5541998000366",
-      whatsappDisplay: "(41) 99800-0366"
+      whatsappNumber: "5541996646761",
+      whatsappDisplay: "(41) 99664-6761",
+      whatsappUrl: "https://wa.me/5541996646761?text=Ol%C3%A1!%20Conheci%20a%20ENGEUM%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
     },
     {
       title: "Manutenção e Troca de Lona para Empresas",
@@ -214,7 +217,11 @@ export const Services = () => {
                 <Button
                   onClick={(e) => { 
                     e.stopPropagation(); 
-                    openWhatsapp(`Olá! Gostaria de um orçamento para: ${service.title}`, service.whatsappNumber); 
+                    if (service.whatsappUrl) {
+                      window.open(service.whatsappUrl, "_blank", "noopener,noreferrer");
+                    } else {
+                      openWhatsapp(`Olá! Gostaria de um orçamento para: ${service.title}`, service.whatsappNumber);
+                    }
                   }}
                   className="w-full bg-[#C8361D] text-white text-xs font-bold tracking-wider uppercase py-2.5 rounded-[2px] transition-all cursor-pointer relative overflow-hidden z-10 btn-fill-hover flex items-center justify-center gap-2"
                 >
@@ -343,10 +350,16 @@ export const Services = () => {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
-                  onClick={() => openWhatsapp(
-                    `Olá, me interessei pelo serviço: ${selectedService.title}. Gostaria de um orçamento!`,
-                    selectedService.whatsappNumber
-                  )}
+                  onClick={() => {
+                    if (selectedService.whatsappUrl) {
+                      window.open(selectedService.whatsappUrl, "_blank", "noopener,noreferrer");
+                    } else {
+                      openWhatsapp(
+                        `Olá, me interessei pelo serviço: ${selectedService.title}. Gostaria de um orçamento!`,
+                        selectedService.whatsappNumber
+                      );
+                    }
+                  }}
                   className="flex-1 bg-[#25D366] hover:bg-[#20ba5a] text-white font-extrabold py-3.5 px-6 rounded-[2px] text-center text-sm uppercase tracking-wider transition-colors cursor-pointer flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4" />
