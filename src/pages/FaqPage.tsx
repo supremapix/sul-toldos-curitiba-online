@@ -1,3 +1,4 @@
+import PolycarbonateGuide from "@/components/PolycarbonateGuide";
 import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
@@ -232,6 +233,7 @@ const FaqPage = () => {
           </div>
         </section>
 
+        <PolycarbonateGuide scope="faq" />
         <Footer />
       </div>
     </>

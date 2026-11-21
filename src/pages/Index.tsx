@@ -1,3 +1,4 @@
+import PolycarbonateGuide from "@/components/PolycarbonateGuide";
 import PartnerDirectory from '@/components/PartnerDirectory';
 import ProjectGuide from '@/components/ProjectGuide';
 import TornimecServices from '@/components/TornimecServices';
@@ -60,6 +61,7 @@ const Index = () => {
         <PartnerDirectory />
         <ProjectGuide />
         <Services />
+        <PolycarbonateGuide scope="home" />
         <TornimecServices />
         <Segments />
         <InfiniteGallery />

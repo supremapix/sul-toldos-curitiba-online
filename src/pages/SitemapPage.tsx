@@ -1,3 +1,4 @@
+import PolycarbonateGuide from "@/components/PolycarbonateGuide";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
@@ -136,6 +137,7 @@ const SitemapPage = () => {
           </div>
         </section>
 
+        <PolycarbonateGuide scope="mapa" />
         <Footer />
       </div>
     </>

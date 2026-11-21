@@ -1,3 +1,4 @@
+import PolycarbonateGuide from "@/components/PolycarbonateGuide";
 import { useParams } from "react-router-dom";
 import EnhancedSEO from "@/components/EnhancedSEO";
 import Header from "@/components/Header";
@@ -248,6 +249,7 @@ const CidadePage = () => {
               </p>
             </div>
           </section>
+        <PolycarbonateGuide scope="cidade" name={cityName} slug={citySlug} />
         </main>
 
         <Footer />
