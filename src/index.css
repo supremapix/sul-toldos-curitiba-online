@@ -312,3 +312,19 @@ section, .container {
 .portal-wordmark{flex-direction:row;align-items:center;gap:10px;max-width:280px}.portal-name{display:flex;flex-direction:column;min-width:0}.portal-mark{flex:0 0 34px;color:#a7311b}.portal-wordmark-light .portal-mark{color:#e8b19b}@media(max-width:850px){.portal-wordmark{gap:8px;max-width:220px}.portal-mark{width:28px;height:32px;flex-basis:28px}.portal-name strong{font-size:20px}.portal-name small{font-size:6.5px;letter-spacing:.12em}}@media(max-width:370px){.portal-name strong{font-size:17px}.portal-name small{font-size:5.7px}.sul-header{gap:12px;padding-left:14px;padding-right:14px}.sul-menu-toggle{padding:10px 8px}}
 
 .sul-polycarbonate{color:#252923}.sul-poly-intro{color:#494e45;max-width:70ch;margin-top:20px;line-height:1.75}.sul-poly-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:880px;margin:36px 0 0}.sul-poly-images figure{margin:0;min-width:0}.sul-poly-images img{display:block;width:100%;height:auto;border-radius:8px}.sul-poly-images figcaption{font-size:14px;color:#494e45;margin-top:10px}.sul-poly-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:32px}.sul-poly-actions .sul-primary{width:fit-content;max-width:100%}.sul-poly-guide-link{color:#8c2e1d;text-decoration:underline;text-underline-offset:4px;display:inline-flex;align-items:center;min-height:44px}@media(max-width:540px){.sul-poly-images{grid-template-columns:1fr}}
+
+/* Match the portal home palette and editorial heading on internal routes. */
+#main-content{scroll-margin-top:110px}
+.sul-inner-page{background:#f9f7f1;color:#252923}
+.sul-inner-hero{background:#f9f7f1;color:#252923;border-bottom-color:#dad7cf}
+.sul-inner-hero h1{font-family:Georgia,serif;font-weight:400;letter-spacing:-.04em;text-transform:none;color:#252923;line-height:1.12}
+.sul-inner-hero h1 span{color:#a5311d}
+.sul-inner-hero p{color:#454c42;line-height:1.65}
+.sul-inner-hero .text-gray-400,.sul-inner-hero .text-gray-300{color:#454c42}
+@media(max-width:640px){
+  .sul-inner-hero{padding-top:44px;padding-bottom:44px}
+  .sul-inner-hero h1{overflow-wrap:break-word;font-size:clamp(32px,7.8vw,44px)}
+}
+.sul-inner-hero .grid-cols-3 > div{background:#ede9dd;border-color:#d7cdbb;min-width:0;overflow-wrap:break-word}
+.sul-inner-hero .grid-cols-3 > div > :first-child{color:#872715;font-size:clamp(.95rem,3vw,1.25rem)}
+@media(max-width:390px){.sul-inner-hero .grid-cols-3{gap:6px}.sul-inner-hero .grid-cols-3 > div{padding:8px 4px}}

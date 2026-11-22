@@ -1,9 +1,7 @@
 import PolycarbonateGuide from "@/components/PolycarbonateGuide";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
+import SiteLayout from "@/components/SiteLayout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const SitemapPage = () => {
@@ -54,11 +52,9 @@ const SitemapPage = () => {
         <link rel="canonical" href="https://www.sultoldos.app.br/mapa-do-site" />
       </Helmet>
 
-      <div className="min-h-screen bg-[#F4EFE6] text-[#1C1F22]">
-        <Header />
-        <FloatingButtons />
+      <SiteLayout mainClassName="sul-inner-page">
 
-        <div className="py-20 bg-[#1C1F22] text-[#F4EFE6] border-b border-border">
+        <div className="sul-inner-hero py-20 bg-[#1C1F22] text-[#F4EFE6] border-b border-border">
           <div className="max-w-[1200px] mx-auto px-6 text-center">
             <span className="inline-block bg-[#F2B705] text-[#1C1F22] font-sans font-extrabold text-[10px] md:text-xs tracking-[0.2em] uppercase px-3 py-1.5 mb-6 rounded-[2px]">
               DIRETÓRIO DE LOCALIDADES
@@ -138,8 +134,7 @@ const SitemapPage = () => {
         </section>
 
         <PolycarbonateGuide scope="mapa" />
-        <Footer />
-      </div>
+      </SiteLayout>
     </>
   );
 };

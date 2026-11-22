@@ -1,9 +1,7 @@
 import PolycarbonateGuide from "@/components/PolycarbonateGuide";
 import { useParams } from "react-router-dom";
 import EnhancedSEO from "@/components/EnhancedSEO";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
+import SiteLayout from "@/components/SiteLayout";
 import ServiceCards from "@/components/ServiceCards";
 import LocationFAQ from "@/components/LocationFAQ";
 import InfiniteGallery from "@/components/InfiniteGallery";
@@ -140,13 +138,10 @@ const BairroPage = () => {
         service={`toldos no ${bairroName}`}
       />
 
-      <div className="min-h-screen bg-[#F4EFE6] text-[#1C1F22]">
-        <Header />
-        <FloatingButtons />
+      <SiteLayout mainClassName="sul-inner-page">
         
-        <main>
           {/* Hero */}
-          <section className="py-20 bg-[#1C1F22] text-[#F4EFE6] border-b border-border">
+          <section className="sul-inner-hero py-20 bg-[#1C1F22] text-[#F4EFE6] border-b border-border">
             <div className="max-w-[1200px] mx-auto px-6">
               <div className="grid lg:grid-cols-12 gap-12 items-center">
                 <div className="lg:col-span-7">
@@ -247,10 +242,7 @@ const BairroPage = () => {
             </div>
           </section>
         <PolycarbonateGuide scope="bairro" name={bairroName} slug={bairroSlug} />
-        </main>
-
-        <Footer />
-      </div>
+      </SiteLayout>
     </>
   );
 };

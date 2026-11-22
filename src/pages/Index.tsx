@@ -4,17 +4,15 @@ import ProjectGuide from '@/components/ProjectGuide';
 import TornimecServices from '@/components/TornimecServices';
 import { useEffect } from "react";
 import EnhancedSEO from "@/components/EnhancedSEO";
-import Header from "@/components/Header";
+import SiteLayout from "@/components/SiteLayout";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import { Segments } from "@/components/Segments";
 import About from "@/components/About";
 import InfiniteGallery from "@/components/InfiniteGallery";
 import ContactForm from "@/components/ContactForm";
-import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import FaqHomeSection from "@/components/FaqHomeSection";
-import FloatingButtons from "@/components/FloatingButtons";
 import AwningCalculator from "@/components/AwningCalculator";
 
 
@@ -54,9 +52,7 @@ const Index = () => {
         service="toldos comerciais e coberturas"
       />
       
-      <div className="min-h-screen bg-background">
-        <Header />
-        <FloatingButtons />
+      <SiteLayout>
         <Hero />
         <PartnerDirectory />
         <ProjectGuide />
@@ -70,8 +66,7 @@ const Index = () => {
         <FaqHomeSection />
         <FAQ />
         <ContactForm />
-        <Footer />
-      </div>
+      </SiteLayout>
     </>
   );
 };
