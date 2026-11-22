@@ -1,3 +1,4 @@
+import LocalHistoryGuide, { getLocalPlaceName } from "@/components/LocalHistoryGuide";
 import PolycarbonateGuide from "@/components/PolycarbonateGuide";
 import { useParams } from "react-router-dom";
 import EnhancedSEO from "@/components/EnhancedSEO";
@@ -16,10 +17,8 @@ import galeriaToldoGaragem from "@/assets/galeria-toldo-garagem.jpg";
 const CidadePage = () => {
   const { cidade } = useParams();
   
-  const cityName = cidade?.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ') || "";
   const citySlug = cidade || "";
+  const cityName = getLocalPlaceName("cidade", citySlug) ?? (cidade?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') || "");
 
   interface CityInfo {
     image: string;
@@ -210,6 +209,8 @@ const CidadePage = () => {
               </div>
             </div>
           </section>
+
+          <LocalHistoryGuide scope="cidade" name={cityName} slug={citySlug} />
 
           <ServiceCards location={cityName} type="cidade" cards={getServiceCards()} />
 
