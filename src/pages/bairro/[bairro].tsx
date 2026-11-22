@@ -1,3 +1,4 @@
+import LocalHistoryGuide, { getLocalPlaceName } from "@/components/LocalHistoryGuide";
 import PolycarbonateGuide from "@/components/PolycarbonateGuide";
 import { useParams } from "react-router-dom";
 import EnhancedSEO from "@/components/EnhancedSEO";
@@ -16,10 +17,10 @@ import toldoVerdeCafe from "@/assets/toldo_verde_cafe.webp";
 const BairroPage = () => {
   const { bairro } = useParams();
   
-  const bairroName = bairro?.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ') || "";
   const bairroSlug = bairro || "";
+  const bairroName = getLocalPlaceName("bairro", bairroSlug) ?? (bairro?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') || "");
+
+  const municipality = bairroSlug === "vila-zumbi" ? "Colombo" : "Curitiba";
 
   interface BairroInfo {
     image: string;
@@ -78,7 +79,7 @@ const BairroPage = () => {
   const currentBairro = bairroData[bairroSlug] || defaultBairro;
 
   const handleWhatsApp = () => {
-    const message = `Olá! Gostaria de solicitar um orçamento para toldo comercial no bairro ${bairroName}, Curitiba!`;
+    const message = `Olá! Gostaria de solicitar um orçamento para toldo comercial em ${bairroName}, ${municipality}!`;
     openWhatsapp(message);
   };
 
@@ -86,17 +87,17 @@ const BairroPage = () => {
     {
       title: `Toldos de Fachada para Lojas no ${bairroName}`,
       icon: "🏢",
-      content: `A Toldos Comerciais Curitiba oferece soluções completas e exclusivas de comunicação visual e proteção para lojas no ${bairroName}, Curitiba. Criamos projetos sob medida para que a sua fachada venda mais, harmonizando a lona com as cores e logotipo da sua marca.\n\nPreços para o ${bairroName}:\n• Toldo fixo para vitrine: a partir de R$ 220/m²\n• Toldo capota comercial: a partir de R$ 220/m²\n\nNossos técnicos estão sempre disponíveis para visitas de medição gratuitas em qualquer avenida comercial do ${bairroName}.`
+      content: `A Toldos Comerciais Curitiba oferece soluções completas e exclusivas de comunicação visual e proteção para lojas no ${bairroName}, ${municipality}. Criamos projetos sob medida para que a sua fachada venda mais, harmonizando a lona com as cores e logotipo da sua marca.\n\nPreços para o ${bairroName}:\n• Toldo fixo para vitrine: a partir de R$ 220/m²\n• Toldo capota comercial: a partir de R$ 220/m²\n\nNossos técnicos estão sempre disponíveis para visitas de medição gratuitas em qualquer avenida comercial do ${bairroName}.`
     },
     {
       title: `Soluções para Restaurantes e Bares no ${bairroName}`,
       icon: "🍽️",
-      content: `O ${bairroName} conta com um comércio de alimentação dinâmico. Nossos toldos retráteis articulados de lona acrílica (a partir de R$ 250/m²) e toldos cortina verticais em PVC cristal (a partir de R$ 220/m²) são o investimento perfeito para ampliar e aproveitar sua área de calçada externa.\n\nProteja seus clientes do sol curitibano e das chuvas repentinas sem comprometer a estética arquitetônica do seu bar ou restaurante no ${bairroName}.`
+      content: `O ${bairroName} conta com um comércio de alimentação dinâmico. Nossos toldos retráteis articulados de lona acrílica (a partir de R$ 250/m²) e toldos cortina verticais em PVC cristal (a partir de R$ 220/m²) são o investimento perfeito para ampliar e aproveitar sua área de calçada externa.\n\nProteja seus clientes do sol e das chuvas repentinas sem comprometer a estética arquitetônica do seu bar ou restaurante no ${bairroName}.`
     },
     {
       title: `Coberturas em Policarbonato no ${bairroName}`,
       icon: "🚘",
-      content: `Para garagens corporativas, estacionamentos comerciais e entradas de clínicas ou escritórios no ${bairroName}, as coberturas em policarbonato alveolar ou compacto (a partir de R$ 240/m²) são sinônimo de elegância e durabilidade máxima.\n\nEstruturas metálicas de alta resistência contra granizo e intempéries climáticas de Curitiba, com projeto e cálculo estrutural integrados.`
+      content: `Para garagens corporativas, estacionamentos comerciais e entradas de clínicas ou escritórios no ${bairroName}, as coberturas em policarbonato alveolar ou compacto (a partir de R$ 240/m²) são sinônimo de elegância e durabilidade máxima.\n\nEstruturas metálicas de alta resistência contra granizo e intempéries da região, com projeto e cálculo estrutural integrados.`
     },
     {
       title: `Instalação Otimizada e Ágil no ${bairroName}`,
@@ -112,7 +113,7 @@ const BairroPage = () => {
     },
     {
       question: `Qual o prazo médio de instalação no ${bairroName}?`,
-      answer: `Graças à nossa logística dedicada em Curitiba, entregamos toldos de fachada em lona de 5 a 10 dias úteis e coberturas de policarbonato de 10 a 15 dias úteis no ${bairroName}. Cumprimos o cronograma rigorosamente conforme estipulado em contrato.`
+      answer: `Graças à nossa logística dedicada na região, entregamos toldos de fachada em lona de 5 a 10 dias úteis e coberturas de policarbonato de 10 a 15 dias úteis no ${bairroName}. Cumprimos o cronograma rigorosamente conforme estipulado em contrato.`
     },
     {
       question: `Vocês realizam a troca de lona com logomarca no ${bairroName}?`,
@@ -124,17 +125,17 @@ const BairroPage = () => {
     }
   ];
 
-  const bairroStructuredData = {"@context":"https://schema.org","@type":"Service",name:`Toldos no ${bairroName}`,areaServed:{"@type":"Place",name:`${bairroName}, Curitiba`},provider:{"@type":"Organization",name:"Sul Toldos",telephone:"+5541998000366"}};
+  const bairroStructuredData = {"@context":"https://schema.org","@type":"Service",name:`Toldos no ${bairroName}`,areaServed:{"@type":"Place",name:`${bairroName}, ${municipality}`},provider:{"@type":"Organization",name:"Sul Toldos",telephone:"+5541998000366"}};
 
   return (
     <>
       <EnhancedSEO
-        title={`Toldos Comerciais no ${bairroName} Curitiba | A Partir R$ 220/m²`}
-        description={`Coberturas, toldos retráteis de bar e lonas personalizadas no ${bairroName} em Curitiba a partir de R$ 220/m². Visita técnica gratuita sem compromisso! ☎️ (41) 99800-0366.`}
+        title={`Toldos Comerciais no ${bairroName}, ${municipality} | A Partir R$ 220/m²`}
+        description={`Coberturas, toldos retráteis de bar e lonas personalizadas no ${bairroName} em ${municipality} a partir de R$ 220/m². Visita técnica gratuita sem compromisso! ☎️ (41) 99800-0366.`}
         keywords={`toldos comerciais ${bairroName.toLowerCase()}, toldo para loja ${bairroName.toLowerCase()}, toldo para restaurante ${bairroName.toLowerCase()}, policarbonato ${bairroName.toLowerCase()}, cobertura ${bairroName.toLowerCase()}, toldo retrátil, lona com logotipo`}
         canonical={`https://www.sultoldos.app.br/bairro/${bairroSlug}`}
         structuredData={bairroStructuredData}
-        location={`${bairroName}, Curitiba`}
+        location={`${bairroName}, ${municipality}`}
         service={`toldos no ${bairroName}`}
       />
 
@@ -146,7 +147,7 @@ const BairroPage = () => {
               <div className="grid lg:grid-cols-12 gap-12 items-center">
                 <div className="lg:col-span-7">
                   <span className="inline-block bg-[#F2B705] text-[#1C1F22] font-sans font-extrabold text-[10px] md:text-xs tracking-[0.2em] uppercase px-3 py-1.5 mb-6 rounded-[2px]">
-                    PROJETOS CORPORATIVOS EM CURITIBA — {bairroName.toUpperCase()}
+                    PROJETOS CORPORATIVOS EM {municipality.toUpperCase()} — {bairroName.toUpperCase()}
                   </span>
                   <h1 
                     className="text-4xl lg:text-6xl font-extrabold uppercase leading-[1.05] tracking-tight mb-6"
@@ -181,7 +182,7 @@ const BairroPage = () => {
 
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div className="bg-white/5 border border-white/10 rounded-[2px] p-4">
-                      <div className="text-xl font-bold text-[#F2B705] font-mono">{currentBairro.zone}</div>
+                      <div className="text-xl font-bold text-[#F2B705] font-mono">{bairroSlug === "vila-zumbi" ? municipality : currentBairro.zone}</div>
                       <div className="text-[10px] text-gray-400 uppercase font-semibold">região</div>
                     </div>
                     <div className="bg-white/5 border border-white/10 rounded-[2px] p-4">
@@ -207,6 +208,8 @@ const BairroPage = () => {
               </div>
             </div>
           </section>
+
+          <LocalHistoryGuide scope="bairro" name={bairroName} slug={bairroSlug} />
 
           <ServiceCards location={bairroName} type="bairro" cards={getServiceCards()} />
 

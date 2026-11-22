@@ -1,0 +1,1096 @@
+{
+  "bairros": [
+    {
+      "slug": "vila-parolin",
+      "history": "A Prefeitura documenta a Vila Parolin como uma comunidade de Curitiba incluída em projetos de urbanização da Cohab. O bairro do cadastro municipal é Parolin.",
+      "benefit": "Para uma porta que abre para fora, meça o movimento inteiro antes de escolher a altura de um toldo.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/noticias/programa-habitacional-da-prefeitura-beneficia-30500-familias/14467",
+      "sourceLabel": "Prefeitura de Curitiba: urbanização da Vila Parolin",
+      "name": "Vila Parolin"
+    },
+    {
+      "slug": "vila-torres",
+      "history": "A Rua Iapó, no Rebouças, aparece na documentação municipal como endereço de equipamento público da Vila Torres. Vila Torres é o nome da localidade, não um bairro oficial separado.",
+      "benefit": "Se a passagem lateral também serve à lavanderia, compare o alcance da chuva com a área que precisa continuar ventilada.",
+      "sourceUrl": "https://mid.curitiba.pr.gov.br/2023/00403603.pdf",
+      "sourceLabel": "Prefeitura de Curitiba: endereços de equipamentos públicos",
+      "name": "Vila Torres"
+    },
+    {
+      "slug": "jardim-schaffer",
+      "history": "O Bosque Alemão ocupa uma área que integrou a antiga chácara Schaffer; o Turismo de Curitiba identifica Jardim Schaffer como referência local no bairro Vista Alegre.",
+      "benefit": "Perto de árvores, avalie queda de folhas e acesso para limpar a cobertura antes de optar por painéis fixos.",
+      "sourceUrl": "https://turismo.curitiba.pr.gov.br/conteudo/bosquealemao/1099",
+      "sourceLabel": "Turismo Curitiba: Bosque Alemão",
+      "name": "Jardim Schaffer"
+    },
+    {
+      "slug": "vila-sabara",
+      "history": "A Prefeitura relaciona endereços de Vila Sabará à Cidade Industrial de Curitiba, e não a um bairro curitibano independente.",
+      "benefit": "Para cobrir o acesso da casa, fotografe portão, degraus e locais de apoio; o toldo não deve reduzir a passagem.",
+      "sourceUrl": "https://mid.curitiba.pr.gov.br/2026/00464283.pdf",
+      "sourceLabel": "Prefeitura de Curitiba: inventário municipal de imóveis",
+      "name": "Vila Sabará"
+    },
+    {
+      "slug": "boqueirao-de-baixo",
+      "history": "Boqueirão de Baixo é uma referência local, sem perímetro próprio no cadastro de bairros. No território do antigo Boqueirão, áreas da fazenda começaram a ser divididas em lotes urbanos e coloniais na década de 1930.",
+      "benefit": "Em uma fachada de rua, compare a projeção do toldo com a área livre para circulação de pedestres.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/7a36c82b-6e93-4c44-9e88-0042ee81d633/56---Boqueirao.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro • Boqueirão",
+      "name": "Boqueirao de Baixo"
+    },
+    {
+      "slug": "boqueirao-de-cima",
+      "history": "Boqueirão de Cima é um nome de referência local, não outro bairro oficial. Na história da região do Boqueirão, a produção leiteira ganhou organização com a fundação de uma cooperativa em 1945.",
+      "benefit": "Num acesso em rampa, registre o ponto alto e o baixo para que o escoamento não descarregue junto ao portão.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/7a36c82b-6e93-4c44-9e88-0042ee81d633/56---Boqueirao.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro • Boqueirão",
+      "name": "Boqueirao de Cima"
+    },
+    {
+      "slug": "tangua",
+      "history": "O Parque Tanguá foi implantado em 1996 numa área de antigas pedreiras. A Prefeitura localiza o parque em Taboão/Pilarzinho; Tanguá não é bairro oficial de Curitiba.",
+      "benefit": "Se o lote tiver desnível, envie fotos laterais e medidas dos apoios antes de decidir como cobrir a entrada.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/conteudo/parque-municipal-tangua/318",
+      "sourceLabel": "Prefeitura de Curitiba: Parque Tanguá",
+      "name": "Tanguá"
+    },
+    {
+      "slug": "vila-zumbi",
+      "history": "A Vila Zumbi dos Palmares pertence a Colombo, não a Curitiba. A Prefeitura de Colombo a inclui em programa municipal de regularização fundiária.",
+      "benefit": "Informe Colombo e CEP ao pedir orçamento e confirme a cobertura do atendimento antes de contar com visita ou instalação.",
+      "sourceUrl": "https://prefeitura.colombo.pr.gov.br/colombo-lanca-maior-programa-de-regularizacao-fundiaria-da-historia/",
+      "sourceLabel": "Prefeitura de Colombo: Vila Zumbi dos Palmares",
+      "name": "Vila Zumbi dos Palmares"
+    },
+    {
+      "slug": "abranches-de-baixo",
+      "history": "Abranches de Baixo é uma referência de uso local. O território maior tem origem em um núcleo colonial, estabelecido no século XIX entre Pilarzinho e Ahú; o nome de uso não delimita um bairro separado.",
+      "benefit": "Em uma entrada próxima à garagem, confira se a extensão do toldo protege o percurso sem pegar no portão.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/2edba390-852c-4a80-a8f7-26f91a9c792a/50---Abranches.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro • Abranches",
+      "name": "Abranches de Baixo"
+    },
+    {
+      "slug": "abranches-de-cima",
+      "history": "O nome Abranches de Cima é usado como referência de endereço, sem bairro administrativo próprio. A história de Abranches registra uma antiga capelaria de colonos que virou sede da paróquia em 1936.",
+      "benefit": "Para varanda exposta, fotografe os lados abertos e marque de onde costuma vir a chuva antes de escolher toldo retrátil ou proteção lateral.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/2edba390-852c-4a80-a8f7-26f91a9c792a/50---Abranches.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro • Abranches",
+      "name": "Abranches de Cima"
+    },
+    {
+      "slug": "vila-nossa-senhora-da-luz",
+      "history": "O IPPUC registra a inauguração da Vila Nossa Senhora da Luz em 1966, um marco da ocupação na área da atual Cidade Industrial.",
+      "benefit": "Ao cobrir um pequeno pátio, preserve janelas e pontos de luz e escolha onde a água recolhida será encaminhada.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/19e32390-2054-49bc-a553-65e67eaabcf3/75---Cidade-Industrial-de-Curitiba.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — CIC",
+      "name": "Vila Nossa Senhora da Luz"
+    },
+    {
+      "slug": "vila-tecnologica",
+      "history": "A Prefeitura documenta a Vila Tecnológica do Bairro Novo e registra na Rua das Tecnologias um ponto de cursos dos Liceus de Ofícios.",
+      "benefit": "Para um espaço de oficina ou aula, escolha a largura da cobertura a partir da circulação e da área efetivamente ocupada.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/noticias/liceus-de-oficios-promovem-13-novos-cursos-gratuitos-em-todas-as-regionais-de-curitiba/36664",
+      "sourceLabel": "Prefeitura de Curitiba: Liceus de Ofícios",
+      "name": "Vila Tecnológica"
+    },
+    {
+      "slug": "vila-oficinas",
+      "history": "O município identifica Vila Oficinas em registros de lazer da Regional Cajuru. É um nome de localidade e de equipamento, não um bairro separado na cartografia oficial.",
+      "benefit": "Onde uma cobertura protege bicicletas, verifique folga de manobra e pingos junto aos suportes e cadeados.",
+      "sourceUrl": "https://mid.curitiba.pr.gov.br/2018/00219510.pdf",
+      "sourceLabel": "Prefeitura de Curitiba: equipamentos de lazer da Regional Cajuru",
+      "name": "Vila Oficinas"
+    },
+    {
+      "slug": "vila-fanny",
+      "history": "A cartilha municipal documenta o antigo Grupo Escolar da Vila Fanny e sua mudança por mais de um endereço. No mapa de hoje, o bairro é Fanny.",
+      "benefit": "Em um imóvel com cobertura antiga, peça avaliação dos suportes e ferragens antes de decidir entre relonar e trocar o conjunto.",
+      "sourceUrl": "https://mid.curitiba.pr.gov.br/2024/00439966.pdf",
+      "sourceLabel": "Prefeitura de Curitiba: Águas do Pinheirinho",
+      "name": "Vila Fanny"
+    },
+    {
+      "slug": "vila-hauer",
+      "history": "Vila Hauer é uma denominação que aparece em registros de equipamentos municipais; Hauer é o bairro indicado na divisão de Curitiba.",
+      "benefit": "Se a loja tem portas de enrolar, identifique a altura do eixo e a posição de letreiros antes de definir os pontos de fixação.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/noticias/liceus-de-oficios-promovem-13-novos-cursos-gratuitos-em-todas-as-regionais-de-curitiba/36664",
+      "sourceLabel": "Prefeitura de Curitiba: Liceus de Ofícios",
+      "name": "Vila Hauer"
+    },
+    {
+      "slug": "batel-soho",
+      "history": "Batel Soho é o nome de um circuito de comércio e lazer na região da Praça da Espanha, ligado a uma associação criada em dezembro de 2007, não um bairro administrativo.",
+      "benefit": "Para mesas externas, confira a projeção de sombra no horário de maior uso e preserve a circulação da calçada.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/noticias/praca-da-espanha-no-roteiro-de-turistas-e-familias-curitibanas/16306",
+      "sourceLabel": "Prefeitura de Curitiba: Praça da Espanha e Batel Soho",
+      "name": "Batel Soho"
+    },
+    {
+      "slug": "alto-da-rua-xv",
+      "history": "Alto da Rua XV e Alto da XV são variantes do mesmo bairro da Regional Matriz, não dois bairros. A Prefeitura registra uma casa de 1947 desse bairro remontada no Parque Atuba.",
+      "benefit": "Numa fachada antiga, avalie onde é possível fixar a estrutura sem encobrir elementos arquitetônicos ou interferir na janela.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/conteudo/parque-municipal-atuba/288",
+      "sourceLabel": "Prefeitura de Curitiba: Parque Atuba",
+      "name": "Alto da Rua XV"
+    },
+    {
+      "slug": "cic-norte",
+      "history": "CIC Norte é uma referência de setor, não um bairro separado. O IPPUC registra que a delimitação destinada à implantação da Cidade Industrial foi detalhada em 1973.",
+      "benefit": "Para entrada de galpão, registre a altura do maior veículo e a posição do portão para avaliar a folga da cobertura.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/19e32390-2054-49bc-a553-65e67eaabcf3/75---Cidade-Industrial-de-Curitiba.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — CIC",
+      "name": "CIC Norte"
+    },
+    {
+      "slug": "cic-central",
+      "history": "CIC Central indica um recorte da Cidade Industrial. O IPPUC registra que a parte central da região era ocupada por chácaras e lotes agrícolas no início do século XX.",
+      "benefit": "Em área comercial com fluxo misto, projeção, sinalização e linha de pedestres devem ser examinadas juntas antes da cotação.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/19e32390-2054-49bc-a553-65e67eaabcf3/75---Cidade-Industrial-de-Curitiba.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — CIC",
+      "name": "CIC Central"
+    },
+    {
+      "slug": "cic-sul",
+      "history": "CIC Sul não é um bairro separado. Na porção sul da região da atual CIC, o IPPUC registra a antiga localidade Prado de São Sebastião.",
+      "benefit": "Para proteger docas, informe percurso de empilhadeiras, carga a coberto e folgas de manobra antes de escolher o vão.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/19e32390-2054-49bc-a553-65e67eaabcf3/75---Cidade-Industrial-de-Curitiba.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — CIC",
+      "name": "CIC Sul"
+    },
+    {
+      "slug": "vila-guaira",
+      "history": "O Grupo Escolar da Vila Guaíra, inaugurado em 1955, deu origem à Escola Municipal Itacelina Bittencourt. Guaíra é o nome do bairro atual no mapa municipal.",
+      "benefit": "Em uma cobertura de área de convivência, analise o ruído da chuva e a entrada de luz antes de escolher o fechamento.",
+      "sourceUrl": "https://mid.curitiba.pr.gov.br/2024/00439966.pdf",
+      "sourceLabel": "Prefeitura de Curitiba: Águas do Pinheirinho",
+      "name": "Vila Guaíra"
+    },
+    {
+      "slug": "centro-historico",
+      "history": "Centro Histórico é uma referência à área histórica de Curitiba, não um bairro com o mesmo nome no cadastro. Largo da Ordem e Rua São Francisco integram intervenções municipais de valorização dessa área.",
+      "benefit": "Se a instalação for em imóvel de valor histórico, confirme previamente as exigências do imóvel e do endereço antes de encomendar a estrutura.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/3anosdetrabalho/regional/matriz",
+      "sourceLabel": "Prefeitura de Curitiba: Regional Matriz",
+      "name": "Centro Histórico"
+    },
+    {
+      "slug": "ecoville",
+      "history": "Ecoville é uma denominação regional, não um bairro oficial. Por exemplo, o Turismo de Curitiba cadastra um estabelecimento que usa Ecoville no nome como endereço no Mossunguê.",
+      "benefit": "Para área comum de condomínio, reúna projeto, convenção e aprovação aplicável antes de escolher cor ou fixação.",
+      "sourceUrl": "https://turismo.curitiba.pr.gov.br/conteudos/cafes-coloniais/167/2",
+      "sourceLabel": "Turismo Curitiba: endereço identificado como Mossunguê",
+      "name": "Ecoville"
+    },
+    {
+      "slug": "carmo",
+      "history": "Carmo é referência para a área do santuário e do terminal na Regional Boqueirão. Ao lado do santuário foi criada a primeira Rua da Cidadania de Curitiba em 1995.",
+      "benefit": "Em área de espera comercial, proteja os pontos de fila sem ocultar o acesso nem dificultar o trajeto.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/noticias/servicos-da-prefeitura-de-curitiba-estao-perto-de-sua-casa-nas-ruas-da-cidadania/76281",
+      "sourceLabel": "Prefeitura de Curitiba: história das Ruas da Cidadania",
+      "name": "Carmo"
+    },
+    {
+      "slug": "abranches",
+      "history": "A Prefeitura registra que a comunidade polonesa adquiriu em 1878 o terreno que receberia igreja, casa paroquial e cemitério em Abranches.",
+      "benefit": "Para manter a abertura de portas e janelas, desenhe a altura livre e a projeção da cobertura na foto da fachada.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/noticias/no-dia-de-santana-igreja-do-abranches-ganha-nova-iluminacao/69559",
+      "sourceLabel": "Prefeitura de Curitiba: igreja de Abranches",
+      "name": "Abranches"
+    },
+    {
+      "slug": "agua-verde",
+      "history": "A Colônia Dantas foi criada em 1878 e recebeu famílias italianas. Segundo o IPPUC, o nome Água Verde veio da antiga referência a um rio de tonalidade esverdeada que drenava a área de chácaras.",
+      "benefit": "Para vitrines que precisam de sombra sem escurecer o interior, compare tecidos com diferentes transmissões de luz e teste o efeito à tarde.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/f5e8ee80-0a21-45fb-b1b4-8a5b72edbe55/09---Agua-Verde.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro • Água Verde",
+      "name": "Água Verde"
+    },
+    {
+      "slug": "ahu",
+      "history": "O Ahú de 1854 era um dos 27 quarteirões de Curitiba e ocupava uma área mais ampla que o bairro de hoje. Chácaras de imigrantes se alinharam à antiga Estrada da Cachoeira, atual Avenida Anita Garibaldi.",
+      "benefit": "Para corredor entre paredes próximas, inclua no desenho o ponto onde o ralo recebe água e uma maneira de alcançar as emendas para limpeza.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/09945e1d-359e-4fcb-90a5-95ad56c21a9e/14---Ahu.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro • Ahú",
+      "name": "Ahú"
+    },
+    {
+      "slug": "alto-boqueirao",
+      "history": "A formação de vilas e núcleos habitacionais acelerou a ocupação do Alto Boqueirão nos anos 1960. A denominação foi oficializada em 1975, segundo o IPPUC.",
+      "benefit": "Para garagem de duas vagas, informe largura útil entre pilares e se as portas dos veículos abrem simultaneamente sem interferir nos apoios.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/0c79010d-b460-4deb-95e1-5413c6f8d57a/64---Alto-Boqueirao.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro • Alto Boqueirão",
+      "name": "Alto Boqueirao"
+    },
+    {
+      "slug": "alto-da-gloria",
+      "history": "A antiga Chácara da Glória ajudou a dar nome ao lugar. O IPPUC registra que, no século XIX, engenhos de mate e fazendas margeavam o eixo da atual Avenida João Gualberto.",
+      "benefit": "Para proteger a entrada de um comércio de esquina, veja em qual face o sol bate e se a chuva entra lateralmente antes de definir a projeção.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/23a2a9aa-7601-4293-ae0e-066a937a70a1/04---Alto-da-Gloria.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro • Alto da Glória",
+      "name": "Alto da Glória"
+    },
+    {
+      "slug": "alto-da-xv",
+      "history": "Uma casa de madeira originalmente construída no Alto da XV em 1947 foi remontada no Parque Atuba, segundo a Prefeitura. Alto da XV e Alto da Rua XV referem-se ao mesmo bairro.",
+      "benefit": "Para uma janela de madeira, indique o sentido de abertura e peça avaliação da superfície estrutural para fixar a cobertura sem usar peças decorativas como apoio.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/conteudo/parque-municipal-atuba/288",
+      "sourceLabel": "Prefeitura de Curitiba: Parque Atuba",
+      "name": "Alto da XV"
+    },
+    {
+      "slug": "atuba",
+      "history": "O Parque Atuba foi implantado em 2004 para preservar um trecho de fundo de vale e margens do rio do mesmo nome.",
+      "benefit": "Se o imóvel está em trecho baixo, planeje o caminho da água da cobertura até um ponto adequado; o toldo sozinho não resolve alagamento.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/conteudo/parque-municipal-atuba/288",
+      "sourceLabel": "Prefeitura de Curitiba: Parque Atuba",
+      "name": "Atuba"
+    },
+    {
+      "slug": "augusta",
+      "history": "O Parque Passaúna, no bairro Augusta, foi inaugurado em 1991 e integra a área de proteção ambiental estadual do Passaúna.",
+      "benefit": "Se o imóvel estiver próximo ao reservatório ou em área protegida, confirme as regras do endereço antes de ampliar estrutura ou área coberta.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/conteudo/parque-municipal-passauna/315",
+      "sourceLabel": "Prefeitura de Curitiba: Parque Passaúna",
+      "name": "Augusta"
+    },
+    {
+      "slug": "bacacheri",
+      "history": "O Parque Bacacheri era conhecido como Tanque do Bacacheri e já teve passeios de barco a remo. Foi inaugurado como parque em 1988.",
+      "benefit": "Para área de lazer externa, planeje sombra sobre o espaço onde se fica, não apenas sobre o piso vazio; observe o sol no horário de uso.",
+      "sourceUrl": "https://locais.curitiba.pr.gov.br/parque-municipal-general-ibere-de-mattos---bacacheri/1543/",
+      "sourceLabel": "Prefeitura de Curitiba: Parque Bacacheri",
+      "name": "Bacacheri"
+    },
+    {
+      "slug": "bairro-alto",
+      "history": "O material da Secretaria Municipal de Educação associa a localidade da Vilinha, próxima ao rio Atuba, à memória da ocupação inicial da antiga Curitiba.",
+      "benefit": "Em uma entrada com passeio inclinado, confira se a ponta da cobertura conduzirá gotas ao ralo previsto, não ao trajeto das pessoas.",
+      "sourceUrl": "https://mid-educacao.curitiba.pr.gov.br/2024/11/pdf/00500089.pdf",
+      "sourceLabel": "Educação de Curitiba: história regional",
+      "name": "Bairro Alto"
+    },
+    {
+      "slug": "barreirinha",
+      "history": "A colônia polonesa da região cultivava, entre outros produtos, centeio, milho e batata. O IPPUC também registra a fabricação de carroças usadas no transporte de erva-mate pela Estrada da Graciosa.",
+      "benefit": "Em uma varanda voltada para um quintal arborizado, avalie um toldo retrátil que possa ser recolhido para aproveitar a luz. Indique no orçamento se galhos ou folhas alcançam a área da cobertura.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/2edba390-852c-4a80-a8f7-26f91a9c792a/52---Barrerinha.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Barreirinha",
+      "name": "Barreirinha"
+    },
+    {
+      "slug": "batel",
+      "history": "A atual Avenida do Batel integra o traçado da antiga Estrada do Mato Grosso. Atas da Câmara já registravam a localidade com o nome Batel em meados do século XIX.",
+      "benefit": "Em uma cafeteria com mesas próximas à fachada, um toldo retrátil pode oferecer sombra nos horários de uso. Verifique o alcance da peça e as permissões da fachada antes de definir as medidas.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/797a1305-7daf-48b1-95f0-701c161a3f0e/10---Batel.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Batel",
+      "name": "Batel"
+    },
+    {
+      "slug": "bigorrilho",
+      "history": "No fim do século XIX, imigrantes ucranianos se estabeleceram no local conhecido como Campo da Galícia, no atual Bigorrilho.",
+      "benefit": "Em condomínio, comece pelo padrão visual aprovado para as sacadas. Um toldo vertical ajuda a controlar o sol lateral sem exigir que todas as unidades usem a mesma projeção horizontal.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/68f5cc76-ed5b-4579-ac92-d79557bee955/11---Bigorrilho.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Bigorrilho",
+      "name": "Bigorrilho"
+    },
+    {
+      "slug": "boa-vista",
+      "history": "Registros antigos descreviam Boa Vista como um sítio do Quarteirão do Ahú. Na década de 1890, a propriedade da família Silveira foi dividida em áreas procuradas para lavoura.",
+      "benefit": "Se a varanda de casa recebe sol à tarde, diga em que horário isso incomoda e envie uma foto tomada desse lado. A equipe pode comparar a projeção de um toldo com a necessidade de proteção lateral.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/ed8c16e9-4d41-4b2d-87d8-d6011c093658/34---Boa-Vista.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Boa Vista",
+      "name": "Boa Vista"
+    },
+    {
+      "slug": "bom-retiro",
+      "history": "Antes de ganhar o nome atual, a região aparecia em registros como Sítio do Matto. O nome Bom Retiro se difundiu com a inauguração do sanatório na década de 1940.",
+      "benefit": "Para cobrir a entrada de uma clínica ou consultório, informe onde as pessoas esperam e embarcam. A cobertura deve proteger esse trecho sem atrapalhar a passagem ou o acesso acessível.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/2d5757a7-32a5-42bc-84b0-daf2085a7351/13---Bom-Retiro.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Bom Retiro",
+      "name": "Bom Retiro"
+    },
+    {
+      "slug": "boqueirao",
+      "history": "A antiga Fazenda Boqueirão foi subdividida em lotes urbanos e coloniais na década de 1930. Imigrantes menonitas também se estabeleceram na região naquela década, participando das atividades agrícolas e leiteiras.",
+      "benefit": "Para uma loja que movimenta produtos entre estoque e veículo, indique o percurso de carga protegido e o espaço necessário para abrir portas e circular. Uma cobertura fixa pode reduzir a exposição à chuva nesse trajeto.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/7a36c82b-6e93-4c44-9e88-0042ee81d633/56---Boqueirao.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Boqueirão",
+      "name": "Boqueirao"
+    },
+    {
+      "slug": "butiatuvinha",
+      "history": "Atas da Câmara de 1782 citam a localidade como Boteatuba, ao registrar uma ponte para atender viajantes. Mais tarde, lotes rurais se concentraram junto à via que se tornou a Avenida Manoel Ribas.",
+      "benefit": "Em um quintal amplo, decida se a cobertura serve à garagem, ao convívio ou à travessia entre os dois. Se os usos são diferentes, pode fazer sentido preservar uma parte descoberta em vez de cobrir todo o terreno.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/74a7ecf9-24d4-4e53-bb6e-b160f3c55f9d/61---Butiatuvinha.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Butiatuvinha",
+      "name": "Butiatuvinha"
+    },
+    {
+      "slug": "cabral",
+      "history": "A família Cabral doou o terreno da primeira capela consagrada ao Senhor Bom Jesus. Segundo o IPPUC, a capela e a família explicam o nome do bairro.",
+      "benefit": "Em uma entrada de edifício, avalie a altura da cobertura em relação à abertura das portas e ao interfone. Informe se há jardim ou degraus entre a entrada e o ponto de desembarque.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/0ce747e8-7d3e-41a1-9c29-2865bb7d7776/16---Cabral.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Cabral",
+      "name": "Cabral"
+    },
+    {
+      "slug": "cachoeira",
+      "history": "O IPPUC registra a instalação de um sítio na região em 1733. O nome do bairro remete a uma pequena cachoeira onde moradoras lavavam roupa.",
+      "benefit": "Para ligar garagem e entrada da casa, descreva onde o piso costuma molhar e para onde a água corre. A cobertura precisa ser pensada junto com a drenagem da passagem.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/2edba390-852c-4a80-a8f7-26f91a9c792a/51---Cachoeira.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Cachoeira",
+      "name": "Cachoeira"
+    },
+    {
+      "slug": "cajuru",
+      "history": "Em 1681, já havia registro de um sítio chamado Cahajuru acessado pelo caminho do Itupava. A instalação de oficinas ferroviárias e da Vila Oficinas marcou a ocupação urbana a partir da década de 1930.",
+      "benefit": "Em um comércio de rua, identifique se o problema é a chuva na porta ou o sol direto na vitrine. Isso ajuda a escolher entre cobertura de entrada e toldo para sombreamento.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/b75ba596-7ac8-44a8-afab-b0514481c8b6/21---Cajuru.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Cajuru",
+      "name": "Cajuru"
+    },
+    {
+      "slug": "campina-do-siqueira",
+      "history": "O nome combina a antiga paisagem de planície com o sobrenome de Antônio Sebastião Siqueira, um português que dividiu parte de suas terras em pequenos sítios.",
+      "benefit": "Em um pequeno ponto comercial com fachada estreita, fotografe a placa, a porta e a janela no mesmo enquadramento. O toldo precisa conviver com a sinalização sem bloquear o acesso.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/ed8c16e9-4d41-4b2d-87d8-d6011c093658/30---Campina-do-Siqueira.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Campina do Siqueira",
+      "name": "Campina do Siqueira"
+    },
+    {
+      "slug": "campo-comprido",
+      "history": "A partir de 1875, a região concentrou núcleos coloniais poloneses que integraram o Distrito de Nova Polônia. Colonos italianos se instalaram às margens da antiga Estrada do Mato Grosso, hoje Rua Eduardo Sprada.",
+      "benefit": "Se o quintal ou terraço tem porções com usos diferentes, uma cobertura somente sobre a mesa pode preservar a claridade da casa. Marque na foto o trecho em que a chuva interrompe o uso.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/2c0d5934-58c8-42cc-8e1c-a59e77157be6/44---Campo-Comprido.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Campo Comprido",
+      "name": "Campo Comprido"
+    },
+    {
+      "slug": "campo-de-santana",
+      "history": "Extensas propriedades da família Santana marcaram a paisagem local no século XIX. O IPPUC registra que a antiga denominação Campos dos Santana inspirou o nome oficial do bairro em 1975.",
+      "benefit": "Se a garagem também vira área de convívio, confirme altura livre, manobra e circulação de pessoas antes da cotação. Esses usos ajudam a definir o alcance de uma cobertura sem ocupar toda a frente.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/e05dd3d6-72ea-49fb-a06c-c8fc5ee28367/71---Campo-do-Santana.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Campo de Santana",
+      "name": "Campo de Santana"
+    },
+    {
+      "slug": "capao-da-imbuia",
+      "history": "O IPPUC registra a presença de imbuias na área e a doação, em 1954, de terras à Prefeitura com a condição de preservação da mata. O Museu de História Natural fica junto ao bosque do bairro.",
+      "benefit": "Em área próxima a árvores, considere como folhas serão removidas e se a cobertura permitirá acesso para manutenção. A foto do espaço deve mostrar tanto a fachada quanto a vegetação acima.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/450dc010-db40-41be-b89b-22ffa2d669f5/20---Capao-da-Imbuia.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Capão da Imbuia",
+      "name": "Capão da Imbuia"
+    },
+    {
+      "slug": "capao-raso",
+      "history": "O nome Campos de Capão Raso aparece em registros do início do século XIX e descrevia agrupamentos de vegetação baixa entre campos. O IPPUC também identifica a atual Avenida Winston Churchill como antigo caminho de tropeiros.",
+      "benefit": "Para sombrear a fila de um ponto de atendimento, mostre onde as pessoas se concentram e em que horário. O projeto deve respeitar a circulação da calçada, não apenas a largura da fachada.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/7a36c82b-6e93-4c44-9e88-0042ee81d633/58---Capao-Raso.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Capão Raso",
+      "name": "Capão Raso"
+    },
+    {
+      "slug": "cascatinha",
+      "history": "A antiga estrada colonial, hoje Avenida Manoel Ribas, passava por uma cascata conhecida dos colonos italianos. Segundo o IPPUC, ela inspirou o nome de um restaurante aberto em 1952, e mais tarde o do bairro.",
+      "benefit": "Em um restaurante com área externa, separe a proteção das mesas da entrada de fornecedores. Um toldo retrátil permite alternar sombra e área aberta sem mudar a circulação planejada.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/766f4f4d-f7e3-4ae7-b19a-c7be6eab2654/47---Cascatinha.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Cascatinha",
+      "name": "Cascatinha"
+    },
+    {
+      "slug": "caximba",
+      "history": "Em 1854 já havia registros de sítios no Caximba. Nas primeiras décadas do século XX, a via hoje chamada Rua Delegado Bruno de Almeida era conhecida como Estrada do Tietê e ligava a região a São José dos Pinhais.",
+      "benefit": "Para proteger a passagem entre duas edificações, informe a largura do caminho, o tipo de piso e onde já existe saída de água. Uma cobertura não substitui análise de drenagem ou do terreno.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/efacb9aa-2588-4dde-bff9-7d42b68a5f0d/70---Caximba.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Caximba",
+      "name": "Caximba"
+    },
+    {
+      "slug": "centro",
+      "history": "A Praça Tiradentes cresceu no local do antigo núcleo central da povoação. O IPPUC registra 29 de março de 1693 como a fundação oficial da vila.",
+      "benefit": "Em uma fachada comercial do Centro, informe se o prédio é protegido ou fica em conjunto histórico antes de orçar. A cor, a posição e a fixação do toldo devem ficar dentro das autorizações aplicáveis.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/790b0a18-5039-4876-bc5e-abf8c7793c37/01---Centro.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Centro",
+      "name": "Centro"
+    },
+    {
+      "slug": "centro-civico",
+      "history": "O Centro Cívico já constava no plano urbanístico de Alfred Agache, de 1943. O conjunto foi inaugurado em 1953, ano do centenário da emancipação política do Paraná.",
+      "benefit": "Para proteger a recepção externa de um edifício de escritórios, separe área de espera de fluxo de passagem e combine com a administração uma janela de execução que não interrompa o acesso.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/0ab1de0a-dc04-448e-ac8d-8b7c497d04b9/03---Centro-Civico.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Centro Cívico",
+      "name": "Centro Civico"
+    },
+    {
+      "slug": "cidade-industrial-de-curitiba",
+      "history": "A Vila Nossa Senhora da Luz foi inaugurada em 1966. Em 1973, um decreto detalhou a área para implantação da Cidade Industrial de Curitiba.",
+      "benefit": "Em uma operação industrial, indique altura das cargas, aproximação de veículos e se a cobertura servirá à doca ou ao acesso de pedestres. A necessidade de vão amplo precisa de avaliação da estrutura.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/19e32390-2054-49bc-a553-65e67eaabcf3/75---Cidade-Industrial-de-Curitiba.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Cidade Industrial de Curitiba",
+      "name": "Cidade Industrial de Curitiba"
+    },
+    {
+      "slug": "cristo-rei",
+      "history": "A área do Cristo Rei fazia parte do antigo Cajuru até o início dos anos 1950. O bairro teve a primeira oficialização em 1952; seus limites foram definidos novamente em 1975.",
+      "benefit": "Para cobrir o caminho da portaria ao bloco de um condomínio, observe onde os moradores mudam de direção e se o trecho é acessível. Uma cobertura contínua pode ser mais útil do que pequenas áreas isoladas.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/93b9f7ad-9d08-49db-ad89-f0009096163e/06---Cristo-Rei.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Cristo Rei",
+      "name": "Cristo Rei"
+    },
+    {
+      "slug": "fanny",
+      "history": "O nome do bairro homenageia Fanny Hauer, nora de Robert Hauer. A Prefeitura transformou o canteiro central da Avenida Wenceslau Braz em área de lazer em 1981, segundo o IPPUC.",
+      "benefit": "Em comércio ou oficina com retirada de pedidos, diga até onde o veículo consegue parar sem obstruir o portão. Uma cobertura pode proteger o ponto de entrega se não reduzir a área de manobra.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/fe28d55e-56ee-49d0-9fb6-c79ecebf158b/39---Fanny.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Fanny",
+      "name": "Fanny"
+    },
+    {
+      "slug": "fazendinha",
+      "history": "O Atalho da Fazendinha foi uma rota entre os Campos Gerais e São José dos Pinhais. O IPPUC também registra a Olaria Esperança, fundada por Francisco Klemtz.",
+      "benefit": "Se a chuva bate entre a lavanderia e o acesso ao quintal, mostre a abertura, a janela e a ventilação necessária. Uma cobertura projetada só para esse trecho reduz interferências no restante do espaço.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/2c0d5934-58c8-42cc-8e1c-a59e77157be6/42---Fazendinha.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Fazendinha",
+      "name": "Fazendinha"
+    },
+    {
+      "slug": "ganchinho",
+      "history": "A Vila 23 de Agosto, no Ganchinho, foi objeto de urbanização municipal com pavimentação de trechos de rua e reassentamento previsto. O registro da Prefeitura documenta essa etapa da ocupação do bairro.",
+      "benefit": "Para uma casa com recuo curto, confira se o portão abre para dentro, se existe diferença de nível e se uma coluna atrapalharia o carro. Isso ajuda a comparar alternativas de cobertura com menos perda de espaço.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/noticias/urbanizacao-transforma-a-vida-de-mil-familias/25547",
+      "sourceLabel": "Prefeitura de Curitiba: urbanização na Vila 23 de Agosto",
+      "name": "Ganchinho"
+    },
+    {
+      "slug": "guabirotuba",
+      "history": "O Horto Municipal do Guabirotuba foi fundado em 1936. O município registra o horto como uma das áreas de produção de plantas para o paisagismo de Curitiba.",
+      "benefit": "Se a ideia é sombrear um canto de jardim usado ao longo do dia, observe quando a área precisa de sol e quando pede sombra. Um toldo recolhível pode dar mais controle sobre os dois períodos.",
+      "sourceUrl": "https://meioambiente.curitiba.pr.gov.br/conteudo/hortos-municipais-de-curitiba/1246",
+      "sourceLabel": "Prefeitura de Curitiba: Hortos Municipais",
+      "name": "Guabirotuba"
+    },
+    {
+      "slug": "guaira",
+      "history": "O IPPUC registra a chegada de Francisco e Bárbara Prochaska em 1927 como marco na formação da Vila Guaíra. O nome oficial deixou de incluir Vila em 1975.",
+      "benefit": "Num pátio comunitário coberto para encontros periódicos, informe a posição dos acessos, as mesas e a passagem de usuários. Isso ajuda a separar a parte que precisa de proteção da que deve continuar livre.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/cfe8a63a-b3d0-457e-91c1-29d2d99c9520/26---Guaira.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Guaíra",
+      "name": "Guaíra"
+    },
+    {
+      "slug": "hauer",
+      "history": "A Vila Hauer surgiu de loteamentos iniciados na década de 1940 em terras que haviam pertencido à família de Robert Hauer. A palavra Vila saiu do nome oficial em 1975.",
+      "benefit": "Para uma loja com vitrine e porta no mesmo alinhamento, compare sombra sobre o vidro com proteção do acesso em dias de chuva. Delimitar cada necessidade ajuda a escolher a projeção da peça.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/fe28d55e-56ee-49d0-9fb6-c79ecebf158b/38---Hauer.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Hauer",
+      "name": "Hauer"
+    },
+    {
+      "slug": "hugo-lange",
+      "history": "No início do século XX, a região ainda tinha campos e chácaras. Seu crescimento acompanhou vias como a Rua Itupava; os limites do bairro foram formalizados em 1975.",
+      "benefit": "Em imóvel onde o toldo precisa conviver com janelas altas ou elementos da fachada, envie uma foto de frente e outra de lado. Isso esclarece o espaço vertical disponível para ombrear sem tapar as aberturas.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/f19ee5ff-5a7e-439b-ab5e-de502eab3a1c/17---Hugo-Lange.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Hugo Lange",
+      "name": "Hugo Lange"
+    },
+    {
+      "slug": "jardim-botanico",
+      "history": "O bairro chamava-se Capanema. Um plebiscito de 1992 levou à mudança para Jardim Botânico, em referência ao jardim da cidade.",
+      "benefit": "Em uma varanda com plantas e área de estar, identifique quais pontos precisam continuar recebendo luz. Uma proteção parcial pode concentrar a sombra sobre o mobiliário em vez de cobrir todo o espaço.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/f1655295-c234-4f86-9185-cb0d50236671/07---Jardim-Botanico.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Jardim Botânico",
+      "name": "Jardim Botânico"
+    },
+    {
+      "slug": "jardim-das-americas",
+      "history": "A área foi ocupada por pastagens. O nome escolhido para o bairro homenageia as três partes do continente americano: América do Norte, Central e do Sul.",
+      "benefit": "Para uma varanda compartilhada por estudo e lazer, informe em que lado o sol incide e se a mesa precisa de luz difusa. Compare cobertura superior com proteção lateral para evitar ofuscamento.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/b3b6ab89-09ba-42bb-ab1c-7ae141241716/22---Jardim-das-Americas.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Jardim das Américas",
+      "name": "Jardim das Américas"
+    },
+    {
+      "slug": "jardim-social",
+      "history": "O IPPUC registra plantas de loteamento da década de 1920. O bairro, formado com ocupação predominantemente residencial e de baixa densidade, teve nome e limites definidos em 1975.",
+      "benefit": "Para preservar o desenho de uma fachada residencial, indique o que precisa permanecer visível e escolha os pontos que realmente merecem sombra. A solução pode proteger a área de convívio sem dominar a frente da casa.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/f760f530-026e-43cb-ad0d-fbf65152c711/18---Jardim-Social.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Jardim Social",
+      "name": "Jardim Social"
+    },
+    {
+      "slug": "juveve",
+      "history": "Um termo de medição de 1693 menciona as nascentes do rio Juvevê. O antigo caminho para a Estrada da Graciosa, hoje Avenida João Gualberto, foi um eixo do desenvolvimento local.",
+      "benefit": "Em um prédio de apartamentos, alinhe a instalação de toldos de sacada com o padrão do condomínio. Distinga as unidades com sol de manhã das com sol no fim da tarde para não tratar exposições diferentes como iguais.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/1dc57211-bdc0-43d1-a5a9-f689f2eab4d8/15---Juveve.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Juvevê",
+      "name": "Juvevê"
+    },
+    {
+      "slug": "lamenha-pequena",
+      "history": "A Colônia Lamenha foi fundada em 1876 e depois dividida em Lamenha Pequena e Lamenha Grande. O nome homenageia Adolfo Lamenha Lins, presidente da Província à época.",
+      "benefit": "Em imóvel com área aberta, verifique com a equipe técnica a exposição a ventos e observe a vegetação próxima antes de escolher cobertura fixa ou retrátil. Leve ao orçamento fotos dos lados menos abrigados.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/74a7ecf9-24d4-4e53-bb6e-b160f3c55f9d/62---Lamenha-Pequena.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Lamenha Pequena",
+      "name": "Lamenha Pequena"
+    },
+    {
+      "slug": "lindoia",
+      "history": "As terras adquiridas por Robert Hauer no fim do século XIX abrangiam áreas que hoje fazem parte do Lindóia. Segundo o IPPUC, a divisão e loteamento de parcelas da antiga fazenda avançaram a partir da década de 1940.",
+      "benefit": "Para um corredor lateral usado para guardar bicicleta ou receber entregas, confirme largura livre, abertura de portas e destino da água. Uma cobertura no trecho útil pode evitar que o acesso inteiro fique escuro.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/fe28d55e-56ee-49d0-9fb6-c79ecebf158b/38---Hauer.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro – Hauer (antigas propriedades na região)",
+      "name": "Lindóia"
+    },
+    {
+      "slug": "merces",
+      "history": "A atual Avenida Manoel Ribas chamava-se Avenida Cruzeiro e levava ao comércio a produção das chácaras da região, transportada em carroças.",
+      "benefit": "Em uma loja de rua, alinhe a projeção do toldo à porta e à vitrine: a entrada fica abrigada sem esconder a exposição.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/c3f756ff-4ff9-4f98-bfb7-291ef37db71b/12---Merces.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Mercês",
+      "name": "Mercês"
+    },
+    {
+      "slug": "mossungue",
+      "history": "O Mossunguê se desenvolveu ao longo do antigo Caminho do Mato Grosso. Seus armazéns recebiam viajantes e tropeiros.",
+      "benefit": "Para uma varanda com porta de correr, uma cobertura translúcida preserva parte da luz natural; vale conferir o quanto de sol chega à sala antes de escolher a chapa.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/766f4f4d-f7e3-4ae7-b19a-c7be6eab2654/45---Mossungue.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Mossunguê",
+      "name": "Mossunguê"
+    },
+    {
+      "slug": "novo-mundo",
+      "history": "O IPPUC registra que Alberto Stenzowski abriu o armazém Novo Mundo e, mais tarde, instalou do outro lado da rua um concorrente chamado Velho Mundo.",
+      "benefit": "Em uma fachada comercial com letreiro, mantenha a comunicação visível mesmo com o toldo aberto. Uma foto de frente ajuda a decidir a altura.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/2c0d5934-58c8-42cc-8e1c-a59e77157be6/41---Novo-Mundo.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Novo Mundo",
+      "name": "Novo Mundo"
+    },
+    {
+      "slug": "orleans",
+      "history": "A Colônia Orleans foi criada em 1875 à margem da antiga Estrada do Mato Grosso e foi emancipada em 1878.",
+      "benefit": "Para ligar uma garagem ao acesso da casa, planeje um trecho coberto contínuo e preveja onde a água será descarregada, fora da faixa de caminhada.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/7a36c82b-6e93-4c44-9e88-0042ee81d633/59---Orleans.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Orleans",
+      "name": "Orleans"
+    },
+    {
+      "slug": "parolin",
+      "history": "Registros da Câmara de 1872 já citavam propriedade na região. A terra passou à família Parolin em 1909; subdivisões posteriores deram origem à Vila Parolin.",
+      "benefit": "Para carga e descarga, a altura livre precisa considerar o veículo mais alto e sua manobra, não apenas a altura da porta do depósito.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/cfe8a63a-b3d0-457e-91c1-29d2d99c9520/25---Parolin.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Parolin",
+      "name": "Parolin"
+    },
+    {
+      "slug": "pilarzinho",
+      "history": "O IPPUC registra a fundação da capela de Nossa Senhora do Pilar em 1782 e a reconstrução iniciada em 1932.",
+      "benefit": "Se a cobertura vai sobre uma escada externa, fotografe os degraus e o patamar superior: a altura útil deve ser avaliada em ambos.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/ed8c16e9-4d41-4b2d-87d8-d6011c093658/32---Pilarzinho.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Pilarzinho",
+      "name": "Pilarzinho"
+    },
+    {
+      "slug": "pinheirinho",
+      "history": "No início do século XIX, a região era conhecida como Capão do Alto e servia de passagem e pouso para viajantes e tropeiros.",
+      "benefit": "Num ponto de retirada de pedidos, um toldo pode abrigar a espera sem ocupar a circulação com colunas, desde que a fachada permita a fixação.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/f31b389e-389c-425f-bcb1-ead09803f29f/66---Pinheirinho.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Pinheirinho",
+      "name": "Pinheirinho"
+    },
+    {
+      "slug": "portao",
+      "history": "Um posto fiscal controlava a passagem de animais pelos antigos caminhos. Segundo o IPPUC, a barreira teria inspirado o nome Portão.",
+      "benefit": "Quem tem portão basculante deve medir o arco de abertura antes de definir a altura da cobertura da garagem.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/f408cacf-d067-4011-822f-4674b25f28e3/27---Portao.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Portão",
+      "name": "Portão"
+    },
+    {
+      "slug": "prado-velho",
+      "history": "Atas de 1874 citam a concessão de terras para um clube de corridas. Após a inauguração do Hipódromo do Tarumã em 1955, o antigo Prado passou a ser conhecido como Prado Velho.",
+      "benefit": "Em pátios de espera de clínicas ou escolas, avalie caminho de entrada, bancos e degraus juntos para decidir quais pontos realmente precisam de abrigo.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/9494b9d2-0d60-4940-8dbd-12688cce565c/24---Prado-velho.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Prado Velho",
+      "name": "Prado Velho"
+    },
+    {
+      "slug": "reboucas",
+      "history": "A estação ferroviária construída na década de 1880 facilitou o transporte de mate e madeira e atraiu comércio e atividades industriais à região.",
+      "benefit": "Num corredor entre galpão e escritório, a cobertura pode evitar cruzar o trecho ao relento. Posicione descidas e apoios fora das rotas de carrinhos e pedestres.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/1b9b9042-cff3-483a-b190-9c27d286598a/08---Reboucas.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Rebouças",
+      "name": "Rebouças"
+    },
+    {
+      "slug": "riviera",
+      "history": "O nome vem da Colônia Rivière, fundada em 1876, e homenageia o engenheiro Henrique Rivière, que chefiou a medição de lotes de imigrantes.",
+      "benefit": "Para uma área de serviço nos fundos, combine claridade e ventilação. Um fechamento fixo dos dois lados pode não servir para quem precisa secar roupa no espaço.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/c6a94957-be1d-4cbf-a2bc-ae5256cfcd7e/69---Riviera.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Riviera",
+      "name": "Riviera"
+    },
+    {
+      "slug": "santa-candida",
+      "history": "A colônia foi criada em 1875 pelo governo provincial e recebeu a visita de Dom Pedro II em 1880.",
+      "benefit": "Se a porta da loja fica recuada, observe de onde entra a chuva com vento antes de escolher a extensão do toldo. Projeção maior nem sempre corrige chuva de lado.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/2edba390-852c-4a80-a8f7-26f91a9c792a/53---Santa-Candida.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Santa Cândida",
+      "name": "Santa Candida"
+    },
+    {
+      "slug": "santa-felicidade",
+      "history": "A colônia de famílias italianas estabelecida em 1878 deu origem ao bairro. Algumas famílias passaram a oferecer refeições a viajantes no antigo caminho para o interior.",
+      "benefit": "Em restaurantes com mesas externas, o toldo retrátil permite alternar sol e sombra. Organize o atendimento e o recolhimento do toldo em condições de vento conforme a orientação do fabricante.",
+      "sourceUrl": "https://turismo.curitiba.pr.gov.br/conteudo/polo-gastronomico-de-santa-felicidade/2554",
+      "sourceLabel": "Turismo Curitiba: Polo Gastronômico de Santa Felicidade",
+      "name": "Santa Felicidade"
+    },
+    {
+      "slug": "santa-quiteria",
+      "history": "O nome Santa Quitéria consolidou-se depois de moradores construírem, em 1950, uma capela dedicada à santa cuja imagem foi doada por Maria Bitana.",
+      "benefit": "Para proteger a churrasqueira, mantenha o material de cobertura e os componentes da estrutura afastados da saída de calor e fumaça, conforme avaliação no local.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/2c0d5934-58c8-42cc-8e1c-a59e77157be6/43---Santa-Quiteria.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Santa Quitéria",
+      "name": "Santa Quitéria"
+    },
+    {
+      "slug": "santo-inacio",
+      "history": "A Colônia Santo Inácio, criada em 1876, fazia parte de um plano de núcleos agrícolas voltado ao abastecimento de Curitiba.",
+      "benefit": "Se a cobertura se apoia perto de jardim e gramado, defina o destino da água para evitar que ela volte para a casa ou caia no lote vizinho.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/766f4f4d-f7e3-4ae7-b19a-c7be6eab2654/46---Santo-Inacio.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Santo Inácio",
+      "name": "Santo Inacio"
+    },
+    {
+      "slug": "sao-braz",
+      "history": "Por décadas, as chácaras de São Braz produziam hortaliças e criavam animais. Segundo o IPPUC, parte dessas propriedades começou a ser loteada por volta dos anos 1970.",
+      "benefit": "Para uma varanda voltada ao sol da tarde, compare o alcance da sombra com toldo aberto e com extensão menor; em ângulos baixos, a direção do sol pesa mais que a metragem coberta.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/74a7ecf9-24d4-4e53-bb6e-b160f3c55f9d/60---Sao-Braz.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — São Braz",
+      "name": "São Braz"
+    },
+    {
+      "slug": "sao-francisco",
+      "history": "A Capela Nossa Senhora do Terço, de 1737, foi mais tarde adquirida pelos Irmãos Terceiros de São Francisco. O IPPUC a aponta como provável origem do nome do bairro.",
+      "benefit": "Em imóvel de interesse histórico, confirme as regras aplicáveis antes de furar a fachada. A primeira decisão é verificar onde o toldo pode ser apoiado, não a cor da lona.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/a82d8095-fa74-4e95-815e-5120f3ce8445/02---Sao-Francisco.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — São Francisco",
+      "name": "São Francisco"
+    },
+    {
+      "slug": "sao-joao",
+      "history": "Na área que integrou a Colônia Santa Felicidade, os primeiros colonos cultivavam vinhedos. A primeira capela do bairro foi construída em 1972.",
+      "benefit": "Para acessos de condomínios horizontais, avalie onde moradores saem do veículo e onde chegam a pé. Um abrigo não deve invadir a área de manobra.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/766f4f4d-f7e3-4ae7-b19a-c7be6eab2654/48---Sao-Joao.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — São João",
+      "name": "São João"
+    },
+    {
+      "slug": "sao-lourenco",
+      "history": "O IPPUC recorda que o curtume e a fábrica de velas eram antigas referências da região antes da implantação do Parque São Lourenço, nos anos 1970.",
+      "benefit": "Em um deck contíguo à sala, um sistema retrátil deixa entrar sol em dias frios e cria sombra quando necessário; a posição das árvores pode ajudar a escolher a área a cobrir.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/ed8c16e9-4d41-4b2d-87d8-d6011c093658/33---Sao-Lourenco.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — São Lourenço",
+      "name": "São Lourenço"
+    },
+    {
+      "slug": "sao-miguel",
+      "history": "Os limites do bairro foram definidos em 1975. Segundo o IPPUC, a ocupação inicialmente agrícola recebeu seu primeiro loteamento aprovado em 1980.",
+      "benefit": "Para uma cobertura apoiada no terreno, confirme seu espaço livre e os pontos de fixação antes do orçamento. Fotos do piso e dos muros ajudam a avaliar o que pode ser aproveitado.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/06f06f1e-fb14-44ad-badf-31e0173aa497/67---Sao-Miguel.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — São Miguel",
+      "name": "São Miguel"
+    },
+    {
+      "slug": "vila-pantanal",
+      "history": "A Vila Pantanal é uma localidade do Alto Boqueirão. A Prefeitura documentou a adoção de um novo itinerário de ônibus com parada acessível que liga a região ao Terminal Boqueirão.",
+      "benefit": "Para cobrir o acesso à residência, mantenha a faixa de passagem desobstruída e direcione a água da cobertura a um ponto adequado, sem lançá-la sobre a entrada. A cobertura não resolve alagamentos.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/noticias/moradores-da-vila-pantanal-elogiam-nova-rota-de-onibus-com-parada-acessivel/76093",
+      "sourceLabel": "Prefeitura de Curitiba: novo itinerário da Vila Pantanal",
+      "name": "Vila Pantanal"
+    },
+    {
+      "slug": "seminario",
+      "history": "O Seminário Rainha dos Apóstolos é uma referência do bairro: a Prefeitura registra que ali há formação teológica de seminaristas.",
+      "benefit": "Para proteger uma entrada sem perder claridade no corredor, compare cobertura translúcida e opaca considerando a orientação da janela mais próxima.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/noticias/greca-ensina-a-seminaristas-um-pouco-da-historia-de-curitiba/67478",
+      "sourceLabel": "Prefeitura de Curitiba: Seminário Rainha dos Apóstolos",
+      "name": "Seminário"
+    },
+    {
+      "slug": "sitio-cercado",
+      "history": "O IPPUC registra duas explicações para o nome: o sítio de Laurindo Ferreira de Andrade seria cercado em parte por cursos d’água ou teria recebido cercas para proteger as lavouras.",
+      "benefit": "Em uma garagem com calçada estreita, a avaliação deve considerar o alinhamento do lote. A cobertura deve proteger a área privada sem criar obstáculos à circulação externa.",
+      "sourceUrl": "https://www.ippuc.org.br/storage/uploads/ad18bea7-4f9f-47a5-a5e7-e96f9a9a580d/65---Sitio-Cercado.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Sítio Cercado",
+      "name": "Sítio Cercado"
+    },
+    {
+      "slug": "taboao",
+      "history": "A área historicamente chamada Taboão era maior que o bairro atual. Segundo o IPPUC, o nome abrangia trechos hoje identificados como Bom Retiro, Pilarzinho, Centro Cívico, Ahú e São Lourenço.",
+      "benefit": "Para cobrir um caminho em desnível, meça a altura em mais de um ponto e verifique por onde a água sai. A mesma altura de pilar não resolve todos os trechos.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/766f4f4d-f7e3-4ae7-b19a-c7be6eab2654/49---Taboao.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Taboão",
+      "name": "Taboão"
+    },
+    {
+      "slug": "taruma",
+      "history": "O Jockey Club do Paraná instalou-se no Tarumã em 1955. O IPPUC associa esse marco ao desenvolvimento e à ocupação do bairro.",
+      "benefit": "Para espaços que recebem público, um toldo sobre a fila pode cobrir a espera sem interferir no vão de entrada; considere também quem chega em cadeira de rodas ou com carrinho.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/0fcdde38-3c53-43f4-8d18-62978081d1a4/19---Taruma.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Tarumã",
+      "name": "Tarumã"
+    },
+    {
+      "slug": "tatuquara",
+      "history": "O Tatuquara aparece em registros de 1786 e foi um ponto de passagem de boiadas numa ligação entre Umbará e Campo Comprido.",
+      "benefit": "Para uma cobertura em sequência sobre frente e lateral, peça que a proposta mostre a junção e o caminho da água, não apenas a aparência de cada trecho.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/e3b03bce-3a18-4284-b715-98a95ba95bfb/74---Tatuquara.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Tatuquara",
+      "name": "Tatuquara"
+    },
+    {
+      "slug": "tingui",
+      "history": "A região antes chamada Vila Tingui foi oficializada como bairro em 1975. O nome faz referência aos povos indígenas Tinguis.",
+      "benefit": "Para proteger bicicletas no pátio, pense primeiro em como entram e saem: o abrigo não deve dificultar a manobra nem descarregar água junto ao suporte.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/2edba390-852c-4a80-a8f7-26f91a9c792a/54---Tingui.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Tingui",
+      "name": "Tingui"
+    },
+    {
+      "slug": "uberaba",
+      "history": "A antiga estrada para São José dos Pinhais, hoje Avenida Salgado Filho, tornou-se um eixo de circulação de rebanhos após a instalação do Matadouro Municipal no antigo Guabirotuba.",
+      "benefit": "Em uma oficina com transparência na entrada, a cobertura deve deixar espaço para levantar tampas ou abrir portas de veículos. Mostre à equipe como o trecho é usado.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/fe28d55e-56ee-49d0-9fb6-c79ecebf158b/37---Uberaba.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Uberaba",
+      "name": "Uberaba"
+    },
+    {
+      "slug": "umbara",
+      "history": "O IPPUC registra que Umbará esteve em caminhos de tropeiros e que, na segunda metade do século XIX, imigrantes italianos e poloneses diversificaram a produção agrícola da região.",
+      "benefit": "Se a cobertura servir a um quintal amplo, separe a área de convívio da circulação de serviço. Isso evita cobrir espaços à toa e ajuda a localizar os apoios.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/39023bad-1c93-4688-ba13-1d057996fdc5/73---Umbara.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Umbará",
+      "name": "Umbará"
+    },
+    {
+      "slug": "vila-izabel",
+      "history": "A grafia Vila Izabel foi oficializada em 1975. O IPPUC liga o desenvolvimento inicial à leiteria de Raimundo Vasconcelos, chamada Vacaria Vila Isabel.",
+      "benefit": "Em prédio residencial, uma cobertura para a saída de serviço pode manter a passagem de compras e entregas protegida sem estender a estrutura até a fachada principal.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/cfe8a63a-b3d0-457e-91c1-29d2d99c9520/28---Vila-Izabel.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Vila Izabel",
+      "name": "Vila Izabel"
+    },
+    {
+      "slug": "vista-alegre",
+      "history": "Segundo o IPPUC, uma propriedade conhecida por trazer o nome Vista Alegre na fachada inspirou a denominação do bairro. As chácaras começaram a dar lugar a loteamentos a partir de 1955.",
+      "benefit": "Em terreno inclinado, compare a altura útil nos dois extremos da garagem e confirme se a cobertura interfere no portão quando o veículo entra na rampa.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/ed8c16e9-4d41-4b2d-87d8-d6011c093658/31---Vista-Alegre.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Vista Alegre",
+      "name": "Vista Alegre"
+    },
+    {
+      "slug": "xaxim",
+      "history": "O antigo caminho entre Curitiba e São José dos Pinhais, hoje Rua Francisco Derosso, foi um eixo de formação do bairro Xaxim.",
+      "benefit": "Se a entrada recebe sol e a vitrine precisa continuar visível, decida posição e inclinação do toldo em conjunto; uma amostra do tecido ajuda a avaliar a claridade percebida.",
+      "sourceUrl": "https://ippuc.org.br/storage/uploads/7a36c82b-6e93-4c44-9e88-0042ee81d633/57---Xaxim.pdf",
+      "sourceLabel": "IPPUC: Nosso Bairro — Xaxim",
+      "name": "Xaxim"
+    }
+  ],
+  "cidades": [
+    {
+      "slug": "adrianopolis",
+      "name": "Adrianópolis",
+      "historyTitle": "Paranaí e o rio Ribeira",
+      "history": "Antes de se chamar Adrianópolis, a localidade passou pelo nome de Paranaí e integrava Bocaiúva do Sul. O IBGE registra a criação do município em 1960 e situa o rio Ribeira na divisa com São Paulo.",
+      "benefitTitle": "Entrada de loja protegida sem esconder a fachada",
+      "benefit": "Para uma loja com porta junto à rua, fotografe a fachada de frente e de lado. Compare a projeção de um toldo fixo com o espaço que precisa ficar livre para a passagem e defina para onde a água da cobertura vai escoar.",
+      "sourceUrl": "https://biblioteca.ibge.gov.br/visualizacao/dtb/parana/adrianopolis.pdf",
+      "sourceLabel": "IBGE: histórico de Adrianópolis"
+    },
+    {
+      "slug": "agudos-do-sul",
+      "name": "Agudos do Sul",
+      "historyTitle": "Os antigos ervais na formação local",
+      "history": "O histórico do IBGE relaciona a formação da povoação aos ervais e à chegada de famílias atraídas pela erva-mate. Depois de integrar São José dos Pinhais e, mais tarde, Tijucas do Sul, Agudos do Sul tornou-se município próprio.",
+      "benefitTitle": "Sombra para varanda sem escurecer a sala",
+      "benefit": "Se a varanda recebe sol forte só em parte do dia, marque no chão até onde a sombra precisa alcançar no horário de uso. Isso ajuda a comparar um toldo retrátil, que pode ser recolhido, com uma solução fixa.",
+      "sourceUrl": "https://biblioteca.ibge.gov.br/visualizacao/dtb/parana/agudosdosul.pdf",
+      "sourceLabel": "IBGE: histórico de Agudos do Sul"
+    },
+    {
+      "slug": "almirante-tamandaré",
+      "name": "Almirante Tamandaré",
+      "historyTitle": "De Conceição do Cercado ao nome atual",
+      "history": "A sede do antigo povoado mudou-se para Cercado no fim do século XIX. A localidade ainda passou pelo nome Timoneira antes de adotar, em 1956, Almirante Tamandaré, em homenagem a Joaquim Marques Lisboa.",
+      "benefitTitle": "Garagem em terreno com desnível",
+      "benefit": "Antes de orçar uma cobertura de garagem, mostre o desnível da entrada, a abertura total do portão e o ponto onde a água já se acumula. A cobertura precisa preservar a altura de manobra e não agravar esse acúmulo.",
+      "sourceUrl": "https://biblioteca.ibge.gov.br/visualizacao/dtb/parana/almirantetamandare.pdf",
+      "sourceLabel": "IBGE: histórico de Almirante Tamandaré"
+    },
+    {
+      "slug": "araucaria",
+      "name": "Araucária",
+      "historyTitle": "De Tindiqüera à vila de Araucária",
+      "history": "O IBGE registra Tindiqüera entre os nomes ligados à formação da cidade. No século XIX houve a freguesia de Nossa Senhora dos Remédios do Yguassú; em 1890, o município recebeu o nome Araucária, em referência aos pinheiros da região.",
+      "benefitTitle": "Cobertura para carga e descarga sem interferir na rota",
+      "benefit": "Para o acesso de um galpão, registre altura e manobra dos veículos, largura do portão e percurso dos pedestres. Esses dados ajudam a avaliar se uma estrutura metálica cobre a área de espera sem interferir no giro dos veículos.",
+      "sourceUrl": "https://biblioteca.ibge.gov.br/visualizacao/dtb/parana/araucaria.pdf",
+      "sourceLabel": "IBGE: histórico de Araucária"
+    },
+    {
+      "slug": "balsa-nova",
+      "name": "Balsa Nova",
+      "historyTitle": "Os pousos de tropeiros de Tamanduá",
+      "history": "Tamanduá aparece no histórico de Balsa Nova como ponto de passagem e pouso de tropeiros, próximo à serra de São Luiz do Purunã. O relato também registra a travessia do rio Iguaçu como desafio na vida dos moradores.",
+      "benefitTitle": "Pergolado com luz natural e proteção no ponto de uso",
+      "benefit": "Em pátios e varandas, decida primeiro se a cobertura deve preservar a luz ou criar sombra mais marcada. Para comparar policarbonato translúcido com opções opacas, indique a orientação do local, a área de permanência e a exposição ao vento.",
+      "sourceUrl": "https://biblioteca.ibge.gov.br/visualizacao/dtb/parana/balsanova.pdf",
+      "sourceLabel": "IBGE: histórico de Balsa Nova"
+    },
+    {
+      "slug": "bocaiuva-do-sul",
+      "name": "Bocaiúva do Sul",
+      "historyTitle": "Arraial Queimado e a mudança de nome",
+      "history": "Arraial Queimado é um nome antigo associado à formação do município. O histórico do IBGE registra a adoção de Bocaiúva em 1890, em homenagem a Quintino Bocaiúva.",
+      "benefitTitle": "Passagem coberta entre casa e portão",
+      "benefit": "Para proteger um caminho já existente, indique onde começa e termina o trecho, mudanças de nível e a direção em que a chuva costuma entrar. Assim é possível discutir avanços ou proteção lateral sem fechar desnecessariamente a passagem.",
+      "sourceUrl": "https://biblioteca.ibge.gov.br/visualizacao/dtb/parana/bocaiuvadosul.pdf",
+      "sourceLabel": "IBGE: histórico de Bocaiúva do Sul"
+    },
+    {
+      "slug": "campina-grande-do-sul",
+      "name": "Campina Grande do Sul",
+      "historyTitle": "Timbu e a volta de Campina Grande",
+      "history": "O município passou a figurar como distrito de Piraquara na reorganização de 1938 e adotou o nome Timbu alguns anos depois. O IBGE registra a volta da autonomia municipal em 1951 e a adoção de Campina Grande do Sul em 1956.",
+      "benefitTitle": "Área de espera coberta sem perder iluminação",
+      "benefit": "Se o objetivo é proteger uma fila de atendimento, observe onde as pessoas se concentram, a posição da porta e a luz que entra pelas janelas. Uma cobertura translúcida pode ser considerada quando preservar luminosidade for prioridade.",
+      "sourceUrl": "https://biblioteca.ibge.gov.br/visualizacao/dtb/parana/campinagrandedosul.pdf",
+      "sourceLabel": "IBGE: histórico de Campina Grande do Sul"
+    },
+    {
+      "slug": "campo-do-tenente",
+      "name": "Campo do Tenente",
+      "historyTitle": "Uma passagem do Caminho das Tropas",
+      "history": "O registro de turismo da prefeitura situa Campo do Tenente no antigo Caminho das Tropas, rota pela qual animais eram conduzidos do Sul em direção à feira de Sorocaba. Essa circulação ajuda a entender a formação local.",
+      "benefitTitle": "Abrigo para organizar a retirada em pequeno comércio",
+      "benefit": "Se o estabelecimento entrega pedidos no balcão, marque onde os clientes aguardam e se existe interferência com a abertura da vitrine. Um toldo pode proteger o ponto de retirada sem ampliar desnecessariamente a área coberta.",
+      "sourceUrl": "https://campodotenente.pr.gov.br/a-cidade/turismo",
+      "sourceLabel": "Fonte oficial: Campo do Tenente"
+    },
+    {
+      "slug": "campo-largo",
+      "name": "Campo Largo",
+      "historyTitle": "Do pouso de tropas à indústria de louças",
+      "history": "A Câmara Municipal registra a presença de pousos no trajeto dos tropeiros e a posterior importância da produção de louças. A atividade industrial deixou marcas que vão além das vitrines: o Museu Histórico de Campo Largo mantém acervo da cidade.",
+      "benefitTitle": "Proteção para a vitrine de cerâmicas e outros produtos",
+      "benefit": "Identifique quando o sol incide diretamente na vitrine e quais peças precisam continuar visíveis da rua. Na comparação entre toldo fixo e retrátil, considere profundidade de sombra, altura da comunicação visual e acesso para limpeza do vidro.",
+      "sourceUrl": "https://www.campolargo.pr.leg.br/institucional/historia/historia-de-campo-largo",
+      "sourceLabel": "Fonte oficial: Campo Largo"
+    },
+    {
+      "slug": "campo-magro",
+      "name": "Campo Magro",
+      "historyTitle": "Os antigos vínculos com Colombo e Timoneira",
+      "history": "A divisão territorial registrada pelo IBGE mostra Campo Magro como distrito de Colombo no início dos anos 1940 e sua transferência para Timoneira em 1947. Timoneira corresponde ao nome então usado pelo atual município de Almirante Tamandaré.",
+      "benefitTitle": "Toldo para varanda usada em dias de sol e de chuva leve",
+      "benefit": "Num imóvel com uso intermitente da varanda, anote de que lado a chuva chega e se a lona pode ser recolhida quando o local fica vazio. Isso ajuda a decidir entre sombra móvel e uma cobertura projetada para proteção mais constante.",
+      "sourceUrl": "https://biblioteca.ibge.gov.br/visualizacao/dtb/parana/campomagro.pdf",
+      "sourceLabel": "IBGE: histórico de Campo Magro"
+    },
+    {
+      "slug": "cerro-azul",
+      "name": "Cerro Azul",
+      "historyTitle": "De Colônia Assunguy a Cerro Azul",
+      "history": "O histórico do IBGE liga a origem de Cerro Azul à Colônia Assunguy, criada em 1860. O município passou pela grafia Serro Azul, alterada para Cerro Azul em 1929.",
+      "benefitTitle": "Abrigo para exposição de frutas ou mercadorias",
+      "benefit": "Em um ponto de venda com bancadas externas, defina quais itens precisam de sombra e quais só precisam ficar protegidos da chuva direta. Um avanço bem posicionado pode proteger o balcão preservando o corredor de quem circula.",
+      "sourceUrl": "https://www.ibge.gov.br/biblioteca/visualizacao/dtb/parana/cerroazul.pdf",
+      "sourceLabel": "IBGE: histórico de Cerro Azul"
+    },
+    {
+      "slug": "colombo",
+      "name": "Colombo",
+      "historyTitle": "O legado da Colônia Alfredo Chaves",
+      "history": "A história publicada pelo turismo municipal registra a formação de diversas colônias de imigrantes no fim do século XIX. Em 1890, a Colônia Alfredo Chaves passou oficialmente a se chamar Colombo.",
+      "benefitTitle": "Fechamento lateral para uma área de convivência",
+      "benefit": "Se mesas e cadeiras já ficam sob uma cobertura, observe por qual lado entra chuva acompanhada de vento. Uma cortina lateral recolhível pode preservar a abertura em dias agradáveis; confira ventilação e as condições de uso do sistema.",
+      "sourceUrl": "https://turismo.colombo.pr.gov.br/historia-de-colombo/",
+      "sourceLabel": "Fonte oficial: Colombo"
+    },
+    {
+      "slug": "contenda",
+      "name": "Contenda",
+      "historyTitle": "O traçado urbano da Estrada do Imperador",
+      "history": "A prefeitura de Contenda identifica trechos da antiga Estrada do Imperador no traçado urbano atual, incluindo as avenidas João Franco e das Américas. A passagem histórica ainda pode ser reconhecida no mapa da cidade.",
+      "benefitTitle": "Toldo de fachada com área livre para quem passa",
+      "benefit": "Em um comércio junto à calçada, marque onde clientes entram, por onde a porta abre e se há degraus ou rampas. A cobertura deve criar abrigo sem comprometer o percurso, e quaisquer avanços sobre o passeio devem ser conferidos previamente.",
+      "sourceUrl": "https://contenda.pr.gov.br/pagina/nossa-historia",
+      "sourceLabel": "Fonte oficial: Contenda"
+    },
+    {
+      "slug": "doutor-ulysses",
+      "name": "Doutor Ulysses",
+      "historyTitle": "As denominações Varzeão e Vila Branca",
+      "history": "A memória publicada pela prefeitura registra Varzeão e Vila Branca como nomes anteriores da localidade. A Agência de Assuntos Metropolitanos do Paraná situa o desmembramento de Cerro Azul em 1990.",
+      "benefitTitle": "Cobertura para a área de serviço de uma casa",
+      "benefit": "Antes de estender o telhado sobre tanque ou lavanderia, indique onde há janelas e como o ambiente hoje ventila. Manter luz e circulação de ar pode ser mais útil que simplesmente fechar toda a área.",
+      "sourceUrl": "https://www.doutorulysses.pr.gov.br/index.php?meio=516",
+      "sourceLabel": "Fonte oficial: Doutor Ulysses"
+    },
+    {
+      "slug": "fazenda-rio-grande",
+      "name": "Fazenda Rio Grande",
+      "historyTitle": "Uma cidade antes ligada a Mandirituba",
+      "history": "As duas antigas fazendas aparecem na formação dos povoados de Fazenda Rio Grande em registros da prefeitura. A região integrou Mandirituba até a criação do município, registrada pela AMEP em 1990.",
+      "benefitTitle": "Cobertura de garagem com espaço para dois carros",
+      "benefit": "Em terreno com dois veículos, compare a abertura das portas com a posição possível dos apoios. Antes de escolher o material, meça a largura útil entre portão, muro e entrada da casa, não apenas a frente do lote.",
+      "sourceUrl": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2016/01/PMSB.pdf",
+      "sourceLabel": "Fonte oficial: Fazenda Rio Grande"
+    },
+    {
+      "slug": "itaperucu",
+      "name": "Itaperuçu",
+      "historyTitle": "De Rio Branco do Sul à instalação do município",
+      "history": "O plano municipal de assistência social diferencia dois marcos: a criação de Itaperuçu por lei estadual em 1990, com desmembramento de Rio Branco do Sul, e a instalação do novo município em janeiro de 1993.",
+      "benefitTitle": "Cobertura para uma oficina sem atrapalhar a manutenção",
+      "benefit": "Em oficina com atividade na entrada, indique o vão que precisa ficar livre e os pontos em que ferramentas ou equipamentos passam. Uma cobertura só ajuda se os apoios não reduzirem a área de manobra nem bloquearem a abertura dos portões.",
+      "sourceUrl": "https://itaperucu.pr.gov.br/wp-content/uploads/2024/11/Plano-Municipal-de-Assistencia-Social-Finalizado-2022-2025-atualizado-2024.pdf",
+      "sourceLabel": "Fonte oficial: Itaperuçu"
+    },
+    {
+      "slug": "lapa",
+      "name": "Lapa",
+      "historyTitle": "Do pouso no Caminho de Viamão ao Setor Histórico",
+      "history": "O órgão estadual de patrimônio registra que a Lapa se formou como pouso no Caminho de Viamão. Igrejas, casas e o Teatro São João ajudam a ler essa história no conjunto arquitetônico protegido da cidade.",
+      "benefitTitle": "Sombra sem descaracterizar um imóvel antigo",
+      "benefit": "Em fachada histórica ou imóvel protegido, descubra primeiro quais autorizações e restrições se aplicam ao endereço. Somente depois compare soluções que preservem a leitura da fachada e reduzam alterações no conjunto.",
+      "sourceUrl": "https://www.patrimoniocultural.pr.gov.br/Bem-Tombado/Setor-Historico-da-Lapa",
+      "sourceLabel": "Fonte oficial: Lapa"
+    },
+    {
+      "slug": "mandirituba",
+      "name": "Mandirituba",
+      "historyTitle": "A Estrada da Mata e a formação de fazendas",
+      "history": "A prefeitura relaciona a formação de Mandirituba à Estrada da Mata, trecho de uma antiga rota de transporte de gado. O caminho favoreceu a instalação de propriedades rurais e o lugarejo tornou-se distrito judiciário em 1909.",
+      "benefitTitle": "Entrada protegida para receber visitantes",
+      "benefit": "Em espaço rural com circulação de visitantes, desenhe o trajeto entre estacionamento e recepção. Proteger a espera ou a chegada pode resolver mais do que cobrir uma área grande onde ninguém para, e a água não deve ser dirigida ao percurso de acesso.",
+      "sourceUrl": "https://www.mandirituba.pr.gov.br/prefeitura/historia",
+      "sourceLabel": "Fonte oficial: Mandirituba"
+    },
+    {
+      "slug": "pien",
+      "name": "Piên",
+      "historyTitle": "As versões sobre o nome e a emancipação",
+      "history": "A prefeitura registra duas hipóteses para a origem do nome Piên: uma o associa a um termo indígena e outra ao piar de um gavião. O plano de mobilidade identifica 1961 como o ano da emancipação política em relação a Rio Negro.",
+      "benefitTitle": "Cobertura para a porta de serviço junto ao quintal",
+      "benefit": "Se a porta externa é usada para levar compras e equipamentos até a cozinha, observe se o problema principal é pingar no batente ou a chuva vir de lado. O desenho pode privilegiar proteção naquele ponto sem diminuir a claridade do cômodo.",
+      "sourceUrl": "https://www.pien.pr.gov.br/storage/files/2024/05/produto-2-plano-de-mobilidade-urbana.pdf",
+      "sourceLabel": "Fonte oficial: Piên"
+    },
+    {
+      "slug": "pinhais",
+      "name": "Pinhais",
+      "historyTitle": "Da estação à emancipação de Piraquara",
+      "history": "A estação ferroviária figura na memória local como uma referência histórica. Conforme o IBGE, Pinhais ainda era distrito de Piraquara antes de tornar-se município próprio em 1992.",
+      "benefitTitle": "Cobertura para a circulação em um condomínio",
+      "benefit": "Num acesso comum entre entrada e elevador, veja onde a drenagem e a iluminação existentes podem ser afetadas. O objetivo é reduzir trechos molhados sem criar degraus, apoios no fluxo ou sombras desnecessárias.",
+      "sourceUrl": "https://www.ibge.gov.br/biblioteca/visualizacao/dtb/parana/pinhais.pdf",
+      "sourceLabel": "IBGE: histórico de Pinhais"
+    },
+    {
+      "slug": "piraquara",
+      "name": "Piraquara",
+      "historyTitle": "A estação e a memória da ferrovia",
+      "history": "A construção da ferrovia Curitiba–Paranaguá marcou a formação urbana de Piraquara. A prefeitura preserva parte dessa trajetória no Centro de Memória Ferroviária, que reúne bens históricos ligados à antiga rede ferroviária.",
+      "benefitTitle": "Policarbonato para uma passagem interna já escura",
+      "benefit": "Se o corredor lateral dá luz às janelas da casa, compare transparência e acabamento de coberturas de policarbonato antes de fechar o trecho. Fotografe do lado de dentro também, para mostrar de onde vem a iluminação que importa.",
+      "sourceUrl": "https://www.piraquara.pr.gov.br/portal/secretarias-paginas/183/centro-de-memoria-ferroviaria-de-piraquara/",
+      "sourceLabel": "Fonte oficial: Piraquara"
+    },
+    {
+      "slug": "quatro-barras",
+      "name": "Quatro Barras",
+      "historyTitle": "O Caminho do Itupava e os quatro rios",
+      "history": "O Caminho do Itupava integra a memória dos trajetos entre o planalto e o litoral. A prefeitura explica que o nome Quatro Barras faz referência às barras dos rios Canguiri, Timbu, Bracajuvava e Capitanduva.",
+      "benefitTitle": "Cobertura para transição entre blocos de um imóvel",
+      "benefit": "Quando cozinha, depósito ou sanitário fica em outro bloco, anote a altura nos dois pontos e se há diferença de piso. A solução precisa acompanhar o percurso efetivo e encaminhar a chuva para fora do caminho.",
+      "sourceUrl": "https://www.quatrobarras.pr.gov.br/pagina/78_Historia-da-Cidade.html",
+      "sourceLabel": "Fonte oficial: Quatro Barras"
+    },
+    {
+      "slug": "quitandinha",
+      "name": "Quitandinha",
+      "historyTitle": "Entre antigos caminhos e o Rio da Várzea",
+      "history": "A história municipal apresenta Quitandinha entre dois antigos trajetos terrestres e associa sua formação a moradores vindos da região da Lapa. O Rio da Várzea também aparece como via de deslocamento na narrativa local.",
+      "benefitTitle": "Sombra para mesas de um café perto da entrada",
+      "benefit": "Num café com mesas externas, marque a posição da sombra durante o horário de atendimento e deixe livre a circulação entre porta e mesas. Um modelo retrátil permite adaptar o espaço quando a demanda muda ao longo do dia.",
+      "sourceUrl": "https://www.quitandinha.pr.gov.br/historia",
+      "sourceLabel": "Fonte oficial: Quitandinha"
+    },
+    {
+      "slug": "rio-branco-do-sul",
+      "name": "Rio Branco do Sul",
+      "historyTitle": "Votuverava e a mudança da sede",
+      "history": "Um levantamento preservado pelo Arquivo Público do Paraná registra a freguesia de Votuverava no século XIX. O documento identifica a transferência da sede para o povoado então chamado Rocinha, que recebeu o nome Rio Branco.",
+      "benefitTitle": "Área de entrega abrigada para manter materiais secos",
+      "benefit": "Para um comércio que recebe caixas, indique a largura do acesso, onde a mercadoria fica até entrar e se há necessidade de usar carrinho. Uma cobertura bem localizada reduz a exposição durante a conferência, sem ocupar o espaço de carga.",
+      "sourceUrl": "https://www.administracao.pr.gov.br/sites/default/arquivos_restritos/files/documento/2021-11/ano_1914_mfn_796.pdf",
+      "sourceLabel": "Fonte oficial: Rio Branco do Sul"
+    },
+    {
+      "slug": "rio-negro",
+      "name": "Rio Negro",
+      "historyTitle": "A antiga Estrada da Mata entre Lapa e Lages",
+      "history": "A história do IBGE relaciona a ocupação de Rio Negro à construção da Estrada da Mata, que ligava a antiga Vila do Príncipe, hoje Lapa, a Lages, em Santa Catarina. A estrada integrava uma rota mais ampla de circulação no Sul.",
+      "benefitTitle": "Proteção de um acesso usado em horários de pouca luz",
+      "benefit": "Num comércio ou prédio que recebe pessoas no começo da manhã ou à noite, observe onde já existem luminárias. Ao planejar a cobertura, combine a proteção da entrada com a visibilidade de degraus e da sinalização nos horários de uso.",
+      "sourceUrl": "https://www.ibge.gov.br/biblioteca/visualizacao/dtb/parana/rionegro.pdf",
+      "sourceLabel": "IBGE: histórico de Rio Negro"
+    },
+    {
+      "slug": "sao-jose-dos-pinhais",
+      "name": "São José dos Pinhais",
+      "historyTitle": "Arraial Grande e a criação da vila",
+      "history": "A prefeitura associa o antigo Arraial Grande às notícias de mineração nas proximidades do Rio do Arraial. A criação da vila de São José dos Pinhais foi formalizada por lei provincial em 1852.",
+      "benefitTitle": "Cobertura para embarque e desembarque com rota separada",
+      "benefit": "Se veículos e pedestres passam pela mesma frente de um imóvel, marque onde cada grupo para e quanto tempo permanece. Uma cobertura de embarque pode ser planejada para proteger a espera sem conduzir pessoas para perto das manobras.",
+      "sourceUrl": "https://www.sjp.pr.gov.br/historia/",
+      "sourceLabel": "Fonte oficial: São José dos Pinhais"
+    },
+    {
+      "slug": "tijucas-do-sul",
+      "name": "Tijucas do Sul",
+      "historyTitle": "Criação em 1951, instalação em 1952",
+      "history": "A prefeitura e o IBGE registram a criação de Tijucas do Sul em 1951, a partir de São José dos Pinhais. O município foi instalado oficialmente no ano seguinte.",
+      "benefitTitle": "Área coberta para guardar bicicletas e utensílios",
+      "benefit": "Para guardar equipamentos perto da entrada, indique se a chuva chega por uma lateral e se a passagem precisa ficar livre. Considere um abrigo que permita retirar e movimentar as peças sem depender de um fechamento completo.",
+      "sourceUrl": "https://tijucasdosul.pr.gov.br/tbt-tijucas-do-sul",
+      "sourceLabel": "Fonte oficial: Tijucas do Sul"
+    },
+    {
+      "slug": "tunas-do-parana",
+      "name": "Tunas do Paraná",
+      "historyTitle": "Do desmembramento à denominação atual",
+      "history": "O município foi criado em 1990 com território desmembrado de Bocaiúva do Sul. O histórico da prefeitura registra que a denominação Tunas do Paraná foi adotada em lei estadual de 1992.",
+      "benefitTitle": "Toldo para abrigo pontual em entrada exposta",
+      "benefit": "Em um imóvel mais aberto, fotografe o entorno para mostrar se a entrada tem proteção de muros ou fica exposta a rajadas. A escolha entre toldo e cobertura fixa deve levar em conta a exposição e as condições previstas pelo fabricante.",
+      "sourceUrl": "https://www.tunasdoparana.pr.gov.br/pagina/78_Historia-da-Cidade.html",
+      "sourceLabel": "Fonte oficial: Tunas do Paraná"
+    },
+    {
+      "slug": "curitiba",
+      "name": "Curitiba",
+      "historyTitle": "A primeira Câmara e a memória do Centro",
+      "history": "A prefeitura registra a constituição da primeira Câmara em 29 de março de 1693 como marco oficial da fundação da vila. O documento daquele ano está preservado no acervo municipal da Casa da Memória.",
+      "benefitTitle": "Toldo que protege a espera sem competir com a placa da loja",
+      "benefit": "Em uma fachada com placa, iluminação e porta de enrolar, fotografe tudo com o comércio aberto. Posicione a zona de sombra onde as pessoas aguardam, sem encobrir o nome da loja nem bloquear o equipamento de abertura.",
+      "sourceUrl": "https://www.curitiba.pr.gov.br/noticias/acervo-da-casa-da-memoria-preserva-a-historia-de-330-anos-de-curitiba/67725",
+      "sourceLabel": "Fonte oficial: Curitiba"
+    }
+  ]
+}
