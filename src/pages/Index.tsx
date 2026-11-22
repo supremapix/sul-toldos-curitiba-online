@@ -56,6 +56,12 @@ const Index = () => {
         <Hero />
         <PartnerDirectory />
         <ProjectGuide />
+        <section className="sul-guide" aria-labelledby="sul-hq-home-title">
+          <p className="sul-eyebrow">GUIA ILUSTRADO</p>
+          <h2 id="sul-hq-home-title">Do primeiro contato ao toldo instalado</h2>
+          <p className="sul-lead" style={{ marginTop: 16 }}>Veja o que enviar para o orçamento e o que conferir antes da instalação, em quatro quadrinhos.</p>
+          <a className="sul-primary" style={{ marginTop: 18 }} href="/atendimento-em-quadrinhos">Ler o guia em quadrinhos</a>
+        </section>
         <Services />
         <PolycarbonateGuide scope="home" />
         <TornimecServices />
