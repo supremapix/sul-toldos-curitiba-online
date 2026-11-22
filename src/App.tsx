@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CidadePage from "./pages/cidade/[cidade]";
 import BairroPage from "./pages/bairro/[bairro]";
+import AtendimentoQuadrinhos, { quadrinhosPath } from "./pages/AtendimentoQuadrinhos";
 import FaqPage from "./pages/FaqPage";
 import SitemapPage from "./pages/SitemapPage";
 
@@ -24,6 +25,7 @@ export const AppContent = ({helmetContext = {}}: {helmetContext?: object}) => (
           <ShareSuprema />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path={quadrinhosPath} element={<AtendimentoQuadrinhos />} />
             <Route path="/faq" element={<FaqPage />} />
             <Route path="/mapa-do-site" element={<SitemapPage />} />
             <Route path="/cidade/:cidade" element={<CidadePage />} />
@@ -39,3 +41,4 @@ export const AppContent = ({helmetContext = {}}: {helmetContext?: object}) => (
 
 const App = () => <BrowserRouter><AppContent /></BrowserRouter>;
 export default App;
+
