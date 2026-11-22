@@ -1,9 +1,7 @@
 import PolycarbonateGuide from "@/components/PolycarbonateGuide";
 import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
+import SiteLayout from "@/components/SiteLayout";
 import { MessageCircle, Phone, Search, ChevronDown, ChevronUp } from "lucide-react";
 import { openWhatsapp } from "@/utils/whatsapp";
 
@@ -94,12 +92,10 @@ const FaqPage = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-[#F4EFE6] text-[#1C1F22]">
-        <Header />
-        <FloatingButtons />
+      <SiteLayout mainClassName="sul-inner-page">
 
         {/* Hero */}
-        <section className="py-20 bg-[#1C1F22] text-[#F4EFE6] border-b border-border">
+        <section className="sul-inner-hero py-20 bg-[#1C1F22] text-[#F4EFE6] border-b border-border">
           <div className="max-w-[1200px] mx-auto px-6 text-center">
             <span className="inline-block bg-[#F2B705] text-[#1C1F22] font-sans font-extrabold text-[10px] md:text-xs tracking-[0.2em] uppercase px-3 py-1.5 mb-6 rounded-[2px]">
               CENTRAL DE AJUDA
@@ -234,8 +230,7 @@ const FaqPage = () => {
         </section>
 
         <PolycarbonateGuide scope="faq" />
-        <Footer />
-      </div>
+      </SiteLayout>
     </>
   );
 };

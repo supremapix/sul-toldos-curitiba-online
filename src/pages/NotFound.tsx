@@ -1,33 +1,17 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import SiteLayout from "@/components/SiteLayout";
 
-const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
-
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center px-4">
-        <h1 className="text-6xl md:text-8xl font-bold mb-4 text-primary">404</h1>
-        <p className="text-2xl md:text-3xl text-foreground mb-2">Página não encontrada</p>
-        <p className="text-base md:text-lg text-muted-foreground mb-8">
-          A página que você está procurando não existe ou foi movida.
-        </p>
-        <a 
-          href="/" 
-          className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-        >
-          Voltar para a Página Inicial
-        </a>
+const NotFound = () => (
+  <SiteLayout mainClassName="sul-inner-page">
+    <section className="sul-inner-hero py-20 px-6 text-center">
+      <p className="font-semibold tracking-widest mb-4" aria-hidden="true">404</p>
+      <h1 className="text-4xl md:text-6xl mb-4">Página não encontrada</h1>
+      <p className="text-base md:text-lg mb-8">O endereço pode ter mudado. Volte ao início ou encontre sua região no mapa do site.</p>
+      <div className="flex flex-wrap gap-4 justify-center">
+        <a href="/" className="sul-primary">Voltar para a página inicial</a>
+        <a href="/mapa-do-site" className="sul-secondary px-3 underline">Ver cidades e bairros</a>
       </div>
-    </div>
-  );
-};
+    </section>
+  </SiteLayout>
+);
 
 export default NotFound;
