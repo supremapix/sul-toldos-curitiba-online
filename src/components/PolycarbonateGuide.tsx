@@ -67,8 +67,6 @@ const tailored = {
   },
 } as const;
 
-const serviceUrl = "https://wa.me/5541984877344?text=Ol%C3%A1%20vi%20no%20seu%20site%20feitos%20pela%20suprema%20o%20servi%C3%A7o%20Coberturas%20em%20policarbonato";
-
 function getPolycarbonateLocation(slug: string, scope: "bairro" | "cidade") {
   let code = 0;
   for (const char of scope + slug) code = (Math.imul(code, 31) + char.charCodeAt(0)) >>> 0;
@@ -108,7 +106,7 @@ export default function PolycarbonateGuide({ scope, name, slug = "" }: { scope: 
         </div>
       )}
       <div className="sul-poly-actions">
-        <a className="sul-primary" href={serviceUrl} target="_blank" rel="noopener noreferrer">Consultar cobertura de policarbonato no WhatsApp</a>
+
         {scope !== "home" && <a href="/#coberturas-policarbonato" className="sul-poly-guide-link">Ver o guia de policarbonato com imagens</a>}
       </div>
     </section>
